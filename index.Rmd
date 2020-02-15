@@ -1,0 +1,22 @@
+---
+title: "Empirical Methods in Political Science: An Introduction"
+author: "Jean Clipperton"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [references.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+#github-repo: rstudio/bookdown-demo
+description: "This is an introductory college textbook on using empirical methods in political science research."
+---
+
+# Preface {-}
+***
+
+```{r fig.align='center', echo=FALSE, 'html'}
+knitr::include_graphics('images/book_cover_sm.png', dpi = NA)
+```
+
+Chapters written by Max Weylandt, Pilar Manzi, Salih Noor, Zhihang Ruan, Irene Kwon, Sam Gubitz, Justin Zimmerman, Erin Ochoa, and John Lee.

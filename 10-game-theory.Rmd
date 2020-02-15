@@ -1,0 +1,59 @@
+# Game Theory
+
+## Introduction
+
+## Background
+
+## Method: setup/overview
+
+## Method: detail
+
+## Applications
+
+## Advantages of Method
+
+## Disadvantages of Method
+
+## Broader significance/use in political science
+
+## Conclusion
+
+## Application Questions
+
+## Key Terms
+
+-   cooperative games
+
+-   noncooperative games
+
+-   strategies
+
+-   payoff
+
+-   expected payoff
+
+-   constant sum games
+
+-   evolutionary games
+
+-   common knowledge
+
+-   equilibrium
+
+-   nash equilibrium
+
+-   pareto efficient
+
+-   dominant strategy
+
+-   dominated strategy
+
+-   Prisoner's dilemma
+
+-   zero sum
+
+-   rational
+
+-   signal
+
+## Answers to Application Questions

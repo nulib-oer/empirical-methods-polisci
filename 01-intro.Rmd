@@ -1,0 +1,125 @@
+# Introduction: What is political science?
+
+This textbook focuses upon empirical methods used in political science. Before turning to the methods, it can be helpful to understand what political science is and what political science research can look like. Broadly, the discipline focuses on power and events throughout history. Some scholars focus on modern issues (e.g. Brexit) while others focus on historical ones (e.g. the New Deal in the U.S.). There are a variety of methods used and scholars are typically organized around the area/region they study.[^1]
+
+## Subfields in Political Science
+
+There are four primary subfields in political science (although we can consider many subdivisions, additional groupings, and so on): comparative politics, American politics, international relations/world politics, and theory. For this text, we will focus on quantitative political science and so we will consider the first three subfields.
+
+*Comparative politics* as a subfield focuses upon comparisons of countries or regions to one another. Typically, 'comparativists' have expertise that enables them to dig deeply into their region. However, the questions they ask are broadly relevant beyond the researcher's region of expertise.
+
+*American politics* focuses upon\....American politics. Here, scholars' work typically focus upon behavior (e.g. voting), institutions (e.g. Congress), or are more historically focused (American Political Development, a.k.a. 'APD'). In other countries (e.g. Australia, Americanists are considered 'comparativists' \... so it's all relative). Here, scholars typically focus on one of the approaches (e.g. institutions), but increasingly more scholars focus on both behavior and institutions, for example.
+
+*International relations*, also known as IR or world politics, focuses on large-scale global questions. Questions here are often about trade, economic development, and/or political economy. There are different branches of IR. Focusing on the quantitative side, many IR scholars work with large datasets, perhaps only slightly more so than in other fields. Qualitative work, specifically, case studies, represents approximately 45% of the field as measured by [@bennettWePreachWhat2003].
+
+*Methods* Quantitative Methods is sometimes considered a subfield of political science and it is devoted to the development of quantitative methods, such as statistics, computational social science, and game theory. Methods scholars focus on tasks such as developing new methods for answering questions where previous ones had failed. For example, if you wanted to study something that either happens or doesn't, then a regression wouldn't be appropriate. You would need a new/different research method. Similarly, if you're looking at something that unfolds over different stages, you might need to develop a strategic model to understand how the actors are incentivized to act.
+
+## Questions in Political Science
+
+Questions in political science span the globe and often consider power: who has power, how that power is used and/or abused, and how power is specified. Here are a few questions that are or have been frequently studied:[^2]
+
+-   Why are some countries democratic and others aren't?
+
+-   Does democratic rule make people better off? How?
+
+-   What sort of political institutions lead to best outcomes?
+
+-   What policies and institutions help diverse groups to live in peace?
+
+-   What are causes of war? How can we prevent war?
+
+-   What leads to cooperation between countries?
+
+-   What are best ways to promote prosperity and avoid poverty?
+
+-   Why do people vote and participate in politics as they do?
+
+-   Is there a 'resource curse'?
+
+These are big questions and where there has been progress made on many of them, they are often so large and broad that a different interpretation can lead to a different finding (for example, what would be a best outcome for a political institution? Stability (and thus low turnover) or a responsive government?
+
+As we go through the text, we'll introduce different research questions and topics that span subfields and methods to demonstrate how varied political science research is.
+
+## What are Empirical Political Science Methods?
+
+In this textbook, we will focus on *empirical* research methods -- meaning how political scientists use and think about quantitative data. These methods are how political scientists go from their initial question to being able to find an answer. They can be a regression/statistics, but they can also involve interviews, or mapping out social networks.
+
+Political scientists use a range of methods to answer their research questions, with the key focus being whether the tool is appropriate for the job. Often, political scientists will specialize in one primary method, and receive training in a few others. This will shape how the researcher sees questions (for example, my own training is quantitatively-focused and so I tend to think about things from a quantitative mindset while a friend of mine has a qualitative background, so to her, she thinks about things like process as a key driver) and how that researcher is able to answer those questions.
+
+### Types of Methods
+
+There are many types of methods used in political science. in the realm of quantitative political science, common methods include the following approaches listed below. There is one chapter that focuses upon techniques like interviews and participant observation, but the broad focus of the book is on quantitative data. Discussion about quantitative and qualitative methods is an important distinction within the discipline.
+
+-   Surveys: Perhaps the most accessible or well-known approach. Surveys are questions asked of respondents. We will focus on how surveys are designed and how respondents are selected.
+
+-   Experiments: Experiments are often described as the 'gold standard' for research and are common in many areas outside political science. In an experiment, there are frequently two groups that are identical to one another except that one group gets the 'treatment' and the other group does not. For example, one group might be exposed to a political ad of a certain type while the remaining group is not, to understand the connection between politics and emotions as in [@Karl2019].
+
+-   Large N: In cases where there are a wealth of data, scholars may opt for statistical research. What this looks like can depend upon the size of the data.
+
+-   Small N: Studies that have fewer observations or use approaches like interviews often focus on the mechanisms behind a process. For example, under what circumstances do institutions evolve and change? See: [@mahoney2009explaining; @ostrom_2015].
+
+-   Game Theory: In game theoretic approaches we represent the strategic choices actors make as a series of interdependent choices. There are frequently two key actors who must make decisions (such as cooperation or defection or the imposition of sanctions ([@pond2017])). These actions weigh the utility of certain choices dependent upon what and how their opponent(s) behave.
+
+-   Social Networks: In social network research, it is the connections between individuals that become the items of interest. How do different actors relate to one another? How might information move around/through a community? These communities can be real (high school social networks, families) or virtual (who follows whom on twitter, whose work is cited by others).
+
+-   Machine Learning: In this approach, very large datasets are used. Frequently, the aim is to discover patterns and connections in the data or to otherwise harness the power of many observations to discern the hidden order in the data.
+
+#### Qualitative and Quantitative Political Science
+
+Empirical research methods typically use quantitative data. These data are frequently numerical and can often show broad trends that are happening within the question of interest. Other scholars use qualitative methods. In a qualitative framework, the 'data' can be anything from noticing how spaces are shared by individuals at the Paris Climate Summit [@marionsuiseeyaMakingInfluenceVisible2019] to interviews [@helmkeCourtsConstraintsJudges2005]. Often (but not always; see: @pearlmanWeCrossedBridge2017) qualitative researchers work with fewer cases (small-n data) and quantitative researchers look at larger datasets (large-n data).
+
+#### Multiple or Mixed Methods
+
+Mixed or multiple methods refers to how many different approaches a scholar or scholars use in their analysis. Although they often specialize in one method, researchers may still combine methods -- either through their own training and/or background -- or through collaborating with others. For example, the use of experiments and surveys [@teele_kalla_rosenbluth_2018; @bonilla_mo_2018] or interviews and observation [@vargas2016wounded]).
+
+Both quantitative and qualitative approaches offer valuable insight into any given research question and there has been a bit of a divide that's arisen within the discipline as technology evolves. With the increasing availability of quantitative data and low barriers to data gathering, it can be tempting to emphasize quantitative methods. Given the additional training often needed to hone and refine one's skillset, individuals frequently rely on a primarily quantitative or qualitative approach. However, there is some movement toward what is termed a 'mixed method' or 'multi-method' approach in which *both* quantitative and qualitative data are used in a research project [@seawrightMultiMethodSocialScience2016]. As it will become clear at the end of the text, each method has advantages and disadvantages: combining methods can help leverage the strengths of each chosen method while minimizing the disadvantages when including a complementary method. Of course, this approach is not without a high cost -- individuals must then be trained and proficient in multiple methods, something that can be challenging and time consuming.
+
+Because of our (Clipperton et al) own background and training, we emphasize empirical approaches, but there are still many different ways to approach a question. A common trope regards advanced methodological training as equating to obtaining a hammer so that everything looks like a nail. Our hope is that you'll develop an understanding of the different tools available in the political scientist's tool kit so that you will be able to appreciate and interpret existing work while thinking critically about how to approach your own research questions. The research question itself can help you choose an appropriate method--rather than the reverse.
+
+## Scientific Method
+
+Regardless of the question and the method, political scientists need a way to work through the evaluation of their question. For that, we will thank [Karl Popper](https://www.iep.utm.edu/pop-sci/) and his push not only for falsification but for urging that scholars have a *method* for their inquiry.
+
+In this text, we rely on an adaptation of the scientific method. This is something we will use for each research article and every research proposal, so it's important to understand each component fully. Below, we lay out the different elements of the scientific method. [^3]
+
+-   **Puzzle**: This is the research question. It must be something that needs answered -- often in the format, 'research leads us to expect x, but we observe y' or 'here are two contradictory arguments, which is right?' In any case, a puzzle is something that is not only unanswered, but interesting. It can somehow tell us about the world in a broader way, even if the question itself is quite narrow.
+
+-   **Theory**: This is the explanation or answer to the question. Typically, you will have an outcome that you wish to explain with some important factor. In the following chapter, we'll introduce theory more fully.
+
+-   **Hypotheses & Implications**: while a theory is more broad and about the relationship of factors, hypotheses are often *testable implications* that stem directly from the theory. This is how
+
+-   **Evidence/Test**: evidence is how the authors support their theory and conclusions. It might be longitudinal data with a regression; it might be survey data with differences of means; it might be interview data. Here, you'll explain how they are evaluating their argument.
+
+    -   **Falsifiablity**: Is it possible to disprove the theory? Sometimes articles might focus on a new paradigm for approaching a research area. These would not be falsifiable as they're an approach or suggestion. Falsifiable questions can be proven wrong -- for example, if I argue that having more political actors will lead to fewer[^4] pieces of significant legislation being produced, you can see whether my theory was correct. In a case with many political actors, there should be few pieces of legislation. If there are many, my theory[^5] is not correct.
+
+-   **Conclusions**: This is what the study concludes -- what are the major findings? Be specific about the findings and whether/how they generalize. For example, if the article is focusing on the 1980 Ugandan elections, what are the findings and what does that tell us overall?
+
+-   Do I buy it?: This is where you'll enter your critique of the article. You might wonder about the method they chose, how it was executed, or their particular case study. This is the point where you'll describe your concerns and then evaluate whether the evidence presented is sufficient enough to overcome those objections.
+
+Note that the scientific method is a helpful means to organize an article (minus the last element), but it's an *even more* helpful way to organize your notes about an article. Using the scientific method can help provide a consistent, clear, organized structure that focuses on the essential elements of an article or book. In all but the last stage, you will want to be as objective as possible--laying out only the relevant elements/details. In the final portion, 'do I buy it', you will put down your critique. But to criticize something, you must first understand what is being argued.
+
+## What can Research Tell us?
+
+When reading or conducting research, there are twin goals at play: the first is what relationships can be established in the research project/dataset itself; the second is how the question answered by the research project can speak about a broader population than just the data in the research project.
+
+### Support for hypotheses
+
+This first component has to do with what can be established within the framework of the question and data. For example, suppose your research question has to do with political attitudes of young Americans. To answer this, you collect data from a random sample of Americans ([\[ch04\]](#ch04){reference-type="ref" reference="ch04"}, [\[ch05\]](#ch05){reference-type="ref" reference="ch05"}) your findings would pertain to your research question within your data. If had a statistically significant relationship, you would find support for your hypotheses. If you failed to have a statistically significant relationship you would not find support for your hypotheses. You would make conclusions about the individual data points within your dataset.
+
+### Generalizability
+
+The second component has to do with how your research fits in to a broader picture: what can your research tell us about young Americans and how does that fit into a larger context? Supposing you conducted your sample appropriately ([\[ch04\]](#ch04){reference-type="ref" reference="ch04"}), you would be able to speak to not only the individuals in your sample, but the population they are intended to represent. This is the important component of research and why we will spend a large amount of time discussing sampling approaches and appropriate methodology. While your sample of, say, 1600 data points may be interesting, it's really only interesting in that it can tell us about the 327 million other data points we don't know anything about.
+
+## Overview of textbook
+
+The textbook proceeds with an introduction to theory and concept building, moves to an explanation of causal inference (how do we 'know' whether something is causal?), and then provides a quick introduction to data and hypothesis testing. Following that, each chapter is devoted to a particular research method used within political science: surveys, experiments, large N, small n, game theory, social network analysis, and machine learning. Each chapter follows a similar format and layout to help introduce the method, its advantages, disadvantages, and different applications.
+
+[^1]: A note about this textbook: in its creation, we have worked to balance our references across subfields (see next subsection) and the race and gender of cited scholars. Our aim is to provide a diverse look at political science, incorporating as many different perspectives as possible. We use a tool developed by Jane Sumner [@sumner_2018] that came out of a project with [@dion_sumner_mitchell_2018] to evaluate the balance in each chapter in the textbook.
+
+[^2]: thank you to Andrew Roberts whose original list has been adapted here
+
+[^3]: These questions adapted from [@clark2017principles]
+
+[^4]: In the following chapter, we'll discuss how to conceptualize 'many' and 'few')
+
+[^5]: This is actually a quite famous theory put forth by George Tsebelis, called 'Veto Players' [@tsebelisVetoPlayersInstitutional2000]
