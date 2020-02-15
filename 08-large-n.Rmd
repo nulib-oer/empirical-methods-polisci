@@ -1,8 +1,8 @@
-# Large N
+## Large N
 
 **By Maximilian Weylandt**
 
-## Introduction
+### Introduction
 
 This chapter introduces the most common methods for working with 'large-n' data, or data where we have a lot of cases. If we want to study a phenomenon across more than 100 countries, or have a survey covering thousands of respondents, it's simply not possible to look at them one by one in great detail. Even if we spent a lot of time and effort to do so, we would struggle to make a systematic comparison because it's difficult to keep track of all the relevant information with so many cases.
 
@@ -12,9 +12,9 @@ Next, we turn to regression, a more powerful tool for identifying associations b
 
 Then we move on to variations of regression, how to interpret regression results, and examples of how the method is used in political science.
 
-## Method: setup/overview
+### Method: setup/overview
 
-### Correlation
+#### Correlation
 
 You have two variables that you think might be related in a linear fashion. Let's say you think that a country's level of education (measured in expected years of education) will be related to its level of gender equality (we'll use a points system based on the UN gender inequality index) . Using software, you can quite easily calculate a linear correlation coefficient for these two variables, denoted by $R$. For these two variables, we get the result $R=0.83.$ That number is a bit abstract but the graph below, [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"}, visualizes what different correlations look like.
 
@@ -34,7 +34,7 @@ Correlations can easily be calculated with statistical software, and the number 
 
 **Check-in Question 1: What does a correlation coefficient tell us? What does it *not* tell us?**
 
-## Regression
+### Regression
 
 Correlations are a useful first look at the relationship between two variables, but linear regression is far more powerful. The intuition behind linear regression is simple: we want to find the line that best fits all of our data points. This is because the line that fits the data best summarizes the relationship between variables, and we can use this line to learn not just the direction of an association (positive or negative) but also its strength: as $X$ changes, *how much* does $Y$ tend to change? Regression also lets us conduct significance tests to establish whether the relationship between variables actually exists or just appears to occur due to chance.
 
@@ -52,9 +52,9 @@ In our example, the intercept $a=-89.2$. This is a good time to warn you about e
 
 ![The regression line[]{label="fig:regression"}](images/largen/line.png){#fig:regression width="\\textwidth"}
 
-# Method: detail
+### Method: detail
 
-## Finding the Line of Best Fit
+#### Finding the Line of Best Fit
 
 How do we find the line that fits the data best? Let's restate our aim: we want a line where, given a certain $X$ value, the $Y$ value predicted by the line is really close to the actual value in the data. That seems like a reasonable definition of 'good fit.' Rephrased in mathematical terms, we want to be as small as possible. The thing we want to minimize, , is called a **residual**. For example, in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}, Serbia has an expected years of schooling value of $14.6$ and a gender equality score of $106$. Those are the actual values in the dataset. However, the regression line predicts that an education (i.e. $X$) value of $14.6$ is associated with a gender inequality score of $82.94$ [\[$Y= a+ bX= -89.2 + 11.6 \cdot(14.6) = 80.16$\]]{style="color: blue"}. The residual amounts to $25.4$ [\[$106 - 80.16=25.4$\]]{style="color: blue"}, and is highlighted with a blue line in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}.
 
@@ -70,7 +70,7 @@ As you can see, we can draw an infinite number of lines through our data, but th
 
 **Check-in Question 2: Why do we want to fit a line through our scatterplot?**
 
-## Significance Tests
+### Significance Tests
 
 Regression lets us test whether the relationship between our variables is statistically significant. We begin by setting up a hypothesis test in the format with which you are already familiar. Our null hypothesis is that the relationship between variables $X$ (education) and $Y$ (gender equality) --- AKA the coefficient $b$ -- is zero.
 
@@ -80,7 +80,7 @@ You can see the details of this calculation in the .
 
 Another way of approaching this issue is to calculate a 95% confidence interval for the coefficient -- a range for which we have 95% certainty that the coefficient falls within its confines. In our example, the 95% confidence interval for the coefficient $b$, which captures the association between education and gender equality, is $[10.4, 12.8]$. (You can see the calculation in the ). If the entire range is positive (as it is for us) or negative, it means that we are 95% certain that the true coefficient is not zero. The null hypothesis says that there is no relationship between $X$ and $Y$. But our interval is so far away from zero that we can feel save rejecting the null hypothesis.
 
-## Multivariate Regression
+### Multivariate Regression
 
 As social scientists, the phenomena we investigate are usually very complicated, and we seldom deal with bivariate relationships alone. In terms of our above example, there are many factors other than education that could affect gender equality. For example, what if wealth is the variable we are looking for, not education? What if it's simply countries where people are wealthier that have higher levels of gender equality?
 
@@ -94,7 +94,7 @@ Here, $\alpha$ is the intercept (the value of gender equality we predict when bo
 
 **Check-in Question 3: why do we control for other variables?**
 
-## Reading a Regression Table
+### Reading a Regression Table
 
 When reading quantitative papers, chances are you will read a regression table. Reading regression results is a key skill for engaging with political science research. It will save you a lot of time, giving you results at a glance, and help you critically compare the actual results of an analysis with the findings the authors present.
 
@@ -182,9 +182,9 @@ This figure also shows an example an example of something you should know called
 
 ![Adapted from Dionne and Horowitz 2016, 220 []{label="fig:dotwhisker"}](images/largen/dotwhisker.png){#fig:dotwhisker height="3in"}
 
-# Applications
+## Applications
 
-## Correlation
+### Correlation
 
 Simple correlations are not as often found in recent scholarship as regression, mostly because regression is far more powerful and flexible than correlation, and hardly more difficult to calculate. Still, as noted above, correlations can be useful for an initial look at the data and when describing data. Take @whitakerExplainingSupportUK2011, who are trying to understand the success of the UK Independence Party at the 2009 European Parliament Election. The first thing they do is simply to see whether support for UKIP correlates with support for the conservative or labour parties in the same geographical area, before moving on to a more sophisticated regression that relates support for UKIP to a number of demographic factors.
 
@@ -192,7 +192,7 @@ You will also encounter correlations in more technical sections of papers, when 
 
 > \...the polity scores for these 33 cases are highly correlated with the other measures of democracy. For example, the polity scores are also highly correlated with the Freedom House total scores for 2000 (r = --0.88; higher values on the Freedom House measure correspond to a lower level of democracy). [@kuenziPartySystemsDemocratic2005 428]
 
-## Regression
+### Regression
 
 We are talking about large-N data in this chapter, and regression is most useful when applied to a fairly large number of cases. Some of this research takes data from different geographical or political units to look at a phenomenon across many cases, like the example about education and gender equality earlier on in this chapter.
 
@@ -229,7 +229,7 @@ Look at Table [\[table:largen\_kuenzi\]](#table:largen_kuenzi){reference-type="r
 
 **Check-in Question 4: Interpret the coefficient for the effective number of parties. What does the coefficient tell us?**
 
-## Logistic Regression
+### Logistic Regression
 
 Logistic regression is a type of regression where the outcome variable, $Y$ can only take on two values, 1 or 0. (Our discussion about dummies earlier was focused on explanatory($X$) variables).
 
@@ -273,7 +273,7 @@ Instead we can do an anti-log on the coefficients to get odds ratios. What are o
 
 [\[fig:data\_Trippkang\]]{#fig:data_Trippkang label="fig:data_Trippkang"}
 
-## Experiments
+### Experiments
 
 r3in ![image](images/largen/mengel.png){width="3in"}
 
@@ -281,7 +281,7 @@ You will also likely encounter papers using experiments or quasi-experiments, wh
 
 For example, Mengel et al. (2019) study how gender affects teaching evaluations. There are by now [more than 70 studies](http://www.rebeccakreitzer.com/summaries-of-research-articles/) indicating that women and people of color receive lower teaching evaluations than their colleagues, all else equal. Mengel et al. use a 'quasi-experiment': they look at data from courses where students were randomly assigned to sections that could be taught by women or men. They write that "female faculty receive systematically lower teaching evaluations than their male colleagues despite the fact that neither students' current or future grades nor their study hours are affected by the gender of the instructor\" [@mengelGenderBiasTeaching2019 536] The regression table to your right provides more detail on controls: economics students, for example, tend to give lower evaluations than students in other fields, and students with high grades in the class tended to give higher scores. Overall, female instructors received lower scores, as indicated by the negative coefficient on the explanatory variable.
 
-# Advantages of Method
+### Advantages of Method
 
 Regression is flexible, relatively easy to conduct, and intuitive. It enjoys many advantages:
 
@@ -293,7 +293,7 @@ Regression is flexible, relatively easy to conduct, and intuitive. It enjoys man
 
 -   *Regression allows for iteration*. Because of the relative ease of use of regression, other researchers can easily replicate research -- and build on it.
 
-# Limitations of Method
+### Limitations of Method
 
 -   *Measurement*. One big problem of large-n quantitative research is that we can only compute statistics for variables we can measure. There are many things that have no measures (for example political will). On issues where we have measures, they are often controversial. For example, many scholars have tried to come up with databases that rate each country on a scale of democracy. But, as you have learned in [\[ch04\]](#ch04){reference-type="ref" reference="ch04"}, coming up with a single measurement for concepts is extremely complicated and always involves trade-offs. What is a democracy in the first place? Which aspects of a society should we consider? How should they be weighed? Many subjective decisions have to be made, all of which can greatly affect the measure given -- and therefore statistical results when entered into an analysis.
 
@@ -305,17 +305,17 @@ Regression is flexible, relatively easy to conduct, and intuitive. It enjoys man
 
 -   *Bad application 2: kitchen sink regressions.* Another thing researchers can do is to investigate a large amount of variables until they find some relationship that either confirms their preferred hypothesis, or is at least interesting enough to warrant publication. This is similar to the practice of datamining discussed above, and is sometimes also called 'p-hacking.' In fact, it is what I did to make figures 2-4 above: I was interested in a clear chart and regression table, and looked at different variables until I found a combination of variables that worked. With large datasets containing many variables so easily accessible, conducting a number of different regressions is dangerously simple.
 
-# Broader significance in political science
+## Broader significance in political science
 
 Regression is perhaps the most commonly used quantitative technique in political science. You've seen that the basic regression is very flexible and gives us important information -- the strength of association between one variable and another, even holding other factors constant. This is very powerful! You've also seen one variation of it, logistic regression, but there are many more extensions of the basic concept for a variety of applications. Regression is used to analyze survey data, compare trends across place and time, and to interpret the results of experiments. If you will conduct research using large-N quantitative data, chances are you'll use linear regression (or a method based on it). If you read research based on large-N quantitative data, chances are you'll be reading a regression table. Hopefully, this chapter got you closer to being able to do so.
 
-# Application Questions
+## Application Questions
 
 1.  Explain the meaning of the coefficients $a$ and $b$ in the bivariate regression equation.
 
 2.  You collect data on two variables and get the computer to calculate a regression equation for you. To check it, you plug an X-value from the dataset into your equation. The Y-value that results from this calculation is different from the Y-value in the dataset. Is it a problem if the regression's predicted values differ from the actual values in the data?
 
-# Key Terms
+## Key Terms
 
 -   bivariate regression
 
@@ -335,9 +335,9 @@ Regression is perhaps the most commonly used quantitative technique in political
 
 -   statistically significant relationship
 
-# Answers to Application Questions
+## Answers to Application Questions
 
-## Check-in Questions
+### Check-in Questions
 
 1.  **What does a correlation coefficient tell us? What does it *not* tell us?** It tells us how strongly the variables in question are associated. It does not tell us how large that association is. For example variables can show a perfect linear relationship, but we do not know if an increase in the first variable is associated with a tiny or a large change in the second variable.
 
@@ -349,7 +349,7 @@ Regression is perhaps the most commonly used quantitative technique in political
 
 4.  **Interpret the coefficient for the effective number of parties. What does the coefficient tell us?** Looking across countries with different party systems, one additional effective party is associated with a 1.68 point increase on the polity score, controlling for the other variables in the regression.
 
-## Application Questions
+### Application Questions
 
 1.  **Explain the meaning of the coefficients $a$ and $b$ in the bivariate regression equation.**
 
@@ -361,9 +361,9 @@ Regression is perhaps the most commonly used quantitative technique in political
 
     No. In linear regression we are trying to fit a straight line through a large number of data points. This means that one line will never perfectly fit all points. It's fine if there is some difference - the importance is that we keep those differences (residuals) as small as possible, in a process we call ordinary least squares.
 
-# Mathematical Appendix {#math_appendix}
+## Mathematical Appendix {#math_appendix}
 
-## Calculating the Regression Coefficient
+### Calculating the Regression Coefficient
 
 For bivariate regressions, you can calculate the coefficient yourself. The equation is $$\begin{aligned}
     b = \frac{S_Y}{S_X}R\end{aligned}$$
@@ -374,7 +374,7 @@ $S_X = 2.95$\
 $S_Y = 39.32$\
 Try plugging them into the above equation and seeing whether you get the result you see in regression table, [\[table:largen\_results\]](#table:largen_results){reference-type="ref" reference="table:largen_results"}. (Don't worry if it's not exact, there's a fair amount of rounding going on).
 
-## Significance Tests
+### Significance Tests
 
 *Calculating the p-value*
 
@@ -405,13 +405,13 @@ So the confidence interval is: $$\begin{aligned}
 = &[11.6 - 1.96 \cdot 0.62 ; 11.6 + 1.96 \cdot 0.62 ]\\
 = &[10.4; 12.8]\end{aligned}$$
 
-## Error Terms
+### Error Terms
 
 The regression equations we wrote out above are technically incomplete. In papers, you will often encounter regression equations with an $e$ at the end, like this:
 
 $$Y = a + b_{1}X_{1} + b_{2}X_{2} + e$$ The $e$ basically stands for our residuals, or the difference between what our regression predicts and what the data actually show, and is sometimes called *error term*. If you plug in any real $X$-value from the actual data, the $Y$ you get is likely to be slightly off, because our regression line is the best fit but does not hit all points. Both sides of an equation have to be equal, and so the error term is brought in to make the right hand side equal to the actual $Y$ at that $X$-value
 
-## Logged Variables
+### Logged Variables
 
 While discussing our linear regression, we noted that GDP was not included directly as a control variable, but rather the log of GDP. We do this because we think that a one unit increase does not always mean the same thing across the range of possible values for our variable. Let's say we are talking about per capita GDP, in units of 1,000 dollars. The differences between a country with a per capita GDP of 1,000 USD and 10,000 USD are massive. (In our data, countries close to those values are Niger, one of the poorest countries in the world and Indonesia, the largest economy in Southeast Asia). Meanwhile, countries with per capita GDP of 38,000 vs 47,000 are likely quite similar, like France and the Netherlands. The extra 9,000 dollars (9 units) don't have the same effect across the range of values. Taking the log of GDP values allows us to 'flatten' the relationship, so that a unit change means a similar thing across $X$-values, but it does make the coefficient a bit harder to interpret. The unit of our variable went from 1 dollar in GDP/capita to the log of 1 dollar, which is not an intuitive number to plug into "an increase of 1 unit $X$ is associated with an increase of $b$ units of $Y$.\"
 
