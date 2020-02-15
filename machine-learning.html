@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>24 Machine Learning | Empirical Methods in Political Science: An Introduction</title>
+  <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="24 Machine Learning | Empirical Methods in Political Science: An Introduction" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an introductory college textbook on using empirical methods in political science research." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="24 Machine Learning | Empirical Methods in Political Science: An Introduction" />
+  
+  <meta name="twitter:description" content="This is an introductory college textbook on using empirical methods in political science research." />
+  
+
+<meta name="author" content="Jean Clipperton" />
+
+
+<meta name="date" content="2020-02-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="game-theory.html"/>
+<link rel="next" href="conclusions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Empirical Methods in Political Science</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html"><i class="fa fa-check"></i><b>1</b> Introduction: What is political science?</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#subfields-in-political-science"><i class="fa fa-check"></i><b>1.1</b> Subfields in Political Science</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#questions-in-political-science"><i class="fa fa-check"></i><b>1.2</b> Questions in Political Science</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#what-are-empirical-political-science-methods"><i class="fa fa-check"></i><b>1.3</b> What are Empirical Political Science Methods?</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#types-of-methods"><i class="fa fa-check"></i><b>1.3.1</b> Types of Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#scientific-method"><i class="fa fa-check"></i><b>1.4</b> Scientific Method</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#what-can-research-tell-us"><i class="fa fa-check"></i><b>1.5</b> What can Research Tell us?</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#support-for-hypotheses"><i class="fa fa-check"></i><b>1.5.1</b> Support for hypotheses</a></li>
+<li class="chapter" data-level="1.5.2" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#generalizability"><i class="fa fa-check"></i><b>1.5.2</b> Generalizability</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="introduction-what-is-political-science.html"><a href="introduction-what-is-political-science.html#overview-of-textbook"><i class="fa fa-check"></i><b>1.6</b> Overview of textbook</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html"><i class="fa fa-check"></i><b>2</b> Causal Inference and the Scientific Method</a><ul>
+<li class="chapter" data-level="2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#introductionbackground"><i class="fa fa-check"></i><b>2.1</b> Introduction/Background</a></li>
+<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The scientific Method</a></li>
+<li class="chapter" data-level="2.3" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#the-fundamental-problem-of-causal-inference"><i class="fa fa-check"></i><b>2.3</b> The Fundamental Problem of Causal Inference</a></li>
+<li class="chapter" data-level="2.4" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#conclusion"><i class="fa fa-check"></i><b>2.4</b> Conclusion</a></li>
+<li class="chapter" data-level="2.5" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#application-questions"><i class="fa fa-check"></i><b>2.5</b> Application Questions</a></li>
+<li class="chapter" data-level="2.6" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#key-terms"><i class="fa fa-check"></i><b>2.6</b> Key Terms</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#answers-to-check-in-questions"><i class="fa fa-check"></i><b>2.6.1</b> Answers to Check-in Questions</a></li>
+<li class="chapter" data-level="2.6.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#answers-to-application-questions"><i class="fa fa-check"></i><b>2.6.2</b> Answers to Application Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>3</b> Theory</a><ul>
+<li class="chapter" data-level="3.1" data-path="theory.html"><a href="theory.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="theory.html"><a href="theory.html#what-is-a-theory"><i class="fa fa-check"></i><b>3.2</b> What is a theory?</a></li>
+<li class="chapter" data-level="3.3" data-path="theory.html"><a href="theory.html#what-is-a-good-theory"><i class="fa fa-check"></i><b>3.3</b> What is a <em>good</em> theory?</a></li>
+<li class="chapter" data-level="3.4" data-path="theory.html"><a href="theory.html#literature-reviews-and-theory"><i class="fa fa-check"></i><b>3.4</b> Literature Reviews and Theory</a></li>
+<li class="chapter" data-level="3.5" data-path="theory.html"><a href="theory.html#conclusion-1"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+<li class="chapter" data-level="3.6" data-path="theory.html"><a href="theory.html#application-questions-1"><i class="fa fa-check"></i><b>3.6</b> Application Questions</a></li>
+<li class="chapter" data-level="3.7" data-path="theory.html"><a href="theory.html#key-terms-1"><i class="fa fa-check"></i><b>3.7</b> Key Terms</a></li>
+<li class="chapter" data-level="3.8" data-path="theory.html"><a href="theory.html#answers-to-application-questions-1"><i class="fa fa-check"></i><b>3.8</b> Answers to Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>4</b> Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="data.html"><a href="data.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="data.html"><a href="data.html#types-of-variables"><i class="fa fa-check"></i><b>4.2</b> Types of Variables</a></li>
+<li class="chapter" data-level="4.3" data-path="data.html"><a href="data.html#types-of-data"><i class="fa fa-check"></i><b>4.3</b> Types of Data</a></li>
+<li class="chapter" data-level="4.4" data-path="data.html"><a href="data.html#samples-and-sampling"><i class="fa fa-check"></i><b>4.4</b> Samples and Sampling</a></li>
+<li class="chapter" data-level="4.5" data-path="data.html"><a href="data.html#measurement"><i class="fa fa-check"></i><b>4.5</b> Measurement</a></li>
+<li class="chapter" data-level="4.6" data-path="data.html"><a href="data.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>4.6</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="4.7" data-path="data.html"><a href="data.html#broader-significanceuse-in-political-science"><i class="fa fa-check"></i><b>4.7</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="4.8" data-path="data.html"><a href="data.html#conclusion-2"><i class="fa fa-check"></i><b>4.8</b> Conclusion</a></li>
+<li class="chapter" data-level="4.9" data-path="data.html"><a href="data.html#application-questions-2"><i class="fa fa-check"></i><b>4.9</b> Application Questions</a></li>
+<li class="chapter" data-level="4.10" data-path="data.html"><a href="data.html#key-terms-2"><i class="fa fa-check"></i><b>4.10</b> Key Terms</a></li>
+<li class="chapter" data-level="4.11" data-path="data.html"><a href="data.html#answers-to-application-questions-2"><i class="fa fa-check"></i><b>4.11</b> Answers to Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>5</b> Hypothesis</a><ul>
+<li class="chapter" data-level="5.1" data-path="hypothesis.html"><a href="hypothesis.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="hypothesis.html"><a href="hypothesis.html#background"><i class="fa fa-check"></i><b>5.2</b> Background</a></li>
+<li class="chapter" data-level="5.3" data-path="hypothesis.html"><a href="hypothesis.html#samples-and-sampling-1"><i class="fa fa-check"></i><b>5.3</b> Samples and Sampling</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="hypothesis.html"><a href="hypothesis.html#magic-of-the-central-limit-theorem"><i class="fa fa-check"></i><b>5.3.1</b> Magic of the Central Limit Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="hypothesis.html"><a href="hypothesis.html#estimates-and-certainty"><i class="fa fa-check"></i><b>5.4</b> Estimates and Certainty</a></li>
+<li class="chapter" data-level="5.5" data-path="hypothesis.html"><a href="hypothesis.html#steps-of-hypothesis-testing"><i class="fa fa-check"></i><b>5.5</b> Steps of Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.6" data-path="hypothesis.html"><a href="hypothesis.html#types-of-hypothesis-testing"><i class="fa fa-check"></i><b>5.6</b> Types of Hypothesis testing</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="hypothesis.html"><a href="hypothesis.html#single-mean-hypothesis-testing"><i class="fa fa-check"></i><b>5.6.1</b> Single Mean Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.6.2" data-path="hypothesis.html"><a href="hypothesis.html#difference-of-means-hypothesis-testing"><i class="fa fa-check"></i><b>5.6.2</b> Difference of Means Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.6.3" data-path="hypothesis.html"><a href="hypothesis.html#regression-coefficients-hypothesis-testing"><i class="fa fa-check"></i><b>5.6.3</b> Regression Coefficients Hypothesis Testing</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="hypothesis.html"><a href="hypothesis.html#conclusions-you-can-draw-based-on-the-type-of-test"><i class="fa fa-check"></i><b>5.7</b> Conclusions you can draw based on the type of test</a></li>
+<li class="chapter" data-level="5.8" data-path="hypothesis.html"><a href="hypothesis.html#applications"><i class="fa fa-check"></i><b>5.8</b> Applications</a></li>
+<li class="chapter" data-level="5.9" data-path="hypothesis.html"><a href="hypothesis.html#is-it-weird"><i class="fa fa-check"></i><b>5.9</b> “Is it weird?”</a></li>
+<li class="chapter" data-level="5.10" data-path="hypothesis.html"><a href="hypothesis.html#broader-significanceuse-in-political-science-1"><i class="fa fa-check"></i><b>5.10</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="5.11" data-path="hypothesis.html"><a href="hypothesis.html#conclusion-3"><i class="fa fa-check"></i><b>5.11</b> Conclusion</a></li>
+<li class="chapter" data-level="5.12" data-path="hypothesis.html"><a href="hypothesis.html#application-questions-3"><i class="fa fa-check"></i><b>5.12</b> Application Questions</a></li>
+<li class="chapter" data-level="5.13" data-path="hypothesis.html"><a href="hypothesis.html#key-terms-3"><i class="fa fa-check"></i><b>5.13</b> Key Terms</a></li>
+<li class="chapter" data-level="5.14" data-path="hypothesis.html"><a href="hypothesis.html#answers-to-application-questions-3"><i class="fa fa-check"></i><b>5.14</b> Answers to Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="surveys.html"><a href="surveys.html"><i class="fa fa-check"></i><b>6</b> Surveys</a><ul>
+<li class="chapter" data-level="6.1" data-path="surveys.html"><a href="surveys.html#introduction-background"><i class="fa fa-check"></i><b>6.1</b> Introduction &amp; Background</a></li>
+<li class="chapter" data-level="6.2" data-path="surveys.html"><a href="surveys.html#brief-history-of-survey-research"><i class="fa fa-check"></i><b>6.2</b> Brief History of Survey Research</a></li>
+<li class="chapter" data-level="6.3" data-path="surveys.html"><a href="surveys.html#designing-a-survey-research"><i class="fa fa-check"></i><b>6.3</b> Designing a Survey Research</a></li>
+<li class="chapter" data-level="6.4" data-path="surveys.html"><a href="surveys.html#applications-1"><i class="fa fa-check"></i><b>6.4</b> Applications</a></li>
+<li class="chapter" data-level="6.5" data-path="surveys.html"><a href="surveys.html#advantages-of-method"><i class="fa fa-check"></i><b>6.5</b> Advantages of Method</a></li>
+<li class="chapter" data-level="6.6" data-path="surveys.html"><a href="surveys.html#disadvantages-of-method-surveys-easier-said-than-done"><i class="fa fa-check"></i><b>6.6</b> Disadvantages of Method: Surveys, Easier Said than Done</a></li>
+<li class="chapter" data-level="6.7" data-path="surveys.html"><a href="surveys.html#broader-significanceuse-in-political-science-2"><i class="fa fa-check"></i><b>6.7</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="6.8" data-path="surveys.html"><a href="surveys.html#conclusion-4"><i class="fa fa-check"></i><b>6.8</b> Conclusion</a></li>
+<li class="chapter" data-level="6.9" data-path="surveys.html"><a href="surveys.html#application-questions-4"><i class="fa fa-check"></i><b>6.9</b> Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="key-terms-4.html"><a href="key-terms-4.html"><i class="fa fa-check"></i><b>7</b> Key Terms</a><ul>
+<li class="chapter" data-level="7.1" data-path="key-terms-4.html"><a href="key-terms-4.html#answers-to-application-questions-4"><i class="fa fa-check"></i><b>7.1</b> Answers to Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="experiments.html"><a href="experiments.html"><i class="fa fa-check"></i><b>8</b> Experiments</a><ul>
+<li class="chapter" data-level="8.1" data-path="experiments.html"><a href="experiments.html#introduction-3"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="experiments.html"><a href="experiments.html#background-1"><i class="fa fa-check"></i><b>8.2</b> Background</a></li>
+<li class="chapter" data-level="8.3" data-path="experiments.html"><a href="experiments.html#method-setupoverview"><i class="fa fa-check"></i><b>8.3</b> Method: setup/overview</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="experiments.html"><a href="experiments.html#check-in-question-1"><i class="fa fa-check"></i><b>8.3.1</b> Check-in Question 1</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="experiments.html"><a href="experiments.html#method-detail-types-of-experiments"><i class="fa fa-check"></i><b>8.4</b> Method: detail (types of experiments)</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="experiments.html"><a href="experiments.html#surveys-vs-survey-experiments"><i class="fa fa-check"></i><b>8.4.1</b> Surveys vs Survey Experiments</a></li>
+<li class="chapter" data-level="8.4.2" data-path="experiments.html"><a href="experiments.html#laboratory-experiments"><i class="fa fa-check"></i><b>8.4.2</b> Laboratory Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="experiments.html"><a href="experiments.html#check-in-question-2"><i class="fa fa-check"></i><b>8.5</b> Check-in Question 2</a></li>
+<li class="chapter" data-level="8.6" data-path="experiments.html"><a href="experiments.html#field-experiments"><i class="fa fa-check"></i><b>8.6</b> Field Experiments</a></li>
+<li class="chapter" data-level="8.7" data-path="experiments.html"><a href="experiments.html#natural-experiments"><i class="fa fa-check"></i><b>8.7</b> Natural Experiments</a></li>
+<li class="chapter" data-level="8.8" data-path="experiments.html"><a href="experiments.html#advantages-of-method-1"><i class="fa fa-check"></i><b>8.8</b> Advantages of Method</a></li>
+<li class="chapter" data-level="8.9" data-path="experiments.html"><a href="experiments.html#disadvantages-of-method"><i class="fa fa-check"></i><b>8.9</b> Disadvantages of Method</a></li>
+<li class="chapter" data-level="8.10" data-path="experiments.html"><a href="experiments.html#broader-significanceuse-in-political-science-3"><i class="fa fa-check"></i><b>8.10</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="8.11" data-path="experiments.html"><a href="experiments.html#conclusion-5"><i class="fa fa-check"></i><b>8.11</b> Conclusion</a></li>
+<li class="chapter" data-level="8.12" data-path="experiments.html"><a href="experiments.html#application-questions-5"><i class="fa fa-check"></i><b>8.12</b> Application Questions</a><ul>
+<li class="chapter" data-level="8.12.1" data-path="experiments.html"><a href="experiments.html#application-question-1"><i class="fa fa-check"></i><b>8.12.1</b> Application Question 1</a></li>
+<li class="chapter" data-level="8.12.2" data-path="experiments.html"><a href="experiments.html#application-question-2"><i class="fa fa-check"></i><b>8.12.2</b> Application Question 2</a></li>
+</ul></li>
+<li class="chapter" data-level="8.13" data-path="experiments.html"><a href="experiments.html#key-terms-5"><i class="fa fa-check"></i><b>8.13</b> Key Terms</a></li>
+<li class="chapter" data-level="8.14" data-path="experiments.html"><a href="experiments.html#answers-to-application-questions-5"><i class="fa fa-check"></i><b>8.14</b> Answers to Application Questions</a></li>
+<li class="chapter" data-level="8.15" data-path="experiments.html"><a href="experiments.html#answer-1"><i class="fa fa-check"></i><b>8.15</b> Answer 1</a></li>
+<li class="chapter" data-level="8.16" data-path="experiments.html"><a href="experiments.html#answer-2"><i class="fa fa-check"></i><b>8.16</b> Answer 2</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="large-n.html"><a href="large-n.html"><i class="fa fa-check"></i><b>9</b> Large N</a><ul>
+<li class="chapter" data-level="9.1" data-path="large-n.html"><a href="large-n.html#introduction-4"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="large-n.html"><a href="large-n.html#method-setupoverview-1"><i class="fa fa-check"></i><b>9.2</b> Method: setup/overview</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="large-n.html"><a href="large-n.html#correlation"><i class="fa fa-check"></i><b>9.2.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="large-n.html"><a href="large-n.html#regression"><i class="fa fa-check"></i><b>9.3</b> Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="method-detail.html"><a href="method-detail.html"><i class="fa fa-check"></i><b>10</b> Method: detail</a><ul>
+<li class="chapter" data-level="10.1" data-path="method-detail.html"><a href="method-detail.html#finding-the-line-of-best-fit"><i class="fa fa-check"></i><b>10.1</b> Finding the Line of Best Fit</a></li>
+<li class="chapter" data-level="10.2" data-path="method-detail.html"><a href="method-detail.html#significance-tests"><i class="fa fa-check"></i><b>10.2</b> Significance Tests</a></li>
+<li class="chapter" data-level="10.3" data-path="method-detail.html"><a href="method-detail.html#multivariate-regression"><i class="fa fa-check"></i><b>10.3</b> Multivariate Regression</a></li>
+<li class="chapter" data-level="10.4" data-path="method-detail.html"><a href="method-detail.html#reading-a-regression-table"><i class="fa fa-check"></i><b>10.4</b> Reading a Regression Table</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="applications-2.html"><a href="applications-2.html"><i class="fa fa-check"></i><b>11</b> Applications</a><ul>
+<li class="chapter" data-level="11.1" data-path="applications-2.html"><a href="applications-2.html#correlation-1"><i class="fa fa-check"></i><b>11.1</b> Correlation</a></li>
+<li class="chapter" data-level="11.2" data-path="applications-2.html"><a href="applications-2.html#regression-1"><i class="fa fa-check"></i><b>11.2</b> Regression</a></li>
+<li class="chapter" data-level="11.3" data-path="applications-2.html"><a href="applications-2.html#logistic-regression"><i class="fa fa-check"></i><b>11.3</b> Logistic Regression</a></li>
+<li class="chapter" data-level="11.4" data-path="applications-2.html"><a href="applications-2.html#experiments-1"><i class="fa fa-check"></i><b>11.4</b> Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="advantages-of-method-2.html"><a href="advantages-of-method-2.html"><i class="fa fa-check"></i><b>12</b> Advantages of Method</a></li>
+<li class="chapter" data-level="13" data-path="limitations-of-method.html"><a href="limitations-of-method.html"><i class="fa fa-check"></i><b>13</b> Limitations of Method</a></li>
+<li class="chapter" data-level="14" data-path="broader-significance-in-political-science.html"><a href="broader-significance-in-political-science.html"><i class="fa fa-check"></i><b>14</b> Broader significance in political science</a></li>
+<li class="chapter" data-level="15" data-path="application-questions-6.html"><a href="application-questions-6.html"><i class="fa fa-check"></i><b>15</b> Application Questions</a></li>
+<li class="chapter" data-level="16" data-path="key-terms-6.html"><a href="key-terms-6.html"><i class="fa fa-check"></i><b>16</b> Key Terms</a></li>
+<li class="chapter" data-level="17" data-path="answers-to-application-questions-6.html"><a href="answers-to-application-questions-6.html"><i class="fa fa-check"></i><b>17</b> Answers to Application Questions</a><ul>
+<li class="chapter" data-level="17.1" data-path="answers-to-application-questions-6.html"><a href="answers-to-application-questions-6.html#check-in-questions"><i class="fa fa-check"></i><b>17.1</b> Check-in Questions</a></li>
+<li class="chapter" data-level="17.2" data-path="answers-to-application-questions-6.html"><a href="answers-to-application-questions-6.html#application-questions-7"><i class="fa fa-check"></i><b>17.2</b> Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="math-appendix.html"><a href="math-appendix.html"><i class="fa fa-check"></i><b>18</b> Mathematical Appendix</a><ul>
+<li class="chapter" data-level="18.1" data-path="math-appendix.html"><a href="math-appendix.html#calculating-the-regression-coefficient"><i class="fa fa-check"></i><b>18.1</b> Calculating the Regression Coefficient</a></li>
+<li class="chapter" data-level="18.2" data-path="math-appendix.html"><a href="math-appendix.html#significance-tests-1"><i class="fa fa-check"></i><b>18.2</b> Significance Tests</a></li>
+<li class="chapter" data-level="18.3" data-path="math-appendix.html"><a href="math-appendix.html#error-terms"><i class="fa fa-check"></i><b>18.3</b> Error Terms</a></li>
+<li class="chapter" data-level="18.4" data-path="math-appendix.html"><a href="math-appendix.html#logged-variables"><i class="fa fa-check"></i><b>18.4</b> Logged Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="small-n.html"><a href="small-n.html"><i class="fa fa-check"></i><b>19</b> Small N</a><ul>
+<li class="chapter" data-level="19.1" data-path="small-n.html"><a href="small-n.html#introduction-5"><i class="fa fa-check"></i><b>19.1</b> Introduction</a></li>
+<li class="chapter" data-level="19.2" data-path="small-n.html"><a href="small-n.html#background-2"><i class="fa fa-check"></i><b>19.2</b> Background</a></li>
+<li class="chapter" data-level="19.3" data-path="small-n.html"><a href="small-n.html#case-selection"><i class="fa fa-check"></i><b>19.3</b> Case Selection</a><ul>
+<li class="chapter" data-level="19.3.1" data-path="small-n.html"><a href="small-n.html#most-similar"><i class="fa fa-check"></i><b>19.3.1</b> Most Similar</a></li>
+<li class="chapter" data-level="19.3.2" data-path="small-n.html"><a href="small-n.html#most-different"><i class="fa fa-check"></i><b>19.3.2</b> Most Different</a></li>
+<li class="chapter" data-level="19.3.3" data-path="small-n.html"><a href="small-n.html#typical-case"><i class="fa fa-check"></i><b>19.3.3</b> Typical Case</a></li>
+<li class="chapter" data-level="19.3.4" data-path="small-n.html"><a href="small-n.html#deviant-case"><i class="fa fa-check"></i><b>19.3.4</b> Deviant Case</a></li>
+<li class="chapter" data-level="19.3.5" data-path="small-n.html"><a href="small-n.html#other-selection-approaches"><i class="fa fa-check"></i><b>19.3.5</b> Other Selection Approaches</a></li>
+<li class="chapter" data-level="19.3.6" data-path="small-n.html"><a href="small-n.html#check-in-question-1-1"><i class="fa fa-check"></i><b>19.3.6</b> Check-in Question 1</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="small-n.html"><a href="small-n.html#method-setupoverview-2"><i class="fa fa-check"></i><b>19.4</b> Method: setup/overview</a></li>
+<li class="chapter" data-level="19.5" data-path="small-n.html"><a href="small-n.html#method-types"><i class="fa fa-check"></i><b>19.5</b> Method: types</a><ul>
+<li class="chapter" data-level="19.5.1" data-path="small-n.html"><a href="small-n.html#interviews"><i class="fa fa-check"></i><b>19.5.1</b> Interviews</a></li>
+<li class="chapter" data-level="19.5.2" data-path="small-n.html"><a href="small-n.html#check-in-question-2-1"><i class="fa fa-check"></i><b>19.5.2</b> Check-in Question 2</a></li>
+<li class="chapter" data-level="19.5.3" data-path="small-n.html"><a href="small-n.html#participant-observation"><i class="fa fa-check"></i><b>19.5.3</b> Participant Observation</a></li>
+<li class="chapter" data-level="19.5.4" data-path="small-n.html"><a href="small-n.html#check-in-question-3"><i class="fa fa-check"></i><b>19.5.4</b> Check-in Question 3</a></li>
+<li class="chapter" data-level="19.5.5" data-path="small-n.html"><a href="small-n.html#focus-groups"><i class="fa fa-check"></i><b>19.5.5</b> Focus Groups</a></li>
+<li class="chapter" data-level="19.5.6" data-path="small-n.html"><a href="small-n.html#process-tracing"><i class="fa fa-check"></i><b>19.5.6</b> Process Tracing</a></li>
+<li class="chapter" data-level="19.5.7" data-path="small-n.html"><a href="small-n.html#ethnography"><i class="fa fa-check"></i><b>19.5.7</b> Ethnography</a></li>
+<li class="chapter" data-level="19.5.8" data-path="small-n.html"><a href="small-n.html#check-in-question-4"><i class="fa fa-check"></i><b>19.5.8</b> Check-in Question 4</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="small-n.html"><a href="small-n.html#applications-3"><i class="fa fa-check"></i><b>19.6</b> Applications</a></li>
+<li class="chapter" data-level="19.7" data-path="small-n.html"><a href="small-n.html#advantages-of-method-3"><i class="fa fa-check"></i><b>19.7</b> Advantages of Method</a></li>
+<li class="chapter" data-level="19.8" data-path="small-n.html"><a href="small-n.html#disadvantages-of-method-1"><i class="fa fa-check"></i><b>19.8</b> Disadvantages of Method</a></li>
+<li class="chapter" data-level="19.9" data-path="small-n.html"><a href="small-n.html#broader-significanceuse-in-political-science-4"><i class="fa fa-check"></i><b>19.9</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="19.10" data-path="small-n.html"><a href="small-n.html#conclusion-6"><i class="fa fa-check"></i><b>19.10</b> Conclusion</a></li>
+<li class="chapter" data-level="19.11" data-path="small-n.html"><a href="small-n.html#application-questions-8"><i class="fa fa-check"></i><b>19.11</b> Application Questions</a></li>
+<li class="chapter" data-level="19.12" data-path="small-n.html"><a href="small-n.html#application-question-1-1"><i class="fa fa-check"></i><b>19.12</b> Application Question 1</a></li>
+<li class="chapter" data-level="19.13" data-path="small-n.html"><a href="small-n.html#application-question-2-1"><i class="fa fa-check"></i><b>19.13</b> Application Question 2</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="key-terms-7.html"><a href="key-terms-7.html"><i class="fa fa-check"></i><b>20</b> Key Terms</a></li>
+<li class="chapter" data-level="21" data-path="answers-to-application-questions-7.html"><a href="answers-to-application-questions-7.html"><i class="fa fa-check"></i><b>21</b> Answers to Application Questions</a><ul>
+<li class="chapter" data-level="21.1" data-path="answers-to-application-questions-7.html"><a href="answers-to-application-questions-7.html#answer-1-1"><i class="fa fa-check"></i><b>21.1</b> Answer 1</a></li>
+<li class="chapter" data-level="21.2" data-path="answers-to-application-questions-7.html"><a href="answers-to-application-questions-7.html#answer-2-1"><i class="fa fa-check"></i><b>21.2</b> Answer 2</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="manual-bibliography-delete-after-checking.html"><a href="manual-bibliography-delete-after-checking.html"><i class="fa fa-check"></i><b>22</b> Manual Bibliography - delete after checking</a></li>
+<li class="chapter" data-level="23" data-path="game-theory.html"><a href="game-theory.html"><i class="fa fa-check"></i><b>23</b> Game Theory</a><ul>
+<li class="chapter" data-level="23.1" data-path="game-theory.html"><a href="game-theory.html#introduction-6"><i class="fa fa-check"></i><b>23.1</b> Introduction</a></li>
+<li class="chapter" data-level="23.2" data-path="game-theory.html"><a href="game-theory.html#background-3"><i class="fa fa-check"></i><b>23.2</b> Background</a></li>
+<li class="chapter" data-level="23.3" data-path="game-theory.html"><a href="game-theory.html#method-setupoverview-3"><i class="fa fa-check"></i><b>23.3</b> Method: setup/overview</a></li>
+<li class="chapter" data-level="23.4" data-path="game-theory.html"><a href="game-theory.html#method-detail-1"><i class="fa fa-check"></i><b>23.4</b> Method: detail</a></li>
+<li class="chapter" data-level="23.5" data-path="game-theory.html"><a href="game-theory.html#applications-4"><i class="fa fa-check"></i><b>23.5</b> Applications</a></li>
+<li class="chapter" data-level="23.6" data-path="game-theory.html"><a href="game-theory.html#advantages-of-method-4"><i class="fa fa-check"></i><b>23.6</b> Advantages of Method</a></li>
+<li class="chapter" data-level="23.7" data-path="game-theory.html"><a href="game-theory.html#disadvantages-of-method-2"><i class="fa fa-check"></i><b>23.7</b> Disadvantages of Method</a></li>
+<li class="chapter" data-level="23.8" data-path="game-theory.html"><a href="game-theory.html#broader-significanceuse-in-political-science-5"><i class="fa fa-check"></i><b>23.8</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="23.9" data-path="game-theory.html"><a href="game-theory.html#conclusion-7"><i class="fa fa-check"></i><b>23.9</b> Conclusion</a></li>
+<li class="chapter" data-level="23.10" data-path="game-theory.html"><a href="game-theory.html#application-questions-9"><i class="fa fa-check"></i><b>23.10</b> Application Questions</a></li>
+<li class="chapter" data-level="23.11" data-path="game-theory.html"><a href="game-theory.html#key-terms-8"><i class="fa fa-check"></i><b>23.11</b> Key Terms</a></li>
+<li class="chapter" data-level="23.12" data-path="game-theory.html"><a href="game-theory.html#answers-to-application-questions-8"><i class="fa fa-check"></i><b>23.12</b> Answers to Application Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>24</b> Machine Learning</a><ul>
+<li class="chapter" data-level="24.1" data-path="machine-learning.html"><a href="machine-learning.html#introduction-7"><i class="fa fa-check"></i><b>24.1</b> Introduction</a></li>
+<li class="chapter" data-level="24.2" data-path="machine-learning.html"><a href="machine-learning.html#background-4"><i class="fa fa-check"></i><b>24.2</b> Background</a><ul>
+<li class="chapter" data-level="24.2.1" data-path="machine-learning.html"><a href="machine-learning.html#a-brief-note-on-notation"><i class="fa fa-check"></i><b>24.2.1</b> A Brief Note on Notation</a></li>
+<li class="chapter" data-level="24.2.2" data-path="machine-learning.html"><a href="machine-learning.html#the-structure-of-prediction-error"><i class="fa fa-check"></i><b>24.2.2</b> The Structure of Prediction Error</a></li>
+<li class="chapter" data-level="24.2.3" data-path="machine-learning.html"><a href="machine-learning.html#bias-variance-trade-offs"><i class="fa fa-check"></i><b>24.2.3</b> Bias-Variance Trade-offs</a></li>
+<li class="chapter" data-level="24.2.4" data-path="machine-learning.html"><a href="machine-learning.html#parametric-v.-non-parametric-methods"><i class="fa fa-check"></i><b>24.2.4</b> Parametric v. Non-parametric Methods</a></li>
+<li class="chapter" data-level="24.2.5" data-path="machine-learning.html"><a href="machine-learning.html#supervised-v.-unsupervised-learning"><i class="fa fa-check"></i><b>24.2.5</b> Supervised v. Unsupervised Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="24.3" data-path="machine-learning.html"><a href="machine-learning.html#method-setupoverview-4"><i class="fa fa-check"></i><b>24.3</b> Method: setup/overview</a><ul>
+<li class="chapter" data-level="24.3.1" data-path="machine-learning.html"><a href="machine-learning.html#what-is-model-selection"><i class="fa fa-check"></i><b>24.3.1</b> What is Model Selection?</a></li>
+<li class="chapter" data-level="24.3.2" data-path="machine-learning.html"><a href="machine-learning.html#why-k-fold-cross-validation"><i class="fa fa-check"></i><b>24.3.2</b> Why K-Fold Cross-Validation?</a></li>
+</ul></li>
+<li class="chapter" data-level="24.4" data-path="machine-learning.html"><a href="machine-learning.html#method-detail-2"><i class="fa fa-check"></i><b>24.4</b> Method: detail</a><ul>
+<li class="chapter" data-level="24.4.1" data-path="machine-learning.html"><a href="machine-learning.html#model-class-tree-based-methods"><i class="fa fa-check"></i><b>24.4.1</b> Model Class: Tree-based Methods</a></li>
+<li class="chapter" data-level="24.4.2" data-path="machine-learning.html"><a href="machine-learning.html#model-class-support-vector-machines"><i class="fa fa-check"></i><b>24.4.2</b> Model Class: Support Vector Machines</a></li>
+</ul></li>
+<li class="chapter" data-level="24.5" data-path="machine-learning.html"><a href="machine-learning.html#applications-5"><i class="fa fa-check"></i><b>24.5</b> Applications</a><ul>
+<li class="chapter" data-level="24.5.1" data-path="machine-learning.html"><a href="machine-learning.html#example-1-u.s.-politics"><i class="fa fa-check"></i><b>24.5.1</b> Example 1: U.S. Politics</a></li>
+<li class="chapter" data-level="24.5.2" data-path="machine-learning.html"><a href="machine-learning.html#example-2-comparative-politics"><i class="fa fa-check"></i><b>24.5.2</b> Example 2: Comparative Politics</a></li>
+<li class="chapter" data-level="24.5.3" data-path="machine-learning.html"><a href="machine-learning.html#example-3-political-theory"><i class="fa fa-check"></i><b>24.5.3</b> Example 3: Political Theory</a></li>
+<li class="chapter" data-level="24.5.4" data-path="machine-learning.html"><a href="machine-learning.html#example-4-comparative-politics"><i class="fa fa-check"></i><b>24.5.4</b> Example 4: Comparative Politics</a></li>
+<li class="chapter" data-level="24.5.5" data-path="machine-learning.html"><a href="machine-learning.html#example-5-peace-and-conflict"><i class="fa fa-check"></i><b>24.5.5</b> Example 5: Peace and Conflict</a></li>
+<li class="chapter" data-level="24.5.6" data-path="machine-learning.html"><a href="machine-learning.html#example-6-international-relations"><i class="fa fa-check"></i><b>24.5.6</b> Example 6: International Relations</a></li>
+</ul></li>
+<li class="chapter" data-level="24.6" data-path="machine-learning.html"><a href="machine-learning.html#advantages-of-method-5"><i class="fa fa-check"></i><b>24.6</b> Advantages of Method</a></li>
+<li class="chapter" data-level="24.7" data-path="machine-learning.html"><a href="machine-learning.html#disadvantages-of-method-3"><i class="fa fa-check"></i><b>24.7</b> Disadvantages of Method</a></li>
+<li class="chapter" data-level="24.8" data-path="machine-learning.html"><a href="machine-learning.html#broader-significanceuse-in-political-science-6"><i class="fa fa-check"></i><b>24.8</b> Broader significance/use in political science</a></li>
+<li class="chapter" data-level="24.9" data-path="machine-learning.html"><a href="machine-learning.html#conclusion-8"><i class="fa fa-check"></i><b>24.9</b> Conclusion</a></li>
+<li class="chapter" data-level="24.10" data-path="machine-learning.html"><a href="machine-learning.html#application-questions-10"><i class="fa fa-check"></i><b>24.10</b> Application Questions</a></li>
+<li class="chapter" data-level="24.11" data-path="machine-learning.html"><a href="machine-learning.html#key-terms-9"><i class="fa fa-check"></i><b>24.11</b> Key Terms</a></li>
+<li class="chapter" data-level="24.12" data-path="machine-learning.html"><a href="machine-learning.html#answers-to-application-questions-9"><i class="fa fa-check"></i><b>24.12</b> Answers to Application Questions</a></li>
+<li class="chapter" data-level="24.13" data-path="machine-learning.html"><a href="machine-learning.html#manual-bibliography---for-checking"><i class="fa fa-check"></i><b>24.13</b> Manual bibliography - for checking</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>25</b> Conclusions</a></li>
+<li class="divider"></li>
+<li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Published by Northwestern University Libraries</a> using <a href="https://github.com/rstudio/bookdown" target="blank">Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Empirical Methods in Political Science: An Introduction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="machine-learning" class="section level1">
+<h1><span class="header-section-number">24</span> Machine Learning</h1>
+<p><strong>By John J. Lee</strong></p>
+<div id="introduction-7" class="section level2">
+<h2><span class="header-section-number">24.1</span> Introduction</h2>
+<p>These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single <span class="math inline">\(&quot;\)</span>correct<span class="math inline">\(&quot;\)</span> definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng <span class="citation">(n.d.)</span>, in his highly popular Stanford course on machine learning (available through Coursera).</p>
+<div class="figure">
+<img src="images/ml/jl-figure1.png" alt="Traditional Programming v. Machine Learning" id="fig:jl-figure1" width="458" height="230" />
+<p class="caption">Traditional Programming v. Machine Learning</p>
+</div>
+<p>The first definition is by Arthur Samuel, a former researcher at IBM and early pioneer in machine learning. In his view, machine learning is a <em><span class="math inline">\(&quot;\)</span><span class="math display">\[f\]</span>ield of study that gives computers the ability to learn without being explicitly programmed.<span class="math inline">\(&quot;\)</span></em> This definition is useful because it alludes to a central distinction between traditional programming and machine learning: i.e., in traditional programming, a computer takes in the data and the rules and generates the output; in machine learning, a computer takes the data and the output and generates the rules that describe the relationship between the input and the output. Figure 1 provides an illustration of this idea.</p>
+<p>The second definition is more detailed and precise. According to Tom Mitchell, a computer scientist at Carnegie Mellon and the author of one of the first textbooks on machine learning: <em><span class="math inline">\(&quot;\)</span>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.<span class="math inline">\(&quot;\)</span></em> <span class="citation">(Mitchell <a href="#ref-mitchell1997a">1997</a>)</span>. From the second definition, we can get a better sense of what machine learning generally entails: i.e., a computer gradually becomes better at performing a specific task (<span class="math inline">\(&quot;\)</span>what<span class="math inline">\(&quot;\)</span>) through experience (<span class="math inline">\(&quot;\)</span>how<span class="math inline">\(&quot;\)</span>); moreover, the computer’s performance is measured using some metric, which allows us to test whether performance has indeed improved over time. In this chapter, I will provide an overview of how machine learning methods work in practice and review some examples of how political scientists have used these methods in their research. Before proceeding, it is necessary to first explain several fundamental concepts in machine learning <span class="citation">(for a more detailed treatment of this subject, see Hastie, Tibshirani, and Friedman <a href="#ref-hastie2017a">2017</a>; James et al. <a href="#ref-james2013a">2013</a>)</span></p>
+</div>
+<div id="background-4" class="section level2">
+<h2><span class="header-section-number">24.2</span> Background</h2>
+<div id="a-brief-note-on-notation" class="section level3">
+<h3><span class="header-section-number">24.2.1</span> A Brief Note on Notation</h3>
+<p>Capital letters refer to variables: e.g., <span class="math inline">\(Y\)</span> refers to the outcome variable, such as vote choice. Lower-case letters refer to the observed value of the variable for a specific observation (or subject), denoted by the first subscript: e.g., <span class="math inline">\(y_{1}\)</span> refers to the value of the outcome variable for the first observation. The subscript of a capital <span class="math inline">\(X\)</span> refers to the number of the predictor or explanatory variable: e.g., <span class="math inline">\(X_{1}\)</span> refers to the first predictor, <span class="math inline">\(X_{2}\)</span> refers to the second predictor, and so on. In addition, <span class="math inline">\(x_{ij}\)</span> refers to the observed value of the <span class="math inline">\(j\)</span>th predictor for the <span class="math inline">\(i\)</span>th observation. The <span class="math inline">\(\string^\)</span> symbol indicates that we are referring to the predicted version or value of an object: e.g., <span class="math inline">\(\hat{f}(.)\)</span> refers to an estimated function, <span class="math inline">\(\hat{Y}\)</span> refers to the predicted value of the outcome variable.</p>
+</div>
+<div id="the-structure-of-prediction-error" class="section level3">
+<h3><span class="header-section-number">24.2.2</span> The Structure of Prediction Error</h3>
+<p>Machine learning practitioners often talk about the best ways to <span class="math inline">\(&quot;\)</span>minimize the mean squared error<span class="math inline">\(&quot;\)</span> or <span class="math inline">\(&quot;\)</span>optimize the bias-variance tradeoff.<span class="math inline">\(&quot;\)</span> To understand how machine learning works, it is very important to understand the structure of prediction error. To illustrate, we can start with a simple example of a regression type problem with a quantitative outcome. Let <span class="math inline">\(Y\)</span> be a 0-100 point feeling thermometer that measures attitudes toward the U.S. president, with 0 being very unfavorable and 100 being very favorable. Assume we are predicting <span class="math inline">\(Y\)</span> using two predictors: ideology (<span class="math inline">\(X_{1}\)</span>) and income (<span class="math inline">\(X_{2}\)</span>). Formally, we can represent the relationship between <span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, and <span class="math inline">\(Y\)</span> in the following way:</p>
+<p><span class="math display">\[Y=f \left( X_{1}, X_{2} \right) + \epsilon\]</span></p>
+<p>In the equation above, <span class="math inline">\({f}(.)\)</span> is also known as the <strong>target function</strong>, which represents the true systematic (i.e., non-random) part of the relationship between the two predictors (<span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>) and the outcome <span class="math inline">\(Y\)</span>. On the other hand, <span class="math inline">\(\epsilon\)</span> is the random error term, which is assumed to be independent of the predictors and have a mean of zero. In reality, of course, we do not know <span class="math inline">\({f}(.)\)</span>, so we have to estimate it using the data. Estimating the true function means that we are estimating the model’s parameters (e.g., the coefficients in a linear regression) or structure (e.g., the shape of a regression tree). For example, suppose we have a dataset (e.g., <span class="math inline">\(n\)</span> observations) with the actual value of <span class="math inline">\(Y\)</span>, <span class="math inline">\(X_{1}\)</span>, and <span class="math inline">\(X_{2}\)</span> for each observation: <span class="math inline">\(\{(y_{1},x_{11},x_{12}),...,(y_{n},x_{n1},x_{n2})\}\)</span>. Next, we will split the dataset into at least two parts, so that we can estimate <span class="math inline">\({f}(.)\)</span> using one subset of the data (typically called the <strong>training set</strong>), and then evaluate the prediction error using the second subset of the data (typically called the <strong>test set</strong>).</p>
+<p>Many machine learning algorithms are designed to estimate (or <span class="math inline">\(&quot;\)</span>fit<span class="math inline">\(&quot;\)</span>) a model that minimizes the <strong>expected</strong> <strong>prediction error (EPE)</strong>, defined as the long-run <em>average</em> difference between the predicted and <span class="math inline">\(&quot;\)</span>true<span class="math inline">\(&quot;\)</span> (i.e., observed) values of the outcome variable. That is, the goal is to identify <span class="math inline">\({f}(.)\)</span> such that <span class="math inline">\(f(X_{1},X_{2})\)</span> is on average as close to <span class="math inline">\(Y\)</span> as possible. How can we measure EPE in practice? When the outcome is a quantitative variable, the algorithms are often designed to minimize the mean squared error (MSE): i.e., the average of the squared difference between <span class="math inline">\(\hat{Y}\)</span> and <span class="math inline">\({Y}\)</span>. The intuition here is that when the absolute difference between the predicted and observed values of the outcome variable is generally small, MSE will also be small.</p>
+<p><span class="math display">\[MSE=\frac{1}{n} \sum _{i=1}^{n} \left( y_{i}-\hat{f} \left( x_{i1},x_{i2} \right)  \right) ^{2}\]</span></p>
+<p>Assuming we have split the original dataset into the training set and test set, we can compute two different types of MSE: <strong>training MSE</strong> and <strong>test MSE</strong>. In both cases, we first fit <span class="math inline">\(\hat{f}(.)\)</span> using the training set. The difference, which is fundamental to machine learning, is the following: the training MSE (or training error, more generally) is then computed using the data from the training set, which contains the same data used to fit <span class="math inline">\(\hat{f}(.)\)</span>. In contrast, the test MSE (or test error) is computed using the test set, which was not used to fit <span class="math inline">\(\hat{f}(.)\)</span>.</p>
+<p>Recall that we randomly assigned the observations in the original full dataset to the training and test sets. Thus, the two datasets are comparable: i.e., the true relationship between the set of predictors (<span class="math inline">\(X_{1}, X_{2}\)</span>) and <span class="math inline">\(Y\)</span> should be the same in both datasets. However, the two datasets are also not identical; these minor, non-systematic differences are due to random noise, which are represented by the <span class="math inline">\(\epsilon\)</span> in Eq. 1. Given this context, it should be clear why we want to minimize test MSE instead of training MSE.</p>
+<p>If we attempt to minimize training MSE, the algorithms are more likely to estimate highly flexible models that try to touch every data point in the feature space of the training dataset. This might initially sound nice, but it means that the model is <strong>overfitting</strong> to the training set: i.e., the model is attempting to capture both the real patterns due to the true <span class="math inline">\({f}(.)\)</span>, as well as the observed but spurious deviations from <span class="math inline">\({f}(.)\)</span> that are due to the random noise (<span class="math inline">\(\epsilon\)</span>). The problem here is that this kind of highly flexible model tends to generate a lower training MSE, but performs poorly on the test set—which has the same underlying patterns due to <span class="math inline">\({f}(.)\)</span>, but different observed deviations from <span class="math inline">\({f}(.)\)</span> because of <span class="math inline">\(\epsilon\)</span>. Figure 2 provides an illustration of this idea. In this example, the true relationship between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(Y\)</span> is linear (see the graph in the middle); we know this for certain because these data were simulated.</p>
+<div class="figure">
+<img src="images/ml/jl-figure2.png" alt="Modeling True Relationship v. Overfitting" id="fig:jl-figure2" width="505" height="223" />
+<p class="caption">Modeling True Relationship v. Overfitting<span label="fig:jl-figure2"></span></p>
+</div>
+<p>Thus, it is a better idea to try and minimize test error. In order to generate a smaller test error, the algorithms need to estimate a model that is generalizable. That is, they need to estimate models that do a better job of capturing the true relationship between the set of predictors (<span class="math inline">\(X_{1},X_{2}\)</span>) and the <span class="math inline">\(Y\)</span>, while ignoring the random observed deviations from the <span class="math inline">\({f}(.)\)</span> due to <span class="math inline">\(\epsilon\)</span> (per Equation 1). Machine learning practitioners often refer to this approach as <span class="math inline">\(&quot;\)</span>focusing on the signal and ignoring the noise.<span class="math inline">\(&quot;\)</span></p>
+<p><span class="underline">Check-in Q. <span class="math inline">\(\#1\)</span>: <span class="math inline">\(&quot;\)</span>What is overfitting and how can we reduce this problem?<span class="math inline">\(&quot;\)</span></span></p>
+<p>So how do we reduce the test error? The expected difference between <span class="math inline">\(\hat{f}(X_{1},X_{2})\)</span> and <span class="math inline">\(Y\)</span> is due to two types of error (e.g., see James et al. 2013): (1) <strong>reducible error</strong>, (2) <strong>irreducible error</strong>. The first type of error is caused by a suboptimal estimate of the true function: i.e., the gap between <span class="math inline">\(\hat{f}(.)\)</span> and <span class="math inline">\(f(.)\)</span>. As its name implies, the reducible error decreases as <span class="math inline">\(\hat{f}(.)\)</span> approaches <span class="math inline">\(f(.)\)</span>. On the other hand, irreducible error is due to <span class="math inline">\(\epsilon\)</span>, and therefore it cannot be reduced by improving the quality of <span class="math inline">\(\hat{f}(.)\)</span>. For example, let us assume that <span class="math inline">\(\hat{f}(.) = f(.)\)</span>, and therefore <span class="math inline">\(\hat{Y} = \hat{f}( X_{1}+X_{2}) = f(X_{1}+X_{2})\)</span>. Even in this case, <span class="math inline">\(\hat{Y}\)</span> does not necessarily equal <span class="math inline">\(Y\)</span>, because <span class="math inline">\(Y = f(X_{1}, X_{2}) + \epsilon\)</span>. That is, even having a perfect estimate of <span class="math inline">\(f(.)\)</span> does not make the random error term go away.</p>
+<p>Can we reduce <span class="math inline">\(\epsilon\)</span>? The random error term represents omitted variables as well as truly random noise. If there are variables that are both useful predictors of <span class="math inline">\(Y\)</span> and also largely independent of the existing predictors (<span class="math inline">\(X_{1},X_{2}\)</span>), then by adding them into the model we can reduce <span class="math inline">\(\epsilon\)</span>. On the other hand, some of the <span class="math inline">\(\epsilon\)</span> is ultimately due to random noise, and this component of <span class="math inline">\(\epsilon\)</span> cannot be eliminated: e.g., perhaps some of the subjects felt particularly well/poorly the day they were surveyed, which affected how they responded to the survey questions.</p>
+<p>To formally decompose the expected test error into its reducible and irreducible components, we can use the <strong>expected value</strong> (or long-run average) of the squared difference between <span class="math inline">\(\hat{Y}\)</span> and <span class="math inline">\(Y\)</span>.<a href="#fn21" class="footnoteRef" id="fnref21"><sup>21</sup></a> The following proof requires knowledge of statistical theory (Larsen and Marx 2017; Rice 2007) and some basic algebra. To simplify the notation, let <span class="math inline">\(X=X_{1}+X_{2}\)</span>.</p>
+<p><span class="math display">\[E \left[  \left( Y-\hat{Y} \right) ^{2} \right] =E \left[  \left( f \left( X \right) + \epsilon -\hat{f} \left( X \right)  \right) ^{2} \right]\]</span></p>
+<p><span class="math display">\[=E \left[  \left(  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) + \epsilon  \right) ^{2} \right]\]</span></p>
+<p><span class="math display">\[=E \left[  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) ^{2}+2 \epsilon  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) + \epsilon ^{2} \right]\]</span></p>
+<p><span class="math display">\[=E \left[  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) ^{2} \right] +E \left[ 2 \epsilon  \left( f \left( X \right) -\hat{f} \left( X \right)  \right)  \right] +E \left(  \epsilon ^{2} \right)\]</span></p>
+<p><span class="math display">\[=E \left[  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) ^{2} \right] +Var \left(  \epsilon  \right)\]</span></p>
+<p>The first term, or the expected squared difference between <span class="math inline">\(\hat{f}(X)\)</span> and <span class="math inline">\({f}(X)\)</span>, represents the reducible error. The second term, <span class="math inline">\(Var(\epsilon)\)</span>, represents the irreducible error. Although a full proof is beyond the scope of this chapter, note that we can further decompose the reducible error into squared <strong>bias</strong> and <strong>variance</strong>.</p>
+<p><span class="math display">\[E \left[  \left( f \left( X \right) -\hat{f} \left( X \right)  \right) ^{2} \right] = \left[ E \left( \hat{f} \left( X \right)  \right) -f \left( X \right)  \right] ^{2}+E \left[  \left( \hat{f} \left( X \right) -E \left( \hat{f} \left( X \right)  \right)  \right) ^{2} \right]\]</span></p>
+<p><span class="math display">\[= \left[ Bias \left( \hat{f} \left( X \right)  \right)  \right] ^{2}+Var \left( \hat{f} \left( X \right)  \right)\]</span></p>
+<p>In sum, the expected test error (or expected prediction error, EPE) is a function of three specific quantities: the bias of <span class="math inline">\(\hat{f}(X)\)</span>, which indicates the gap between <span class="math inline">\(\hat{f}(.)\)</span> and <span class="math inline">\(f(.)\)</span>; the variance of <span class="math inline">\(\hat{f}(X)\)</span>, which indicates how much <span class="math inline">\(\hat{f}(.)\)</span> fluctuates depending on the training data; and <span class="math inline">\(Var(\epsilon)\)</span>, which is a measure of the non-systematic random noise in the data.</p>
+<p><span class="math display">\[EPE=E \left[  \left( Y-\hat{Y} \right) ^{2} \right] = \left[ Bias \left( \hat{f} \left( X \right)  \right)  \right] ^{2}+Var \left( \hat{f} \left( X \right)  \right) +Var \left(  \epsilon  \right)\]</span></p>
+<p>The key insight is that the reducible error is itself a function of the squared bias and variance of <span class="math inline">\(\hat{f}(.)\)</span>, or the estimated model. Thus, to minimize the reducible error (and hence the total EPE), we want to minimize the bias and the variance.</p>
+<p><span class="underline">Check-in Q. $#$2: <span class="math inline">\(&quot;\)</span>What is the expected prediction error (EPE), and why does it matter?<span class="math inline">\(&quot;\)</span></span></p>
+</div>
+<div id="bias-variance-trade-offs" class="section level3">
+<h3><span class="header-section-number">24.2.3</span> Bias-Variance Trade-offs</h3>
+<p>In machine learning, <strong>bias</strong> is a measure of the size of the gap between <span class="math inline">\(\hat{f}(.)\)</span> and <span class="math inline">\({f}(.)\)</span>.<a href="#fn22" class="footnoteRef" id="fnref22"><sup>22</sup></a> The bias is smaller when the model does a better job of representing the true relationship between the set of predictors <span class="math inline">\((X_{1},X_{2},...,X_{p})\)</span> and <span class="math inline">\(Y\)</span>. For example, let’s assume that the true relationship between <span class="math inline">\(X_{2}\)</span> and <span class="math inline">\(Y\)</span> is described using an inverted U-shaped curve. If the model we select imposes a linear functional form, then the bias will be larger than if the model allowed nonlinearity. Thus, to reduce bias, we often want to use a more flexible model.</p>
+<p>However, it is possible for the model to be too flexible. <strong>Variance</strong> is a measure of the stability or consistency of the estimated model across training sets. If small changes to the training set (e.g., dropping a few observations) causes large changes in <span class="math inline">\(\hat{f}(.)\)</span>, then the variance is high. A highly flexible model tends to reduce bias but also increase variance (hence the idea of a <span class="math inline">\(&quot;\)</span>trade-off<span class="math inline">\(&quot;\)</span>). Thus, the goal is to fit a model that is flexible enough to capture the true relationship between the set of predictors <span class="math inline">\((X_{1},X_{2},...,X_{p})\)</span> and <span class="math inline">\(Y\)</span>, but not so flexible that it is also fitting to the observed deviations from <span class="math inline">\({f}(.)\)</span> in the training set due to <span class="math inline">\(\epsilon\)</span>.</p>
+<div class="figure">
+<img src="images/ml/jl-figure3.png" alt="Bias-Variance Trade-offs" id="fig:jl-figure3" width="498" height="220" />
+<p class="caption">Bias-Variance Trade-offs<span label="fig:jl-figure3"></span></p>
+</div>
+<p>Figure 3 provides an illustration of this idea. The first model is not flexible enough, leading to high bias (also known as <strong>underfitting</strong>); on the other hand, the third model is too flexible, which leads to higher variance across slightly different training sets (<strong>overfitting</strong>). The second model imposes the ideal amount of flexibility, which optimizes the bias-variance trade-off and yields the smallest test MSE of the three alternatives.</p>
+<p><span class="underline">Check-in Q. $#$3: <span class="math inline">\(&quot;\)</span>Explain why reducing bias can often entail an increase in variance.<span class="math inline">\(&quot;\)</span></span></p>
+</div>
+<div id="parametric-v.-non-parametric-methods" class="section level3">
+<h3><span class="header-section-number">24.2.4</span> Parametric v. Non-parametric Methods</h3>
+<p>Machine learning algorithms that make explicit assumptions about the functional form of the relationship between the set of predictors and <span class="math inline">\(Y\)</span> are known as <strong>parametric methods</strong>. A well-known example is the ordinary least squares (OLS) regression. Given two predictors, <span class="math inline">\(f \left( X_{1}, X_{2} \right) = \beta _{0}+ \beta _{1}X_{1}+ \beta _{2}X_{2}\)</span>. Thus, the regression equation in this case can be written as follows:</p>
+<p><span class="math display">\[Y= \beta _{0}+ \beta _{1}X_{1}+  \beta _{2}X_{2}+ \epsilon\]</span></p>
+<p>Parametric methods offer several key advantages. First, they simplify the task of estimating <span class="math inline">\(f(.)\)</span> by making an assumption about the functional form or shape of <span class="math inline">\(f(.)\)</span>. In the case of an OLS regression, the algorithm assumes that <span class="math inline">\(f(.)\)</span> is linear with respect to the parameters (i.e., the coefficients and the error term), although not necessarily with respect to the values of the predictors. Thus, the only task is to estimate coefficients: <span class="math inline">\(\beta _{0}, \beta _{1}, ..., \beta _{p}\)</span>. Second, because of the functional form assumption, the <span class="math inline">\(\hat{f}(.)\)</span> tends to be more stable across comparable training sets (i.e., lower variance); put differently, the estimated model is more robust to minor fluctuations due to <span class="math inline">\(\epsilon\)</span>. Another advantage is that parametric methods also tend to score high on <strong>interpretability</strong>: e.g., we can easily interpret <span class="math inline">\(\beta _{1}\)</span> as indicating that a one-unit change in <span class="math inline">\(X_{1}\)</span> is associated with a change of <span class="math inline">\(\beta _{1}\)</span> in <span class="math inline">\(Y\)</span>. Other examples of parametric methods include logistic regression, penalized regression methods (e.g., lasso, ridge), and linear discriminant analysis. The main disadvantage of parametric methods is the risk of imposing a functional form that is very different from the true <span class="math inline">\(f(.)\)</span>, which can result in higher bias (or more prediction error). We can mitigate this risk by adjusting the parametric methods so that they are more flexible (e.g., by using higher-order terms in an OLS regression), but this may come at the cost of higher variance.</p>
+<p>Non-parametric methods do not assume that the true relationship between a set of predictors and <span class="math inline">\(Y\)</span> follows a specific functional form; instead, they inductively attempt to estimate <span class="math inline">\(f(.)\)</span> such that it closely follows the training observations in the feature space. Well-known examples of non-parametric methods include tree-based methods (e.g., random forests, boosted trees), support vector machines (SVM), and K-nearest neighbor (KNN). The main advantage of non-parametric methods is that by design, they are very flexible; this means that they can be particularly useful when the relationship between the predictors and the outcome is highly complex. In such cases, non-parametric methods can outperform parametric methods by achieving lower bias, and ultimately, lower test error.</p>
+<p>However, non-parametric methods also have a number of disadvantages. Since they do not make assumptions about the functional form, they often require much larger training sets in order to estimate <span class="math inline">\(f(.)\)</span>. In addition, because they are highly flexible, non-parametric methods may also be subject to higher variance across training sets due to overfitting. This can be mitigated by properly tuning the models using <strong>cross-validation (CV)</strong>, a model selection procedure discussed later in this chapter. Finally, it is also often more difficult to interpret the nature of the relationship between a specific predictor (e.g., <span class="math inline">\(X_{1}\)</span>) and the outcome. This is why some especially complex non-parametric methods such as artificial neural networks (ANN) are often called <span class="math inline">\(&quot;\)</span>black box algorithms,<span class="math inline">\(&quot;\)</span> since it is not clear exactly how the <span class="math inline">\(f(.)\)</span> is being estimated.</p>
+<p>Given this discussion, which methods are preferred? It depends on the size of the available data, the complexity of the relationships among the variables, and the goals of the method. Machine learning practitioners are often interested in <strong>prediction</strong> or <strong>(causal) inference</strong>. If the goal is prediction, then we are less concerned about understanding the specific nature of <span class="math inline">\(f(.)\)</span>. Instead, we are satisfied as long as we can estimate a model such that <span class="math inline">\(\hat{f}(X) \approx Y\)</span>. In this case, we should choose the parametric or non-parametric method that generates the lowest expected test error. On the other hand, if we are interested in understanding the specific nature of the relationship between a given predictor (or group of predictors) and the outcome, it may make more sense to select a parametric method, which produces results (e.g., regression coefficients) that are easier to interpret. While social scientists are often more interested in causal inference than prediction alone, they have used both parametric and non-parametric methods in their research. Several examples from political science will be discussed later in this chapter.</p>
+</div>
+<div id="supervised-v.-unsupervised-learning" class="section level3">
+<h3><span class="header-section-number">24.2.5</span> Supervised v. Unsupervised Learning</h3>
+<p>We can also classify machine learning methods according to whether they predict a specific outcome. In <strong>supervised learning</strong>, there is a clearly defined <span class="math inline">\(&quot;\)</span>correct answer<span class="math inline">\(&quot;\)</span> – and the purpose of the machine learning algorithm is to correctly predict that answer. For instance, let us assume we want to predict whether a U.S. citizen will vote in the next presidential election. This is an example of a supervised learning problem; since the person either will or will not vote, there is clearly a <span class="math inline">\(&quot;\)</span>correct answer.<span class="math inline">\(&quot;\)</span> There are two types of supervised learning, which are distinguished by the type of outcome predicted: (1) <strong>regression</strong>, (2) <strong>classification</strong>. In regression, the goal is to predict a continuous or quantitative outcome: e.g., test scores, stock prices, inflation rates, number of children, and so on.<a href="#fn23" class="footnoteRef" id="fnref23"><sup>23</sup></a> In classification, the goal is to predict a categorical or discrete outcome: e.g., religion, political party membership, vote choice, occupation, whether a person holds a four-year degree.<a href="#fn24" class="footnoteRef" id="fnref24"><sup>24</sup></a></p>
+<p>In <strong>unsupervised learning</strong>, the purpose of the machine learning algorithm is to examine the underlying structure of the data and identify <span class="math inline">\(&quot;\)</span>hidden<span class="math inline">\(&quot;\)</span> patterns. It is not attempting to correctly predict an outcome. One well-known example of an unsupervised learning method is clustering: clustering algorithms (e.g., hierarchical, k-means) identify latent groups of observations by examining the relationships among the variables associated with the observations (Bryan 2004; Wagstaff and Cardie 2000; Witten 2011). In this case, we do not know ahead of time what the <span class="math inline">\(&quot;\)</span>correct<span class="math inline">\(&quot;\)</span> or <span class="math inline">\(&quot;\)</span>true<span class="math inline">\(&quot;\)</span> number of clusters is. Researchers can use clustering algorithms to identify more internally homogeneous groups of subjects (e.g., with respect to demographic characteristics, attitudes, preferences, consumption patterns). Figure 4 provides an illustration of how we may organize machine learning methods by type and subtype. Please note that the list of examples is not meant to be exhaustive.</p>
+<div class="figure">
+<img src="images/ml/jl-figure4.png" alt="Types of Machine Learning Methods" id="fig:jl-figure4" width="593" height="384" />
+<p class="caption">Types of Machine Learning Methods<span label="fig:jl-figure4"></span></p>
+</div>
+<p><span class="underline">Check-in Q. $#<span class="math inline">\(4:\)</span>“<span class="math inline">\(What is the main difference between supervised and unsup. learning?\)</span>”$</span></p>
+</div>
+</div>
+<div id="method-setupoverview-4" class="section level2">
+<h2><span class="header-section-number">24.3</span> Method: setup/overview</h2>
+<p>There are definitely variations in how researchers and other practitioners organize their machine learning projects. However, the workflow tends to follow a general pattern. Assuming you already decided to use one specific method (e.g., lasso regression), the workflow may look something like this:</p>
+<ol style="list-style-type: decimal">
+<li><p>Split the data into training and test sets</p></li>
+<li><p>With just the training set, use k-fold cross-validation (CV) to perform <strong>model selection</strong> (i.e., optimize the tuning parameters)</p></li>
+<li><p>Fit the final optimized version of the model (also called the <strong>candidate model</strong>) using the full training set</p></li>
+<li><p>Assess the candidate model by computing the test error</p></li>
+</ol>
+<p>If you would like to compare the performance of multiple methods (e.g., boosted trees, random forests), then only a few modifications to the sample workflow above are necessary. Repeat steps 2-4 for each of the methods. At the final stage, you will have the test error for each candidate model: depending on your ideal trade-off between accuracy and interpretability, you can then select the most preferred model. For example, if the goal is causal inference, then you may be willing to select the candidate model with a somewhat higher test error because it scores much higher on interpretability.</p>
+<div id="what-is-model-selection" class="section level3">
+<h3><span class="header-section-number">24.3.1</span> What is Model Selection?</h3>
+<p>The performance of machine learning models is often highly dependent on their <strong>tuning parameters</strong>. We can think of tuning parameters as levers of the model that allow us to customize or adjust how it operates. <strong>Model selection</strong> refers to the process of identifying the tuning parameters that yield the lowest expected test error; this is also referred to as <span class="math inline">\(&quot;\)</span>optimizing the tuning parameters.<span class="math inline">\(&quot;\)</span> For example, consider the lasso regression, which is a powerful method when we know that most of the predictors are probably not useful for predicting the outcome. If a normal OLS regression is used in this situation, the coefficients that should actually be zero may remain at non-zero values—which increases the likelihood of the model overfitting to the training data.</p>
+<p>The algorithms for the OLS and lasso regressions are similar, except that the optimization process for the latter is subject to an additional constraint. Basically, this extra constraint imposes a penalty for the sum of the coefficients for the <span class="math inline">\(p\)</span> predictors in the model. The size of the penalty is controlled by <span class="math inline">\(\lambda\)</span>: the bigger the <span class="math inline">\(\lambda\)</span>, the smaller the coefficients. In fact, when the <span class="math inline">\(\lambda\)</span> is sufficiently large, many of the coefficients are totally zeroed out, which means that the lasso regression also provides a means of automating the variable selection process. Next, I explain why we typically use a method known as <span class="math inline">\(k\)</span>-fold cross-validation to perform the model selection procedure.</p>
+<p><span class="math display">\[\lambda  \sum _{j=1}^{p} \vert  \beta _{j} \vert\]</span></p>
+</div>
+<div id="why-k-fold-cross-validation" class="section level3">
+<h3><span class="header-section-number">24.3.2</span> Why K-Fold Cross-Validation?</h3>
+<p>For example, let us assume that we want to compare 100 unique values of <span class="math inline">\(\lambda _{i}\)</span> for the lasso regression; how do we know which value will yield the lowest test error rate?</p>
+<p>One option is using the <strong>validation set approach</strong>. This entails randomly splitting the training set (<span class="math inline">\(n_{1}\)</span>) into two non-overlapping subsets: a model-building set (<span class="math inline">\(n_{1a}\)</span>) and a validation set (<span class="math inline">\(n_{1b}\)</span>). Next, we fit a model using the model-building set (<span class="math inline">\(n_{1a}\)</span>) and the first value of lambda (<span class="math inline">\(\lambda _{1}\)</span>), and then test it against the validation set (<span class="math inline">\(n_{1b}\)</span>). We would then repeat this process 99 more times, so that we have done it once for each <span class="math inline">\(\lambda _{i}\)</span>. Afterward, we could compare the 100 validation error rates and identify the value of the parameter that generated the lowest validation error. However, this approach has two important disadvantages <span class="citation">(James et al. <a href="#ref-james2013a">2013</a>, 176–78)</span>. First, the estimated validation error rate for each <span class="math inline">\(\lambda _{i}\)</span> is highly variable, since it is very sensitive to the specific observations that were randomly selected to be in <span class="math inline">\(n_{1a}\)</span> and <span class="math inline">\(n_{1b}\)</span>; if a small percentage of the observations in the <span class="math inline">\(n_{1a}\)</span> were moved to <span class="math inline">\(n_{1b}\)</span> (and vice-versa), the test error rate would likely change. Second, statistical learning models tend to perform more poorly when trained on a smaller dataset; thus, by only training the model on a subset of the full training set (i.e., since <span class="math inline">\(n_{1a} \ll n_{1}\)</span> ), we may actually overestimate the test error.</p>
+<p><span class="math inline">\(K\)</span>-fold cross-validation (CV) is a statistically efficient resampling method that addresses both of these problems. The purpose of CV is to provide a more reliable estimate of the test error, which can then be used to compare and evaluate unique values of the tuning parameters (e.g., <span class="math inline">\(\lambda _{i}\)</span>). It involves randomly splitting the training set (<span class="math inline">\(n_{1}\)</span>) into <span class="math inline">\(k\)</span> non-overlapping groups (or <span class="math inline">\(&quot;\)</span>folds<span class="math inline">\(&quot;\)</span>) that are equal in size; the first fold is treated as the held-out validation set, and the model is fit using the observations in the remaining <span class="math inline">\(k-1\)</span> folds. This process is repeated until each fold has served as a validation set.</p>
+<p>If there are 10 folds, there are also 10 estimates of the validation error; these estimates are averaged to form the CV error rate. The idea is that this CV error rate is a more reliable estimate of the validation error since it is based on an average of <span class="math inline">\(k\)</span> estimates (i.e., the CV error rate has a lower variance). Returning to the previous example, if we wanted to test 100 potential values of <span class="math inline">\(\lambda _{i}\)</span>, we would perform the <span class="math inline">\(k\)</span>-fold CV procedure for each <span class="math inline">\(\lambda _{i}\)</span>; then, we would choose the value of <span class="math inline">\(\lambda _{i}\)</span> that yielded the lowest CV error.</p>
+</div>
+</div>
+<div id="method-detail-2" class="section level2">
+<h2><span class="header-section-number">24.4</span> Method: detail</h2>
+<p>In this section, I provide a brief overview of two common classes of machine learning methods, and how they actually work in practice: (1) tree-based methods, (2) support vector machines. Since we have used quantitative outcomes so far in our examples, this time the examples will focus on classification: 1 = voted for Trump in 2016, 0 = voted for someone else.</p>
+<div id="model-class-tree-based-methods" class="section level3">
+<h3><span class="header-section-number">24.4.1</span> Model Class: Tree-based Methods</h3>
+<p>All tree-based methods (e.g., bagged trees, random forests, boosted trees) share some important similarities. Each tree divides the training observations into <span class="math inline">\(m\)</span> non-overlapping regions of the predictor space <span class="math inline">\(\{ R_{1},R_{2}, \ldots R_{m} \}\)</span>. Internal nodes refer to the place where the splits are made. The algorithm uses binary recursive splitting, and generally operates in the following way. The splits (i.e., predictor used, values of the predictor) are chosen in order to maximize the purity or homogeneity of the child nodes with respect to outcome class: i.e., in this case, whether or not the respondents voted for Trump (i.e., <span class="math inline">\(Vote=1\)</span> or <span class="math inline">\(Vote=0\)</span>). As such, the first split has the most explanatory power (i.e., in terms of being able to predict the outcome class of a training observation), the second split has the second most explanatory power, and so on.</p>
+<p>Node purity or homogeneity is often measured using the Gini index or entropy. In both cases, the measures are smaller when the nodes (or regions) are more homogeneous; thus, the objective is actually to choose splits that minimize the Gini index or entropy (which is equivalent to maximizing node purity). The Gini index is defined below <span class="citation">(James et al. <a href="#ref-james2013a">2013</a>, 312)</span>. Here, <span class="math inline">\(p_{mk}\)</span> represents the proportion of the training observations that are in <span class="math inline">\(m\)</span>th region (<span class="math inline">\(R_{m}\)</span>) from the <span class="math inline">\(k\)</span>th class. Recall that <span class="math inline">\(G\)</span> is small when the nodes are more homogeneous: e.g., when the proportion of training observations in <span class="math inline">\(m\)</span>th region are closely split between two classes <span class="math inline">\(45\% -55\%\)</span>, then <span class="math inline">\(G = (.45)(.55)(2) =0.495\)</span>; in contrast, when the training observations in <span class="math inline">\(R_{m}\)</span> are more dominated by a single class (and thus <span class="math inline">\(R_{m}\)</span> is more homogeneous), for instance, <span class="math inline">\(90\% -10\%\)</span> , then <span class="math inline">\(G = (.10)(.90)(2) = 0.18\)</span>.</p>
+<p><span class="math display">\[G= \sum _{k=1}^{K}p_{mk} \left( 1-p_{mk} \right)\]</span></p>
+<p>How does this work in practice? For example, let us assume that in the training set, being white v. not being white was the strongest individual predictor of the Trump vote (i.e., it would maximize node purity). If this were the case, then the first split would be based on race: all white respondents would be assigned to the right branch, and all non-white respondents would be assigned to the left branch (see Figure 5 below). Next, let us assume that among white respondents, being above the mean on the 1-7 point political conservatism scale is the strongest predictor of the Trump vote; if so, then the second split would be based on whether the white respondents’ conservatism score is <span class="math inline">\(\leq 4.3\)</span> (left branch) or <span class="math inline">\(&gt; 4.3\)</span> (right branch).</p>
+<div class="figure">
+<img src="images/ml/jl-figure5.png" alt="Example of a Decision Tree" id="fig:jl-figure5" width="454" height="228" />
+<p class="caption">Example of a Decision Tree<span label="fig:jl-figure5"></span></p>
+</div>
+<p>In this simple example, the observations (or respondents) in the training set are assigned to one of three non-overlapping regions in the predictor space: <span class="math inline">\({R_{1}= \{Vote \vert minority}\}\)</span>, <span class="math inline">\(R_{2} = \{Vote \vert white, conservatism \leq 4.3\}\)</span>, and <span class="math inline">\(R_{3}= \{Vote \vert white, conservatism &gt; 4.3 \}\)</span>. To predict the outcome class of an observation in the validation or test set, we simply look at which region the observation would be assigned to based on its predictor values (e.g., is <span class="math inline">\(x_{1} = white\)</span>?), and then choose the most common class of that region. For instance, if the test observation would belong to <span class="math inline">\(R_{3}\)</span>, and <span class="math inline">\(70\%\)</span> of the training observations in <span class="math inline">\(R_{3}\)</span> voted for Trump, then the predicted class of that test observation would be <span class="math inline">\(Vote=1\)</span>. In general, of course, there are usually more than three regions (or terminal nodes); the splitting ends once a stopping point is reached: e.g., in order to satisfy the minimum terminal node size.</p>
+<p>Individual decision trees suffer from high variance: i.e., the structure of the tree is highly dependent on which specific observations randomly end up in the training set. To address this issue, we can use the average prediction of many different trees. Methods for combining these different trees are called decision tree ensembles. There are three popular approaches: bagging<a href="#fn25" class="footnoteRef" id="fnref25"><sup>25</sup></a>, random forests<a href="#fn26" class="footnoteRef" id="fnref26"><sup>26</sup></a>, and boosting<a href="#fn27" class="footnoteRef" id="fnref27"><sup>27</sup></a></p>
+</div>
+<div id="model-class-support-vector-machines" class="section level3">
+<h3><span class="header-section-number">24.4.2</span> Model Class: Support Vector Machines</h3>
+<p>Support Vector Machines (SVMs) are a class of methods that seek to assign observations to the correct outcome by using hyperplanes as decision boundaries. Hyperplanes are a <span class="math inline">\(p-1\)</span> dimensional flat subspace in a <span class="math inline">\(p\)</span>-dimensional space: e.g., if <span class="math inline">\(p = 2\)</span> (there are 2 predictors), then the hyperplane is simply a line. For instance, let us assume a simple case in which we are predicting the binary outcome <span class="math inline">\(Vote\)</span> using only two predictors; in this case, the separating hyperplane is a line. If the respondents in the training set who voted for Trump are labeled as <span class="math inline">\(y_{i}=1\)</span>, and those who did not vote for Trump are labeled as <span class="math inline">\(y_{i}=-1\)</span>, then the separating hyperplane can be formally described as follows:</p>
+<p><span class="math display">\[y_{i} \left(  \beta _{0}+ \beta _{1}x_{i1}+ \beta _{2}x_{i2} \right) &gt;0\]</span></p>
+<p>In this case, when <span class="math inline">\(\beta _{0}+ \beta _{1}x_{i1}+ \beta _{2}x_{i2}&gt;0\)</span>, <span class="math inline">\(y_{i}=1\)</span> and if <span class="math inline">\(\beta _{0}+ \beta _{1}x_{i1}+ \beta _{2}x_{i2}&lt;0\)</span>, then <span class="math inline">\(y_{i}=-1\)</span>. That is, we can classify the observations based on whether they are above or below the separating hyperplane.</p>
+<p>Next, I will briefly review how SVMs have been designed to address two key practical challenges. The first challenge is that there are often many hyperplanes that can correctly classify the observations, since the hyperplane can be slightly adjusted in any direction and probably still produce the same classifications. If we return to the equation above, it is easy to see that there are many ways the coefficients <span class="math inline">\(\beta _{0}\)</span>, <span class="math inline">\(\beta _{1}\)</span>, and <span class="math inline">\(\beta _{2}\)</span> can be slightly adjusted (e.g., a <span class="math inline">\(0.5\%\)</span> increase or decrease) and still perfectly classify the observations. The solution is to maximize the margins, or the distance between the training data points and the separating hyperplane: this is also known as the maximal margin classifier or MMC.</p>
+<p>Unfortunately, the MMC approach faces its own problems. Sometimes, there is simply no perfectly separating hyperplane; and even if there is, it is highly sensitive to individual observations, which can lead to overfitting (and high variance). The solution is a more flexible form of the MMC that allows some observations to fall on the wrong side of the margin and/or hyperplane: this is also known as the support vector classifier (SVC). The SVC is more robust in that it is less sensitive to individual observations, such as outliers (i.e., since some violations of the margin are allowed); this property allows the SVC to do a better job of classifying the observations in <em>general</em>.</p>
+<p>Like the MMC, the SVC seeks to maximize the margin, but it is subject to a number of important constraints <span class="citation">(James et al. <a href="#ref-james2013a">2013</a>, 346–47)</span>. Here, I will specifically focus on the cost parameter (<span class="math inline">\(C\)</span>), since that is what is generally optimized using cross-validation. Below, <span class="math inline">\(\epsilon _{i}\)</span> indicates how severely the <span class="math inline">\(i\)</span>th observation violates the margin and separating hyperplane. When <span class="math inline">\(\epsilon _{i}=0\)</span>, the <span class="math inline">\(i\)</span>th observation is located on the correct side of the margin (i.e., no error); when <span class="math inline">\(\epsilon _{i}&gt;0\)</span>, it is on the wrong side of the margin; and if <span class="math inline">\(\epsilon _{i}&gt;1\)</span>, it has actually violated the separating hyperplane. That is, <span class="math inline">\(C\)</span> essentially represents the budget for the number and severity of the classification errors across the <span class="math inline">\(n\)</span> observations. When <span class="math inline">\(C\)</span> is small, the SVC will fit more tightly to the training observations in the feature space, at the cost of higher variance; and when <span class="math inline">\(C\)</span> is large, the opposite can occur. To optimize this bias-variance trade-off, we can use k-fold CV.</p>
+<p><span class="math display">\[\sum _{i=1}^{n} \epsilon _{i} \leq C\]</span></p>
+<p>The SVM is an extension of the SVC, which allows us to model nonlinear decision boundaries using kernels. By using kernels, the SVM allows us to expand the feature space (e.g., include polynomial functions of the predictors) in a computationally efficient manner. For more details on this procedure, we can refer to James et al. 2013, pp. 350-353; and Hastie et al. 2017, pp. 423-426).</p>
+</div>
+</div>
+<div id="applications-5" class="section level2">
+<h2><span class="header-section-number">24.5</span> Applications</h2>
+<p>In this section, I review six recent examples of machine learning methods in political science articles. The examples cover applications of both supervised learning (e.g., RF, SVM, naïve Bayes, k-nearest neighbor); and unsupervised methods such as topic modeling, which is related to clustering. Several different subfields of political science are represented: U.S. politics, political theory, comparative politics, international relations, and peace and conflict studies; in addition, the articles use data from many countries around the world (e.g., Argentina, India).</p>
+<div id="example-1-u.s.-politics" class="section level3">
+<h3><span class="header-section-number">24.5.1</span> Example 1: U.S. Politics</h3>
+<p>DW-NOMINATE scores are often used in political science as a measure of a legislator’s ideology; they are based on the actual votes the legislators have made on bills in the U.S. House or U.S. Senate. uses two supervised machine learning methods (i.e., support vector regression and random forests) to address a very interesting problem: how can we predict the ideology of new legislators before they begin casting their votes? Support vector regression (SVR) is very similar to SVM, except that the algorithm has been modified to enable the prediction of a continuous outcome. In the first part of the paper, the author uses 10-fold CV to train models that predict the candidates’ DW-NOMINATE scores based on their campaign contributions, gender, party, and home state. The training set includes candidates with DW-NOMINATE scores between 1980-2014; and the key predictors in the feature matrix are the names of donors who have given to at least 15 candidates (e.g., National Education Association).</p>
+<p>According to the results (i.e., RMSE),<a href="#fn28" class="footnoteRef" id="fnref28"><sup>28</sup></a> the support vector regression and random forest methods perform at least as well as the other methods that actually use the roll call data. This is especially impressive when we consider that the roll call data are used to construct the DW-NOMINATE scores. Next, Bonica also shows that the supervised learning methods also do a very good job of correctly predicting the actual votes cast during the 96<sup>th</sup>-113th Congresses: e.g., 89.9<span class="math inline">\(\%\)</span> of the votes are correctly predicted using DW-NOMINATE, which is not surprising; however, 89.5<span class="math inline">\(\%\)</span> and 89.3<span class="math inline">\(\%\)</span> of the votes are also correctly classified using the RF and SVR methods that were only trained using campaign contributions and a few other predictors.</p>
+</div>
+<div id="example-2-comparative-politics" class="section level3">
+<h3><span class="header-section-number">24.5.2</span> Example 2: Comparative Politics</h3>
+<p>How do we know whether an election was rigged? Using synthetic (i.e., simulated) data, <span class="citation">Cantú and Saiegh (<a href="#ref-cant2011a">2011</a>)</span> train a naïve Bayes classifier that successfully identifies fraudulent elections in the Buenos Aires province of Argentina between 1931 and 1941. One of the greatest strengths of the naïve Bayes (NB) algorithm is its simplicity, which is due the assumption that the features (i.e., predictors) are independent.<a href="#fn29" class="footnoteRef" id="fnref29"><sup>29</sup></a> For every election, the algorithm first estimates the posterior probability of membership in each class (i.e., fraudulent or clean) given the set of observed features or attributes associated with the election. The predicted class of each election is the class with the largest posterior probability, per Bayes theorem. For example, given a set of features, if the election is even slightly more likely to be fraudulent than clean, the election is classified by NB as a fraudulent election, and vice versa. After training their NB classifier on a large synthetic dataset (N=10,000), the authors test their model using several well-documented elections in 1936, 1940, and 1941; they show that their method ultimately outperforms key existing fraud detection algorithms (e.g., those based on the distributions of digits in official vote counts).</p>
+</div>
+<div id="example-3-political-theory" class="section level3">
+<h3><span class="header-section-number">24.5.3</span> Example 3: Political Theory</h3>
+<p>Can machine learning be used to study the evolution of political theory across centuries? During the medieval and early modern period, scholars and other elites often wrote advice books for leaders that covered topics such as military strategy, economic prosperity, and religious devotion. These books provide an insightful view or <span class="math inline">\(&quot;\)</span>mirror<span class="math inline">\(&quot;\)</span> into the dominant political theories and paradigms of the day. <span class="citation">Blaydes, Grimmer, and McQueen (<a href="#ref-blaydes2018a">2018</a>)</span> use automated text analysis to compare how political advice texts in the Medieval Christian and Islamic Worlds changed during the medieval period. Their corpus of text includes 21 texts from the medieval Islamic world, which were produced between the eighth to seventeenth centuries; and 25 texts from Christian Europe, which were produced between the sixth to seventeenth centuries. Specifically, the authors use a hierarchical form of topic modeling based on variational approximation; while topic modeling methods vary in their specific details, all of them are unsupervised learning methods that seek to identify latent or <span class="math inline">\(&quot;\)</span>hidden<span class="math inline">\(&quot;\)</span> clusters of topics in bodies of text (Wallach 2006).</p>
+<p>Blaydes et al. identify four broad themes and 60 specific sub-themes nested within the broader themes; the four broader themes include: being a good ruler, the personal virtues of rulers, religion, and political geography or space. A key finding of the study is that at the aggregate level, the Christian and Muslim texts generally allocated a similar share of the space for each of the four broad topics. For example, topic 1 was the most prevalent issue across both Christian and Muslim works. However, there are some differences in trends across time. Whereas the prevalence of religious content steadily declined during the medieval period in Christian works, a similar temporal trend was not observed for advice books published in the Islamic world. The authors provide an interesting discussion of what these findings may mean for how we understand the relationship between political theory and institutional development.</p>
+</div>
+<div id="example-4-comparative-politics" class="section level3">
+<h3><span class="header-section-number">24.5.4</span> Example 4: Comparative Politics</h3>
+<p>In a very recent study, <span class="citation">Parthasarathy, Rao, and Palaniswamy (<a href="#ref-parthasarathy2019a">2019</a>)</span> use natural language processing (NLP) and topic modeling to study deliberative processes in the rural villages of South India. Their dataset includes a corpus of transcripts from a geographically representative sample of 100 village assemblies (or <span class="math inline">\(&quot;\)</span>gram sahbas<span class="math inline">\(&quot;\)</span> ) in Tamil Nadu, a state in southern India. Parthasarathy and her coauthors use an unsupervised topic learning approach called structural topic modeling (STM), which identifies clusters of co-occurring words in the corpus of text. They identify 15 topics, with the most popular topics being water, beneficiary and voting lists, and employment and wages. By combining these topics with the use of statistical tests, the authors show that female participants face serious inequalities: <span class="math inline">\(&quot;\)</span><span class="math display">\[Women\]</span> are less likely to be heard, less likely to drive the agenda, and less likely to receive a relevant response from state officials<span class="math inline">\(&quot;\)</span> (pp. 637-638). For example, politicians provided a relevant (i.e., on-topic) response to women only 49<span class="math inline">\(\%\)</span> time, but to male speakers 70<span class="math inline">\(\%\)</span> of the time. These disparities are problematic not only because they indicate that female voices tend to matter less in deliberative processes, but also because the issues that disproportionately affect women may be less likely to be translated into meaningful policy outputs.</p>
+</div>
+<div id="example-5-peace-and-conflict" class="section level3">
+<h3><span class="header-section-number">24.5.5</span> Example 5: Peace and Conflict</h3>
+<p>In a fascinating paper, <span class="citation">Mueller and Rauh (<a href="#ref-mueller2018a">2018</a>)</span> combine a number of methods (i.e., topic models, lasso regression, linear fixed effects models) to predict political violence using newspaper text. First, they downloaded 700,000 newspaper articles about events in 185 countries from the <em>New York Times</em> (NYT), the <em>Washington Post</em> (WP), and the <em>Economist</em>. All available articles published between 1975-2015 were included in the text corpus. Topic modeling based on Dirichlet allocation (LDA) is used to reduce the high dimensionality of the text corpus (i.e., almost a million unique words, after preprocessing) to 15 topics. The relative prevalence of the topics are aggregated at the level of country-year and used as predictors in linear fixed effects models. The results show that the within-country variation over time in topic prevalence is a robust predictor of the outbreak of civil war and armed conflict: the area under the curve (AUC) indicates that about 73-82<span class="math inline">\(\%\)</span> of the outcomes can be correctly predicted using only within unit variation. The authors also use lasso regressions, an automated variable selection method, to identify the most important predictors: e.g., the prevalence of the <span class="math inline">\(&quot;\)</span>justice<span class="math inline">\(&quot;\)</span> topic is a significant predictor of political violence across several different values of lambda, the penalty parameter. This finding is substantively important because it reinforces the idea that institutional design, the rule of law, and social stability are often tightly coupled together in reality.</p>
+</div>
+<div id="example-6-international-relations" class="section level3">
+<h3><span class="header-section-number">24.5.6</span> Example 6: International Relations</h3>
+<p>Although power is a key concept in international relations, there is no consensus over the best way to measure it. <span class="citation">Carroll and Kenkel (<a href="#ref-carroll2019a">2019</a>)</span> use machine learning to develop a new method of measuring power, called the Dispute Outcome Expectations (DOE) score. To create the DOE scores, they used a two-step process: first, a number of machine learning methods (e.g., SVM, k-nearest neighbors, RF, neural nets) were used to predict the outcomes of militarized international disputes between 1816 and 2007. Then, a super learner algorithm was used to combine the results and create an optimal weighted ensemble of the models. Carroll and Kenkel demonstrate that the DOE does a much better job of predicting the probability of conflicts between two states (called dyads) than the national capability ratio, which is frequently used in the literature. Using this superior measure of power also improves our substantive understanding of the nature of interstate conflict: the probability of interstate conflict is the greatest when there is a large disparity in power and the more powerful state does not prefer the status quo—a finding that seems more sensible and in line with existing theories.</p>
+</div>
+</div>
+<div id="advantages-of-method-5" class="section level2">
+<h2><span class="header-section-number">24.6</span> Advantages of Method</h2>
+<p>What are the advantages and disadvantages of machine learning, especially in the context of the social sciences? The advantages are considerable. Machine learning algorithms can increase prediction accuracy, which is especially important when we are attempting to predict highly consequential outcomes (e.g., outbreak of violent conflicts). They can also reduce the effects of human biases, by automating many decisions (e.g., variable selection); in addition, modern machine learning methods are also very computationally efficient (e.g., due to vectorization), which means that truly vast amounts of data can be analyzed.</p>
+</div>
+<div id="disadvantages-of-method-3" class="section level2">
+<h2><span class="header-section-number">24.7</span> Disadvantages of Method</h2>
+<p>However, machine learning methods also face some disadvantages. To accurately predict the outcomes of highly complex or contingent processes, large amounts of data are often necessary but sometimes unavailable; classification methods (e.g., classification trees, SVM) tend to perform poorly when the classes are imbalanced; many algorithms are prone to overfitting; and gains in prediction accuracy can sometimes come at the cost of reduced interpretability. In addition, machine learning methods may also generate results that seem socially undesirable or biased against certain groups. While these challenges are very real, many of them can be addressed by existing best practices as well as future innovations. For example, using k-fold cross-validation can help reduce overfitting and optimize the bias-variance trade-off; we can also minimize the risk of <span class="math inline">\(&quot;\)</span>biased algorithms<span class="math inline">\(&quot;\)</span> by remaining cognizant of the biases or problems that may be present in the training data.</p>
+</div>
+<div id="broader-significanceuse-in-political-science-6" class="section level2">
+<h2><span class="header-section-number">24.8</span> Broader significance/use in political science</h2>
+<p>As evidenced by the examples discussed above, machine learning methods are broadly applicable across the social sciences (Mason et al. 2014). You are more likely to see them used when there are a lot of data, the relationships among variables are highly complex, and the key patterns in the data are not obvious to the human eye. Political scientists have successfully used machine learning methods (e.g., k-fold CV) and algorithms to pursue research questions in subfields including U.S. politics, comparative politics, international relations, and political theory. For instance, political scientists frequently use unsupervised learning methods such as topic modeling to automate the analysis of large bodies of text. In recent years, researchers have also been increasingly using multiple machine learning models in the same project (e.g., topic modeling and linear regressions), in order to address more complex research questions or gain more prediction accuracy.</p>
+</div>
+<div id="conclusion-8" class="section level2">
+<h2><span class="header-section-number">24.9</span> Conclusion</h2>
+<p>The era of <span class="math inline">\(&quot;\)</span>big data<span class="math inline">\(&quot;\)</span> has arrived. Large technology companies such as Amazon, Apple, Facebook, Google, and Twitter are harvesting unprecedented amounts of data from their users across the globe. At the same time, political scientists and other social scientists (e.g., economists, sociologists) are interested in advancing our understanding of the social world. Why do people choose to vote (or not vote)? Under what conditions will countries go to war with each other? What makes some proposed bills more likely to be passed into law? This is an exciting time for quantitative social science research. Recent advancements in machine learning, while not without their challenges, offer many new and exciting ways to analyze an increasingly large quantity and variety of data. If handled properly, the findings generated from these new methods could improve our understanding of complex social processes, inform policymakers, and improve human societies.</p>
+</div>
+<div id="application-questions-10" class="section level2">
+<h2><span class="header-section-number">24.10</span> Application Questions</h2>
+<ol style="list-style-type: decimal">
+<li><p>Imagine you are the director of analytics for a U.S. Senate candidate. Briefly describe how you could use a machine learning method in your work. Why did you choose this method? What are some advantages and disadvantages of the method you chose?</p></li>
+<li><p>Imagine you are a consultant and your client is a federal law enforcement agency that wants to predict the likelihood of a violent protest in various regions of the country. Briefly describe how you could use a machine learning method in your work. Why did you choose this method? What are some advantages and disadvantages of the method you chose?</p></li>
+</ol>
+</div>
+<div id="key-terms-9" class="section level2">
+<h2><span class="header-section-number">24.11</span> Key Terms</h2>
+<p>target function, training set, test set, expected prediction error (EPE), training error, test error, overfitting, underfitting, reducible error, irreducible error, expected value, bias, variance, bias-variance trade-offs, parametric methods, non-parametric methods, model interpretability, model flexibility, k-fold cross-validation, prediction v. (causal) inference, supervised v. unsupervised learning, regression v. classification methods, model selection, candidate model, tuning parameters, validation set approach</p>
+</div>
+<div id="answers-to-application-questions-9" class="section level2">
+<h2><span class="header-section-number">24.12</span> Answers to Application Questions</h2>
+<p>There is no single correct answer. However, for both questions, a strong answer will specify the method type (e.g., supervised, regression v. classification) and discuss issues such as the bias-variance trade-off, cross-validation, model interpretability, and prediction accuracy.</p>
+</div>
+<div id="manual-bibliography---for-checking" class="section level2">
+<h2><span class="header-section-number">24.13</span> Manual bibliography - for checking</h2>
+<p>Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. <span class="math inline">\(&quot;\)</span>Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.<span class="math inline">\(&quot;\)</span> <em>Journal of Politics</em> 80(4): 1150–67.</p>
+<p>Bonica, Adam. 2018. <span class="math inline">\(&quot;\)</span>Inferring Roll‐Call Scores from Campaign Contributions Using Supervised Machine Learning.<span class="math inline">\(&quot;\)</span> <em>American Journal of Political Science</em> 62(4): 830–48.</p>
+<p>Cantú, Francisco, and Sebastián M. Saiegh. 2011. <span class="math inline">\(&quot;\)</span>Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade Using Supervised Machine Learning.<span class="math inline">\(&quot;\)</span> <em>Political Analysis</em> 19(4): 409–33.</p>
+<p>Carroll, Robert J., and Brenton Kenkel. 2019. <span class="math inline">\(&quot;\)</span>Prediction, Proxies, and Power.<span class="math inline">\(&quot;\)</span> <em>American Journal of Political Science</em>.</p>
+<p>Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2017. <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. 2nd ed. New York City: Springer.</p>
+<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em>An Introduction to Statistical Learning: With Applications in R</em>. 7th ed. New York City: Springer.</p>
+<p>Larsen, Richard J., and Morris L. Marx. 2017. <em>An Introduction to Mathematical Statistics and Its Applications</em>. 6th ed. New York City: Pearson.</p>
+<p>Mitchell, Tom. 1997. <em>Machine Learning</em>. New York City: McGraw-Hill Education.</p>
+<p>Mueller, Hannes F., and Christopher Rauh. 2018. <span class="math inline">\(&quot;\)</span>Reading Between the Lines: Prediction of Political Violence Using Newspaper Text.<span class="math inline">\(&quot;\)</span> <em>American Political Science Review</em> 112(2): 358–75.</p>
+<p>Ng, Andrew. <em>Machine Learning</em>. Stanford University: Coursera. <a href="https://www.coursera.org/learn/" class="uri">https://www.coursera.org/learn/</a> machine-learning/.</p>
+<p>Parthasarathy, Ramya, Vijayendra Rao, and Nethra Palaniswamy. 2019. <span class="math inline">\(&quot;\)</span>Deliberative Democracy in an Unequal World: A Text-As-Data Study of South India’s Village Assemblies.<span class="math inline">\(&quot;\)</span> <em>American Political Science Review</em> 113(3): 623–40.</p>
+<p>Rice, John A. 2007. <em>Mathematical Statistics and Data Analysis</em>. 3rd ed. Belmont, CA: Brooks/Cole, Cengage Learning.</p>
+<p>Samuel, Arthur L. 1959. <span class="math inline">\(&quot;\)</span>Some Studies in Machine Learning Using the Game of Checkers.<span class="math inline">\(&quot;\)</span> <em>IBM Journal of Research and Development</em> 3(3): 210–29.</p>
+<p>Bryan, Jenny. 2004. “Problems in Gene Clustering Based on Gene Expression Data.” Special Issue on Multivariate Methods in Genomic Data Analysis 90(1): 44–66.</p>
+<p>Cutler, Adele. 2005. “Random Forests.” In Encyclopedia of Statistics in Behavioral Science, American Cancer Society. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/0470013192.bsa530" class="uri">https://onlinelibrary.wiley.com/doi/abs/10.1002/0470013192.bsa530</a>.</p>
+<p>Cutler, Adele, Chris Corcoran, and Leslie Toone. 2014. “Bagging.” In Wiley StatsRef: Statistics Reference Online, American Cancer Society. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat06529" class="uri">https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat06529</a>.</p>
+<p>Mason, Winter, Jennifer Wortman Vaughan, and Hanna Wallach. 2014. “Computational Social Science and Social Computing.” Machine Learning 95(3): 257–60.</p>
+<p>Wagstaff, Kiri, and Claire Cardie. 2000. “Clustering with Instance-Level Constraints.” In Proceedings of the Seventeenth International Conference on Machine Learning, ICML ’00, San Francisco, CA, USA: Morgan Kaufmann Publishers Inc., 1103–1110.</p>
+<p>Wallach, Hanna M. 2006. “Topic Modeling: Beyond Bag-of-Words.” In Proceedings of the 23rd International Conference on Machine Learning, ICML ’06, New York, NY, USA: Association for Computing Machinery, 977–984. <a href="https://doi.org/10.1145/1143844.1143967" class="uri">https://doi.org/10.1145/1143844.1143967</a>.</p>
+<p>Witten, Daniela M. 2011. “Classification and Clustering of Sequencing Data Using a Poisson Model.” Ann. Appl. Stat. 5(4): 2493–2518.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-blaydes2018a">
+<p>Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. “Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.” <em><span style="font-style:normal;">Journal of Politics</span></em> 80 (4): 1150–67.</p>
+</div>
+<div id="ref-cant2011a">
+<p>Cantú, Francisco, and Sebastián M. Saiegh. 2011. “Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade Using Supervised Machine Learning.” <em><span style="font-style:normal;">Political Analysis</span></em> 19 (4): 409–33.</p>
+</div>
+<div id="ref-carroll2019a">
+<p>Carroll, Robert J., and Brenton Kenkel. 2019. “Prediction.” <em>Proxies, and Power. <span style="font-style:normal;">American Journal of Political Science</span></em>.</p>
+</div>
+<div id="ref-hastie2017a">
+<p>Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2017. <em><span style="font-style:normal;">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</span></em>. 2nd ed. New York City: Springer.</p>
+</div>
+<div id="ref-james2013a">
+<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em><span style="font-style:normal;">An Introduction to Statistical Learning: With Applications in R</span></em>. 7th ed. New York City: Springer.</p>
+</div>
+<div id="ref-mitchell1997a">
+<p>Mitchell, Tom. 1997. <em><span style="font-style:normal;">Machine Learning</span></em>. New York City: McGraw-Hill Education.</p>
+</div>
+<div id="ref-mueller2018a">
+<p>Mueller, Hannes F., and Christopher Rauh. 2018. “Reading Between the Lines: Prediction of Political Violence.” <em>Using Newspaper Text. <span style="font-style:normal;">American Political Science Review</span></em> 112 (2): 358–75.</p>
+</div>
+<div id="ref-parthasarathy2019a">
+<p>Parthasarathy, Ramya, Vijayendra Rao, and Nethra Palaniswamy. 2019. “Deliberative Democracy in an Unequal World: A Text-as-Data Study of South India’s Village Assemblies.” <em><span style="font-style:normal;">American Political Science Review</span></em> 113 (3): 623–40.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="21">
+<li id="fn21"><p>Here is a more detailed explanation of what is meant by this sentence. The squared difference between <span class="math inline">\(Y\)</span> and <span class="math inline">\(\hat{Y}\)</span> is actually a continuous random variable. In statistical theory, a random variable is a variable whose value is the outcome of a random process. Recall that in the general case <span class="math inline">\(Y = f(X) + \epsilon\)</span>, where <span class="math inline">\(X\)</span> represents a set of predictors. Since <span class="math inline">\(Y\)</span> is the function of the random error component <span class="math inline">\(\epsilon\)</span>, <span class="math inline">\(Y\)</span> is by definition a random variable. Now, notice that since <span class="math inline">\((Y-\hat{Y})^{2}\)</span> is a function of the random variable <span class="math inline">\(Y\)</span>, <span class="math inline">\((Y-\hat{Y})^{2}\)</span> must also be a random variable. In particular, <span class="math inline">\((Y-\hat{Y})^{2}\)</span> is a continuous random variable, since it can theoretical take on an infinite number of possible (non-negative) values. We can think of the expected value of a random variable as being the weighted or “long-run” average of the random variable’s possible values. To simplify the notation, let <span class="math inline">\(W=(Y-\hat{Y})^{2}\)</span>. Formally, let’s assume that the random variable <span class="math inline">\(W\)</span> has a probability density function <span class="math inline">\(g(w)\)</span>, which determines the distribution of the probabilities associated with the possible values of <span class="math inline">\(W\)</span>. The lower-case <span class="math inline">\(w\)</span> represents specific possible values of the random variable <span class="math inline">\(W\)</span>. In this case, then <span class="math inline">\(E(W) = \int_{-\infty}^{\infty} wg(w) dw\)</span>.<a href="machine-learning.html#fnref21">↩</a></p></li>
+<li id="fn22"><p>Another way to think about bias is that it is the systematic part of the difference between <span class="math inline">\(Y\)</span> and <span class="math inline">\(\hat{Y}\)</span>. When <span class="math inline">\(\hat{f}(.)\neq{f}(.)\)</span>, the observed difference between <span class="math inline">\(Y\)</span> and <span class="math inline">\(\hat{Y}\)</span> is often correlated with the gap between the estimated function and the true function.<a href="machine-learning.html#fnref22">↩</a></p></li>
+<li id="fn23"><p>Examples of popular supervised learning methods for regression include the ordinary least squares (OLS) regression, penalized/shrinkage methods such as the ridge and lasso regressions, regression trees, and artificial neural networks (ANN).<a href="machine-learning.html#fnref23">↩</a></p></li>
+<li id="fn24"><p>Examples of popular supervised learning methods for classification include various implementations of the logistic regression (i.e., binary, ordinal, multinomial), k-nearest neighbor (KNN), linear discriminant analysis (LDA), quadratic discriminant analysis (QDA), support vector classifiers (SVC), support vector machines (SVM), classification trees, and artificial neural networks (ANNs).<a href="machine-learning.html#fnref24">↩</a></p></li>
+<li id="fn25"><p>This entails creating <span class="math inline">\(B\)</span> bootstrap samples by sampling with replacement from the original training set (<span class="math inline">\(n_{1}\)</span>). A classification tree is fit using each sample, and then the trees are combined (Cutler et al. 2014). This method is superior to using a single decision tree, because a single decision tree is affected by high variance; in contrast, by averaging the predictions across many <span class="math inline">\(B\)</span> trees, the variance is reduced. The main tuning parameter for bagged trees is <span class="math inline">\(B\)</span>, the number of bootstrapped trees.<a href="machine-learning.html#fnref25">↩</a></p></li>
+<li id="fn26"><p>This is the same as bagging, but now the model is only allowed to consider only a random subset <span class="math inline">\(m\)</span> of the <span class="math inline">\(p\)</span> predictors at each split (such that <span class="math inline">\(m \ll p\)</span>, e.g., <span class="math inline">\(n \approx \sqrt{p}\)</span>). The logic here is that by intentionally restricting the number of predictors that can be considered at each split, the trees will become less correlated (Cutler 2005). In many cases, decorrelating the <span class="math inline">\(B\)</span> trees in this way can lead to reduced test error.<a href="machine-learning.html#fnref26">↩</a></p></li>
+<li id="fn27"><p>With boosted trees, the trees are grown sequentially: each tree is fit to the residuals from the previous model. The logic of this approach is that it allows each successive tree to address the weaknesses of the previous tree.<a href="machine-learning.html#fnref27">↩</a></p></li>
+<li id="fn28"><p>Root mean squared error (RMSE) is a measure of the average absolute difference between the predicted value of the outcome and the actual observed value. The smaller the RMSE, the more accurate the estimates of the outcome.<a href="machine-learning.html#fnref28">↩</a></p></li>
+<li id="fn29"><p>Although this is a strong assumption, research has shown that NB algorithm is robust to minor deviations from independence of the features.<a href="machine-learning.html#fnref29">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="game-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
