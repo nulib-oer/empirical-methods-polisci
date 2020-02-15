@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Conclusions | Empirical Methods in Political Science: An Introduction</title>
+  <title>10 Social Networks | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Conclusions | Empirical Methods in Political Science: An Introduction" />
+  <meta property="og:title" content="10 Social Networks | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Conclusions | Empirical Methods in Political Science: An Introduction" />
+  <meta name="twitter:title" content="10 Social Networks | Empirical Methods in Political Science: An Introduction" />
   
   <meta name="twitter:description" content="This is an introductory college textbook on using empirical methods in political science research." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="machine-learning.html"/>
-
+<link rel="prev" href="game-theory.html"/>
+<link rel="next" href="machine-learning.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -330,401 +330,375 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="conclusions" class="section level1">
-<h1><span class="header-section-number">12</span> Conclusions</h1>
-<p><strong>By Jean Clipperton</strong></p>
-<p>Throughout the text, we’ve worked to explain the different elements of social science and how they help us build, develop, and test theories about the world.</p>
+<div id="social-networks" class="section level1">
+<h1><span class="header-section-number">10</span> Social Networks</h1>
+<p><strong>By Erin M. Ochoa</strong></p>
+<div id="introduction-7" class="section level2">
+<h2><span class="header-section-number">10.1</span> Introduction</h2>
+<p>This chapter provides an introduction to social networks and some of the methods used to analyze them.</p>
+</div>
+<div id="what-is-a-social-network-what-is-social-network-analysis" class="section level2">
+<h2><span class="header-section-number">10.2</span> What is a Social Network? What is Social Network Analysis?</h2>
+<p>From a high-level view, a <strong>social network</strong> is a model representing <em>relationships</em> among <em>social entities</em>. <strong>Social network analysis</strong>, then, is a body of methods used to evaluate the characteristics of a social network and its elements. To better understand what these terms mean, it is important to first address what a network is and what elements it comprises. We will also consider examples of networks and approaches to representing them.</p>
+<div id="elements-of-a-network" class="section level3">
+<h3><span class="header-section-number">10.2.1</span> Elements of a Network</h3>
+<p>In the most basic definition, a <strong>network</strong> is a data structure modeling a collection of units, which are represented as points called <strong>nodes</strong> or <strong>vertices</strong>, and the relationships between them, which are represented by links, called <strong>edges</strong> or <strong>ties</strong>, between the nodes. Two nodes that are connected by an edge are said to be <strong>neighbors</strong>.</p>
+<p>A network is also called a <strong>graph</strong>; here, both terms are used interchangeably.</p>
+<p>Networks can represent many different types of real-world phenomena. Consider how a network could be used to model each of the following:</p>
+<ul>
+<li><p>The genealogical history of the Japanese royal family:</p>
+<ul>
+<li>Nodes represent people; ties represent marriages and births.</li>
+</ul></li>
+<li><p>Email correspondence between workers in a corporation:</p>
+<ul>
+<li>Nodes represent workers; ties represent emails exchanged between pairs of workers.</li>
+</ul></li>
+<li><p>Flights between all the international airports in the world:</p>
+<ul>
+<li>Nodes represent airports; ties represent flights connecting airports.</li>
+</ul></li>
+<li><p>Predator–prey relationships among animals in an ecosystem:</p>
+<ul>
+<li>Nodes represent different species; ties represent which animals prey upon others.</li>
+</ul></li>
+<li><p>Mentorship and advising among political scientists in academia:</p>
+<ul>
+<li>Nodes represent scholars; ties represent mentor–student relationships among scholars.</li>
+</ul></li>
+<li><p>The order in which blocks of code in a computer program could be executed:</p>
+<ul>
+<li>Nodes represent blocks of code; ties represent flow control between blocks.</li>
+</ul></li>
+<li><p>Advice-seeking relationships among all current federal circuit judges in the United States:</p>
+<ul>
+<li>Nodes represent judges; ties represent whether a given judge has ever asked another judge for advice.</li>
+</ul></li>
+</ul>
+<p>When the nodes in a network represent people, organizations, or another type of social entity, the graph can be called a <strong>social network</strong>. Which of the above networks are examples of social networks?</p>
+</div>
+<div id="network-representations" class="section level3">
+<h3><span class="header-section-number">10.2.2</span> Network Representations</h3>
+<p>There are different ways to represent a network. The two most accessible methods are sociograms and adjacency matrices.</p>
+<p>A sociogram is a diagram that displays the nodes as points and the edges as lines or arrows.</p>
+<p>To understand how an adjacency matrix works, first recall that a <strong>matrix</strong> is a rectangular data structure containing numeric values which are organized in rows and columns; the total number of <em>cells</em> or values in the matrix equals the number of rows multiplied by the number of columns. An <strong>adjacency matrix</strong> is a square matrix that represents the presence or absence of ties between pairs of nodes in a graph—it tells us which nodes are <em>adjacent</em>, that is, which nodes are neighbors. There exists one row and one column for each node, and each cell value identifies whether the nodes associated with that cell are adjacent.</p>
+<table>
+<caption>Adjacency matrix for a network with nodes <span class="math inline">\([A, B, C, D, E]\)</span>. Rows and columns represent nodes; <span class="math inline">\(1\)</span> denotes an edge between tow nodes and <span class="math inline">\(0\)</span> denotes absence of edge, with dashes along the diagonal to demonstrate that a node cannot have an edge to itself. In this network, there exist relationships between nodes <span class="math inline">\(A &amp; B\)</span>, <span class="math inline">\(A &amp; C\)</span>, <span class="math inline">\(A &amp; E\)</span>, <span class="math inline">\(B &amp; D\)</span>, <span class="math inline">\(C &amp; D\)</span>, and <span class="math inline">\(C &amp; E\)</span>.</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="center"><span class="math inline">\(B\)</span></th>
+<th align="center"><span class="math inline">\(C\)</span></th>
+<th align="center"><span class="math inline">\(D\)</span></th>
+<th align="center"><span class="math inline">\(E\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td align="center">—</td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center">—</td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center">—</td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center">—</td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center">—</td>
+</tr>
+</tbody>
+</table>
+<p><span id="tab:adjacency_matrix" label="tab:adjacency_matrix"><span class="math display">\[tab:adjacency\_matrix\]</span></span></p>
+</div>
+</div>
+<div id="method-set-upoverview" class="section level2">
+<h2><span class="header-section-number">10.3</span> Method: Set-up/Overview</h2>
+<div id="two-fundamental-network-attributes" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Two Fundamental Network Attributes</h3>
+<p>The two most fundamental attributes of a network are whether it is <em>directed</em> and whether it is <em>weighted</em>.</p>
+<div id="undirected-and-directed-networks" class="section level4">
+<h4><span class="header-section-number">10.3.1.1</span> Undirected and Directed Networks</h4>
+<p>The first important attribute of a network is whether there is a direction associated with the modeled relationships between nodes. There are two types of graphs with respect to direction, <strong>undirected</strong> and <strong>directed</strong>.</p>
+<div id="undirected-networks." class="section level5">
+<h5><span class="header-section-number">10.3.1.1.1</span> Undirected Networks.</h5>
+<p>The most basic type is an undirected graph, in which the edges represent <em>symmetric</em>, or <em>reciprocal</em>, relationships between nodes. The ties in an undirected graph are called <strong>undirected</strong> or <strong>symmetric ties</strong>. Such ties indicate that for any pair of connected nodes, both nodes have the same role in the relationship.</p>
+<p>One example of such a graph is the friendship network of students in an elementary school class based on bonds observed by their teacher; if the teacher infers that Inge and Jaylen are friends, then an undirected tie exists between them in the graph (see Figure <a href="social-networks.html#fig:sn.undirected_friendship" reference-type="ref" reference="fig:sn.undirected_friendship"><span class="math display">\[fig:sn.undirected\_friendship\]</span></a>). In this network, an edge between two students means that their teacher perceives them to have a mutual friendship; note that a tie does not indicate any hierarchy among the connected nodes.</p>
+<div class="figure">
+<embed src="images/ch11_socialNetwork/undirected_friendship.pdf" />
+<p class="caption">An undirected friendship network of students in an elementary school class as inferred by the teacher.</p>
+</div>
+<p><span id="fig:sn.undirected_friendship" label="fig:sn.undirected_friendship"><span class="math display">\[fig:sn.undirected\_friendship\]</span></span></p>
+</div>
+<div id="directed-networks." class="section level5">
+<h5><span class="header-section-number">10.3.1.1.2</span> Directed Networks.</h5>
+<p>In a directed graph, each tie has a direction: the <strong>directed ties</strong> in a directed graph represent a <em>one-way</em> or <em>asymmetric</em> relationship between nodes. We can think of asymmetric relationships as those in which the roles of the source and destination nodes differ.</p>
+<p>Earlier, we described a network to model mentorship and advising between political scientists (see Figure <a href="social-networks.html#fig:sn.directed_mentorship" reference-type="ref" reference="fig:sn.directed_mentorship"><span class="math display">\[fig:sn.directed\_mentorship\]</span></a>). For each tie in this network, one node has the role of mentor and the other the role of student; note that each node can take on one role or the other, or even <em>both</em> depending on the direction of its ties to other nodes. Let there be eight scholars in the network: Akemi, Brett, Chi, Dani, Elvan, Farah, Gal, and Harvey. Akemi is the most senior scholar and was an adviser to Brett and Chi when they were graduate students. Later in their careers, Brett mentored Dani and Elvan, and Chi mentored Farah, Gal, and Harvey. In this network, the direction of the tie is a fundamental aspect of the relationship between two nodes: to say <em>Brett mentors Akemi</em> is not the same as saying <em>Akemi mentors Brett</em>.</p>
+<div class="figure">
+<embed src="images/ch11_socialNetwork/directed_mentorship.pdf" />
+<p class="caption">A directed network of adviser–student relationships between political scientists.</p>
+</div>
+<p><span id="fig:sn.directed_mentorship" label="fig:sn.directed_mentorship"><span class="math display">\[fig:sn.directed\_mentorship\]</span></span></p>
+<p>A second example of a directed graph is the network of students in an elementary school class based on friendship ties identified by the students themselves (see Figure <a href="social-networks.html#fig:sn.directed_friendship" reference-type="ref" reference="fig:sn.directed_friendship"><span class="math display">\[fig:sn.directed\_friendship\]</span></a>): If Inge identifies Jaylen as a friend, then there exists a friendship tie from Inge to Jaylen; if Jaylen identifies Inge as a friend, then there exists a friendship tie from Jaylen to Inge. Kiko identifies both Inge and Jaylen as friends, so there exist ties from Kiko to Inge and Kiko to Jaylen. Inge identifies Kiko as a friend, but Jaylen does not; thus, there exists a tie from Inge to Kiko, but there is no tie from Jaylen to Kiko—despite the tie from Kiko to Jaylen. The ability to denote such asymmetric relationships is the key feature of directed graphs.</p>
+<div class="figure">
+<embed src="images/ch11_socialNetwork/directed_friendship.pdf" />
+<p class="caption">A directed friendship network of students based on self-reported ties.</p>
+</div>
+<p><span id="fig:sn.directed_friendship" label="fig:sn.directed_friendship"><span class="math display">\[fig:sn.directed\_friendship\]</span></span></p>
+</div>
+</div>
+<div id="weighting" class="section level4">
+<h4><span class="header-section-number">10.3.1.2</span> Weighting</h4>
+<p>The second fundamental attribute of a graph is whether its ties are weighted. There are two types of graphs with respect to weighting, <strong>unweighted</strong> and <strong>weighted</strong>.</p>
+<div id="unweighted-networks." class="section level5">
+<h5><span class="header-section-number">10.3.1.2.1</span> Unweighted Networks.</h5>
+<p>In an unweighted graph, there are no values associated with any of the edges. The relationships represented in the network are modeled as equivalent, regardless of the circumstances surrounding each relationship.</p>
+<p>Consider the earlier example describing a friendship network among elementary school classmates as observed by their teacher. In this undirected network, we can consider ties as <em>dichotomous</em> or <em>binary</em>: between two nodes, a tie either exists or not. Imagine that Inge and Jaylen have been neighbors, friends, and classmates for five years, and both are now friends with Loren, a new classmate who has recently moved to the neighborhood. In an unweighted representation of the friendship network, the tie between Inge and Jaylen is seen as equivalent to the tie between Inge and Loren: the network does not capture the strength, duration, frequency of contact, or other qualities of the friendship bonds, only whether the friendship bonds exist.</p>
+</div>
+<div id="weighted-networks." class="section level5">
+<h5><span class="header-section-number">10.3.1.2.2</span> Weighted Networks.</h5>
+<p>In a weighted graph, each edge has a numeric value or <em>weight</em> representing an attribute of the relationship between its two nodes. Depending on the network, the value can measure the physical distance between two nodes or some aspect of the strength or intensity of the relationship between them or perhaps of the frequency of an event that occurs between the two nodes.</p>
+<p>A simple example of a weighted network is an undirected graph of several towns and the highways existing between them. In this network, the weight of each edge is the length of the highway connecting a pair of towns and thus measures the distance between them.</p>
+<p>For a directed weighted graph, recall the earlier example of the email correspondence network among workers in a corporation. Consider the case of two workers, Stéphane and Tracy, each of whom has sent emails to the other. To make a directed weighted correspondence graph, assign to each edge the number of emails sent by the source node to the destination node: Stéphane has sent Tracy <span class="math inline">\(11\)</span> emails, so the weight of the tie from Stéphane to Tracy is <span class="math inline">\(11\)</span>; Tracy has sent Stéphane <span class="math inline">\(15\)</span> emails, so the weight of the tie from Tracy to Stéphane is <span class="math inline">\(15\)</span>. In this case, the edges represent the frequency and direction of email contact between the two workers.</p>
+<p>It is possible to convert a weighted directed graph to a weighted undirected graph. This can be accomplished by summing the weights of ties between a pair of nodes and assigning the result to a single undirected edge between the nodes. For the email correspondence network, to replace the directed ties between Stéphane and Tracy with an undirected tie, we add Stéphane’s <span class="math inline">\(11\)</span> sent emails to Tracy’s <span class="math inline">\(15\)</span> and assign the value <span class="math inline">\(26\)</span> to the link between them. The edges now represent the frequency, but not the direction, of email contact between Stéphane and Tracy.</p>
+</div>
+<div id="node-attributes." class="section level5">
+<h5><span class="header-section-number">10.3.1.2.3</span> Node Attributes.</h5>
+<p>Real-world social entities vary in their characteristics—that is, there are <em>variables</em> associated with social entities. For example, there exist many types of organizations, such as non-profits, for-profit corporations, government agencies, and intergovernmental bodies. Similarly, there are a plethora of aspects associated with individual people; consider the following: In the United States, generally speaking, age cutoffs define the legal categories of <em>child</em> and <em>adult</em>; persons with high-school degrees belong to one category, while those who have not attained a high-school education belong to a different one; and those with certain criminal convictions are labeled as felons.</p>
+<p>In general, each variable associated with a social actor measures a single aspect of that actor: it may measure height or weight, but not both, for example. These variables may be <em>quantitative</em> (a <em>number</em>, such as the count of armed conflicts that have taken place in a district, or the fuel efficiency of a vehicle in miles per gallon) or <em>qualitative</em> (a <em>category</em>, such as a nation’s form of government, or whether a state’s legal code allows for capital punishment). (For a thorough discussion of variable types, see Chapter 4.)</p>
+<p>We can represent the different values of a variable across the vertices in a network using <em>node attributes</em>. Here, we will only consider node attributes that represent categorical variables, either nominal or ordinal. A variable may take on a single value from a finite set of all possible categories (the categories are <em>exhaustive</em>), with each category being distinct from all the others (the categories are <em>mutually exclusive</em>). Note, however, that discrete and continuous variables <em>can</em> be converted to ordinal variables by subsetting the possible values into categories. Consider, for example, a variable that captures the count of shootings in a neighborhood with categories such as <span class="math inline">\(0\mbox{--}9\)</span>, <span class="math inline">\(10\mbox{--}19\)</span>, <span class="math inline">\(20\mbox{--}29\)</span>, and <span class="math inline">\(\ge30\)</span>; or the weight status associated with each range of BMI values as classified by the CDC (<span class="citation">(<span class="citeproc-not-found" data-reference-id="CDC2017"><strong>???</strong></span>)</span>): <span class="math inline">\(\le18.5\)</span> is classified as <em>underweight</em>, <span class="math inline">\(18.5\mbox{--}24.9\)</span> as <em>normal or healthy weight</em>, <span class="math inline">\(25\mbox{--}29.9\)</span> as <em>overweight</em>, and <span class="math inline">\(\ge30\)</span> as <em>obese</em>{–}.</p>
+<p>In reality, social actors are associated with myriad characteristics, conditions, and states of being. A given scientific study may measure many such characteristics, with each constituting a single variable. While each variable can only take on a single value for a given observation, a node in a network may be associated with zero, one, or several variables. In the earlier example of a friendship network among elementary-school students as inferred by their teacher, there were no variables associated with any node: each vertex represents a student, and no vertex attributes are taken into account. In the case of organization types, each node has a <em>type</em>, the categories of which are (in this simplified case) <em>non-profit</em>, <em>for-profit</em>, <em>governmental</em>, and <em>intergovernmental</em>. As an example of a network with two variables, consider a graph of ally relationships between nation-states; the first variable captures whether the entity engaged in a military conflict during the previous ten years (a binary variable that takes the value <span class="math inline">\(True\)</span> or <span class="math inline">\(False\)</span>), and the second captures total per capita military spending over that same period (an ordinal variable, with each category capturing a range of spending amounts measured in thousands of dollars, such as <span class="math inline">\([0, 10)\)</span>, <span class="math inline">\([10, 20)\)</span>, <span class="math inline">\([20, 30)\)</span>, <span class="math inline">\(\ge30\)</span>).</p>
+<p>To visualize node attributes in a network diagram, the physical aspects of a node’s presentation vary to represent different values; such aspects include color, shape, and size. Sociograms with elements to represent more than two attributes, however, become increasingly challenging to interpret with each additional variable.</p>
+</div>
+<div id="multigraphs." class="section level5">
+<h5><span class="header-section-number">10.3.1.2.4</span> Multigraphs.</h5>
+<p>Just as social actors are associated with many characteristics, they are also associated with other actors via multiple types of relationships. Consider the following examples: A pair of nation-states are currently allies but were previously adversaries. Two students who were once roommates have also played together on the softball team. Company A was a customer of Company B, but now Company A has acquired Company B as a subsidiary.</p>
+<p>A graph that models multiple types of relationships is called a <em>multigraph</em>. In a multigraph, each type of relationship between a pair of nodes is represented by a distinct edge. In each of the three preceding examples, the respective multigraph models two types of relationships. Each pair of nodes in the network, then, would be connected by zero, one, or two edges. In visualizing multigraphs, the type of a relationship is typically represented by varying the color of the link between nodes. As with node attributes, diagrams with increasing levels of complexity are more difficult to interpret.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="method-detail-2" class="section level2">
+<h2><span class="header-section-number">10.4</span> Method: detail</h2>
+<p>Now that we have covered the foundations of social networks, we can consider concepts to study their characteristics as well introduce some special types of graphs. Many of the concepts build on others, so <span class="math display">\[something something something\]</span>.</p>
+<div id="network-characteristics-and-measures" class="section level3">
+<h3><span class="header-section-number">10.4.1</span> Network Characteristics and Measures</h3>
+<div id="distance" class="section level4">
+<h4><span class="header-section-number">10.4.1.1</span> Distance</h4>
+<p>There are many important concepts related to the traversal of a graph from one specific node to another. A <strong>path</strong> is a sequence of nodes connected by edges, spanning from an origin node to a destination node without repeating any nodes or edges <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. For a directed graph, the path follows the direction of each edge. Note that for any pair of nodes in a network, there may exist multiple paths.</p>
+<p>The <strong>path length</strong> is the number of edges in a given path between two nodes, and the shortest path between two given nodes is called their <strong>geodesic</strong> <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. The sociograms in Figure <a href="#fig:geodesics" reference-type="ref" reference="fig:geodesics"><span class="math display">\[fig:geodesics\]</span></a> highlight the geodesics between Kiko and Mega for both undirected and directed representations of the student friendship network.</p>
+<p>The <strong>distance</strong> between any two nodes, also referred to as the <em>geodesic distance</em> is the length of their geodesic. For example, if nodes <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are connected by an undirected tie, then their geodesic distance is <span class="math inline">\(1\)</span>.</p>
+<p>We can find the <strong>mean path length</strong>, also called the <strong>average path length</strong> or <strong>characteristic path length</strong>, by averaging the geodesic distances between all pairs of nodes in the graph <span class="citation">(Watts and Strogatz <a href="#ref-WattsStrogatz1998">1998</a>)</span>.</p>
+<p>The <strong>diameter</strong> of a network is the maximum geodesic distance between any two vertices in the network <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. Note that the path under evaluation is <em>not necessarily</em> the <em>longest path</em> between any two vertices, but the longest of the geodesic paths in the graph.</p>
+</div>
+<div id="connectivity-subgraphs-and-components" class="section level4">
+<h4><span class="header-section-number">10.4.1.2</span> Connectivity, Subgraphs, and Components</h4>
+<p>A network in which each node is directly connected to all the other nodes is called a <strong>complete graph</strong> (this is a special case of a <strong>geographic network</strong>, as described later).</p>
+<p>A graph in which each node can reach all other nodes via a path is called a <strong>connected graph</strong> <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>.</p>
+<p>If we take a subset of the nodes in a graph, including the edges between the subset of nodes, the result, called a <strong>subgraph</strong>, is itself a graph. If the subgraph is a connected graph, then it is called a <strong>connected component</strong>. Note that a subgraph consisting of a single node is considered a connected component.</p>
+<p>A <strong>disconnected graph</strong> is one in which at least one node is not reachable via a path from at least one other node <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. A disconnected graph has at least two connected components.</p>
+</div>
+<div id="centrality" class="section level4">
+<h4><span class="header-section-number">10.4.1.3</span> Centrality</h4>
+<p>A node’s <strong>centrality</strong> can be used to gauge how important it is, for various conceptualizations of <em>importance</em>. There are many different measures of centrality; here, we will discuss three such measures: <strong>betweenness centrality</strong>, <strong>closeness centrality</strong>, and <strong>degree centrality</strong>.</p>
+<div id="betweenness-centrality." class="section level5">
+<h5><span class="header-section-number">10.4.1.3.1</span> Betweenness centrality.</h5>
+<p>The <strong>betweenness centrality</strong> metric is a measure of centrality that considers important vertices to be those that create connections <em>between</em> other vertices. According to Freeman, who formalized the definition of the metric, betweenness is important because “<span class="math display">\[a vertex\]</span> falling between two others can facilitate, block, distort, or falsify communication between the two; it can more or less completely control their communication” (<span class="citation">(<a href="#ref-Freeman1977">1977</a>, 36)</span>). For a given target node, betweenness centrality is found by computing the sum, for all other pairs of nodes in the graph, of the ratio of the number of geodesics between the pair of nodes that pass through the target node to the total number of geodesics between the pair of nodes <span class="citation">(Freeman <a href="#ref-Freeman1977">1977</a>)</span>. More formally, we can write the definition of betweenness for a node <span class="math inline">\(v\)</span> as: <span class="math display">\[Betweenness(v) = \sum_{i \neq j \neq v}^{n}\cfrac{g_{ij}(v)}{g_{ij}}
+  \label{eq:Betweenness}\]</span> where <span class="math inline">\(g_{ij}\)</span> is the number of geodesics between node <span class="math inline">\(i\)</span> and node <span class="math inline">\(j\)</span>, and <span class="math inline">\(g_{ij}(v)\)</span> is the number of such paths that pass through node <span class="math inline">\(v\)</span> <span class="citation">(Freeman <a href="#ref-Freeman1977">1977</a>)</span>. Note that a similar definition can be used to find the betweenness centrality of edges.</p>
+</div>
+<div id="closeness-centrality." class="section level5">
+<h5><span class="header-section-number">10.4.1.3.2</span> Closeness centrality.</h5>
+<p><strong>Closeness centrality</strong> is a measure of centrality that considers important nodes to be those with short geodesics to other nodes—that is, they are <em>close</em> to other nodes. For a given node, closeness centrality is found by computing the inverse of the sum of all the distances between the given node and each other node in the graph. We can write the definition of closeness for a node <span class="math inline">\(v\)</span> thus: <span class="math display">\[Closeness(v) = \cfrac{1}{\sum_{i \neq v}^{n}d(v, i)}\]</span> where <span class="math inline">\(d(v, i)\)</span> is the geodesic distance between nodes <span class="math inline">\(v\)</span> and <span class="math inline">\(i\)</span> <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>.</p>
+</div>
+<div id="degree-centrality." class="section level5">
+<h5><span class="header-section-number">10.4.1.3.3</span> Degree centrality.</h5>
+<p>A third measure of centrality is <strong>degree centrality</strong>, which considers important nodes to be those that have many neighbors. The <strong>degree</strong> of a vertex tells us its number of neighbors. To calculate the degree of a vertex in an undirected graph, we can simply count the number of edges it has <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. Let us return to the example of an undirected friendship network among classmates as inferred by the teacher; in this network, if Orla is connected to Parveen, Quinn, and Refilwe, then Orla has a degree of <span class="math inline">\(3\)</span>.</p>
+<p>For a directed graph, a node’s <strong>outdegree</strong> is the number of edges originating from it; the <strong>indegree</strong> is the number of edges terminating at the node <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. As an example, we can consider the directed friendship network as described by the students. In this network, the students Parveen, Refilwe, Stéphane, and Tracy consider Orla to be a friend, so Orla has an indegree of <span class="math inline">\(4\)</span>. Orla, in turn, considers only Parveen and Quinn to be friends and so has an outdegree of <span class="math inline">\(2\)</span>.</p>
+<p>A network’s <strong>degree distribution</strong> describes the probability of a given node in the graph having a degree of a certain value. In practical terms, we can think of it as a set of numbers, where each reflects the count of nodes in the graph with degree of <span class="math inline">\(0\)</span>, degree of <span class="math inline">\(1\)</span>, degree of <span class="math inline">\(2\)</span>, and so on. This will be important later when we discuss <em>power law networks</em>.</p>
+<p>The <strong>mean degree</strong> of a graph is the mean average of the degrees for all the vertices in the entire graph <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>. For example, if an undirected network has four nodes with degrees <span class="math inline">\([1, 1, 2, 2]\)</span>, then the mean degree for the network is <span class="math inline">\(1.5\)</span>. If a directed graph has five nodes with indegrees <span class="math inline">\([0, 1, 3, 3, 3]\)</span>, and outdegrees <span class="math inline">\([1, 2, 2, 2, 3]\)</span>, then the mean of the indegrees is <span class="math inline">\(2\)</span> and the mean of the outdegrees is also <span class="math inline">\(2\)</span>; note that these are equal because every edge extending from some node points to another <span class="citation">(Wasserman and Faust <a href="#ref-WassermanFaust1994">1994</a>)</span>.</p>
+</div>
+</div>
+<div id="clustering" class="section level4">
+<h4><span class="header-section-number">10.4.1.4</span> Clustering</h4>
+<p>In order to evaluate clustering within a network, we must first introduce the notion of a <strong>triple</strong>, sometimes called a <strong>triplet</strong> or <strong>triad</strong>, which is a connected component with three nodes. If a triple forms a complete graph—that is, if each node is connected to both the others—then it is a <strong>closed triple</strong>, also known as a <strong>triangle</strong>; otherwise, one pair of nodes in the triple are not adjacent so it is an <strong>open triple</strong>. An <strong>ordered triple</strong> is one for which the vertex order is a characteristic of the triple; for example, if the vertices <span class="math inline">\([A, B, C]\)</span> form a complete graph, the ordered triples <span class="math inline">\(ABC\)</span>, <span class="math inline">\(ACB\)</span>, <span class="math inline">\(BAC\)</span>, <span class="math inline">\(BCA\)</span>, <span class="math inline">\(CAB\)</span>, and <span class="math inline">\(CBA\)</span> are each distinct—but note that the <em>triangles</em> formed by each triple are all the same.</p>
+<p>For our purposes, we will assume that all edges are <em>undirected</em> when considering triples, triangles, and clustering. Note that in many applications outside the scope of this chapter, this assumption will not hold.</p>
+<p>We can now define, for any given node, its <strong>local clustering coefficient</strong> or <strong>local transitivity</strong> by taking the fraction of the pairs of the node’s neighbors that are in turn neighbors with one another—that is, the number of triangles including the node divided by the number of possible triangles <span class="citation">(Watts and Strogatz <a href="#ref-WattsStrogatz1998">1998</a>; Opsahl <a href="#ref-Opsahl2013">2013</a>)</span>. An equivalent definition given in Saramäki et al. (<span class="citation">(<a href="#ref-SaramakiEtAl2007">2007</a>)</span>) is to compute the ratio of twice the number of triangles that include the given node to the product of the node’s degree and one less than its degree:</p>
+<p><span class="math display">\[Transitivity_{local}(v) = \frac{2 \times t_v}{degree(v) \times (degree(v) - 1)}\]</span> where <span class="math inline">\(t_v\)</span> is the number of triangles that include node <span class="math inline">\(v\)</span>. This metric measures cohesion among a given vertex and its neighbors <span class="citation">(Barrat et al. <a href="#ref-BarratEtAl2004">2004</a>)</span>.</p>
+<p>To calculate the <strong>global clustering coefficient</strong>, also called the or <strong>global transitivity</strong>, for a graph <span class="math inline">\(g\)</span>, we take the ratio of thrice the number of triangles to the number of all ordered triples—both closed and open—in the graph: <span class="math display">\[Transitivity_{global}(g) = \frac{3 \times Triangles(g)}{Triples_{ordered}(g)}\]</span> where <span class="math inline">\(Triangles(g)\)</span> is the total number of triangles in graph <span class="math inline">\(g\)</span> and <span class="math inline">\(Triples_{ordered}(g)\)</span> is the total number of ordered triples in <span class="math inline">\(g\)</span> <span class="citation">(Opsahl <a href="#ref-Opsahl2013">2013</a>)</span>.</p>
+<p>Finally, we can compute the average local clustering coefficient for a graph <span class="math inline">\(g\)</span> by taking the mean across all nodes: <span class="math display">\[AverageLocalTransitivity(g) = \frac{\sum_{i = 1}^{N}Transitivity_{local}(n_i)}{N}\]</span> where <span class="math inline">\(n_i\)</span> represents a node identified by its index and <span class="math inline">\(N\)</span> is the number of nodes in the entire network <span class="citation">(Barrat et al. <a href="#ref-BarratEtAl2004">2004</a>)</span>. According to <span class="citation">Barrat et al. (<a href="#ref-BarratEtAl2004">2004</a>)</span>, this measure “expresses the statistical level of cohesiveness measuring the global density of interconnected vertex <span class="math display">\[triples\]</span> in the network” (<span class="citation">(<a href="#ref-BarratEtAl2004">2004</a>, 3750)</span>).</p>
+</div>
+<div id="density" class="section level4">
+<h4><span class="header-section-number">10.4.1.5</span> Density</h4>
+<p>The <strong>density</strong> of a network is the ratio of the number of edges it contains to the number of <em>possible</em> edges. For example, in a network of seven nodes, the number of possible edges is found by the combination <span class="math inline">\(7C_2 = \frac{7!}{2!(7 - 2)!} = 21\)</span>. If there exist <span class="math inline">\(12\)</span> edges among the nodes, then the density of the network is <span class="math inline">\(\frac{12}{21} = .57\)</span> or <span class="math inline">\(57\%\)</span>.</p>
+</div>
+<div id="diffusion" class="section level4">
+<h4><span class="header-section-number">10.4.1.6</span> Diffusion</h4>
+<p>The process of <strong>diffusion</strong> describes the spread of tastes, information, or some status from one node to others along network ties.</p>
+</div>
+</div>
+<div id="special-graphs" class="section level3">
+<h3><span class="header-section-number">10.4.2</span> Special Graphs</h3>
+<div id="geographic-networks" class="section level4">
+<h4><span class="header-section-number">10.4.2.1</span> Geographic Networks</h4>
+<p>A <strong>geographic network</strong> is one in which each node is connected to the <em>k</em> nearest nodes, with <em>k</em> ranging from <span class="math inline">\(1\)</span> to the total number of nodes in the network minus <span class="math inline">\(1\)</span>. If <em>k</em> takes on the maximum value—that is, if each node is connected to all the other nodes—then the network is called a <strong>complete graph</strong>.</p>
+</div>
+<div id="random-networks" class="section level4">
+<h4><span class="header-section-number">10.4.2.2</span> Random Networks</h4>
+<p>A <strong>random network</strong> is one in which, for each pair of nodes, there is a probability <span class="math inline">\(p\)</span> that there is an edge between them. This probability is a constant for the entire graph and can range from <span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span>.</p>
+</div>
+<div id="small-world-networks" class="section level4">
+<h4><span class="header-section-number">10.4.2.3</span> Small-World Networks</h4>
+<p>The small-world phenomenon describes the idea that in a large population, most people are connected to each other by relatively short chains of acquaintances. In a series of widely known experiments conducted within the United States, Milgram and Travers asked arbitrarily chosen participants to attempt to make contact with a specific target person by mailing or delivering a provided document to someone the participant knew on a first-name basis who was more likely to be personally acquainted with the target person; their findings in one experiment showed that among successful contacts, the average number of intermediaries between the initial participants and the target person was <span class="math inline">\(5.2\)</span> <span class="citation">(Milgram <a href="#ref-Milgram1967">1967</a>; Milgram and Travers <a href="#ref-MilgramTravers1969">1969</a>)</span>. <span class="citation">Dodds, Muhamad, and Watts (<a href="#ref-DoddsEtAl2003">2003</a>)</span> conducted an international email study in a similar vein, finding that successful contacts were transmitted across an average chain length of <span class="math inline">\(4.05\)</span> steps.; when accounting for attrition, they found a median chain length of <span class="math inline">\(7\)</span> steps. These experiments show that the small-world hypothesis appears to be consistent with society at large: in just a few degrees of separation, one’s network of friends of friends grows very large. Small-world networks exhibit two key characteristics: (1) the mean local clustering coefficient is high—that is, on average, a node’s neighbors are highly connected to each other <span class="citation">(Watts and Strogatz <a href="#ref-WattsStrogatz1998">1998</a>)</span>; and (2) the mean path length is low—that is, on average, the distance between nodes is short<span class="citation">(Watts and Strogatz <a href="#ref-WattsStrogatz1998">1998</a>)</span>. Given high average clustering, we might expect such networks to be dense, but in fact, they tend to have relatively few edges <span class="citation">(<span class="citeproc-not-found" data-reference-id="TakesKosters2011"><strong>???</strong></span>)</span>. Because they have a small mean path length, the diameter—the largest distance between any two nodes—is “exponentially smaller than <span class="math display">\[the size of the network\]</span>’’ <span class="citation">(Kleinberg <a href="#ref-Kleinberg2000">2000</a>, 845)</span>.</p>
+<p>These combination of these features results in a network through which information and other conditions, such as infectious disease, propagate quickly <span class="citation">(Watts and Strogatz <a href="#ref-WattsStrogatz1998">1998</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div id="applications-of-social-network-analysis" class="section level2">
+<h2><span class="header-section-number">10.5</span> Applications of Social Network Analysis</h2>
+</div>
+<div id="advantages-of-social-network-analysis" class="section level2">
+<h2><span class="header-section-number">10.6</span> Advantages of Social Network Analysis</h2>
+</div>
+<div id="disadvantages-of-social-network-analysis" class="section level2">
+<h2><span class="header-section-number">10.7</span> Disadvantages of Social Network Analysis</h2>
+</div>
+<div id="broader-significance-of-social-network-analysis-in-political-science" class="section level2">
+<h2><span class="header-section-number">10.8</span> Broader Significance of Social Network Analysis in Political Science</h2>
+</div>
+<div id="conclusion-8" class="section level2">
+<h2><span class="header-section-number">10.9</span> Conclusion</h2>
+</div>
+<div id="application-questions-10" class="section level2">
+<h2><span class="header-section-number">10.10</span> Application Questions</h2>
+</div>
+<div id="key-terms-8" class="section level2">
+<h2><span class="header-section-number">10.11</span> Key Terms</h2>
+<ul>
+<li><p>adjacency matrix</p></li>
+<li><p>betweenness centrality</p></li>
+<li><p>centrality</p></li>
+<li><p>closed triple</p></li>
+<li><p>closeness centrality</p></li>
+<li><p>complete graph</p></li>
+<li><p>connected component</p></li>
+<li><p>connected graph</p></li>
+<li><p>degree centrality</p></li>
+<li><p>degree distribution</p></li>
+<li><p>diameter</p></li>
+<li><p>diffusion</p></li>
+<li><p>directed graph</p></li>
+<li><p>directed tie</p></li>
+<li><p>disconnected graph</p></li>
+<li><p>distance</p></li>
+<li><p>edge</p></li>
+<li><p>geographic network</p></li>
+<li><p>hierarchical mapping</p></li>
+<li><p>indegree</p></li>
+<li><p>local clustering coefficient</p></li>
+<li><p>matrix</p></li>
+<li><p>mean degree</p></li>
+<li><p>mean path length</p></li>
+<li><p>multigraph</p></li>
+<li><p>neighbors</p></li>
+<li><p>network</p></li>
+<li><p>network density</p></li>
+<li><p>node</p></li>
+<li><p>open triple</p></li>
+<li><p>ordered triple</p></li>
+<li><p>outdegree</p></li>
+<li><p>path</p></li>
+<li><p>path length</p></li>
+<li><p>power law network</p></li>
+<li><p>random network</p></li>
+<li><p>small-world network</p></li>
+<li><p>social network</p></li>
+<li><p>social network analysis</p></li>
+<li><p>subgraph</p></li>
+<li><p>tie</p></li>
+<li><p>triad</p></li>
+<li><p>triangle</p></li>
+<li><p>triple</p></li>
+<li><p>triplet</p></li>
+<li><p>undirected graph</p></li>
+<li><p>undirected tie</p></li>
+<li><p>unweighted graph</p></li>
+<li><p>vertex</p></li>
+<li><p>weighted graph</p></li>
+</ul>
+</div>
+<div id="answers-to-application-questions-9" class="section level2">
+<h2><span class="header-section-number">10.12</span> Answers to Application Questions</h2>
 
+</div>
+</div>
+<h3>References</h3>
 <div id="refs" class="references">
-<div>
-<p>Acemoglu, Daron, Suresh Naidu, Pascual Restrepo, and James A Robinson. 2019. “Democracy Does Cause Growth.” <em>Journal of Political Economy</em> 127 (1). University of Chicago Press Chicago, IL: 47–100.</p>
-</div>
-<div>
-<p>Amrhein, Valentin, Sander Greenland, and Blake McShane. 2019. “Scientists Rise up Against Statistical Significance.” <em>Nature</em> 567. Nature Publishing Group: 305–7.</p>
-</div>
-<div>
-<p>Angrist, Joshua D, Victor Lavy, Jetson Leder-Luis, and Adi Shany. 2017. “Maimonides Rule Redux.” Working Paper 23486. National Bureau of Economic Research. doi:<a href="https://doi.org/10.3386/w23486">10.3386/w23486</a>.</p>
-</div>
-<div>
-<p>Angrist, Joshua D., and Victor Lavy. 1999. “Using Maimonides’ Rule to Estimate the Effect of Class Size on Scholastic Achievement.” <em>The Quarterly Journal of Economics</em> 114 (2): 533–75. doi:<a href="https://doi.org/10.1162/003355399556061">10.1162/003355399556061</a>.</p>
-</div>
-<div>
-<p>Angrist, Joshua David, and Jörn-Steffen Pischke. 2015. <em>Mastering ’Metrics: The Path from Cause to Effect</em>. Princeton ; Oxford: Princeton University Press.</p>
-</div>
-<div>
-<p>Ansolabehere, Stephen, and Brian F Schaffner. 2014. “Does Survey Mode Still Matter? Findings from a 2010 Multi-Mode Comparison.” <em>Political Analysis</em> 22 (3). Cambridge University Press: 285–303.</p>
-</div>
-<div>
-<p>Bacharach, Samuel B. 1989. “Organizational Theories: Some Criteria for Evaluation.” <em>Academy of Management Review</em> 14 (4): 496–515.</p>
-</div>
-<div>
-<p>Barakso, Maryann, Daniel M Sabet, and Brian Schaffner. 2013. <em>Understanding Political Science Research Methods: The Challenge of Inference</em>. Routledge.</p>
-</div>
-<div>
+<div id="ref-BarratEtAl2004">
 <p>Barrat, A., M. Barthélemy, R. Pastor-Satorras, and A. Vespignani. 2004. “The Architecture of Complex Weighted Networks.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (11): 3747–52. doi:<a href="https://doi.org/10.1073/pnas.0400087101">10.1073/pnas.0400087101</a>.</p>
 </div>
-<div>
-<p>Bennett, Andre, Aharo Barth, and Kennet R Rutherford. 2003. “Do We Preach What We Practice? A Survey of Methods in Political Science Journals and Curricula.” <em>PS: Political Science &amp; Politics</em> 36 (3): 373–78.</p>
-</div>
-<div>
-<p>Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. “Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.” <em><span style="font-style:normal;">Journal of Politics</span></em> 80 (4): 1150–67.</p>
-</div>
-<div>
-<p>Boigelot, Denis. 2011. “An Example of the Correlation of X and Y for Various Distributions of (X,y) Pairs.” Wikimedia Commons.</p>
-</div>
-<div>
-<p>Boix, Carles, and Susan C Stokes. 2003. “Endogenous Democratization.” <em>World Politics</em> 55 (4). Cambridge University Press: 517–49.</p>
-</div>
-<div>
-<p>Bonilla, Tabitha, and Cecilia Hyunjung Mo. 2018. “Bridging the Partisan Divide on Immigration Policy Attitudes Through a Bipartisan Issue Area: The Case of Human Trafficking.” <em>Journal of Experimental Political Science</em> 5 (2). Cambridge University Press: 107–20. doi:<a href="https://doi.org/10.1017/XPS.2018.3">10.1017/XPS.2018.3</a>.</p>
-</div>
-<div>
-<p>Booth, Andrew, Anthea Sutton, and Diana Papaioannou. 2016. <em>Systematic Approaches to a Successful Literature Review</em>. SAGE.</p>
-</div>
-<div>
-<p>Borell-Porta, Mireia, Joan Costa- Font, and Julia Phillip. 2018. “The ’Mighty Girl’ Effect: Does Parenting Daughters Alter Attitudes Towards Gender Roles?” <em>IZA Institute of Labor Economics</em> DP N. 11259.</p>
-</div>
-<div>
-<p>Bouka, Yolande. 2013. “(Oral) History of Violence: Conflicting Narratives in Post-Genocide Rwanda.” <em>Oral History Forum</em> 33.</p>
-</div>
-<div>
-<p>Broockman, David, Joshua Kalla, and Peter Aronow. 2015. “Irregularities in LaCour (2014).”</p>
-</div>
-<div>
-<p>Bullock, John G., and Shang E. Ha. 2011. “Mediation Analysis Is Harder Than It Looks.” In <em>Cambridge Handbook of Experimental Political Science</em>, edited by James N. Druckman, Donald P. Green, James H. Kuklinski, and Arthur Lupia, 508–22. Cambridge: Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9780511921452.035">10.1017/CBO9780511921452.035</a>.</p>
-</div>
-<div>
-<p>Cantú, Francisco, and Sebastián M. Saiegh. 2011. “Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade Using Supervised Machine Learning.” <em><span style="font-style:normal;">Political Analysis</span></em> 19 (4): 409–33.</p>
-</div>
-<div>
-<p>Carroll, Robert J., and Brenton Kenkel. 2019. “Prediction.” <em>Proxies, and Power. <span style="font-style:normal;">American Journal of Political Science</span></em>.</p>
-</div>
-<div>
-<p>Chen, Dingding, Chao-yo Cheng, and Johannes Urpelainen. 2016. “Support for Renewable Energy in China: A Survey Experiment with Internet Users.” <em>Journal of Cleaner Production</em> 112 (January): 3750–8. doi:<a href="https://doi.org/10.1016/j.jclepro.2015.08.109">10.1016/j.jclepro.2015.08.109</a>.</p>
-</div>
-<div>
-<p>Clark, William Roberts, Matt Golder, and Sona Nadenichek Golder. 2013. <em>Principles of Comparative Politics</em>. Los Angeles, CA: SAGE Publications.</p>
-</div>
-<div>
-<p>Coe, Kevin, David Tewksbury, Bradley J. Bond, Kristin L. Drogos, Robert W. Porter, Ashley Yahn, and Yuanyuan Zhang. 2008. “Hostile News: Partisan Use and Perceptions of Cable News Programming.” <em>Journal of Communication</em> 58 (2): 201–19. doi:<a href="https://doi.org/10.1111/j.1460-2466.2008.00381.x">10.1111/j.1460-2466.2008.00381.x</a>.</p>
-</div>
-<div>
-<p>Cohen, Cathy J. 1999. <em>The Boundaries of Blackness: AIDS and the Breakdown of Black Politics</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>Collier, David, and John Gerring, eds. 2009. <em>Concepts and Method in Social Science: The Tradition of Giovanni Sartori</em>. New York: Routledge.</p>
-</div>
-<div>
-<p>Cook, Kathleen E., and Elise Murowchick. 2014. “Do Literature Review Skills Transfer from One Course to Another?” <em>Psychology Learning &amp; Teaching</em> 13 (1): 3–11. doi:<a href="https://doi.org/10.2304/plat.2014.13.1.3">10.2304/plat.2014.13.1.3</a>.</p>
-</div>
-<div>
-<p>Dawson, Michael C. 2001. <em>Black Visions: The Roots and Contemporary African-American Political Ideologies</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>De La O, Ana L. 2013. “Do Conditional Cash Transfers Affect Electoral Behavior? Evidence from a Randomized Experiment in Mexico.” <em>American Journal of Political Science</em> 57 (1): 1–14.</p>
-</div>
-<div>
-<p>Dionne, Kim Yi, and Jeremy Horowitz. 2016. “The Political Effects of Agricultural Subsidies in Africa: Evidence from Malawi.” <em>World Development</em> 87 (November): 215–26. doi:<a href="https://doi.org/10.1016/j.worlddev.2016.06.011">10.1016/j.worlddev.2016.06.011</a>.</p>
-</div>
-<div>
+<div id="ref-DoddsEtAl2003">
 <p>Dodds, Peter Sheridan, Roby Muhamad, and Duncan J. Watts. 2003. “An Experimental Study of Search in Global Social Networks.” <em>Science</em> 301 (5634): 827–29. doi:<a href="https://doi.org/10.1126/science.1081058">10.1126/science.1081058</a>.</p>
 </div>
-<div>
-<p>Duverger, Maurice. 1954. <em>Political Parties: Their Organization and Activity in the Modern State</em>. New York, NY: Wiley.</p>
-</div>
-<div>
-<p>Emerson, Robert M., Rachel I. Fretz, and Linda L. Shaw. 2011. <em>Writing Ethnographic Fieldnotes. Second</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>Erikson, Robert S, and Kent L Tedin. 2015. <em>American Public Opinion: Its Origins, Content and Impact</em>. Routledge.</p>
-</div>
-<div>
-<p>Ferguson, Thomas, Benjamin Page, Jacob Rothschild, Arturo Chang, and Jie Chen. 2018. “The Economic and Social Roots of Populist Rebellion: Support for Donald Trump in 2016.” <em>Institute for New Economic Thinking Working Paper Series</em>, no. 83.</p>
-</div>
-<div>
-<p>Ferree, Karen E. 2006. “Explaining South Africa’s Racial Census.” <em>The Journal of Politics</em> 68 (4): 803–15. doi:<a href="https://doi.org/10.1111/j.1468-2508.2006.00471.x">10.1111/j.1468-2508.2006.00471.x</a>.</p>
-</div>
-<div>
-<p>Fink, Arlene. 2013. <em>Conducting Research Literature Reviews: From the Internet to Paper</em>. 4th ed. SAGE.</p>
-</div>
-<div>
-<p>Fraile, Marta, and Irene Sánchez-Vítores. 2019. “Tracing the Gender Gap in Political Interest over the Life Span: A Panel Analysis.” <em>Political Psychology</em>, May. doi:<a href="https://doi.org/10.1111/pops.12600">10.1111/pops.12600</a>.</p>
-</div>
-<div>
+<div id="ref-Freeman1977">
 <p>Freeman, Linton C. 1977. “A Set of Measures of Centrality Based on Betweenness.” <em>Sociometry</em> 40 (1): 35–41. doi:<a href="https://doi.org/10.2307/3033543">10.2307/3033543</a>.</p>
 </div>
-<div>
-<p>Frymer, Paul. 2017. <em>Building an American Empire: The Era of Territorial and Political Expansion</em>. Princeton; Oxford: Princeton University Press.</p>
-</div>
-<div>
-<p>García-Rivero, Carlos. 2006. “Race, Class and Underlying Trends in Party Support in South Africa.” <em>Party Politics</em> 12 (1): 57–75. doi:<a href="https://doi.org/10.1177/1354068806059344">10.1177/1354068806059344</a>.</p>
-</div>
-<div>
-<p>Goertz, Gary. 2006. <em>Social Science Concepts: A User’s Guide</em>. Princeton: Princeton University Press.</p>
-</div>
-<div>
-<p>González, Yanilda M. 2017. “What Citizens Can See of the State: Police and the Construction of Democratic Citizenship in Latin America.” <em>Theoretical Criminology</em> 21 (4): 494–511.</p>
-</div>
-<div>
-<p>Gosnell, Harold F. 1927. <em>Getting Out the Vote: An Experiment in the Stimulation of Voting</em>. The University of Chicago press.</p>
-</div>
-<div>
-<p>Groves, Robert M. 2011. “Three Eras of Survey Research.” <em>Public Opinion Quarterly</em> 75 (5). Oxford University Press: 861–71.</p>
-</div>
-<div>
-<p>Hadaway, C Kirk, Penny Long Marler, and Mark Chaves. 1993. “What the Polls Don’t Show: A Closer Look at Us Church Attendance.” <em>American Sociological Review</em>. JSTOR, 741–52.</p>
-</div>
-<div>
-<p>Hainmueller, Jens, Dominik Hangartner, and Teppei Yamamoto. 2015. “Validating Vignette and Conjoint Survey Experiments Against Real-World Behavior.” <em>Proceedings of the National Academy of Sciences</em> 112 (8): 2395–2400. doi:<a href="https://doi.org/10.1073/pnas.1416587112">10.1073/pnas.1416587112</a>.</p>
-</div>
-<div>
-<p>Harris-Perry, Melissa V. 2011. <em>Sister Citizen: Shame, Stereotypes, and Black Women in America. New Haven and</em>. London: Yale University Press.</p>
-</div>
-<div>
-<p>Hart, Chris. 1998. <em>Doing a Literature Review: Releasing the Social Science Research Imagination</em>. Thousand Oaks, CA: SAGE Publications.</p>
-</div>
-<div>
-<p>Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2017. <em><span style="font-style:normal;">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</span></em>. 2nd ed. New York City: Springer.</p>
-</div>
-<div>
-<p>Helmke, Gretchen. 2005. <em>Courts Under Constraints: Judges, Generals, and Presidents in Argentina</em>. Cambridge: Cambridge University Press.</p>
-</div>
-<div>
-<p>Hochschild, Jennifer L., Vesla Weaver, and Traci D. Burch. 2012. <em>Creating a New Racial Order: How Immigration, Multiracialism, Genomics, and the Young Can Remake Race in America</em>. Princeton; Oxford: Princeton University Press.</p>
-</div>
-<div>
-<p>Hopkins, Daniel J., and Jonathan M. Ladd. 2014. “The Consequences of Broader Media Choice: Evidence from the Expansion of Fox News.” <em>Quarterly Journal of Political Science</em> 9 (1): 115–35. doi:<a href="https://doi.org/10.1561/100.00012099">10.1561/100.00012099</a>.</p>
-</div>
-<div>
-<p>Iyengar, Shanto, Mark D. Peters, and Donald R. Kinder. 1982. “Experimental Demonstrations of the ‘Not-so-Minimal’ Consequences of Television News Programs.” <em>American Political Science Review</em> 76 (4): 848–58. doi:<a href="https://doi.org/10.1017/S000305540018966X">10.1017/S000305540018966X</a>.</p>
-</div>
-<div>
-<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em><span style="font-style:normal;">An Introduction to Statistical Learning: With Applications in R</span></em>. 7th ed. New York City: Springer.</p>
-</div>
-<div>
-<p>Jamison, Julian C. 2019. “The Entry of Randomized Assignment into the Social Sciences.” <em>Journal of Causal Inference</em> 7 (1). doi:<a href="https://doi.org/10.1515/jci-2017-0025">10.1515/jci-2017-0025</a>.</p>
-</div>
-<div>
-<p>Jesson, Jill, Lydia Matheson, and Fiona M. Lacey. 2011. <em>Doing Your Literature Review: Traditional and Systematic Techniques</em>. Thousand Oaks, CA: SAGE.</p>
-</div>
-<div>
-<p>Johnson, Janet Buttolph, H. T. Reynolds, and Jason D. Mycoff. 2016. <em>Political Science Research Methods</em>. 8th ed. Washington, DC: CQ Press.</p>
-</div>
-<div>
-<p>Karl, Kristyn L. 2019. “Motivating Participation Through Political Ads: Comparing the Effects of Physiology and Self-Reported Emotion.” <em>Political Behavior</em>, September. doi:<a href="https://doi.org/10.1007/s11109-019-09569-2">10.1007/s11109-019-09569-2</a>.</p>
-</div>
-<div>
+<div id="ref-Kleinberg2000">
 <p>Kleinberg, Jon M. 2000. “Navigation in a Small World.” <em>Nature</em> 406 (6798): 845. doi:<a href="https://doi.org/10.1038/35022643">10.1038/35022643</a>.</p>
 </div>
-<div>
-<p>Knopf, Jeffrey W. 2006. “Doing a Literature Review.” <em>PS: Political Science and Politics</em> 39 (1): 127–32.</p>
-</div>
-<div>
-<p>Kramer, Katherine J. 2016. <em>The Politics of Resentment: Rural Consciousness in Wisconsin and the Rise of Scott Walker</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>Kuenzi, Michelle, and Gina Lambright. 2005. “Party Systems and Democratic Consolidation in Africa’s Electoral Regimes.” <em>Party Politics</em> 11 (4): 423–46. doi:<a href="https://doi.org/10.1177/1354068805053211">10.1177/1354068805053211</a>.</p>
-</div>
-<div>
-<p>Kuhn, Thomas S. 1996. <em>The Structure of Scientific Revolutions, 3rd Ed.</em> The Structure of Scientific Revolutions, 3rd Ed. Chicago, IL, US. doi:<a href="https://doi.org/10.7208/chicago/9780226458106.001.0001">10.7208/chicago/9780226458106.001.0001</a>.</p>
-</div>
-<div>
-<p>Kuziemko, Ilyana, Jessica Pan, Jenny Shen, and Ebonya Washington. 2018. “The Mommy Effect: Do Women Anticipate the Employment Effects of Motherhood?” <em>NBER Working Paper Series</em> N. 24740.</p>
-</div>
-<div>
-<p>Lee, Stephanie M. 2018. “Sliced and Diced: The Inside Story of How an Ivy League Food Scientist Turned Shoddy Data into Viral Studies.” <em>BuzzFeed News</em>. https://www.buzzfeednews.com/article/stephaniemlee/brian-wansink-cornell-p-hacking.</p>
-</div>
-<div>
-<p>Lipset, Seymour Martin. 1959. “Some Social Requisites of Democracy: Economic Development and Political Legitimacy.” <em>American Political Science Review</em> 53 (01): 69–105. doi:<a href="https://doi.org/10.2307/1951731">10.2307/1951731</a>.</p>
-</div>
-<div>
-<p>Lombard, Matthew, Jennifer Snyder-Duch, and Cheryl Campanella Bracken. 2002. “Content Analysis in Mass Communication: Assessment and Reporting of Intercoder Reliability.” <em>Human Communication Research</em> 28 (4). Wiley Online Library: 587–604.</p>
-</div>
-<div>
-<p>Luo, Zhaotian, and Adam Przeworski. 2019. “Why Are the Fastest Growing Countries Autocracies?” <em>The Journal of Politics</em> 81 (2). The University of Chicago Press Chicago, IL: 663–69.</p>
-</div>
-<div>
-<p>Mahoney, James, and Kathleen Thelen. 2009. <em>Explaining Institutional Change: Ambiguity, Agency, and Power</em>. Cambridge University Press.</p>
-</div>
-<div>
-<p>Marion Suiseeya, Kimberly R., and Laura Zanotti. 2019. “Making Influence Visible: Innovating Ethnography at the Paris Climate Summit.” <em>Global Environmental Politics</em> 19 (2): 38–60. doi:<a href="https://doi.org/10.1162/glep_a_00507">10.1162/glep_a_00507</a>.</p>
-</div>
-<div>
-<p>Masuoka, Natalie, and Jane Junn. 2013. <em>The Politics of Belonging: Race, Public Opinion, and Immigration</em>. University of Chicago Press.</p>
-</div>
-<div>
-<p>Matejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” In <em>CHI 2017 Conference Proceedings:</em></p>
-</div>
-<div>
-<p>Mayda, Anna Maria, Kevin H O’Rourke, and Richard Sinnott. 2007. “Risk, Government and Globalization: International Survey Evidence.” National Bureau of Economic Research.</p>
-</div>
-<div>
-<p>Mengel, Friederike, Jan Sauermann, and Ulf Zölitz. 2019. “Gender Bias in Teaching Evaluations.” <em>Journal of the European Economic Association</em> 17 (2): 535–66. doi:<a href="https://doi.org/10.1093/jeea/jvx057">10.1093/jeea/jvx057</a>.</p>
-</div>
-<div>
+<div id="ref-Milgram1967">
 <p>Milgram, Stanley. 1967. “The Small-World Problem.” <em>Psychology Today</em> 1 (1): 61–67.</p>
 </div>
-<div>
+<div id="ref-MilgramTravers1969">
 <p>Milgram, Stanley, and Jeffrey Travers. 1969. “An Experimental Study of the Small World Problem.” <em>Sociometry</em> 32 (4): 425–43. doi:<a href="https://doi.org/10.2307/2786545">10.2307/2786545</a>.</p>
 </div>
-<div>
-<p>Mitchell, Tom. 1997. <em><span style="font-style:normal;">Machine Learning</span></em>. New York City: McGraw-Hill Education.</p>
-</div>
-<div>
-<p>Moore, Barrington. 1966. <em>Social Origins of Dictatorship and Democracy: Lord and Peasant in the Making of the Modern World</em>. Boston, MA: Beacon Press.</p>
-</div>
-<div>
-<p>Mueller, Hannes F., and Christopher Rauh. 2018. “Reading Between the Lines: Prediction of Political Violence.” <em>Using Newspaper Text. <span style="font-style:normal;">American Political Science Review</span></em> 112 (2): 358–75.</p>
-</div>
-<div>
-<p>Munck, Gerardo L. 2009. <em>Measuring Democracy: A Bridge Between Scholarship and Politics</em>. Baltimore: Johns Hopkins University Press.</p>
-</div>
-<div>
-<p>Ng, Andrew. n.d. <em><span style="font-style:normal;">Machine Learning</span></em>. Stanford University: Coursera. <a href="https://www.coursera.org/learn/" class="uri">https://www.coursera.org/learn/</a>.</p>
-</div>
-<div>
-<p>Olson, Mancur. 1965. <em>The Logic of Collective Action: Public Goods and the Theory of Groups</em>. Harvard Economic Studies 124. Cambridge, MA: Harvard University Press.</p>
-</div>
-<div>
-<p>Onwuegbuzie, Anthony J., and Rebecca Frels. 2016. <em>Seven Steps to a Comprehensive Literature Review: A Multimodal and Cultural Approach</em>. Thousand Oaks, CA: SAGE.</p>
-</div>
-<div>
+<div id="ref-Opsahl2013">
 <p>Opsahl, Tore. 2013. “Triadic Closure in Two-Mode Networks: Redefining the Global and Local Clustering Coefficients.” <em>Social Networks</em> 35 (2): 159–67. doi:<a href="https://doi.org/10.1016/j.socnet.2011.07.001">10.1016/j.socnet.2011.07.001</a>.</p>
 </div>
-<div>
-<p>Ostrom, Elinor. 2015. <em>Governing the Commons: The Evolution of Institutions for Collective Action</em>. Canto Classics. Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9781316423936">10.1017/CBO9781316423936</a>.</p>
-</div>
-<div>
-<p>Pan, Jennifer, and Yiqing Xu. 2018. “China’s Ideological Spectrum.” <em>The Journal of Politics</em> 80 (1): 254–73. doi:<a href="https://doi.org/10.1086/694255">10.1086/694255</a>.</p>
-</div>
-<div>
-<p>Parthasarathy, Ramya, Vijayendra Rao, and Nethra Palaniswamy. 2019. “Deliberative Democracy in an Unequal World: A Text-as-Data Study of South India’s Village Assemblies.” <em><span style="font-style:normal;">American Political Science Review</span></em> 113 (3): 623–40.</p>
-</div>
-<div>
-<p>Pattillo, Mary. 2013. <em>Black Picket Fences: Privilege and Peril Among the Black Middle Class</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>Paxton, Pamela. 2000. “Women’s Suffrage in the Measurement of Democracy: Problems of Operationalization.” <em>Studies in Comparative International Development</em> 35 (3): 92–111.</p>
-</div>
-<div>
-<p>Pearlman, Wendy. 2017. <em>We Crossed a Bridge and It Trembled: Voices from Syria</em>. New York: HarperCollins.</p>
-</div>
-<div>
-<p>Pond, Amy. 2017. “Economic Sanctions and Demand for Protection.” <em>Journal of Conflict Resolution</em> 61 (5): 1073–94. doi:<a href="https://doi.org/10.1177/0022002715596777">10.1177/0022002715596777</a>.</p>
-</div>
-<div>
-<p>Price, Paul C, Rajiv Jhangiani, I-Chant A Chiang, and others. 2015. <em>Research Methods in Psychology</em>. BCCampus.</p>
-</div>
-<div>
-<p>Rice, John. 2007. <em>Mathematical Statistics and Data Analysis</em>. Belmont, CA: Thompson/Brooks/Cole.</p>
-</div>
-<div>
-<p>Ridley, Diana. 2012. <em>The Literature Review: A Step-by-Step Guide for Students</em>. 2nd ed. Thousand Oaks, CA: SAGE.</p>
-</div>
-<div>
-<p>Rogers, Reuel R. 2006. <em>Afro-Caribbean Immigrants and the Politics of Incorporation: Ethnicity, Exception, or Exit</em>. Cambridge, New York, Melbourne, Cape Town, Singapore,; Sao Paulo: Cambridge University Press.</p>
-</div>
-<div>
+<div id="ref-SaramakiEtAl2007">
 <p>Saramäki, Jari, Mikko Kivelä, Jukka-Pekka Onnela, Kimmo Kaski, and János Kertész. 2007. “Generalizations of the Clustering Coefficient to Weighted Complex Networks.” <em>Physical Review E</em> 75 (2): 027105–1–027105–4. doi:<a href="https://doi.org/10.1103/physreve.75.027105">10.1103/physreve.75.027105</a>.</p>
 </div>
-<div>
-<p>Sartori, Giovanni. 1970. “Concept Misformation in Comparative Politics.” <em>American Political Science Review</em> 64 (4): 1033–53. doi:<a href="https://doi.org/10.2307/1958356">10.2307/1958356</a>.</p>
-</div>
-<div>
-<p>Schroeder, Elizabeth, and Daniel F. Stone. 2015. “Fox News and Political Knowledge.” <em>Journal of Public Economics</em> 126 (June): 52–63. doi:<a href="https://doi.org/10.1016/j.jpubeco.2015.03.009">10.1016/j.jpubeco.2015.03.009</a>.</p>
-</div>
-<div>
-<p>Schuman, Howard, and Stanley Presser. 1996. <em>Questions and Answers in Attitude Surveys: Experiments on Question Form, Wording, and Context</em>. Sage.</p>
-</div>
-<div>
-<p>Scotto, Thomas J, Jason Reifler, David Hudson, and others. 2017. “We Spend How Much? Misperceptions, Innumeracy, and Support for the Foreign Aid in the United States and Great Britain.” <em>Journal of Experimental Political Science</em> 4 (2). Cambridge University Press: 119–28.</p>
-</div>
-<div>
-<p>Seawright, Jason. 2010. “Regression- Based Inference: A Case Study in Failed Causal Assessment.” In <em>Rethinking Social Inquiry: Diverse Tools, Shared Standards</em>, 2nd ed. Rowman &amp; Littlefield Publishers, Inc.</p>
-</div>
-<div>
-<p>———. 2016. <em>Multi-Method Social Science: Combining Qualitative and Quantitative Tools</em>. Strategies for Social Inquiry. Cambridge: Cambridge University Press.</p>
-</div>
-<div>
-<p>Seawright, Jason, and John Gerring. 2008. “Case Selection Techniques in Case Study Research: A Menu of Qualitative and Quantitative Options.” <em>Political Research Quarterly</em> 61 (2). Sage Publications Sage CA: Los Angeles, CA: 294–308.</p>
-</div>
-<div>
-<p>Shineman, Victoria Anne. 2018. “If You Mobilize Them, They Will Become Informed: Experimental Evidence That Information Acquisition Is Endogenous to Costs and Incentives to Participate.” <em>British Journal of Political Science; Cambridge</em> 48 (1): 189–211. doi:<a href="https://doi.org/http://dx.doi.org.turing.library.northwestern.edu/10.1017/S0007123416000168">http://dx.doi.org.turing.library.northwestern.edu/10.1017/S0007123416000168</a>.</p>
-</div>
-<div>
-<p>Shoemaker, Pamela J., James William Tankard Jr, and Dominic L. Lasorsa. 2003. <em>How to Build Social Science Theories</em>. Thousand Oaks, CA: SAGE Publications.</p>
-</div>
-<div>
-<p>Stuart, Gretchen S, and David A Grimes. 2009. “Social Desirability Bias in Family Planning Studies: A Neglected Problem.” <em>Contraception</em> 80 (2). Elsevier: 108–12.</p>
-</div>
-<div>
-<p>Teele, Dawn, Joshua Kalla, and Frances Rosenbluth. 2018. “The Ties That Double Bind: Social Roles and Women’s Underrepresentation in Politics.” <em>American Political Science Review</em> 112 (3). Cambridge University Press: 525–41. doi:<a href="https://doi.org/10.1017/S0003055418000217">10.1017/S0003055418000217</a>.</p>
-</div>
-<div>
-<p>Thurston, Chloe N. 2018. <em>At the Boundaries of Homeownership: Credit, Discrimination, and the American State</em>. New York; Melbourne: Cambridge University Press.</p>
-</div>
-<div>
-<p>Vargas, Robert. 2016. <em>Wounded City: Violent Turf Wars in a Chicago Barrio</em>. Oxford University Press.</p>
-</div>
-<div>
+<div id="ref-WassermanFaust1994">
 <p>Wasserman, Stanley, and Katherine Faust. 1994. <em>Social Network Analysis: Methods and Applications</em>. Cambridge University Press.</p>
 </div>
-<div>
+<div id="ref-WattsStrogatz1998">
 <p>Watts, Duncan J., and Steven H. Strogatz. 1998. “Collective Dynamics of ‘Small-World’ Networks.” <em>Nature</em> 393 (6684): 440–42. doi:<a href="https://doi.org/10.1038/30918">10.1038/30918</a>.</p>
 </div>
-<div>
-<p>Weiss, Robert S. 1994. <em>Learning from Strangers: The Art and Method of Qualitative Interview Studies</em>. New York: Free Press.</p>
 </div>
-<div>
-<p>Whitaker, Richard, and Philip Lynch. 2011. “Explaining Support for the UK Independence Party at the 2009 European Parliament Elections.” <em>Journal of Elections, Public Opinion and Parties</em> 21 (3). doi:<a href="https://doi.org/10.1080/17457289.2011.588439">10.1080/17457289.2011.588439</a>.</p>
-</div>
-<div>
-<p>White, Ismail K., Chryl N. Laird, and Troy D. Allen. 2014. “Selling Out?: The Politics of Navigating Conflicts Between Racial Group Interest and Self-Interest.” <em>American Political Science Review</em> 108 (4): 783–800. doi:<a href="https://doi.org/10.1017/S000305541400046X">10.1017/S000305541400046X</a>.</p>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="machine-learning.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="game-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="machine-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
