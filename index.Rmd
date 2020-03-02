@@ -19,4 +19,14 @@ description: "This is an introductory college textbook on using empirical method
 knitr::include_graphics('images/book_cover_sm.png', dpi = NA)
 ```
 
-Chapters written by Max Weylandt, Pilar Manzi, Salih Noor, Zhihang Ruan, Irene Kwon, Sam Gubitz, Justin Zimmerman, Erin Ochoa, and John Lee.
+**Chapters written by:**
+
+- Max Weylandt
+- Pilar Manzi
+- Salih Noor
+- Zhihang Ruan
+- Irene Kwon
+- Sam Gubitz
+- Justin Zimmerman
+- Erin Ochoa
+- John Lee.

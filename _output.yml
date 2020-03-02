@@ -2,12 +2,23 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
+      collapse: section
+      scroll_highlight: yes
       before: |
         <li><a href="./">Empirical Methods in Political Science</a></li>
       after: |
-        <li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Published by Northwestern University Libraries</a> using <a href="https://github.com/rstudio/bookdown" target="blank">Bookdown</a></li>
-    #edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
-    #download: ["pdf", "epub"]
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Northwestern Libraries</a></li>
+    fontsettings: false
+    info: false
+    edit: null
+    download: null
+    search: yes
+    sharing:
+      github: yes
+      facebook: no
+    toolbar:
+      position: fixed
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
