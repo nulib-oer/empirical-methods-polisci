@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton" />
 
 
-<meta name="date" content="2020-02-15" />
+<meta name="date" content="2020-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -311,7 +311,8 @@
 </ul></li>
 <li class="chapter" data-level="12" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>12</b> Conclusions</a></li>
 <li class="divider"></li>
-<li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Published by Northwestern University Libraries</a> using <a href="https://github.com/rstudio/bookdown" target="blank">Bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Northwestern Libraries</a></li>
 
 </ul>
 
@@ -374,7 +375,7 @@
 <p>Not all surveys use probabilistic sampling, and you should be very wary of these. One type of sampling method under this category is <strong>convenience sampling</strong>. As its name suggest, this method implies selecting individuals that are most accessible. Most online polls have this characteristic: the sample will be composed of people who accessed certain websites where the poll was posted and decided to take their time to answer it. A convenience sample could also consist of surveying your soccer team when your research is about soccer fans across the country. <strong>Snowball sampling</strong> is another type of nonprobability sampling. This method is usually used when studying certain vulnerable or hidden populations that are harder to reach through normal sampling methods (eg. people with AIDS). With this technique, a survey respondent will provide referrals who will be recruited to become part of the study.</p>
 <p>Nonprobability samples suffer from a major problem called <strong>sampling bias</strong>. With these techniques, the resulting sample is far from reflecting the actual population. The online poll example will be a representation only of those people who are exposed to the poll and who feel compelled to answer it, which has been shown to be nonrandom. Deciding to only survey your soccer team will yield biased results as well. You will be representing only a certain age group, from a certain neighborhood who probably share socio-economic status and educational level. The results from this poll will not provide any information on soccer fans across the country, but only of one limited, unrepresentative portion of them.</p>
 <p>Although the risks of falling into sampling bias is much lower with random sampling, this might still occur. For instance, while it used to be common to survey people through landline telephone surveys, this will nowadays exclude a significant part of the population. For this reason, pollsters such as Pew Research Center combine random sampling from both landline and cellphone numbers. This method ensures that practically all of the U.S. population will be covered (according to Pew, only 3% of households have no phone access).<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a></p>
-<p>There are other types of biases that researchers must be aware of, both for random and nonrandom samples. One of these is <strong>non-response bias</strong>, referring to subjects that do not wish to participate or answer certain questions, or when subjects cannot be reached. The differences between those that chose to respond and those that do not are usually nontrivial. For instance, people who participate in a poll of a given subject tend to have stronger feelings for it. If a pollster is calling people at 10am, people who are at work will probably refuse to answer, and the differences between their opinions and non-working people opinions are usually not random. This is why pollsters attempt contact at different times of day and different days of the week. Other types of biases can arise from question wording, social desirability or respondent fatigue. You can learn about these in <a href="#ch06" reference-type="ref" reference="ch06"><span class="math display">\[ch06\]</span></a>.</p>
+<p>There are other types of biases that researchers must be aware of, both for random and nonrandom samples. One of these is <strong>non-response bias</strong>, referring to subjects that do not wish to participate or answer certain questions, or when subjects cannot be reached. The differences between those that chose to respond and those that do not are usually nontrivial. For instance, people who participate in a poll of a given subject tend to have stronger feelings for it. If a pollster is calling people at 10am, people who are at work will probably refuse to answer, and the differences between their opinions and non-working people opinions are usually not random. This is why pollsters attempt contact at different times of day and different days of the week. Other types of biases can arise from question wording, social desirability or respondent fatigue. You can learn about these in <a href="#ch06"><span class="math display">\[ch06\]</span></a>.</p>
 <p>Finally, no matter how well designed your sampling method is, your results will always have some <strong>sampling error</strong>. Sampling error accounts for the fact that your results do not correspond to the population, but to your sample. Inevitably, there exists variation between these two. The sampling error is also called <strong>margin of error</strong>, and it depends on how many subjects are in your sample and on how dispersed our data is. As mentioned previously, the law of large numbers states that, the larger the sample, the closer the estimate will be to the actual population value. Note, however, that usually around 1,500 observations is large enough to represent a country. In fact, most of the regional survey mentioned above, such as Afrobarometer and Latinobarometer, survey between 1000 and 1200 subjects in each country. Though the margin of error continues getting smaller as the size surpasses 1500, the gains are usually not worth the costs of surveying more people. On the other end, the margin of error does vary substantially for lower sample sizes.</p>
 <p>Since we can never be <span class="math inline">\(100\%\)</span> confident that our result is exactly the same as the population value, we must always calculate the margin of error to represent the uncertainty of our estimates. Failing to consider this uncertainty is one of the most common ways of misinterpreting survey results. Going back to the example of your survey of university professors: imagine your sample size is of 200 cases, with a margin of error of 8 percentage points. Your estimates show that, among tenured professors, the average score of student evaluations is of <span class="math inline">\(72\%\)</span> , while for non-tenured professors it is <span class="math inline">\(78\%\)</span>. This could lead you to erroneously conclude that non-tenured professors have higher student evaluations. In reality, given such high margin of error, we cannot claim any difference between the scores. Our estimate of non-tenured teacher evaluations are actually between <span class="math inline">\(71\%\)</span> and <span class="math inline">\(86\%\)</span> (<span class="math inline">\(78\% \pm 8\)</span>), while tenured professor evaluations are between <span class="math inline">\(64\%\)</span> and <span class="math inline">\(80\%\)</span> (<span class="math inline">\(72\% \pm 8\)</span>).</p>
 <p>In sum, surveys are an essential tool in data collection, but must be designed carefully in order to avoid common pitfalls. First, be aware of problems related to sampling. When encountering surveys, always evaluate if the sample on which the study was done is representative of the population for which conclusions are being drawn. A study performed on a sample of students from your cohort will only speak to the opinions of students from your university and your cohort. Finally, yet very importantly, recall that survey estimates will always have some variation from the actual &quot;reality&quot;. You must take into account this uncertainty and evaluate the results with their corresponding margin of error.</p>
@@ -638,8 +639,8 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
@@ -647,15 +648,8 @@ gitbook.start({
 "vk": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
+"fontsettings": false,
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -666,7 +660,13 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
+},
+"info": false,
+"search": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

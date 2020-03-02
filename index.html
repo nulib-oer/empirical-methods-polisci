@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton" />
 
 
-<meta name="date" content="2020-02-15" />
+<meta name="date" content="2020-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -311,7 +311,8 @@
 </ul></li>
 <li class="chapter" data-level="12" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>12</b> Conclusions</a></li>
 <li class="divider"></li>
-<li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Published by Northwestern University Libraries</a> using <a href="https://github.com/rstudio/bookdown" target="blank">Bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Northwestern Libraries</a></li>
 
 </ul>
 
@@ -333,13 +334,24 @@
 <div id="header">
 <h1 class="title">Empirical Methods in Political Science: An Introduction</h1>
 <p class="author"><em>Jean Clipperton</em></p>
-<p class="date"><em>2020-02-15</em></p>
+<p class="date"><em>2020-03-02</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
 <hr />
 <p><img src="images/book_cover_sm.png" style="display: block; margin: auto;" /></p>
-<p>Chapters written by Max Weylandt, Pilar Manzi, Salih Noor, Zhihang Ruan, Irene Kwon, Sam Gubitz, Justin Zimmerman, Erin Ochoa, and John Lee.</p>
+<p><strong>Chapters written by:</strong></p>
+<ul>
+<li>Max Weylandt</li>
+<li>Pilar Manzi</li>
+<li>Salih Noor</li>
+<li>Zhihang Ruan</li>
+<li>Irene Kwon</li>
+<li>Sam Gubitz</li>
+<li>Justin Zimmerman</li>
+<li>Erin Ochoa</li>
+<li>John Lee.</li>
+</ul>
 
 </div>
             </section>
@@ -364,8 +376,8 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
+"github": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
@@ -373,15 +385,8 @@ gitbook.start({
 "vk": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
+"fontsettings": false,
+"edit": null,
 "history": {
 "link": null,
 "text": null
@@ -392,7 +397,13 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
+},
+"info": false,
+"search": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });
