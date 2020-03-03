@@ -1,8 +1,10 @@
-# Introduction: What is political science?
+# Introduction
+
+## What is political science?
 
 This textbook focuses upon empirical methods used in political science. Before turning to the methods, it can be helpful to understand what political science is and what political science research can look like. Broadly, the discipline focuses on power and events throughout history. Some scholars focus on modern issues (e.g. Brexit) while others focus on historical ones (e.g. the New Deal in the U.S.). There are a variety of methods used and scholars are typically organized around the area/region they study.[^1]
 
-## Subfields in Political Science
+### Subfields in Political Science
 
 There are four primary subfields in political science (although we can consider many subdivisions, additional groupings, and so on): comparative politics, American politics, international relations/world politics, and theory. For this text, we will focus on quantitative political science and so we will consider the first three subfields.
 
@@ -64,7 +66,7 @@ There are many types of methods used in political science. in the realm of quant
 
 -   Machine Learning: In this approach, very large datasets are used. Frequently, the aim is to discover patterns and connections in the data or to otherwise harness the power of many observations to discern the hidden order in the data.
 
-#### Qualitative and Quantitative Political Science
+### Qualitative and Quantitative Political Science
 
 Empirical research methods typically use quantitative data. These data are frequently numerical and can often show broad trends that are happening within the question of interest. Other scholars use qualitative methods. In a qualitative framework, the 'data' can be anything from noticing how spaces are shared by individuals at the Paris Climate Summit [@marionsuiseeyaMakingInfluenceVisible2019] to interviews [@helmkeCourtsConstraintsJudges2005]. Often (but not always; see: @pearlmanWeCrossedBridge2017) qualitative researchers work with fewer cases (small-n data) and quantitative researchers look at larger datasets (large-n data).
 

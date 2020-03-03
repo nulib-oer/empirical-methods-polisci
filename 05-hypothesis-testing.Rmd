@@ -1,4 +1,4 @@
-# Hypothesis
+# Hypothesis Testing
 
 **By Zhihang Ruan**
 
@@ -76,7 +76,7 @@ In other cases, we are not only interested in describing the population, but ana
 
 A bivariate regression model is like this. $$Y=\beta_{0} + \beta_{1} X$$ If there is no correlation between a variable X and another variance Y, then any change of X will not be correlated to any change of Y. Thus, $\beta_{1}$ in the regression model should be 0, which implies the value of Y will not change with the value of X. When we do the hypothesis testing, the null hypothesis is that the coefficient is 0. Then we put the data we get from a random sample into the regression model. The model will provide us an estimate of the coefficient. Then we do statistic tests (e.g., $t$ test which compares the difference with the standard deviation) to see whether the coefficient estimated differs significantly from 0. If it differs significantly from 0, we may reject the null hypothesis and suggest that there may be some correlation between X and Y.
 
-## Conclusions you can draw based on the type of test
+### Conclusions you can draw based on the type of test
 
 Based on the type of tests we conduct, we may draw certain types of conclusions. For example, with the single mean test, we may reject the null hypothesis that the single mean is a specific number or within a specific interval. With the test of the difference of means, we may reject that the null hypothesis that there is no difference between two groups. Based on the test of the regression coefficient, we may reject the null hypothesis that there is no correlation between two variables. But as stated above, in many cases we may fail to reject the null hypothesis. This does not suggest the null hypothesis is true, but that we do not have strong enough evidence to reject it.
 
