@@ -15,8 +15,6 @@ description: "This is an introductory college textbook on using empirical method
 # Preface {-}
 ***
 
-[Download PDF](./EmpiricalMethodsInPoliticalScience.pdf)
-
 ```{r fig.align='center', echo=FALSE, 'html'}
 knitr::include_graphics('images/book_cover_sm.png', dpi = NA)
 ```
