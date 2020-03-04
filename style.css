@@ -125,3 +125,7 @@ span.search-highlight {
   color: rgb(056, 023, 090);
   text-decoration: underline;
 }
+
+.underline {
+  text-decoration: underline;
+}
