@@ -18,7 +18,7 @@ Thus, a small n qualitative researcher must take care to ensure their work is ab
 
 ## Case Selection
 
-Case selection for small n qualitative research setup to use a small number of cases in order to go into a deep dive into a specific subject. For instance, a researcher may use a specific neighborhood to explain a specific political characteristic of the community. Reuel Rogers conducts this exact research when he interviewed Afro-Caribbean residents in New York City about their political preferences as new immigrants of the United States of America (2006). This case selection allowed for Rogers to assess the veracity of an age old claim that pluralism allows for immigrants to eventually assimilate into American culture and government participation by highlighting the complexity that comes from immigrants that are identified as black. Rogers finds that Afro-Caribbean immigrant to suffer from discrimination that may hinder their ability to assimilate into American society. Yet, how does a researcher decide what cases to use? [Seawright and Gerring provide some insight by identifying seven case selection procedures [-@seawright2008case] (2008)]{style="color: red"}. For the purposes of this text, this chapter will focus on four of these case selection procedures. The cases focused on will be most similar, most different, typical, and deviant. The chapter will also briefly describe extreme, diverse, and influential cases.
+Case selection for small n qualitative research setup to use a small number of cases in order to go into a deep dive into a specific subject. For instance, a researcher may use a specific neighborhood to explain a specific political characteristic of the community. Reuel Rogers conducts this exact research when he interviewed Afro-Caribbean residents in New York City about their political preferences as new immigrants of the United States of America (2006). This case selection allowed for Rogers to assess the veracity of an age old claim that pluralism allows for immigrants to eventually assimilate into American culture and government participation by highlighting the complexity that comes from immigrants that are identified as black. Rogers finds that Afro-Caribbean immigrant to suffer from discrimination that may hinder their ability to assimilate into American society. Yet, how does a researcher decide what cases to use? Seawright and Gerring provide some insight by identifying seven case selection procedures [@seawright2008case]. For the purposes of this text, this chapter will focus on four of these case selection procedures. The cases focused on will be most similar, most different, typical, and deviant. The chapter will also briefly describe extreme, diverse, and influential cases.
 
 ### Most Similar
 
@@ -44,9 +44,7 @@ Second, **diverse cases** highlight range of possible values. A researcher can c
 
 Lastly, **influential cases** are outliers in a sense that they are not typical and may be playing an outsize role in a researcher's results. It is unlikely that small n methods will play a significant role as influential cases rely on large n methods.
 
-### Check-in Question 1
-
-How should a researcher go about choosing a case selection procedure?
+**Check-in Question 1:** How should a researcher go about choosing a case selection procedure?
 
 ## Method: setup/overview
 
@@ -58,7 +56,7 @@ Small n methods are characterized by an emphasis on detail. A researcher has to 
 
 The typical methods used in small n research are interviews, participant observation, focus groups, process tracing, and ethnography. Each method has its advantages and disadvantages and a researcher can utilize more than one these methods depending on the aims of their research. In deciding on a small n method a researcher must consider the goals of the research, validity, and conceptual framework that will feed the researcher's broader question. The diagram below illustrates that a small n qualitative researcher should be purposeful in their research design. They must consider their overall question. Specify the goals of their research, consider the theories that are driving the conceptual framework of their research, and consider the validity (does it make sense) of their research design.
 
-![image](images/questiondiagram.png){width="16cm" height="10cm"}
+![Research Methods Diagram](images/questiondiagram.png)
 
 Focusing on the methods portion of the diagram, this chapter will discuss in further detail each small n qualitative method.
 
@@ -70,13 +68,11 @@ Before contacting anyone for an interview, a researcher should take sometime to 
 
 Once a researcher has decided on an interview structure and completed their interview guide, they can decide who they want to recruit to participate in the interview. The researcher will need to consider the **key informants** and **representative sample** they want to recruit. Key informants are experts that can discuss the population of interest including but not limited to academics, community leaders, and politicians. The representative sample is the population that your research is based on. For example, Wendy Pearlman's text *We Crossed a Bridge and it Trembled: Voices from Syria* has a representative sample of Syrians displaced during the civil war [-@pearlmanWeCrossedBridge2017]. What is important to understand about the difference between the representative sample and key informants is that the sample is giving a firsthand account of their experiences, while a key informant is mainly given their observation and experiences of the representative sample from an outside perspective.
 
-Moving on to recruitment, Robert Weiss' *Learning From Strangers*list several reasons that affect whether an individual is willing to participate in an interview including: occupation, region, retirement status, vulnerability, and sponsorship from others within their network [-@weiss1994a]. Unfortunately, there is no easy way to recruit but from experience face to face discussions with potential participants and immediate follow up are quite effective. Also use **snowball sampling** to use previous participants acquaintances and networks to participate in interviews. This strategies are not full proof but a layer of personal interaction through face to face contact or networks does have advantages in making many people more receptive to participating in interviews.
+Moving on to recruitment, Robert Weiss' *Learning From Strangers* list several reasons that affect whether an individual is willing to participate in an interview including: occupation, region, retirement status, vulnerability, and sponsorship from others within their network [@weiss1994a]. Unfortunately, there is no easy way to recruit but from experience face to face discussions with potential participants and immediate follow up are quite effective. Also use **snowball sampling** to use previous participants acquaintances and networks to participate in interviews. This strategies are not full proof but a layer of personal interaction through face to face contact or networks does have advantages in making many people more receptive to participating in interviews.
 
 Lastly, when the day to interview finally arrives a researcher should have two recorders, tissue, interview guide, consent form, and a gift card for the participant if possible. The interview should not take any longer than an hour as a sign of respect for the time of your participant. A researcher should take meticulous notes during the interview. Also, the researcher must gain the permission of the participant to conduct a follow up interview if necessary.
 
-### Check-in Question 2
-
-What is this difference between a representative sample and a key informant?
+**Check-in Question 2:** What is this difference between a representative sample and a key informant?
 
 ### Participant Observation
 
@@ -84,13 +80,11 @@ What is this difference between a representative sample and a key informant?
 
 The key purpose of participant observations is to provide deeper insight into process and how things function. This exercise is good for 'theory building,' but it may be best to include another method, such as interviewing, to allow for the community to tell their story as well, a supplemental method Pattillo uses as well. What is most important when using participant observation (in qualitative methods in general) is to take meticulous field notes with attention to accuracy. A researcher should be cognizant of their own biases and constantly thinking through their analysis to make sure they a capturing an accurate story. In order to tell an accurate story a research should keep both mental notes and a notepad. After the end of an event it is important to write everything down while the researcher's memory is fresh.
 
-### Check-in Question 3
-
-What are the advantages and disadvantage of covert and over participant observation?
+**Check-in Question 3:** What are the advantages and disadvantage of covert and over participant observation?
 
 ### Focus Groups
 
-**Focus Groups** similar to individuals interviews requires a researchers to set questions, recruit participants and follow up with participants as necessary. As with an individual interview, the researcher should have an interview guide to help structure the questions and themes of the focus group. The advantage of a focus group is that a researcher is able to facilitate multiple respondents at once, which can lead to additional details and information you might not get in series of single interviews. As seen in Melissa Harris Perry's *Sister Citizen*, focus groups are great for spurring discussion about topics such as stereotypes [-@harris-perry2011a]. A researcher should note impressions, points of contention, and general interactions within the group. Group dynamics and discussions can be used for theory building as well as getting a deeper understanding of a particular group of people.
+**Focus Groups** similar to individuals interviews requires a researchers to set questions, recruit participants and follow up with participants as necessary. As with an individual interview, the researcher should have an interview guide to help structure the questions and themes of the focus group. The advantage of a focus group is that a researcher is able to facilitate multiple respondents at once, which can lead to additional details and information you might not get in series of single interviews. As seen in Melissa Harris Perry's *Sister Citizen*, focus groups are great for spurring discussion about topics such as stereotypes [@harris-perry2011a]. A researcher should note impressions, points of contention, and general interactions within the group. Group dynamics and discussions can be used for theory building as well as getting a deeper understanding of a particular group of people.
 
 ### Process Tracing
 
@@ -104,15 +98,13 @@ Thus, process tracing looks for historical evidence to explain certain events or
 
 ### Ethnography
 
-**Ethnography** involves studying groups of people and their experiences [-@emerson2011a]. As mentioned earlier with participant observations, the purpose of ethnography is for a researcher to immerse themselves in the environment they are studying. The researcher will need to develop relationships with the community and detail the environment through constant note taking and reflection. This is reflected in the work of many of the researchers already detailed in the chapter. Done correctly a researcher can document the emotions, attitudes, and relationships in a community that sometimes incapable to capture in quantitative work.
+**Ethnography** involves studying groups of people and their experiences [@emerson2011a]. As mentioned earlier with participant observations, the purpose of ethnography is for a researcher to immerse themselves in the environment they are studying. The researcher will need to develop relationships with the community and detail the environment through constant note taking and reflection. This is reflected in the work of many of the researchers already detailed in the chapter. Done correctly a researcher can document the emotions, attitudes, and relationships in a community that sometimes incapable to capture in quantitative work.
 
 In his text *Wounded City: Violent Turf Wars in a Chicago Barrio*, Robert Vargas is able to capture the fear, frustration, and empowerment felt by the residents of Chicago's Little Village as they negotiate turf wars between gangs, police, and alderman (2016). The insight he is able to gather cannot simply be surveyed, but must be observed in the environment in order to develop trust within the community.
 
 Ethnography is about relationship building and allows for latent findings that may give proper context for understanding particular groups. This is especially important for underrepresented communities, where in depth research is often lacking and responsiveness to a survey may not be likely under less personal circumstances. Ethnography allows a researcher to take a more holistic approach in understanding a community.
 
-### Check-in Question 4
-
-What should a researcher be looking for when taking ethnographic field notes?
+**Check-in Question 4:** What should a researcher be looking for when taking ethnographic field notes?
 
 ## Applications
 
@@ -136,11 +128,11 @@ Not all questions can be answered with a survey and experiment alone. Sometimes 
 
 ## Application Questions
 
-## Application Question 1
+**Application Question 1**
 
 What are some materials needed to conduct small n research?
 
-## Application Question 2
+**Application Question 2**
 
 When in the field, how does a researcher build rapport with the community?
 
@@ -192,11 +184,11 @@ When in the field, how does a researcher build rapport with the community?
 
 ## Answers to Application Questions
 
-## Answer 1
+**Answer 1**
 
 A researcher should have their interview guide prepared, tissues, and two recorders if conducting interviews or focus groups. Additionally, a researcher should have a notepad for field notes and consent forms if necessary. Business cards are also useful when trying to recruit participants from the field.
 
-## Answer 2
+**Answer 2**
 
 Rapport can be built through appearance including dress, race, gender, regional, and class markers. Most importantly, a researcher should present themselves as engaged and attentive to the participants. A researcher should remain professional and read the room, rapport building for a group of blue collar workers may be different than with college students. A researcher should remain cognizant of this distinction and look for openings to build connections when possible.
 

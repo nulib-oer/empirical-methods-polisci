@@ -1,8 +1,8 @@
-## Large N
+# Large N
 
 **By Maximilian Weylandt**
 
-### Introduction
+## Introduction
 
 This chapter introduces the most common methods for working with 'large-n' data, or data where we have a lot of cases. If we want to study a phenomenon across more than 100 countries, or have a survey covering thousands of respondents, it's simply not possible to look at them one by one in great detail. Even if we spent a lot of time and effort to do so, we would struggle to make a systematic comparison because it's difficult to keep track of all the relevant information with so many cases.
 
@@ -12,15 +12,13 @@ Next, we turn to regression, a more powerful tool for identifying associations b
 
 Then we move on to variations of regression, how to interpret regression results, and examples of how the method is used in political science.
 
-### Method: setup/overview
+## Method: setup/overview
 
 #### Correlation
 
-You have two variables that you think might be related in a linear fashion. Let's say you think that a country's level of education (measured in expected years of education) will be related to its level of gender equality (we'll use a points system based on the UN gender inequality index) . Using software, you can quite easily calculate a linear correlation coefficient for these two variables, denoted by $R$. For these two variables, we get the result $R=0.83.$ That number is a bit abstract but the graph below, [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"}, visualizes what different correlations look like.
+You have two variables that you think might be related in a linear fashion. Let's say you think that a country's level of education (measured in expected years of education) will be related to its level of gender equality (we'll use a points system based on the UN gender inequality index) . Using software, you can quite easily calculate a linear correlation coefficient for these two variables, denoted by $R$. For these two variables, we get the result $R=0.83.$ That number is a bit abstract but the graph below, fig 8.1, visualizes what different correlations look like.
 
-![Different correlations, visualized. The numbers represent correlation coefficients. Based on @boigelotdenisExampleCorrelationVarious2011, modified by Max Weylandt.](images/largen/correlation.png){width="\\textwidth"}
-
-[\[fig:largen\_correlation\]]{#fig:largen_correlation label="fig:largen_correlation"}
+![Figure 8.1: Different correlations, visualized. The numbers represent correlation coefficients. Based on @boigelotdenisExampleCorrelationVarious2011, modified by Max Weylandt.](images/largen/correlation.png)
 
 Correlation coefficients can range from -1 to 1. Imagine that the different graphs in figure [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"} represent the different possible relationships between education (along the $X$-axis) and gender equality (on the $Y$-axis). As the top line of figure [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"} shows, a correlation coefficient closer to either pole means a strong correlation while a number around 0 means a weak correlation. If $R=-0.8$, there is a strong negative correlation (at larger values of X, Y tends to have lower values). If $R=0.4$, there is a moderate positive correlation (at larger values of X, Y tends to have higher values). The correlation we got indicates that we have a fairly strong positive correlation. In other words, countries with higher levels of education tend to have higher gender equality overall.
 
@@ -38,7 +36,7 @@ Correlations can easily be calculated with statistical software, and the number 
 
 Correlations are a useful first look at the relationship between two variables, but linear regression is far more powerful. The intuition behind linear regression is simple: we want to find the line that best fits all of our data points. This is because the line that fits the data best summarizes the relationship between variables, and we can use this line to learn not just the direction of an association (positive or negative) but also its strength: as $X$ changes, *how much* does $Y$ tend to change? Regression also lets us conduct significance tests to establish whether the relationship between variables actually exists or just appears to occur due to chance.
 
-![A simple scatterplot[]{label="fig:scatter"}](images/largen/scatter.png){#fig:scatter width="\\textwidth"}
+![A simple scatterplot](images/largen/scatter.png)
 
 Perhaps it's best to start with an image. Figure [1](#fig:scatter){reference-type="ref" reference="fig:scatter"} charts the values for 147 countries' expected years of education against their scores on the equality index, with each country represented by a dot. Just from looking at it, you can see that countries with a high level of education tend to have higher levels of overall gender equality, even if not all countries neatly fit that description. In other words, as predicted by our correlation coefficient of 0.85, it seems that there is a relationship between education and gender equality. But how strong is this association?
 
@@ -58,13 +56,13 @@ In our example, the intercept $a=-89.2$. This is a good time to warn you about e
 
 How do we find the line that fits the data best? Let's restate our aim: we want a line where, given a certain $X$ value, the $Y$ value predicted by the line is really close to the actual value in the data. That seems like a reasonable definition of 'good fit.' Rephrased in mathematical terms, we want to be as small as possible. The thing we want to minimize, , is called a **residual**. For example, in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}, Serbia has an expected years of schooling value of $14.6$ and a gender equality score of $106$. Those are the actual values in the dataset. However, the regression line predicts that an education (i.e. $X$) value of $14.6$ is associated with a gender inequality score of $82.94$ [\[$Y= a+ bX= -89.2 + 11.6 \cdot(14.6) = 80.16$\]]{style="color: blue"}. The residual amounts to $25.4$ [\[$106 - 80.16=25.4$\]]{style="color: blue"}, and is highlighted with a blue line in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}.
 
-![Visualizing Residuals[]{label="fig:residuals"}](images/largen/residuals.png){#fig:residuals width="\\textwidth"}
+![Visualizing Residuals](images/largen/residuals.png)
 
 We take a cumulative look at all of our residuals to see which line fits best. There are several possible methods for doing this. Simply adding up the residuals would give us misleading results: some are negative and some are positive, and they would cancel each other out. To deal with this problem we square each residual. This makes all values positive, and has the added benefit of penalizing larger differences between our line and actual values. We find the line that best fits our data by minimizing the squared residuals. This procedure is called **ordinary least squares**.
 
-The line you see in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"} is the line of best fit. Still, as you can also see, there are residuals. This is because in linear regression we are trying to find one single straight line to best predict the data, which always results in some points being off the line. A line that hits all points is possible but its equation would be so complicated it would be impossible to interpret. The key is that any other line would have residuals that are overall further away. The image below shows how different lines have drastically different squared residuals.For an interactive example that lets you adjust the line and see how the squared residuals change, check out the second image on [this page](http://setosa.io/ev/ordinary-least-squares-regression/).
+The line you see in figure [3](#fig:residuals) is the line of best fit. Still, as you can also see, there are residuals. This is because in linear regression we are trying to find one single straight line to best predict the data, which always results in some points being off the line. A line that hits all points is possible but its equation would be so complicated it would be impossible to interpret. The key is that any other line would have residuals that are overall further away. The image below shows how different lines have drastically different squared residuals.For an interactive example that lets you adjust the line and see how the squared residuals change, check out the second image on [this page](http://setosa.io/ev/ordinary-least-squares-regression/).
 
-![Placeholder: if time, add animated gif on residuals for charts](example-image-a){height="1in"}
+![Placeholder: if time, add animated gif on residuals for charts](example-image-a)
 
 As you can see, we can draw an infinite number of lines through our data, but the one where the squared residuals are lowest is the line of best fit -- the line that best describes the relationship between our variables X and Y.
 
@@ -145,15 +143,15 @@ In Column (3) we add GDP/capita to account for different levels of wealth, and y
 
                                   (1)                       (2)                        (3)
 
-  expected schooling     11.63$^{***}$ (0.62)      11.57$^{***}$ (0.62)        6.49$^{***}$ (1.02)
+  expected schooling     11.63$^{**}$ (0.62)      11.57$^{**}$ (0.62)        6.49$^{**}$ (1.02)
   migration                                             0.27 (0.29)              $-$0.16 (0.27)
-  GDP/capita (log)                                                            15.74$^{***}$ (2.67)
-  Constant              $-$89.19$^{***}$ (8.54)   $-$88.37$^{***}$ (8.59)   $-$164.56$^{***}$ (15.02)
+  GDP/capita (log)                                                            15.74$^{**}$ (2.67)
+  Constant              $-$89.19$^{**}$ (8.54)   $-$88.37$^{**}$ (8.59)   $-$164.56$^{**}$ (15.02)
 
   Observations                    134                       134                        134
   Adjusted R$^{2}$               0.73                      0.73                       0.78
 
-  *Note:*                                                                  
+  Note:                                                                 
   -------------------- ------------------------- ------------------------- ---------------------------
 
 The coefficient of our main variable of interest - education - changes a fair amount when we change the model. When an association remains despite us changing the models around, we say that it is **robust**. If our variable remains significant across different models, it gives us more confidence that the association is actually there. If introducing control variables means that the main interest is not significant, we would question whether our association is actually there or not. There is no hard and fast rule for judging robustness. In our case, controlling for GDP did mean that the effect size of education went down by quite a lot. This is somewhat worrying. On the other hand, education did retain a statistically significant association throughout.
@@ -218,7 +216,7 @@ We are talking about large-N data in this chapter, and regression is most useful
                                                          (1.21)
 
   Number of countries                                      32
-  *Note:*                           $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01
+  *Note:*                           $^{*}$p$<$0.1; $^{*}$p$<$0.05; $^{*}$p$<$0.01
   -------------------------------- --------------------------------------------------
 
   : Adapted from Kuenzi and Lambright, 2005, 436
