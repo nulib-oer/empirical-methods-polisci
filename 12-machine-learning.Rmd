@@ -4,19 +4,19 @@
 
 ## Introduction
 
-These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single $"$correct$"$ definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng [-@ng-a], in his highly popular Stanford course on machine learning (available through Coursera).
+These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single "correct" definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng [@ng-a], in his highly popular Stanford course on machine learning (available through Coursera).
 
-![Traditional Programming v. Machine Learning](images/ml/jl-figure1.png){#fig:jl-figure1 width="4.78in" height="2.4in"}
+![Figure 12.1: Traditional Programming v. Machine Learning](images/ml/jl-figure1.png)
 
-The first definition is by Arthur Samuel, a former researcher at IBM and early pioneer in machine learning. In his view, machine learning is a *$"$\[f\]ield of study that gives computers the ability to learn without being explicitly programmed.$"$* This definition is useful because it alludes to a central distinction between traditional programming and machine learning: i.e., in traditional programming, a computer takes in the data and the rules and generates the output; in machine learning, a computer takes the data and the output and generates the rules that describe the relationship between the input and the output. Figure 1 provides an illustration of this idea.
+The first definition is by Arthur Samuel, a former researcher at IBM and early pioneer in machine learning. In his view, machine learning is a *"field of study that gives computers the ability to learn without being explicitly programmed."* This definition is useful because it alludes to a central distinction between traditional programming and machine learning: i.e., in traditional programming, a computer takes in the data and the rules and generates the output; in machine learning, a computer takes the data and the output and generates the rules that describe the relationship between the input and the output. Figure 12.1 provides an illustration of this idea.
 
-The second definition is more detailed and precise. According to Tom Mitchell, a computer scientist at Carnegie Mellon and the author of one of the first textbooks on machine learning: *$"$A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.$"$* [@mitchell1997a]. From the second definition, we can get a better sense of what machine learning generally entails: i.e., a computer gradually becomes better at performing a specific task ($"$what$"$) through experience ($"$how$"$); moreover, the computer's performance is measured using some metric, which allows us to test whether performance has indeed improved over time. In this chapter, I will provide an overview of how machine learning methods work in practice and review some examples of how political scientists have used these methods in their research. Before proceeding, it is necessary to first explain several fundamental concepts in machine learning [for a more detailed treatment of this subject, see @hastie2017a; @james2013a]
+The second definition is more detailed and precise. According to Tom Mitchell, a computer scientist at Carnegie Mellon and the author of one of the first textbooks on machine learning: *"A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E."* [@mitchell1997a]. From the second definition, we can get a better sense of what machine learning generally entails: i.e., a computer gradually becomes better at performing a specific task ("what") through experience ("how"); moreover, the computer's performance is measured using some metric, which allows us to test whether performance has indeed improved over time. In this chapter, I will provide an overview of how machine learning methods work in practice and review some examples of how political scientists have used these methods in their research. Before proceeding, it is necessary to first explain several fundamental concepts in machine learning [for a more detailed treatment of this subject, see @hastie2017a; @james2013a]
 
 ## Background
 
 ### A Brief Note on Notation
 
-Capital letters refer to variables: e.g., $Y$ refers to the outcome variable, such as vote choice. Lower-case letters refer to the observed value of the variable for a specific observation (or subject), denoted by the first subscript: e.g., $y_{1}$ refers to the value of the outcome variable for the first observation. The subscript of a capital $X$ refers to the number of the predictor or explanatory variable: e.g., $X_{1}$ refers to the first predictor, $X_{2}$ refers to the second predictor, and so on. In addition, $x_{ij}$ refers to the observed value of the $j$th predictor for the $i$th observation. The $\string^$ symbol indicates that we are referring to the predicted version or value of an object: e.g., $\hat{f}(.)$ refers to an estimated function, $\hat{Y}$ refers to the predicted value of the outcome variable.
+Capital letters refer to variables: e.g., $Y$ refers to the outcome variable, such as vote choice. Lower-case letters refer to the observed value of the variable for a specific observation (or subject), denoted by the first subscript: e.g., $y_{1}$ refers to the value of the outcome variable for the first observation. The subscript of a capital $X$ refers to the number of the predictor or explanatory variable: e.g., $X_{1}$ refers to the first predictor, $X_{2}$ refers to the second predictor, and so on. In addition, $x_{ij}$ refers to the observed value of the $j$th predictor for the $i$th observation. The ^ symbol indicates that we are referring to the predicted version or value of an object: e.g., $\hat{f}(.)$ refers to an estimated function, $\hat{Y}$ refers to the predicted value of the outcome variable.
 
 ### The Structure of Prediction Error
 
@@ -40,7 +40,7 @@ If we attempt to minimize training MSE, the algorithms are more likely to estima
 
 Thus, it is a better idea to try and minimize test error. In order to generate a smaller test error, the algorithms need to estimate a model that is generalizable. That is, they need to estimate models that do a better job of capturing the true relationship between the set of predictors ($X_{1},X_{2}$) and the $Y$, while ignoring the random observed deviations from the ${f}(.)$ due to $\epsilon$ (per Equation 1). Machine learning practitioners often refer to this approach as $"$focusing on the signal and ignoring the noise.$"$
 
-[Check-in Q. $\#1$: $"$What is overfitting and how can we reduce this problem?$"$]{.underline}
+**Check-in Question 1:** What is overfitting and how can we reduce this problem?
 
 So how do we reduce the test error? The expected difference between $\hat{f}(X_{1},X_{2})$ and $Y$ is due to two types of error (e.g., see James et al. 2013): (1) **reducible error**, (2) **irreducible error**. The first type of error is caused by a suboptimal estimate of the true function: i.e., the gap between $\hat{f}(.)$ and $f(.)$. As its name implies, the reducible error decreases as $\hat{f}(.)$ approaches $f(.)$. On the other hand, irreducible error is due to $\epsilon$, and therefore it cannot be reduced by improving the quality of $\hat{f}(.)$. For example, let us assume that $\hat{f}(.) = f(.)$, and therefore $\hat{Y} = \hat{f}( X_{1}+X_{2}) = f(X_{1}+X_{2})$. Even in this case, $\hat{Y}$ does not necessarily equal $Y$, because $Y = f(X_{1}, X_{2}) + \epsilon$. That is, even having a perfect estimate of $f(.)$ does not make the random error term go away.
 
@@ -70,7 +70,7 @@ $$EPE=E \left[  \left( Y-\hat{Y} \right) ^{2} \right] = \left[ Bias \left( \hat{
 
 The key insight is that the reducible error is itself a function of the squared bias and variance of $\hat{f}(.)$, or the estimated model. Thus, to minimize the reducible error (and hence the total EPE), we want to minimize the bias and the variance.
 
-[Check-in Q. $\#$2: $"$What is the expected prediction error (EPE), and why does it matter?$"$]{.underline}
+**Check-in Question 2:** What is the expected prediction error (EPE), and why does it matter?
 
 ### Bias-Variance Trade-offs
 
@@ -82,7 +82,7 @@ However, it is possible for the model to be too flexible. **Variance** is a meas
 
 Figure 3 provides an illustration of this idea. The first model is not flexible enough, leading to high bias (also known as **underfitting**); on the other hand, the third model is too flexible, which leads to higher variance across slightly different training sets (**overfitting**). The second model imposes the ideal amount of flexibility, which optimizes the bias-variance trade-off and yields the smallest test MSE of the three alternatives.
 
-[Check-in Q. $\#$3: $"$Explain why reducing bias can often entail an increase in variance.$"$]{.underline}
+**Check-in Question 3:** Explain why reducing bias can often entail an increase in variance.
 
 ### Parametric v. Non-parametric Methods
 
@@ -106,7 +106,7 @@ In **unsupervised learning**, the purpose of the machine learning algorithm is t
 
 ![Types of Machine Learning Methods[]{label="fig:jl-figure4"}](images/ml/jl-figure4.png){#fig:jl-figure4 width="6.18in" height="4.01in"}
 
-[Check-in Q. $\#$4:$"$What is the main difference between supervised and unsup. learning?$"$]{.underline}
+**Check-in Question 4:** What is the main difference between supervised and unsup. learning?
 
 ## Method: setup/overview
 
@@ -200,7 +200,7 @@ Blaydes et al. identify four broad themes and 60 specific sub-themes nested with
 
 ### Example 4: Comparative Politics
 
-In a very recent study, @parthasarathy2019a use natural language processing (NLP) and topic modeling to study deliberative processes in the rural villages of South India. Their dataset includes a corpus of transcripts from a geographically representative sample of 100 village assemblies (or $"$gram sahbas$"$ ) in Tamil Nadu, a state in southern India. Parthasarathy and her coauthors use an unsupervised topic learning approach called structural topic modeling (STM), which identifies clusters of co-occurring words in the corpus of text. They identify 15 topics, with the most popular topics being water, beneficiary and voting lists, and employment and wages. By combining these topics with the use of statistical tests, the authors show that female participants face serious inequalities: $"$\[Women\] are less likely to be heard, less likely to drive the agenda, and less likely to receive a relevant response from state officials$"$ (pp. 637-638). For example, politicians provided a relevant (i.e., on-topic) response to women only 49$\%$ time, but to male speakers 70$\%$ of the time. These disparities are problematic not only because they indicate that female voices tend to matter less in deliberative processes, but also because the issues that disproportionately affect women may be less likely to be translated into meaningful policy outputs.
+In a very recent study, @parthasarathy2019a use natural language processing (NLP) and topic modeling to study deliberative processes in the rural villages of South India. Their dataset includes a corpus of transcripts from a geographically representative sample of 100 village assemblies (or $"$gram sahbas$"$ ) in Tamil Nadu, a state in southern India. Parthasarathy and her coauthors use an unsupervised topic learning approach called structural topic modeling (STM), which identifies clusters of co-occurring words in the corpus of text. They identify 15 topics, with the most popular topics being water, beneficiary and voting lists, and employment and wages. By combining these topics with the use of statistical tests, the authors show that female participants face serious inequalities: "Women are less likely to be heard, less likely to drive the agenda, and less likely to receive a relevant response from state officials" (pp. 637-638). For example, politicians provided a relevant (i.e., on-topic) response to women only 49$\%$ time, but to male speakers 70$\%$ of the time. These disparities are problematic not only because they indicate that female voices tend to matter less in deliberative processes, but also because the issues that disproportionately affect women may be less likely to be translated into meaningful policy outputs.
 
 ### Example 5: Peace and Conflict
 
