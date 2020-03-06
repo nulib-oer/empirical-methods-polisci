@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Hypothesis Testing | Empirical Methods in Political Science: An Introduction</title>
+  <title>References | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Hypothesis Testing | Empirical Methods in Political Science: An Introduction" />
+  <meta property="og:title" content="References | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Hypothesis Testing | Empirical Methods in Political Science: An Introduction" />
+  <meta name="twitter:title" content="References | Empirical Methods in Political Science: An Introduction" />
   
   <meta name="twitter:description" content="This is an introductory college textbook on using empirical methods in political science research." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data.html"/>
-<link rel="next" href="surveys.html"/>
+<link rel="prev" href="conclusions.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -329,170 +329,477 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hypothesis-testing" class="section level1">
-<h1><span class="header-section-number">5</span> Hypothesis Testing</h1>
-<p><strong>By Zhihang Ruan</strong></p>
-<div id="introduction-3" class="section level2">
-<h2><span class="header-section-number">5.1</span> Introduction</h2>
-<p>Either in our daily lives or in scientific research, we come across a lot of claims. We may formulate our own hypotheses based on our knowledge, available information, or existing theory. These hypotheses can be descriptive, e.g., we may hypothesize that a certain percent of U.S. voters support the policy of universal basic income. Or the hypothesis can be causal, e.g., we may believe that education leads to stronger support for gender equality. The measures (for example, mean or standard deviation) used to describe a population distribution are called <strong>population parameter</strong>. If we have access to everyone among the population we are interested in, then we may easily tell whether our hypothesis of a population parameter is true or false (e.g., if we know every voter’s support for the policy of universal basic income, then we can prove/disprove our hypothesis concerning the support rate for the policy). But in many cases, we do not have access to the population to firmly prove or disprove our hypotheses. For example, it may cost too much to ask each U.S. voter about their opinions on specific policies. In these cases, statistical theory and methods provide us some effective ways to test a hypothesis, or more accurately, assess whether the observed data is or is not consistent with the a claim of interest concerning the population. In this chapter, we will go through the idea of hypothesis testing in statistics and how it is applied in political science.</p>
-</div>
-<div id="background" class="section level2">
-<h2><span class="header-section-number">5.2</span> Background</h2>
-<p>There are different understandings of hypothesis testing. In this chapter, we will follow the Neyman-Pearson paradigm <span class="citation">(Rice <a href="#ref-rice2007math">2007</a>, 331)</span>, which casts hypothesis testing as a decision problem. Within this paradigm, we first have a null hypothesis and an alternative hypothesis concerning the population. A null hypothesis is a claim or hypothesis we plan to test, or more specifically, something we decide whether to reject or not. It can be descriptive (e.g., the support rate for the president among all U.S. voters) or causal (education leads to stronger support for gender equality among all human beings). An alternative hypothesis is also called the research hypothesis, which is opposite to the null hypothesis. It is what we believe to be true if we reject the null hypothesis. Then with what we observe in a random sample from the population, we make a decision to reject or not reject the null hypothesis concerning the population. This approach does not enable us to say the exact probability that the null or alternative hypothesis is true.<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a> To do that, we need more information and maybe another paradigm (e.g., so-called prior probability within the Bayesian paradigm), and we will not go in details in this chapter. But, even though the approach we discuss in this chapter does not directly tell us how likely a hypothesis is true or false, the approach is very useful in scientific studies as well as daily lives, as you will see in this chapter.</p>
-<p>As mentioned in the introduction of this chapter, the classic idea of hypothesis testing concerns a sample and a population. In the previous chapter, we learned what the terms population, random sample and random sampling mean. The techniques we discuss in this chapter mostly assume a random sample. Below, we will quickly review the idea of random sampling and random sample and explains how random sampling enables us to make inference about the population with what we observe in the sample.</p>
-</div>
-<div id="samples-and-sampling-1" class="section level2">
-<h2><span class="header-section-number">5.3</span> Samples and Sampling</h2>
-<p>As mentioned in the beginning of this chapter, in many cases, we do not have the access to all the units of the population we are interested in. For example, if we are interested in the support rate for the president, it would be perfect if we know the opinion of every single person (i.e., unit of the population) in the U.S. However, it is almost impossible to get access to everyone’s opinion. In many cases, we can only get access to a small group of individuals, which we call a sample from the population. When the sample is randomly chosen from the population (i.e., everyone in the population has an equal chance to be selected, or at least has a specific chance known to the researchers before the sample is drawn), then we may learn about the population with what we observe in the random sample we have. More specifically, statistical theory enables us to make inference about the population from the random sample. In the next part, I will explain how we may make inference from a random sample to the population and test a hypothesis concerning the population with a random sample.</p>
-<div id="magic-of-the-central-limit-theorem" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> Magic of the Central Limit Theorem</h3>
-<p>Let’s say, we roll a fair die. We know the probability of getting 1 is 1/6. In other words, the probability that the mean of the number we get from one trial equals 1 is 1/6. Then, if we roll the same die twice, we get two numbers. We can calculate the mean of the two numbers. What is the probability that the mean equals 1? Is the probability still 1/6? No, because if the mean is 1, we have to get 1 twice, the probability of which would be 1/36 (which equals 1/6 times 1/6). Very likely, the mean we get is larger than 1. Similarly, if we roll the die three times, the mean of the three numbers we get would probably be larger than 1. If we roll the die many times (e.g. 1,000 times), it is almost impossible that the mean would be 1 or even close to 1 (since it means we need to get 1 in all or most of the trials). Then what would the mean be? The mean would not be an extreme number like 1 or 6. Instead, it would be very close to the expected value we get from rolling it once, which is 3.5, the average of all possible numbers we get. Among the 1,000 trials, the number of 1s we get would be close to the amount of 2s we get, or the amount of 3s, etc. If we take the average of all numbers we get in the 1,000 trials, we would get a number very to close to 3.5, which equals (1+2+3+4+5+6)/6.</p>
-<p>This is what we called the weak law of large numbers: the sample average converges in probability towards the expected value or the population average, or in other words, the average of the sample gets close to the population average when the sample size is large (e.g., when rolling the die 1000 times).</p>
-<p>One step further from the law of large numbers, we can rely on something called the central limit theorem to make inference. The <strong>central limit theorem</strong> suggests that the mean of a sufficiently large number of independent draws from any distribution will be normally distributed. A normal distribution is a bell-shaped probability density. From the example above, we already know intuitively the mean of a large amount of draws is very close to the expected value of the population. But in most cases, the average of the draws will not be exactly equal to the expected value of the population (which is 3.5 in the example of rolling a fair die). The central limit theorem enables us to calculate/quantify the probability that the sample average falls into intervals around the expected value of the population. As long as the expected value and variance of a normal distribution is known, we can calculate the probability that we get a sample mean within a specified interval. For example, with some calculation based on the central limit theorem (which we will not go into details here), we know that if we roll a fair die 1,000 times, the chance that the mean of the 1,000 numbers we get falls between 3.394 and 3.606 is roughly 0.95 (or 95 percent).</p>
-<p>What if, after rolling the die 1,000 times, the average of the 1,000 numbers we get is much smaller than 3.394 or much larger than 3.606? Then we may want to check whether there is some problem with the rolling process, or whether the die is fair. Similarly, if we hypothesize that the support rate for the president is 50 percent, but after interviewing 1,000 people randomly drawn from the population, we find that the support rate is much lower than 50 percent, then we may doubt whether the support rate is really 50 percent. This makes sense when the sample is drawn randomly from the population. But if the sample is not drawn randomly (e.g., all the people in the sample are drawn from a gathering of a specific party), then the result does not tell us much about the support rate among the population. This is like a magician who uses tricks and gets 1 every time rolling a fair die. We cannot learn anything about the die based on the mean the magician gets.</p>
-<p>These examples show us intuitively how central limit theorem works and how it makes hypothesis testing possible. In the next part, I will explain more specifically how we may estimate the population average/expected value based on what we observe from the sample, as well as how to test a hypothesis.</p>
-</div>
-</div>
-<div id="estimates-and-certainty" class="section level2">
-<h2><span class="header-section-number">5.4</span> Estimates and Certainty</h2>
-<p>Based on the central limit theorem, we can make inferences about the population with the data we observe. One way to estimate the population parameter is called <strong>point estimate</strong>, which is a sample statistic used to estimate the exact value of a population parameter. We may consider the point estimate as our best guess to the population parameter based on what we observe in the sample. For example, if learn that the mean of a random sample from simple random sampling is 3.5, then we may say that the point estimate of the population mean is 3.5.</p>
-<p>But in most cases, the point estimate does not equal the true value of the population parameter (e.g., the population mean can be 3.5001, 3.4986 or other number when the sample mean is 3.5). Another way to estimate the population parameter is interval estimation. With the information we learn from the sample, we may calculate an interval that may include the population average. The central limit theorem enables us to quantify how confident we are that the interval will include the population average. The interval is called <strong>confidence interval</strong>, which defines a range of values within which the population parameter is estimated to fall. If we want to estimate the confidence interval of the population mean, we need the sample mean, the estimated population variance, and the sample size. A 95 percent confidence interval for the population mean equals <span class="math inline">\(\bar{X}\pm 1.96 * (S_{\bar{X}})\)</span>. <span class="math inline">\(S_{\bar{X}}\)</span> is the estimated standard error of the sampling distribution of the sample mean. It is equal to the standard error (or the square root of the variance) of the population divided by the square root of the sample size.<a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a> We can see from the formula that the range of the interval will decrease when the population variance is small, and the sample size is large. This makes sense intuitively because when there is little variation among the population, or when we have a large sample, the sample mean may be close to the population mean, and thus our estimation will be preciser.</p>
-<p>In short, we can estimate the confidence interval of the population mean based on the sample we get. Similarly, if we have a hypothesis about the population average, then we can calculate an interval which the sample mean may fall into, and quantify how confident we are that the sample average will fall onto this interval.</p>
-<p>It is intuitive to say that if we increases the range of our estimated interval, we are more confident that the interval will include the population mean. The trade-off is that our estimation is less precise. The likelihood, expressed as a percentage or a probability, that a specified interval will contain the population parameter, is called <strong>confidence level</strong>. For example, if we learn from a random sample (with a sample size of 1,000) that the support rate for the president is 52 percent, then a 95 percent confidence interval of the support rate among the population is between 50.5 and 53.5. And a 99 percent confidence interval is roughly 50.0 to 54.0 percent. As we can see, the confidence interval becomes wider (in other words, our estimation becomes less precise) if we want to be more confident that the population mean is within the confidence interval we estimate (i.e., we have a higher confidence level). More specifically, a 99 percent confidence interval for the population mean equals <span class="math inline">\(\bar{X}\pm 2.58 * (S_{\bar{X}})\)</span>.<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a> As we can see, the interval is wider than the 95 percent confidence interval, which is <span class="math inline">\(\bar{X}\pm 1.96 * (S_{\bar{X}})\)</span>, and the 90 percent confidence interval, which is <span class="math inline">\(\bar{X}\pm 1.64 * (S_{\bar{X}})\)</span>.</p>
-</div>
-<div id="steps-of-hypothesis-testing" class="section level2">
-<h2><span class="header-section-number">5.5</span> Steps of Hypothesis Testing</h2>
-<p>Hypothesis testing becomes more straightforward once we understand the central limit theorem and confidence interval. As mentioned earlier, if we have a hypothesis of the population mean, then we can calculate a confidence interval that the sample average will fall into. But if the sample average is very different from the population average we hypothesize, or in other words, falls outside the confidence interval at a specific confidence level, then we may reject the null hypothesis with a specific level of confidence. For example, if we hypothesize a die is a fair one, then the expected value (or the population mean) we get from rolling the die once is 3.5. However, if we roll the die many times (e.g., 1000 times), and the mean of all the numbers we get is 2.003, then we may be very confident to say that the die is not a fair die (i.e., we will reject the null hypothesis that the die is a fair one).</p>
-<p>More specifically, there are four steps of hypothesis testing. First, we need to have a statement about a population parameter evaluated with a test statistic. The parameter can be the population mean (e.g., the average number of basketball games Americans go to), proportion (e.g., the support rate for the president among all U.S. voters), or some other characteristics of the population, like the variance of heights among all first-grade children. Any statement concerning the population implies a null hypothesis and an alternative/research hypothesis concerning the population. The <strong>research hypothesis</strong> is the hypothesis we’re putting forward to test, which reflects the substantive hypothesis. It is also called ‘alternative hypothesis’, but some prefer ‘research’ to convey that this hypothesis comes from an understanding of the subject area and is often derived from theory. The research/alternative hypothesis is in contrast to the <strong>null hypothesis</strong>, which is the ‘default’ one that we wish to challenge. For example, if most people believe that on average individuals in the U.S. go to more than 1 basketball game annually, and we hypothesize that on average Americans go to fewer than 1 basketball game every year. Then we can set our hypothesis as the research hypothesis and the common belief as the null hypothesis.</p>
-<p>Then, we collect a random sample, calculate the statistic from the sample, and compare the statistic with the null hypothesis and the alternative hypothesis. What kind of statistic is calculated depends on the kind of hypothesis we have and statistical methods we use in hypothesis testing. For example, if we are interested in the population mean, then we need to calculate the mean and standard error of the sample.</p>
-<p>Then we determine the rejection of the null hypothesis or of failure to reject the null. If the statistic we observe differs significantly from what we hypothesize, then we will reject the null hypothesis. Otherwise, we fail to reject the null hypothesis. As stated earlier, in most cases what we get from the sample is different from what we state in the null hypothesis. But we reject the null hypothesis only when what we observe in the sample is really weird or significantly different from the null hypothesis. What counts as weird, depends on the rule we set before, as well as common practices in the field. In social science, we usually take a pretty strict standard concerning the rejection of the null hypothesis. In many cases, only when the sample mean is outside the 95 percent, 99 percent or 99.9 percent of the confidence interval, do we reject the null hypothesis. This means, that we would expect to get a result as ‘weird’ as ours less than 5% of the time, if the null hypothesis is true. Since the probability is so low (e.g., 0.05), we reject the null hypothesis.</p>
-<p>We tend to be conservative and decide not to reject the null hypothesis. Thus, failing to reject the null hypothesis does not mean the hypothesis is true, but just means that we do not have enough evidence to reject it. Similarly, rejecting the null hypothesis does not mean we prove that it is false, but it only suggest that we have pretty strong evidence (that we feel confident about) that it is false, if all the assumptions of the sampling process and statistical methods we use are met (e.g., the sample is a random sample from the population).</p>
-</div>
-<div id="types-of-hypothesis-testing" class="section level2">
-<h2><span class="header-section-number">5.6</span> Types of Hypothesis testing</h2>
-<p>In our lives, we may have different types of claims or hypotheses. It can be a hypothesis about the mean of the population (e.g., the support rate for the president, the average income, etc.) or the variance of the population (e.g., the variance of people’s income). Or it can be a hypothesis concerning the difference between two groups, or a hypothesis about the correlation between two variables. Statisticians have developed different tests for different types of hypotheses. In this section, we will introduce some basic methods of hypothesis testing.</p>
-<div id="single-mean-hypothesis-testing" class="section level3">
-<h3><span class="header-section-number">5.6.1</span> Single Mean Hypothesis Testing</h3>
-<p>The single mean hypothesis testing concerns the mean of the population we care about. In many cases, we are interested in the population average. For example, in an election, we may want to know the support rate for a specific candidate, which is important for the development of campaign strategy. We may hypothesize that the support rate for the candidate is a specific number, and we can test the hypothesis with a random sample we get from the population. If the support rate for the candidate among the sample is very different from the rate stated in our hypothesis, we may reject the hypothesis. If the rate we get from the sample is not very different from the number stated in the hypothesis, we may fail to reject the hypothesis.</p>
-<p>Here is how a single mean hypothesis works. As we have discussed, the central limit theorem suggests that the mean of a random sample with a sufficiently large sample size is normally distributed. The normal distribution of the sample mean is an example of <strong>sampling distribution</strong>, which is a theoretical distribution of all possible sample values for the statistic which we are interested. For example, when we have a sample (with the sample size of 1,000), we can calculate the sample mean. If we do the sampling multiple times (e.g., 1 million times), we get 1 million samples and 1 million sample means (each sample still has 1000 cases). From the central limit theorem, we know that the 1 million sample means follow a normal distribution. This distribution is the sampling distribution of the sample mean, for samples with the sample size of 1,000.</p>
-<p>If we get a simple random sample (explained in the previous chapter), the expected value of the sampling distribution of the mean equals the population mean, and the variance of the sampling distribution is determined by the population variance and the size of the sample. When there is less variation among the population, or we have a larger sample, the variance of the sampling distribution is smaller, which means the sample mean is expected to be closer to the population mean.</p>
-<p>Since the sampling distribution of the mean is a normal distribution, we can calculate the probability that the sample mean falls into a specific range given the hypothesis is true. If the sample mean we get is very different from the hypothesized population mean, we may think there is some problem with the null hypothesis and we may reject the null hypothesis. Statisticians have learned a lot about the normal distribution, and we know that if we randomly draw a number from a normal distribution, we have roughly 95 percent chance of getting a number within two (or more accurately, 1.96) standard deviations (which equals the square root of the variance) away from the expected value of the normal distribution. Since the sampling distribution of the sample mean is a normal distribution, the chance that the distance between the sample mean we observe and the expected value of the normal distribution is more than two standard deviations of the normal distribution is roughly 5 percent. Thus, if we observe a difference between the sample mean and the hypothesized population mean that is larger than twice the standard deviations of the sampling distribution, we may reject the null hypothesis at the significance level of 95 percent. It is weird (e.g., less than 5 percent chance) to get a sample mean as extreme as the one we have if the null hypothesis is true, so we decide to reject the null hypothesis. We can also set a stricter standard (e.g., a significance level of 99 percent, or 99.9 percent) and reject the null only when the difference between the sample mean and the population mean is more extreme.</p>
-</div>
-<div id="difference-of-means-hypothesis-testing" class="section level3">
-<h3><span class="header-section-number">5.6.2</span> Difference of Means Hypothesis Testing</h3>
-<p>Sometimes, we are not interested in the mean of a single group, but more interested in the difference of means between two groups. Testing the difference of means is especially useful when we aim to make causal inference with an experiment. It can also be useful when we compare two groups without aiming to make causal inference. For example, in an election, especially an election within the majority system, we may be interested in whether one candidate has a higher support rate than another candidate. In this case, we are dealing with a hypothesis concerning the difference of means. The hypothesis may take the forms of <span class="math inline">\(A&gt;B\)</span>, <span class="math inline">\(A&lt;B\)</span>, <span class="math inline">\(A=B\)</span>, or <span class="math inline">\(A-B=c\)</span>. If our research hypothesis is <span class="math inline">\(A&gt;B\)</span>, the null hypothesis would be <span class="math inline">\(A&lt;B\)</span>. Then we test the hypothesis with what we observe in the random sample. For example, if the null hypothesis is that Candidate A has a higher support rate than Candidate B and we get a random sample in which Candidate A has a support rate much lower than Candidate B, then we may reject the hypothesis.</p>
-<p>Similar to the single mean test, testing the difference of means hypothesis requires the standard deviation of the sampling distribution. We observe the difference of means among the two samples (groups), and then compare the difference to the standard deviation of the sampling distribution. If the difference is much larger than (e.g. more than two times) the standard deviation, then we may reject the null hypothesis that there is no difference between the two groups and suggest that there is <strong>statistically significant difference</strong> between the two groups.</p>
-</div>
-<div id="regression-coefficients-hypothesis-testing" class="section level3">
-<h3><span class="header-section-number">5.6.3</span> Regression Coefficients Hypothesis Testing</h3>
-<p>In other cases, we are not only interested in describing the population, but analyzing the correlations of different variables concerning the population. We may want to test whether two characteristics or variables within the population are correlated with each other. To test the correlations, we may put them into a regression model, which we will discuss more in later chapters on regressions. Here we can briefly explain how testing regression coefficients works.</p>
-<p>A bivariate regression model is like this. <span class="math display">\[Y=\beta_{0} + \beta_{1} X\]</span> If there is no correlation between a variable X and another variance Y, then any change of X will not be correlated to any change of Y. Thus, <span class="math inline">\(\beta_{1}\)</span> in the regression model should be 0, which implies the value of Y will not change with the value of X. When we do the hypothesis testing, the null hypothesis is that the coefficient is 0. Then we put the data we get from a random sample into the regression model. The model will provide us an estimate of the coefficient. Then we do statistic tests (e.g., <span class="math inline">\(t\)</span> test which compares the difference with the standard deviation) to see whether the coefficient estimated differs significantly from 0. If it differs significantly from 0, we may reject the null hypothesis and suggest that there may be some correlation between X and Y.</p>
-</div>
-<div id="conclusions-you-can-draw-based-on-the-type-of-test" class="section level3">
-<h3><span class="header-section-number">5.6.4</span> Conclusions you can draw based on the type of test</h3>
-<p>Based on the type of tests we conduct, we may draw certain types of conclusions. For example, with the single mean test, we may reject the null hypothesis that the single mean is a specific number or within a specific interval. With the test of the difference of means, we may reject that the null hypothesis that there is no difference between two groups. Based on the test of the regression coefficient, we may reject the null hypothesis that there is no correlation between two variables. But as stated above, in many cases we may fail to reject the null hypothesis. This does not suggest the null hypothesis is true, but that we do not have strong enough evidence to reject it.</p>
-</div>
-</div>
-<div id="applications" class="section level2">
-<h2><span class="header-section-number">5.7</span> Applications</h2>
-<p>The single mean hypothesis testing is very straightforward in statistics and one of the basic tools in social science research. Once we get a random sample and get the sample mean and sample variance, we can easily estimate the confidence interval for the population mean, e.g., the public opinions on specific policies. Then we can compare the null hypothesis with the sample mean or the confidence interval, and decide whether to reject the null hypothesis or not. The main challenge in these descriptive works is not statistical theory or method per se, but the sampling process. As we emphasize earlier in this chapter, to make inference about the population with a sample, we need to first have a random sample from the population, otherwise it is like trying to make inference based on magicians’ tricks. But it is extremely difficult to get a random sample in real lives. Many factors, like the non-response rate, lack of access to specific groups, financial and time constraints, make it unlikely to get a perfect random sample from the population. Researchers have tried different techniques to get a representative and random sample from the population. To test whether a sampling method is reliable, one way is to compare the findings we get with the new technique with census data or others authoritative data. In an article by Ansolabehere and Schaffner, they compare three sampling techniques (over the Internet, by telephone with live interviews, and by mail) with other data sources <span class="citation">(Ansolabehere and Schaffner <a href="#ref-ansolabehere2014does">2014</a>)</span>. Comparing the confidence interval estimated from the sample with validating source, provides us some inputs on whether the sampling process provides a good enough (though not perfect) sample.</p>
-<p>Testing hypotheses concerning the difference of means and regression coefficients are even more widely used in political science. In most studies in political science nowadays, researchers care about correlations or causal relations between different variables. Different methods, like regression and experiments, have been developed to explore the relations between different variables in the world, e.g., democracy and economic growth <span class="citation">(Boix and Stokes <a href="#ref-boix2003endogenous">2003</a>; Acemoglu et al. <a href="#ref-acemoglu2019democracy">2019</a>; Luo and Przeworski <a href="#ref-luo2019fastest">2019</a>)</span>. In these works which aim to explore relations between different variables, we often have a null hypothesis that there are no correlations between two variables, and researchers aim to find strong evidence to reject the null hypothesis.</p>
-<p>More specifically, in an experiment, the null hypothesis is often that there are no difference between the treatment group and the control group. If we find statistically significant difference in the means between the treatment and the control groups, we may reject the null hypothesis and suggest that there are some difference between the two groups. And since the two groups differ in getting the treatment or not, researchers may suggest that the treatment is the cause for the difference between the two groups. Here is an example for of an experiment. As some may know, the general support for aid to foreign countries is low among U.S. citizens. This is a descriptive finding. But what explains the low support? Some researchers <span class="citation">(Scotto et al. <a href="#ref-scotto2017we">2017</a>)</span> suggest, one reason is that people in the United States and other developed countries tend to overestimate the percent of government budget spend on overseas aid. To test this research hypothesis, they designed an experiment in the United States and Great Britain, in which one group of people (i.e., the control group) are provided the amount of dollars/pounds spent on foreign aid each year, and the other group (i.e., the treatment group) of people are provided the amount of money as well as the percentage of government budget on overseas aid. Then they ask the two groups of people about their opinions on foreign aid, and test the difference of means between the two groups. They find out that the group of people informed the percentage as well as the amount of overseas aid are less likely to think that the governments have spent &quot;too much&quot; on foreign aid. The difference is statistically significant at the confidence level of 99 percent, which enables them to reject the null hypothesis that there are no difference between the two groups and argue that overestimating the percentage of budget spent on aid is one cause for the low support for foreign aid.</p>
-<p>When we use regressions based on observational data instead of experiments, the idea is similar. Researchers often have a null hypothesis that the coefficient for a specific variable X is 0, which implies no correlations between the explanatory variable X and the outcome variable Y. If from the sample we find that the estimated coefficient differs significantly from 0, then we may decide to reject the null hypothesis and suggest that there is some correlation between X and Y. Whether the correlation implies causal relations, requires a closer look on the research design, but is not something hypothesis testing can tell.</p>
-</div>
-<div id="is-it-weird" class="section level2">
-<h2><span class="header-section-number">5.8</span> “Is it weird?”</h2>
-<p>The idea of hypothesis testing can be formulated as some kind of &quot;Is it weird&quot; question. We start from a hypothesis concerning the population, then we observe the data from a sample, and ask ourselves, someone with training in statistical methods, &quot;is it weird that we get a sample like this, if the null hypothesis is true?&quot; If it is weird (AKA statistically unlikely), in the sense of statistical method, then we will reject the null hypothesis. Otherwise, we decide not to reject the null hypothesis, though that does not mean we prove or accept the null hypothesis.</p>
-</div>
-<div id="broader-significanceuse-in-political-science-1" class="section level2">
-<h2><span class="header-section-number">5.9</span> Broader significance/use in political science</h2>
-<p>The Neyman-Pearson paradigm of hypothesis testing may be a bit obscure if we have not gone through the idea behind it. Students without a firm understanding of the statistical theory behind may make mistakes when interpreting the result of hypothesis testing. In recent years, there have been some heated discussions on whether we should continue this paradigm and use some jargon with this paradigm, e.g., <span class="math inline">\(p\)</span> value, statistical significance, et al. <span class="citation">(Amrhein, Greenland, and McShane <a href="#ref-amrhein2019scientists">2019</a>)</span>. One concern with this paradigm is whether we should set a threshold value (e.g., the confidence level of 95 percent) to reject the null hypothesis and suggest there is statistically significant correlation once the threshold is met, since this may mislead someone without much training in statistical methods to think that we are more than 95 percent confident that the alternative hypothesis is true.<a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a> Another concern is that the paradigm of hypothesis testing may not tell us much about substantial relationship. When the sample size is very large, it may be very easy to reject the null hypothesis and suggest that one variable may have statistically significant correlation with another variable, but the effect/correlation may be trivial.<a href="#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a> Besides, the paradigm may bring the problem of publication bias. Researchers and journal editors may tend to report findings that show statistically significant correlations, but not findings that do not show significant correlations. This may make our understanding of the world biased.</p>
-<p>Other than that, for studies that do not involve random sampling, how the Neyman-Pearson paradigm of hypothesis testing works is not very clear. For example, when we have a sample which is not randomly drawn from the population, we cannot test a hypothesis concerning the population with the sample we have. And if we have access to information concerning every unit of the population (e.g., if the unit of interest is country, then in many cases we get access to the whole population as long as we learn specific information of all countries in the world), what hypothesis testing means and how the method we introduced above tells us about the population is less clear.</p>
-<p>Other paradigms of hypothesis testing, like Bayesian approach, may provide more intuitive ways for us to understand and explain hypothesis testing and quantitative results to new learners and the general public. But these paradigms are not necessarily incompatible with the paradigm introduced in this chapter. The main issue is when we use this approach of hypothesis testing, we should be clear what each step and the results mean, and what we can and cannot say with our findings.</p>
-</div>
-<div id="conclusion-3" class="section level2">
-<h2><span class="header-section-number">5.10</span> Conclusion</h2>
-<p>Hypothesis testing is a basic tool in contemporary political science studies, especially in quantitative political science. In the following chapters, we will introduce specific methods that explore the relations between different variables in our society. Hypothesis testing is the basic idea behind most of these methods. Understanding how hypothesis testing works will make it easier for us to understand experiments, large-N analysis and other quantitative methods.</p>
-</div>
-<div id="application-questions-3" class="section level2">
-<h2><span class="header-section-number">5.11</span> Application Questions</h2>
-<ol style="list-style-type: decimal">
-<li><p>Before an election, a political analyst argues that the support rate for a candidate is above 60 percent. With a sample from all voters (assuming the sample is a random one), researchers find that the 95 percent confident interval of the support rate for the candidate is between 56.2 percent and 58.9 percent. Does this provide strong evidence that the analyst is wrong? Why or why not?</p></li>
-<li><p>In an experiment, 80 students are randomly divided into two groups. The first group of students are asked to read a news article on the negative effects of climate change on peasants in developing countries, and the other group of students are asked to read an article on a new electronic device. Then both groups of students are asked about their opinions on the role of the United States in fighting climate change. Researchers find compared to the second group, the first group of students show slightly higher support for the U.S. government to take more responsibility in fighting climate change, but the difference is not statistically significant at the level of 95 percent. Does it mean that reading the news article on climate change has no effects on students’ opinions on U.S.’s responsibility in fighting climate change? Why or why not?</p></li>
-<li><p>A student is interested in the average amount of courses Northwestern undergrads took last quarter. In total, there were 8,231 Northwestern undergrads last quarter. With a random sample from all NU undergrads, whose sample size is 196, she learned that on average, a student took 4.0 courses last quarter. With the sample, she estimated that the population variance is 1.21. Can you calculate a 95 percent confidence interval for the average amount of courses Northwestern undergrads took last quarter?</p></li>
-</ol>
-</div>
-<div id="key-terms-3" class="section level2">
-<h2><span class="header-section-number">5.12</span> Key Terms</h2>
-<ul>
-<li><p>Central Limit Theorem</p></li>
-<li><p>confidence interval</p></li>
-<li><p>mean</p></li>
-<li><p>null hypothesis</p></li>
-<li><p>population</p></li>
-<li><p>population parameter</p></li>
-<li><p>point estimate</p></li>
-<li><p>quantitative data</p></li>
-<li><p>random sample</p></li>
-<li><p>regression coefficient</p></li>
-<li><p>research hypothesis</p></li>
-<li><p>sample</p></li>
-<li><p>standard deviation</p></li>
-<li><p>standard error</p></li>
-<li><p>statistically significant difference</p></li>
-</ul>
-</div>
-<div id="answers-to-application-questions-3" class="section level2">
-<h2><span class="header-section-number">5.13</span> Answers to Application Questions</h2>
-<ol style="list-style-type: decimal">
-<li><p>Yes. This provides strong evidence that the analyst is wrong. The confidence interval of the support rate among the population suggests that we are 95 confident that the support rate will not be higher than 58.9 percent or lower than 56.2 percent. Since the prediction of the analyst (higher than 60 percent) is well beyond the confidence interval we calculated from the random sample, we are pretty confident the prediction is wrong. But this is based on assumptions that the sample is a random one, respondents in the survey tell their true preference for the candidate, etc. If these assumptions are not met, the sample does not tell us anything about the population and we cannot tell whether the analyst is right or wrong.</p></li>
-<li><p>Finding no statistically significant difference between the two groups makes us fail to reject the null hypothesis, which is that there are no difference between the two groups. However, it does not tell us that the null hypothesis is true. We can only say that we do not find enough evidence to show that there are difference between the two groups based on one study, but we cannot say the difference is exactly 0.</p></li>
-<li><p>A 95 confidence interval is <span class="math inline">\(\bar{X}\pm 1.96 * (S_{\bar{X}})\)</span>. The sample mean is 4.0. The estimated standard error of the sampling distribution equals the square root of the population variance divided by the square root of the sample size, which is <span class="math inline">\(\sqrt{1.21}/\sqrt{196}=0.0785\)</span>. Thus the 95 confidence interval is <span class="math inline">\(\bar{X}\pm 1.96 * (S_{\bar{X}}) = 4.0\pm 1.96* 0.0785= [3.846, 4.154]\)</span>.</p></li>
-</ol>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
 
-</div>
-</div>
-<h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-acemoglu2019democracy">
+<div>
 <p>Acemoglu, Daron, Suresh Naidu, Pascual Restrepo, and James A Robinson. 2019. “Democracy Does Cause Growth.” <em>Journal of Political Economy</em> 127 (1). University of Chicago Press Chicago, IL: 47–100.</p>
 </div>
-<div id="ref-amrhein2019scientists">
+<div>
+<p>Alcañiz, Isabella. 2010. “Bureaucratic Networks and Government Spending: A Network Analysis of Nuclear Cooperation in Latin America.” <em>Latin American Research Review</em> 45 (1). Project Muse: 148–72. doi:<a href="https://doi.org/10.1353/lar.0.0128">10.1353/lar.0.0128</a>.</p>
+</div>
+<div>
 <p>Amrhein, Valentin, Sander Greenland, and Blake McShane. 2019. “Scientists Rise up Against Statistical Significance.” <em>Nature</em> 567. Nature Publishing Group: 305–7.</p>
 </div>
-<div id="ref-ansolabehere2014does">
+<div>
+<p>Angrist, Joshua D, Victor Lavy, Jetson Leder-Luis, and Adi Shany. 2017. “Maimonides Rule Redux.” Working Paper 23486. National Bureau of Economic Research. doi:<a href="https://doi.org/10.3386/w23486">10.3386/w23486</a>.</p>
+</div>
+<div>
+<p>Angrist, Joshua D., and Victor Lavy. 1999. “Using Maimonides’ Rule to Estimate the Effect of Class Size on Scholastic Achievement.” <em>The Quarterly Journal of Economics</em> 114 (2): 533–75. doi:<a href="https://doi.org/10.1162/003355399556061">10.1162/003355399556061</a>.</p>
+</div>
+<div>
+<p>Angrist, Joshua David, and Jörn-Steffen Pischke. 2015. <em>Mastering ’Metrics: The Path from Cause to Effect</em>. Princeton ; Oxford: Princeton University Press.</p>
+</div>
+<div>
 <p>Ansolabehere, Stephen, and Brian F Schaffner. 2014. “Does Survey Mode Still Matter? Findings from a 2010 Multi-Mode Comparison.” <em>Political Analysis</em> 22 (3). Cambridge University Press: 285–303.</p>
 </div>
-<div id="ref-boix2003endogenous">
+<div>
+<p>Bacharach, Samuel B. 1989. “Organizational Theories: Some Criteria for Evaluation.” <em>Academy of Management Review</em> 14 (4): 496–515.</p>
+</div>
+<div>
+<p>Barakso, Maryann, Daniel M Sabet, and Brian Schaffner. 2013. <em>Understanding Political Science Research Methods: The Challenge of Inference</em>. Routledge.</p>
+</div>
+<div>
+<p>Barrat, A., M. Barthélemy, R. Pastor-Satorras, and A. Vespignani. 2004. “The Architecture of Complex Weighted Networks.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (11): 3747–52. doi:<a href="https://doi.org/10.1073/pnas.0400087101">10.1073/pnas.0400087101</a>.</p>
+</div>
+<div>
+<p>Bennett, Andre, Aharo Barth, and Kennet R Rutherford. 2003. “Do We Preach What We Practice? A Survey of Methods in Political Science Journals and Curricula.” <em>PS: Political Science &amp; Politics</em> 36 (3): 373–78.</p>
+</div>
+<div>
+<p>Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. “Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.” <em><span style="font-style:normal;">Journal of Politics</span></em> 80 (4): 1150–67.</p>
+</div>
+<div>
+<p>Boigelot, Denis. 2011. “An Example of the Correlation of X and Y for Various Distributions of (X,y) Pairs.” Wikimedia Commons.</p>
+</div>
+<div>
 <p>Boix, Carles, and Susan C Stokes. 2003. “Endogenous Democratization.” <em>World Politics</em> 55 (4). Cambridge University Press: 517–49.</p>
 </div>
-<div id="ref-luo2019fastest">
+<div>
+<p>Bonilla, Tabitha, and Cecilia Hyunjung Mo. 2018. “Bridging the Partisan Divide on Immigration Policy Attitudes Through a Bipartisan Issue Area: The Case of Human Trafficking.” <em>Journal of Experimental Political Science</em> 5 (2). Cambridge University Press: 107–20. doi:<a href="https://doi.org/10.1017/XPS.2018.3">10.1017/XPS.2018.3</a>.</p>
+</div>
+<div>
+<p>Booth, Andrew, Anthea Sutton, and Diana Papaioannou. 2016. <em>Systematic Approaches to a Successful Literature Review</em>. SAGE.</p>
+</div>
+<div>
+<p>Borell-Porta, Mireia, Joan Costa- Font, and Julia Phillip. 2018. “The ’Mighty Girl’ Effect: Does Parenting Daughters Alter Attitudes Towards Gender Roles?” <em>IZA Institute of Labor Economics</em> DP N. 11259.</p>
+</div>
+<div>
+<p>Bouka, Yolande. 2013. “(Oral) History of Violence: Conflicting Narratives in Post-Genocide Rwanda.” <em>Oral History Forum</em> 33.</p>
+</div>
+<div>
+<p>Broido, Anna D., and Aaron Clauset. 2019. “Scale-Free Networks Are Rare.” <em>Nature Communications</em> 10 (1): 2–10. doi:<a href="https://doi.org/10.1038/s41467-019-08746-5">10.1038/s41467-019-08746-5</a>.</p>
+</div>
+<div>
+<p>Broockman, David, Joshua Kalla, and Peter Aronow. 2015. “Irregularities in LaCour (2014).”</p>
+</div>
+<div>
+<p>Bullock, John G., and Shang E. Ha. 2011. “Mediation Analysis Is Harder Than It Looks.” In <em>Cambridge Handbook of Experimental Political Science</em>, edited by James N. Druckman, Donald P. Green, James H. Kuklinski, and Arthur Lupia, 508–22. Cambridge: Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9780511921452.035">10.1017/CBO9780511921452.035</a>.</p>
+</div>
+<div>
+<p>Cantú, Francisco, and Sebastián M. Saiegh. 2011. “Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade Using Supervised Machine Learning.” <em><span style="font-style:normal;">Political Analysis</span></em> 19 (4): 409–33.</p>
+</div>
+<div>
+<p>Carroll, Robert J., and Brenton Kenkel. 2019. “Prediction.” <em>Proxies, and Power. <span style="font-style:normal;">American Journal of Political Science</span></em>.</p>
+</div>
+<div>
+<p>Cassese, Erin C, Tiffany D Barnes, and Regina P Branton. 2015. “Racializing Gender: Public Opinion at the Intersection.” <em>Politics &amp; Gender</em> 11 (1). Cambridge University Press: 1–26.</p>
+</div>
+<div>
+<p>Centers for Disease Control and Prevention. 2017. “About Adult BMI.” Web. <a href="\url{https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html}" class="uri">\url{https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html}</a>.</p>
+</div>
+<div>
+<p>Chen, Dingding, Chao-yo Cheng, and Johannes Urpelainen. 2016. “Support for Renewable Energy in China: A Survey Experiment with Internet Users.” <em>Journal of Cleaner Production</em> 112 (January): 3750–8. doi:<a href="https://doi.org/10.1016/j.jclepro.2015.08.109">10.1016/j.jclepro.2015.08.109</a>.</p>
+</div>
+<div>
+<p>Clark, William Roberts, Matt Golder, and Sona Nadenichek Golder. 2013. <em>Principles of Comparative Politics</em>. Los Angeles, CA: SAGE Publications.</p>
+</div>
+<div>
+<p>———. 2017. <em>Principles of Comparative Politics</em>. CQ Press.</p>
+</div>
+<div>
+<p>Coe, Kevin, David Tewksbury, Bradley J. Bond, Kristin L. Drogos, Robert W. Porter, Ashley Yahn, and Yuanyuan Zhang. 2008. “Hostile News: Partisan Use and Perceptions of Cable News Programming.” <em>Journal of Communication</em> 58 (2): 201–19. doi:<a href="https://doi.org/10.1111/j.1460-2466.2008.00381.x">10.1111/j.1460-2466.2008.00381.x</a>.</p>
+</div>
+<div>
+<p>Cohen, Cathy J. 1999. <em>The Boundaries of Blackness: AIDS and the Breakdown of Black Politics</em>. Chicago; London: The University of Chicago Press.</p>
+</div>
+<div>
+<p>Colleoni, Elanor, Alessandro Rozza, and Adam Arvidsson. 2014. “Echo Chamber or Public Sphere? Predicting Political Orientation and Measuring Political Homophily in Twitter Using Big Data.” <em>Journal of Communication</em> 64 (2). Oxford University Press (OUP): 317–32. doi:<a href="https://doi.org/10.1111/jcom.12084">10.1111/jcom.12084</a>.</p>
+</div>
+<div>
+<p>Collier, David, and John Gerring, eds. 2009. <em>Concepts and Method in Social Science: The Tradition of Giovanni Sartori</em>. New York: Routledge.</p>
+</div>
+<div>
+<p>Cook, Kathleen E., and Elise Murowchick. 2014. “Do Literature Review Skills Transfer from One Course to Another?” <em>Psychology Learning &amp; Teaching</em> 13 (1): 3–11. doi:<a href="https://doi.org/10.2304/plat.2014.13.1.3">10.2304/plat.2014.13.1.3</a>.</p>
+</div>
+<div>
+<p>Dawson, Michael C. 2001. <em>Black Visions: The Roots and Contemporary African-American Political Ideologies</em>. Chicago; London: The University of Chicago Press.</p>
+</div>
+<div>
+<p>De La O, Ana L. 2013. “Do Conditional Cash Transfers Affect Electoral Behavior? Evidence from a Randomized Experiment in Mexico.” <em>American Journal of Political Science</em> 57 (1): 1–14.</p>
+</div>
+<div>
+<p>Dion, Michelle L., Jane Lawrence Sumner, and Sara McLaughlin Mitchell. 2018. “Gendered Citation Patterns Across Political Science and Social Science Methodology Fields.” <em>Political Analysis</em> 26 (3). Cambridge University Press: 312–27. doi:<a href="https://doi.org/10.1017/pan.2018.12">10.1017/pan.2018.12</a>.</p>
+</div>
+<div>
+<p>Dionne, Kim Yi, and Jeremy Horowitz. 2016. “The Political Effects of Agricultural Subsidies in Africa: Evidence from Malawi.” <em>World Development</em> 87 (November): 215–26. doi:<a href="https://doi.org/10.1016/j.worlddev.2016.06.011">10.1016/j.worlddev.2016.06.011</a>.</p>
+</div>
+<div>
+<p>Dodds, Peter Sheridan, Roby Muhamad, and Duncan J. Watts. 2003. “An Experimental Study of Search in Global Social Networks.” <em>Science</em> 301 (5634): 827–29. doi:<a href="https://doi.org/10.1126/science.1081058">10.1126/science.1081058</a>.</p>
+</div>
+<div>
+<p>Druckman, James N, and Cindy D Kam. 2011. “Students as Experimental Participants.” <em>Cambridge Handbook of Experimental Political Science</em> 1. Cambridge University Press New York: 41–57.</p>
+</div>
+<div>
+<p>Duverger, Maurice. 1954. <em>Political Parties: Their Organization and Activity in the Modern State</em>. New York, NY: Wiley.</p>
+</div>
+<div>
+<p>Emerson, Robert M., Rachel I. Fretz, and Linda L. Shaw. 2011. <em>Writing Ethnographic Fieldnotes. Second</em>. Chicago; London: The University of Chicago Press.</p>
+</div>
+<div>
+<p>Erikson, Robert S, and Kent L Tedin. 2015. <em>American Public Opinion: Its Origins, Content and Impact</em>. Routledge.</p>
+</div>
+<div>
+<p>Ferguson, Thomas, Benjamin Page, Jacob Rothschild, Arturo Chang, and Jie Chen. 2018. “The Economic and Social Roots of Populist Rebellion: Support for Donald Trump in 2016.” <em>Institute for New Economic Thinking Working Paper Series</em>, no. 83.</p>
+</div>
+<div>
+<p>Ferrara, Emilio, Onur Varol, Clayton Davis, Filippo Menczer, and Alessandro Flammini. 2016. “The Rise of Social Bots.” <em>Communications of the ACM</em> 59 (7). Association for Computing Machinery (ACM): 96–104. doi:<a href="https://doi.org/10.1145/2818717">10.1145/2818717</a>.</p>
+</div>
+<div>
+<p>Ferree, Karen E. 2006. “Explaining South Africa’s Racial Census.” <em>The Journal of Politics</em> 68 (4): 803–15. doi:<a href="https://doi.org/10.1111/j.1468-2508.2006.00471.x">10.1111/j.1468-2508.2006.00471.x</a>.</p>
+</div>
+<div>
+<p>Fink, Arlene. 2013. <em>Conducting Research Literature Reviews: From the Internet to Paper</em>. 4th ed. SAGE.</p>
+</div>
+<div>
+<p>Fowler, James H., Bernard Grofman, and Natalie Masuoka. 2007. “Social Networks in Political Science: Hiring and Placement of Ph.D.s, 1960–2002.” <em>PS: Political Science &amp; Politics</em> 40 (04). Cambridge University Press (CUP): 729–39. doi:<a href="https://doi.org/10.1017/s104909650707117x">10.1017/s104909650707117x</a>.</p>
+</div>
+<div>
+<p>Fraile, Marta, and Irene Sánchez-Vítores. 2019. “Tracing the Gender Gap in Political Interest over the Life Span: A Panel Analysis.” <em>Political Psychology</em>, May. doi:<a href="https://doi.org/10.1111/pops.12600">10.1111/pops.12600</a>.</p>
+</div>
+<div>
+<p>Freeman, Linton C. 1977. “A Set of Measures of Centrality Based on Betweenness.” <em>Sociometry</em> 40 (1): 35–41. doi:<a href="https://doi.org/10.2307/3033543">10.2307/3033543</a>.</p>
+</div>
+<div>
+<p>Frymer, Paul. 2017. <em>Building an American Empire: The Era of Territorial and Political Expansion</em>. Princeton; Oxford: Princeton University Press.</p>
+</div>
+<div>
+<p>Gidengil, Elisabeth, and Dietlind Stolle. 2009. “The Role of Social Networks in Immigrant Women’s Political Incorporation.” <em>International Migration Review</em> 43 (4): 727–63. doi:<a href="https://doi.org/10.1111/j.1747-7379.2009.00783.x">10.1111/j.1747-7379.2009.00783.x</a>.</p>
+</div>
+<div>
+<p>Goertz, Gary. 2006. <em>Social Science Concepts: A User’s Guide</em>. Princeton: Princeton University Press.</p>
+</div>
+<div>
+<p>González, Yanilda M. 2017. “What Citizens Can See of the State: Police and the Construction of Democratic Citizenship in Latin America.” <em>Theoretical Criminology</em> 21 (4): 494–511.</p>
+</div>
+<div>
+<p>Gosnell, Harold F. 1927. <em>Getting Out the Vote: An Experiment in the Stimulation of Voting</em>. The University of Chicago press.</p>
+</div>
+<div>
+<p>Groves, Robert M. 2011. “Three Eras of Survey Research.” <em>Public Opinion Quarterly</em> 75 (5). Oxford University Press: 861–71.</p>
+</div>
+<div>
+<p>Guille, Adrien, Hakim Hacid, Cécile Favre, and Djamel A. Zighed. 2013. “Information Diffusion in Online Social Networks: A Survey.” <em>ACM SIGMOD Record</em> 42 (1). Association for Computing Machinery (ACM): 17. doi:<a href="https://doi.org/10.1145/2503792.2503797">10.1145/2503792.2503797</a>.</p>
+</div>
+<div>
+<p>Hadaway, C Kirk, Penny Long Marler, and Mark Chaves. 1993. “What the Polls Don’t Show: A Closer Look at Us Church Attendance.” <em>American Sociological Review</em>. JSTOR, 741–52.</p>
+</div>
+<div>
+<p>Hainmueller, Jens, Dominik Hangartner, and Teppei Yamamoto. 2015. “Validating Vignette and Conjoint Survey Experiments Against Real-World Behavior.” <em>Proceedings of the National Academy of Sciences</em> 112 (8): 2395–2400. doi:<a href="https://doi.org/10.1073/pnas.1416587112">10.1073/pnas.1416587112</a>.</p>
+</div>
+<div>
+<p>Harris-Perry, Melissa V. 2011. <em>Sister Citizen: Shame, Stereotypes, and Black Women in America. New Haven and</em>. London: Yale University Press.</p>
+</div>
+<div>
+<p>Hart, Chris. 1998. <em>Doing a Literature Review: Releasing the Social Science Research Imagination</em>. Thousand Oaks, CA: SAGE Publications.</p>
+</div>
+<div>
+<p>Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2017. <em><span style="font-style:normal;">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</span></em>. 2nd ed. New York City: Springer.</p>
+</div>
+<div>
+<p>Heerwig, Jennifer A, and Brian J McCabe. 2009. “Education and Social Desirability Bias: The Case of a Black Presidential Candidate.” <em>Social Science Quarterly</em> 90 (3). Wiley Online Library: 674–86.</p>
+</div>
+<div>
+<p>Helmke, Gretchen. 2005. <em>Courts Under Constraints: Judges, Generals, and Presidents in Argentina</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div>
+<p>Hochschild, Jennifer L., Vesla Weaver, and Traci D. Burch. 2012. <em>Creating a New Racial Order: How Immigration, Multiracialism, Genomics, and the Young Can Remake Race in America</em>. Princeton; Oxford: Princeton University Press.</p>
+</div>
+<div>
+<p>Hopkins, Daniel J., and Jonathan M. Ladd. 2014. “The Consequences of Broader Media Choice: Evidence from the Expansion of Fox News.” <em>Quarterly Journal of Political Science</em> 9 (1): 115–35. doi:<a href="https://doi.org/10.1561/100.00012099">10.1561/100.00012099</a>.</p>
+</div>
+<div>
+<p>Iyengar, Shanto, Mark D. Peters, and Donald R. Kinder. 1982. “Experimental Demonstrations of the ‘Not-so-Minimal’ Consequences of Television News Programs.” <em>American Political Science Review</em> 76 (4): 848–58. doi:<a href="https://doi.org/10.1017/S000305540018966X">10.1017/S000305540018966X</a>.</p>
+</div>
+<div>
+<p>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. <em><span style="font-style:normal;">An Introduction to Statistical Learning: With Applications in R</span></em>. 7th ed. New York City: Springer.</p>
+</div>
+<div>
+<p>Jamison, Julian C. 2019. “The Entry of Randomized Assignment into the Social Sciences.” <em>Journal of Causal Inference</em> 7 (1). doi:<a href="https://doi.org/10.1515/jci-2017-0025">10.1515/jci-2017-0025</a>.</p>
+</div>
+<div>
+<p>Jesson, Jill, Lydia Matheson, and Fiona M. Lacey. 2011. <em>Doing Your Literature Review: Traditional and Systematic Techniques</em>. Thousand Oaks, CA: SAGE.</p>
+</div>
+<div>
+<p>Johnson, Janet Buttolph, H. T. Reynolds, and Jason D. Mycoff. 2016. <em>Political Science Research Methods</em>. 8th ed. Washington, DC: CQ Press.</p>
+</div>
+<div>
+<p>Kadushin, Charles. 2012. <em>Understanding Social Networks: Theories, Concepts, and Findings</em>. Oxford University Press.</p>
+</div>
+<div>
+<p>Kane, Emily W, and Kimberly J Whipkey. 2009. “Predictors of Public Support for Gender-Related Affirmative Action: Interests, Gender Attitudes, and Stratification Beliefs.” <em>Public Opinion Quarterly</em> 73 (2). Oxford University Press: 233–54.</p>
+</div>
+<div>
+<p>Karl, Kristyn L. 2019. “Motivating Participation Through Political Ads: Comparing the Effects of Physiology and Self-Reported Emotion.” <em>Political Behavior</em>, September. doi:<a href="https://doi.org/10.1007/s11109-019-09569-2">10.1007/s11109-019-09569-2</a>.</p>
+</div>
+<div>
+<p>Kemp, Simon. 2020. “Digital 2020: Global Digital Overview.” Hootsuite &amp; We Are Social. <a href="https://datareportal.com/reports/digital-2020-global-digital-overview" class="uri">https://datareportal.com/reports/digital-2020-global-digital-overview</a>.</p>
+</div>
+<div>
+<p>Kleinberg, Jon M. 2000. “Navigation in a Small World.” <em>Nature</em> 406 (6798): 845. doi:<a href="https://doi.org/10.1038/35022643">10.1038/35022643</a>.</p>
+</div>
+<div>
+<p>Knopf, Jeffrey W. 2006. “Doing a Literature Review.” <em>PS: Political Science and Politics</em> 39 (1): 127–32.</p>
+</div>
+<div>
+<p>Kramer, Katherine J. 2016. <em>The Politics of Resentment: Rural Consciousness in Wisconsin and the Rise of Scott Walker</em>. Chicago; London: The University of Chicago Press.</p>
+</div>
+<div>
+<p>Kuenzi, Michelle, and Gina Lambright. 2005. “Party Systems and Democratic Consolidation in Africa’s Electoral Regimes.” <em>Party Politics</em> 11 (4): 423–46. doi:<a href="https://doi.org/10.1177/1354068805053211">10.1177/1354068805053211</a>.</p>
+</div>
+<div>
+<p>Kuhn, Thomas S. 1996. <em>The Structure of Scientific Revolutions, 3rd Ed.</em> The Structure of Scientific Revolutions, 3rd Ed. Chicago, IL, US. doi:<a href="https://doi.org/10.7208/chicago/9780226458106.001.0001">10.7208/chicago/9780226458106.001.0001</a>.</p>
+</div>
+<div>
+<p>Kuziemko, Ilyana, Jessica Pan, Jenny Shen, and Ebonya Washington. 2018. “The Mommy Effect: Do Women Anticipate the Employment Effects of Motherhood?” <em>NBER Working Paper Series</em> N. 24740.</p>
+</div>
+<div>
+<p>Lee, Stephanie M. 2018. “Sliced and Diced: The Inside Story of How an Ivy League Food Scientist Turned Shoddy Data into Viral Studies.” <em>BuzzFeed News</em>. https://www.buzzfeednews.com/article/stephaniemlee/brian-wansink-cornell-p-hacking.</p>
+</div>
+<div>
+<p>Leighley, Jan E, and Arnold Vedlitz. 1999. “Race, Ethnicity, and Political Participation: Competing Models and Contrasting Explanations.” <em>The Journal of Politics</em> 61 (4). University of Texas Press: 1092–1114.</p>
+</div>
+<div>
+<p>Lewis, Kevin, Jason Kaufman, Marco Gonzalez, Andreas Wimmer, and Nicholas Christakis. 2008. “Tastes, Ties, and Time: A New Social Network Dataset Using Facebook.com.” <em>Social Networks</em> 30 (4). Elsevier BV: 330–42. doi:<a href="https://doi.org/10.1016/j.socnet.2008.07.002">10.1016/j.socnet.2008.07.002</a>.</p>
+</div>
+<div>
+<p>Lipset, Seymour Martin. 1959. “Some Social Requisites of Democracy: Economic Development and Political Legitimacy.” <em>American Political Science Review</em> 53 (01): 69–105. doi:<a href="https://doi.org/10.2307/1951731">10.2307/1951731</a>.</p>
+</div>
+<div>
+<p>Lombard, Matthew, Jennifer Snyder-Duch, and Cheryl Campanella Bracken. 2002. “Content Analysis in Mass Communication: Assessment and Reporting of Intercoder Reliability.” <em>Human Communication Research</em> 28 (4). Wiley Online Library: 587–604.</p>
+</div>
+<div>
 <p>Luo, Zhaotian, and Adam Przeworski. 2019. “Why Are the Fastest Growing Countries Autocracies?” <em>The Journal of Politics</em> 81 (2). The University of Chicago Press Chicago, IL: 663–69.</p>
 </div>
-<div id="ref-rice2007math">
+<div>
+<p>Mahoney, James, and Kathleen Thelen. 2009. <em>Explaining Institutional Change: Ambiguity, Agency, and Power</em>. Cambridge University Press.</p>
+</div>
+<div>
+<p>Marion Suiseeya, Kimberly R., and Laura Zanotti. 2019. “Making Influence Visible: Innovating Ethnography at the Paris Climate Summit.” <em>Global Environmental Politics</em> 19 (2): 38–60. doi:<a href="https://doi.org/10.1162/glep_a_00507">10.1162/glep_a_00507</a>.</p>
+</div>
+<div>
+<p>Masuoka, Natalie, and Jane Junn. 2013. <em>The Politics of Belonging: Race, Public Opinion, and Immigration</em>. University of Chicago Press.</p>
+</div>
+<div>
+<p>Matejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” In <em>CHI 2017 Conference Proceedings:</em></p>
+</div>
+<div>
+<p>Mayda, Anna Maria, Kevin H O’Rourke, and Richard Sinnott. 2007. “Risk, Government and Globalization: International Survey Evidence.” National Bureau of Economic Research.</p>
+</div>
+<div>
+<p>Mengel, Friederike, Jan Sauermann, and Ulf Zölitz. 2019. “Gender Bias in Teaching Evaluations.” <em>Journal of the European Economic Association</em> 17 (2): 535–66. doi:<a href="https://doi.org/10.1093/jeea/jvx057">10.1093/jeea/jvx057</a>.</p>
+</div>
+<div>
+<p>Milgram, Stanley. 1967. “The Small-World Problem.” <em>Psychology Today</em> 1 (1): 61–67.</p>
+</div>
+<div>
+<p>Milgram, Stanley, and Jeffrey Travers. 1969. “An Experimental Study of the Small World Problem.” <em>Sociometry</em> 32 (4): 425–43. doi:<a href="https://doi.org/10.2307/2786545">10.2307/2786545</a>.</p>
+</div>
+<div>
+<p>Mitchell, Tom. 1997. <em><span style="font-style:normal;">Machine Learning</span></em>. New York City: McGraw-Hill Education.</p>
+</div>
+<div>
+<p>Moore, Barrington. 1966. <em>Social Origins of Dictatorship and Democracy: Lord and Peasant in the Making of the Modern World</em>. Boston, MA: Beacon Press.</p>
+</div>
+<div>
+<p>Mueller, Hannes F., and Christopher Rauh. 2018. “Reading Between the Lines: Prediction of Political Violence.” <em>Using Newspaper Text. <span style="font-style:normal;">American Political Science Review</span></em> 112 (2): 358–75.</p>
+</div>
+<div>
+<p>Munck, Gerardo L. 2009. <em>Measuring Democracy: A Bridge Between Scholarship and Politics</em>. Baltimore: Johns Hopkins University Press.</p>
+</div>
+<div>
+<p>Murdie, Amanda. 2014. “The Ties That Bind: A Network Analysis of Human Rights International Nongovernmental Organizations.” <em>British Journal of Political Science</em> 44 (1). Cambridge University Press (CUP): 1–27. doi:<a href="https://doi.org/10.1017/s0007123412000683">10.1017/s0007123412000683</a>.</p>
+</div>
+<div>
+<p>Mutz, Diana C, and Eunji Kim. 2017. “The Impact of in-Group Favoritism on Trade Preferences.” <em>International Organization</em> 71 (4). Cambridge University Press: 827–50.</p>
+</div>
+<div>
+<p>Newman, MEJ. 2005. “Power Laws, Pareto Distributions and Zipf’s Law.” <em>Contemporary Physics</em> 46 (5): 323–51. doi:<a href="https://doi.org/10.1080/00107510500052444">10.1080/00107510500052444</a>.</p>
+</div>
+<div>
+<p>Ng, Andrew. n.d. <em><span style="font-style:normal;">Machine Learning</span></em>. Stanford University: Coursera. <a href="https://www.coursera.org/learn/" class="uri">https://www.coursera.org/learn/</a>.</p>
+</div>
+<div>
+<p>Olson, Mancur. 1965. <em>The Logic of Collective Action: Public Goods and the Theory of Groups</em>. Harvard Economic Studies 124. Cambridge, MA: Harvard University Press.</p>
+</div>
+<div>
+<p>Onwuegbuzie, Anthony J., and Rebecca Frels. 2016. <em>Seven Steps to a Comprehensive Literature Review: A Multimodal and Cultural Approach</em>. Thousand Oaks, CA: SAGE.</p>
+</div>
+<div>
+<p>Opsahl, Tore. 2013. “Triadic Closure in Two-Mode Networks: Redefining the Global and Local Clustering Coefficients.” <em>Social Networks</em> 35 (2): 159–67. doi:<a href="https://doi.org/10.1016/j.socnet.2011.07.001">10.1016/j.socnet.2011.07.001</a>.</p>
+</div>
+<div>
+<p>Ostrom, Elinor. 2015. <em>Governing the Commons: The Evolution of Institutions for Collective Action</em>. Canto Classics. Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9781316423936">10.1017/CBO9781316423936</a>.</p>
+</div>
+<div>
+<p>Pan, Jennifer, and Yiqing Xu. 2018. “China’s Ideological Spectrum.” <em>The Journal of Politics</em> 80 (1): 254–73. doi:<a href="https://doi.org/10.1086/694255">10.1086/694255</a>.</p>
+</div>
+<div>
+<p>Parry, Marc. 2011. “Harvard Researchers Accused of Breaching Students’ Privacy.” <em>The Chronicle of Higher Education</em>. Web. <a href="\url{https://www.chronicle.com/article/Harvards-Privacy-Meltdown/128166}" class="uri">\url{https://www.chronicle.com/article/Harvards-Privacy-Meltdown/128166}</a>.</p>
+</div>
+<div>
+<p>Parthasarathy, Ramya, Vijayendra Rao, and Nethra Palaniswamy. 2019. “Deliberative Democracy in an Unequal World: A Text-as-Data Study of South India’s Village Assemblies.” <em><span style="font-style:normal;">American Political Science Review</span></em> 113 (3): 623–40.</p>
+</div>
+<div>
+<p>Pattillo, Mary. 2013. <em>Black Picket Fences: Privilege and Peril Among the Black Middle Class</em>. Chicago; London: The University of Chicago Press.</p>
+</div>
+<div>
+<p>Paxton, Pamela. 2000. “Women’s Suffrage in the Measurement of Democracy: Problems of Operationalization.” <em>Studies in Comparative International Development</em> 35 (3): 92–111.</p>
+</div>
+<div>
+<p>Pearlman, Wendy. 2017. <em>We Crossed a Bridge and It Trembled: Voices from Syria</em>. New York: HarperCollins.</p>
+</div>
+<div>
+<p>Pond, Amy. 2017. “Economic Sanctions and Demand for Protection.” <em>Journal of Conflict Resolution</em> 61 (5): 1073–94. doi:<a href="https://doi.org/10.1177/0022002715596777">10.1177/0022002715596777</a>.</p>
+</div>
+<div>
+<p>Price, Paul C, Rajiv Jhangiani, I-Chant A Chiang, and others. 2015. <em>Research Methods in Psychology</em>. BCCampus.</p>
+</div>
+<div>
 <p>Rice, John. 2007. <em>Mathematical Statistics and Data Analysis</em>. Belmont, CA: Thompson/Brooks/Cole.</p>
 </div>
-<div id="ref-scotto2017we">
+<div>
+<p>Ridley, Diana. 2012. <em>The Literature Review: A Step-by-Step Guide for Students</em>. 2nd ed. Thousand Oaks, CA: SAGE.</p>
+</div>
+<div>
+<p>Rogers, Reuel R. 2006. <em>Afro-Caribbean Immigrants and the Politics of Incorporation: Ethnicity, Exception, or Exit</em>. Cambridge, New York, Melbourne, Cape Town, Singapore,; Sao Paulo: Cambridge University Press.</p>
+</div>
+<div>
+<p>Saramäki, Jari, Mikko Kivelä, Jukka-Pekka Onnela, Kimmo Kaski, and János Kertész. 2007. “Generalizations of the Clustering Coefficient to Weighted Complex Networks.” <em>Physical Review E</em> 75 (2): 027105–1–027105–4. doi:<a href="https://doi.org/10.1103/physreve.75.027105">10.1103/physreve.75.027105</a>.</p>
+</div>
+<div>
+<p>Sartori, Giovanni. 1970. “Concept Misformation in Comparative Politics.” <em>American Political Science Review</em> 64 (4): 1033–53. doi:<a href="https://doi.org/10.2307/1958356">10.2307/1958356</a>.</p>
+</div>
+<div>
+<p>Schroeder, Elizabeth, and Daniel F. Stone. 2015. “Fox News and Political Knowledge.” <em>Journal of Public Economics</em> 126 (June): 52–63. doi:<a href="https://doi.org/10.1016/j.jpubeco.2015.03.009">10.1016/j.jpubeco.2015.03.009</a>.</p>
+</div>
+<div>
+<p>Schuman, Howard, and Stanley Presser. 1996. <em>Questions and Answers in Attitude Surveys: Experiments on Question Form, Wording, and Context</em>. Sage.</p>
+</div>
+<div>
 <p>Scotto, Thomas J, Jason Reifler, David Hudson, and others. 2017. “We Spend How Much? Misperceptions, Innumeracy, and Support for the Foreign Aid in the United States and Great Britain.” <em>Journal of Experimental Political Science</em> 4 (2). Cambridge University Press: 119–28.</p>
 </div>
+<div>
+<p>Seawright, Jason. 2010. “Regression- Based Inference: A Case Study in Failed Causal Assessment.” In <em>Rethinking Social Inquiry: Diverse Tools, Shared Standards</em>, 2nd ed. Rowman &amp; Littlefield Publishers, Inc.</p>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="9">
-<li id="fn9"><p>This may be a bit confusing. But you may consider it this way. Let’s say, we hypothesize that the average height of all Northwestern undergrads is 5.7 feet. If we do the hypothesis testing as we will learn in this chapter, we will not reject the null hypothesis unless we get a random sample whose average height is much higher than 5.7 or much shorter than 5.7 feet. In many cases, we may not reject the hypothesis. However, how likely is the hypothesis true, even if we do not reject it? Almost 0, because the exact average height can be any number slightly different from 5.7 feet, e.g., 5.700001 or 5.697382. As a result, the hypothesis is almost always wrong, but we do not always reject it. Thus, whether to reject the hypothesis or not does not tell us whether it is true or false. Nor does it tell us the probability that it is true.<a href="hypothesis-testing.html#fnref9">↩</a></p></li>
-<li id="fn10"><p>We have 1.96 in the formula because statisticians tell us if we randomly draw a number from a normal distribution, we have a 95 percent chance of getting a number no more than 1.96 standard errors above or below the mean of the distribution.<a href="hypothesis-testing.html#fnref10">↩</a></p></li>
-<li id="fn11"><p>We have 2.58 in the formula because if we randomly draw a number from a normal distribution, we have a 99 percent chance of getting a number no more than 2.58 standard errors above or below the mean of the distribution.<a href="hypothesis-testing.html#fnref11">↩</a></p></li>
-<li id="fn12"><p>As I have tried to explain, the level of significance is not the probability that the research hypothesis is true.<a href="hypothesis-testing.html#fnref12">↩</a></p></li>
-<li id="fn13"><p>For example, the finding that 1 million investment in education for one student may increase her annual income by 100 dollars after graduation may be statistically significant, but the effect is too small to tell any substantial relations.<a href="hypothesis-testing.html#fnref13">↩</a></p></li>
-</ol>
+<div>
+<p>———. 2016. <em>Multi-Method Social Science: Combining Qualitative and Quantitative Tools</em>. Strategies for Social Inquiry. Cambridge: Cambridge University Press.</p>
 </div>
+<div>
+<p>Seawright, Jason, and John Gerring. 2008. “Case Selection Techniques in Case Study Research: A Menu of Qualitative and Quantitative Options.” <em>Political Research Quarterly</em> 61 (2). Sage Publications Sage CA: Los Angeles, CA: 294–308.</p>
+</div>
+<div>
+<p>Shineman, Victoria Anne. 2018. “If You Mobilize Them, They Will Become Informed: Experimental Evidence That Information Acquisition Is Endogenous to Costs and Incentives to Participate.” <em>British Journal of Political Science; Cambridge</em> 48 (1): 189–211. doi:<a href="https://doi.org/http://dx.doi.org.turing.library.northwestern.edu/10.1017/S0007123416000168">http://dx.doi.org.turing.library.northwestern.edu/10.1017/S0007123416000168</a>.</p>
+</div>
+<div>
+<p>Shoemaker, Pamela J., James William Tankard Jr, and Dominic L. Lasorsa. 2003. <em>How to Build Social Science Theories</em>. Thousand Oaks, CA: SAGE Publications.</p>
+</div>
+<div>
+<p>Stuart, Gretchen S, and David A Grimes. 2009. “Social Desirability Bias in Family Planning Studies: A Neglected Problem.” <em>Contraception</em> 80 (2). Elsevier: 108–12.</p>
+</div>
+<div>
+<p>Sumner, Jane Lawrence. 2018. “The Gender Balance Assessment Tool (Gbat): A Web-Based Tool for Estimating Gender Balance in Syllabi and Bibliographies.” <em>PS: Political Science &amp;Amp; Politics</em> 51 (2). Cambridge University Press: 396–400. doi:<a href="https://doi.org/10.1017/S1049096517002074">10.1017/S1049096517002074</a>.</p>
+</div>
+<div>
+<p>Takes, Frank W., and Walter A. Kosters. 2011. “Determining the Diameter of Small World Networks.” In <em>Proceedings of the 20th ACM International Conference on Information and Knowledge Management - CIKM 11</em>, 1191–6. doi:<a href="https://doi.org/10.1145/2063576.2063748">10.1145/2063576.2063748</a>.</p>
+</div>
+<div>
+<p>Teele, Dawn, Joshua Kalla, and Frances Rosenbluth. 2018. “The Ties That Double Bind: Social Roles and Women’s Underrepresentation in Politics.” <em>American Political Science Review</em> 112 (3). Cambridge University Press: 525–41. doi:<a href="https://doi.org/10.1017/S0003055418000217">10.1017/S0003055418000217</a>.</p>
+</div>
+<div>
+<p>Thurston, Chloe N. 2018. <em>At the Boundaries of Homeownership: Credit, Discrimination, and the American State</em>. New York; Melbourne: Cambridge University Press.</p>
+</div>
+<div>
+<p>Tsebelis, George. 2000. “Veto Players and Institutional Analysis.” <em>Governance</em> 13 (4): 441–74. doi:<a href="https://doi.org/10.1111/0952-1895.00141">10.1111/0952-1895.00141</a>.</p>
+</div>
+<div>
+<p>Van de Mortel, Thea F, and others. 2008. “Faking It: Social Desirability Response Bias in Self-Report Research.” <em>Australian Journal of Advanced Nursing, The</em> 25 (4). Australian Nursing Federation: 40.</p>
+</div>
+<div>
+<p>Vargas, Robert. 2016. <em>Wounded City: Violent Turf Wars in a Chicago Barrio</em>. Oxford University Press.</p>
+</div>
+<div>
+<p>Wasserman, Stanley, and Katherine Faust. 1994. <em>Social Network Analysis: Methods and Applications</em>. Cambridge University Press.</p>
+</div>
+<div>
+<p>Watts, Duncan J., and Steven H. Strogatz. 1998. “Collective Dynamics of ‘Small-World’ Networks.” <em>Nature</em> 393 (6684): 440–42. doi:<a href="https://doi.org/10.1038/30918">10.1038/30918</a>.</p>
+</div>
+<div>
+<p>Weiss, Robert S. 1994. <em>Learning from Strangers: The Art and Method of Qualitative Interview Studies</em>. New York: Free Press.</p>
+</div>
+<div>
+<p>White, Ismail K., Chryl N. Laird, and Troy D. Allen. 2014. “Selling Out?: The Politics of Navigating Conflicts Between Racial Group Interest and Self-Interest.” <em>American Political Science Review</em> 108 (4): 783–800. doi:<a href="https://doi.org/10.1017/S000305541400046X">10.1017/S000305541400046X</a>.</p>
+</div>
+<div>
+<p>Zimmer, Michael. 2008. “More on the ‘Anonymity’ of the Facebook Dataset—It’s Harvard College (Updated).” Web. <a href="\url{http://www.michaelzimmer.org/2008/10/03/more-on-the-anonymity-of-the-facebook-dataset-its-harvard-college/}" class="uri">\url{http://www.michaelzimmer.org/2008/10/03/more-on-the-anonymity-of-the-facebook-dataset-its-harvard-college/}</a>.</p>
+</div>
+<div>
+<p>———. 2010. “‘But the Data Is Already Public’: On the Ethics of Research in Facebook.” <em>Ethics and Information Technology</em> 12 (4). Springer Science; Business Media LLC: 313–25. doi:<a href="https://doi.org/10.1007/s10676-010-9227-5">10.1007/s10676-010-9227-5</a>.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="surveys.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conclusions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
