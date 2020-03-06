@@ -20,25 +20,23 @@ You have two variables that you think might be related in a linear fashion. Let'
 
 ![Figure 8.1: Different correlations, visualized. The numbers represent correlation coefficients. Based on @boigelotdenisExampleCorrelationVarious2011, modified by Max Weylandt.](images/largen/correlation.png)
 
-Correlation coefficients can range from -1 to 1. Imagine that the different graphs in figure [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"} represent the different possible relationships between education (along the $X$-axis) and gender equality (on the $Y$-axis). As the top line of figure [\[fig:largen\_correlation\]](#fig:largen_correlation){reference-type="ref" reference="fig:largen_correlation"} shows, a correlation coefficient closer to either pole means a strong correlation while a number around 0 means a weak correlation. If $R=-0.8$, there is a strong negative correlation (at larger values of X, Y tends to have lower values). If $R=0.4$, there is a moderate positive correlation (at larger values of X, Y tends to have higher values). The correlation we got indicates that we have a fairly strong positive correlation. In other words, countries with higher levels of education tend to have higher gender equality overall.
+Correlation coefficients can range from -1 to 1. Imagine that the different graphs in figure 8.1 represent the different possible relationships between education (along the $X$-axis) and gender equality (on the $Y$-axis). As the top line of figure 8.1 shows, a correlation coefficient closer to either pole means a strong correlation while a number around 0 means a weak correlation. If $R=-0.8$, there is a strong negative correlation (at larger values of X, Y tends to have lower values). If $R=0.4$, there is a moderate positive correlation (at larger values of X, Y tends to have higher values). The correlation we got indicates that we have a fairly strong positive correlation. In other words, countries with higher levels of education tend to have higher gender equality overall.
 
-But also note the difference between the two lines in the graph above. In the bottom line, every image represents a perfect correlation, even though the relationships between $X$ and $Y$ are clearly very different. On the first graph from the left, $Y$ increases a lot as $X$ moves from its lowest to its highest value. Two images over, $Y$ still increases as $X$ does, but much less so. They both move in the same direction perfectly (they have a correlation coefficient of $R=1$), but the slopes are different. This has implications for our findings: is gender equality slightly higher in countries with more education, or a lot higher? Correlation cannot answer that question. Later, we'll see how regression accounts for this difference in slopes. By the way, it is always a good idea to visualize your data. The graphs in figure [\[fig:largen\_datasaur\]](#fig:largen_datasaur){reference-type="ref" reference="fig:largen_datasaur"} below show three datasets that have almost identical means, medians, and correlations - yet look quite different when plotted.
+But also note the difference between the two lines in the graph above. In the bottom line, every image represents a perfect correlation, even though the relationships between $X$ and $Y$ are clearly very different. On the first graph from the left, $Y$ increases a lot as $X$ moves from its lowest to its highest value. Two images over, $Y$ still increases as $X$ does, but much less so. They both move in the same direction perfectly (they have a correlation coefficient of $R=1$), but the slopes are different. This has implications for our findings: is gender equality slightly higher in countries with more education, or a lot higher? Correlation cannot answer that question. Later, we'll see how regression accounts for this difference in slopes. By the way, it is always a good idea to visualize your data. The graphs in figure 8.2 below show three datasets that have almost identical means, medians, and correlations - yet look quite different when plotted.
 
-![Based on the 'Datasaurus Dozen' by @matejkaSameStatsDifferent2017](images/largen/dino.png){width="\\textwidth"}
-
-[\[fig:largen\_datasaur\]]{#fig:largen_datasaur label="fig:largen_datasaur"}
+![Figure 8.2: Based on the 'Datasaurus Dozen' by @matejkaSameStatsDifferent2017](images/largen/dino.png)
 
 Correlations can easily be calculated with statistical software, and the number of datasets available to researchers has exploded in recent years. This means that, now more than ever, you can conduct exploratory analyses with a large number of variables to see which ones are related to each other or the outcome you are interested in. This process, of looking at large number of variables and seeing how they relate, is sometimes called **data-mining**. Data mining can be an acceptable part of an inductive theory-building process (see [ch02](./casual-inference.html)), but it is a fraught process: when looking at a large number of variables you are bound to find some that show a relationship, and it can be tempting (even subconsciously) to write up only results that confirm our hypothesis rather than those that don't.
 
-**Check-in Question 1: What does a correlation coefficient tell us? What does it *not* tell us?**
+**Check-in Question 1:** What does a correlation coefficient tell us? What does it *not* tell us?
 
 ### Regression
 
 Correlations are a useful first look at the relationship between two variables, but linear regression is far more powerful. The intuition behind linear regression is simple: we want to find the line that best fits all of our data points. This is because the line that fits the data best summarizes the relationship between variables, and we can use this line to learn not just the direction of an association (positive or negative) but also its strength: as $X$ changes, *how much* does $Y$ tend to change? Regression also lets us conduct significance tests to establish whether the relationship between variables actually exists or just appears to occur due to chance.
 
-![A simple scatterplot](images/largen/scatter.png)
+![Figure 8.3: A simple scatterplot](images/largen/scatter.png)
 
-Perhaps it's best to start with an image. Figure [1](#fig:scatter){reference-type="ref" reference="fig:scatter"} charts the values for 147 countries' expected years of education against their scores on the equality index, with each country represented by a dot. Just from looking at it, you can see that countries with a high level of education tend to have higher levels of overall gender equality, even if not all countries neatly fit that description. In other words, as predicted by our correlation coefficient of 0.85, it seems that there is a relationship between education and gender equality. But how strong is this association?
+Perhaps it's best to start with an image. Figure 8.3 charts the values for 147 countries' expected years of education against their scores on the equality index, with each country represented by a dot. Just from looking at it, you can see that countries with a high level of education tend to have higher levels of overall gender equality, even if not all countries neatly fit that description. In other words, as predicted by our correlation coefficient of 0.85, it seems that there is a relationship between education and gender equality. But how strong is this association?
 
 To answer the question, we draw the line that best fits the data points in the scatterplot. This straight line (this is *linear* regression after all) summarizes the relationship between the two variables we are interested in. Imagine we wanted to explain the relationship to someone else but couldn't show them the individual data points. We could still show them the line and they would get a sense of how gender equality and education relate.
 
@@ -46,23 +44,21 @@ The regression equation takes the form: $$Y = a + bX$$
 
 Take a second to appreciate what we have done here. We've taken data on two variables for 147 countries, and summarized it with one line on the graph, which we can in turn express as this simple formula. The formula may look familiar to you, as it is simply the formula for a straight line. should I say linear equation? In the above equation $a$ is the intercept -- the value $Y$ takes on when $X=0$. In other words, what is the level of gender inequality that a country with 0 years of expected schooling would have? $b$ is the slope. Remember the function the slope plays in a graphs: it gives you 'rise over run', telling you how much the $Y$ tends changes in relation to the $X$. This means that in a regression equation, the slope is very important, because it expresses the relationship between our variables: on average, a one-unit increase in the X variable (in our case, one year of extra expected schooling) is associated with a $b$-sized increase or decrease in the outcome variable (points on the gender equality index). The slope $b$ is often also called the **regression coefficient**. In the case of our regression line, $b=11.6$. As you will see below, we often encounter regressions with multiple variables, each of which has its own coefficient (i.e. change in the outcome variable associated with change in the independent/input variable).
 
-In our example, the intercept $a=-89.2$. This is a good time to warn you about extrapolating using data from regression. That intercept is impossible, because the way our outcome variable is set up, there are only positive scores for equality. Yet because of the best fit line, our regression predicts an impossible value for $Y$ when $X=0$. Always remember that regression fits the line based on the data available. If you want to use it to make prediction about data points far away from the data you actually have, it is possible the prediction will be way off. (By the way, you can find the values for both $a$ and $b$ in [\[table:largen\_results\]](#table:largen_results){reference-type="ref" reference="table:largen_results"} below. We'll discuss how to interpret the table in more detail below, but feel free to see how much you can get from it right now).
+In our example, the intercept $a=-89.2$. This is a good time to warn you about extrapolating using data from regression. That intercept is impossible, because the way our outcome variable is set up, there are only positive scores for equality. Yet because of the best fit line, our regression predicts an impossible value for $Y$ when $X=0$. Always remember that regression fits the line based on the data available. If you want to use it to make prediction about data points far away from the data you actually have, it is possible the prediction will be way off. (By the way, you can find the values for both $a$ and $b$ in Table 8.1 below. We'll discuss how to interpret the table in more detail below, but feel free to see how much you can get from it right now).
 
-![The regression line[]{label="fig:regression"}](images/largen/line.png){#fig:regression width="\\textwidth"}
+![Figure 8.4: The regression line](images/largen/line.png)
 
 ### Method: detail
 
 #### Finding the Line of Best Fit
 
-How do we find the line that fits the data best? Let's restate our aim: we want a line where, given a certain $X$ value, the $Y$ value predicted by the line is really close to the actual value in the data. That seems like a reasonable definition of 'good fit.' Rephrased in mathematical terms, we want to be as small as possible. The thing we want to minimize, , is called a **residual**. For example, in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}, Serbia has an expected years of schooling value of $14.6$ and a gender equality score of $106$. Those are the actual values in the dataset. However, the regression line predicts that an education (i.e. $X$) value of $14.6$ is associated with a gender inequality score of $82.94$ [\[$Y= a+ bX= -89.2 + 11.6 \cdot(14.6) = 80.16$\]]{style="color: blue"}. The residual amounts to $25.4$ [\[$106 - 80.16=25.4$\]]{style="color: blue"}, and is highlighted with a blue line in figure [3](#fig:residuals){reference-type="ref" reference="fig:residuals"}.
+How do we find the line that fits the data best? Let's restate our aim: we want a line where, given a certain $X$ value, the $Y$ value predicted by the line is really close to the actual value in the data. That seems like a reasonable definition of 'good fit.' Rephrased in mathematical terms, we want to be as small as possible. The thing we want to minimize, , is called a **residual**. For example, in figure 8.4, Serbia has an expected years of schooling value of $14.6$ and a gender equality score of $106$. Those are the actual values in the dataset. However, the regression line predicts that an education (i.e. $X$) value of $14.6$ is associated with a gender inequality score of $82.94$ [\[$Y= a+ bX= -89.2 + 11.6 \cdot(14.6) = 80.16$\]]{style="color: blue"}. The residual amounts to $25.4$ [\[$106 - 80.16=25.4$\]]{style="color: blue"}, and is highlighted with a blue line in figure 8.5.
 
-![Visualizing Residuals](images/largen/residuals.png)
+![Figure 8.5: Visualizing Residuals](images/largen/residuals.png)
 
 We take a cumulative look at all of our residuals to see which line fits best. There are several possible methods for doing this. Simply adding up the residuals would give us misleading results: some are negative and some are positive, and they would cancel each other out. To deal with this problem we square each residual. This makes all values positive, and has the added benefit of penalizing larger differences between our line and actual values. We find the line that best fits our data by minimizing the squared residuals. This procedure is called **ordinary least squares**.
 
-The line you see in figure [3](#fig:residuals) is the line of best fit. Still, as you can also see, there are residuals. This is because in linear regression we are trying to find one single straight line to best predict the data, which always results in some points being off the line. A line that hits all points is possible but its equation would be so complicated it would be impossible to interpret. The key is that any other line would have residuals that are overall further away. The image below shows how different lines have drastically different squared residuals.For an interactive example that lets you adjust the line and see how the squared residuals change, check out the second image on [this page](http://setosa.io/ev/ordinary-least-squares-regression/).
-
-![Placeholder: if time, add animated gif on residuals for charts](example-image-a)
+The line you see in figure 8.5 is the line of best fit. Still, as you can also see, there are residuals. This is because in linear regression we are trying to find one single straight line to best predict the data, which always results in some points being off the line. A line that hits all points is possible but its equation would be so complicated it would be impossible to interpret. The key is that any other line would have residuals that are overall further away. The image below shows how different lines have drastically different squared residuals.For an interactive example that lets you adjust the line and see how the squared residuals change, check out the second image on [this page](http://setosa.io/ev/ordinary-least-squares-regression/).
 
 As you can see, we can draw an infinite number of lines through our data, but the one where the squared residuals are lowest is the line of best fit -- the line that best describes the relationship between our variables X and Y.
 
@@ -98,61 +94,15 @@ When reading quantitative papers, chances are you will read a regression table. 
 
 Let's look at a regression table that shows the results of our analyses, [\[table:largen\_results\]](#table:largen_results){reference-type="ref" reference="table:largen_results"}. As you can see, each variable gets its own row -- often the main variable of interest is in the top row. Also, each model gets its own column. Broadly, a model is a different way of looking at the statistical relationship between our variables. In our case, model just refers to different combinations of variables. Other times, different models can feature more complicated differences in statistical calculation. Column (1) shows the results of our first model, which is the simple bivariate regression we began with. Here, in the line for expected years of schooling, you can see the f the variable. You interpret this as discussed above: a one-unit increase in the variable (education) is associated with a 11.6 unit increase in the outcome variable (gender equality). In other words, one extra year of expected schooling is associated with an almost 12 point higher score on the gender equality index.
 
-[\[table:largen\_results\]]{#table:largen_results label="table:largen_results"}
-
-  -------------------- ------------------------- ------------------------- ---------------------------
-
-
-
-
-
-                                  (1)                       (2)                        (3)
-
-  expected schooling     11.63$^{***}$ (0.62)      11.57$^{***}$ (0.62)        6.49$^{***}$ (1.02)
-  migration                                             0.27 (0.29)              $-$0.16 (0.27)
-  GDP/capita (log)                                                            15.74$^{***}$ (2.67)
-  Constant              $-$89.19$^{***}$ (8.54)   $-$88.37$^{***}$ (8.59)   $-$164.56$^{***}$ (15.02)
-
-  Observations                    134                       134                        134
-  Adjusted R$^{2}$               0.73                      0.73                       0.78
-
-  *Note:*                                                                  
-  -------------------- ------------------------- ------------------------- ---------------------------
+![Table: 8.1](images/largen/large-n-results-table.png)
 
 The little asterisk next to the coefficient is a very common symbol to denote statistical significance. A legend at the bottom of the table (as in our example) will explain what different symbols mean , but the standard meanings are shown in Table [\[table:p\]](#table:p){reference-type="ref" reference="table:p"}.You can see that education is statistically significant at the 0.01 level - we are quite certain the coefficient is not zero, and therefore quite confident that there is an association between education and gender equality. Right next to the coefficient and the asterisks is the standard error - our measure of uncertainty regarding our estimate of the coefficient.
-
-hr5cm
-
-  Symbol     P-value below
-  -------- ---------------
-  $*$                  0.1
-  $**$                0.05
-  $***$               0.01
 
 Column (2) shows the results of a second model where we also add the net migration of a country. We can also read the association with this variable from the table: the ndicates that a 1-unit increase in the migration index results in a 0.27 increase in the gender equality index *holding all other variables constant*, but the finding is not statistically significant.
 
 In Column (3) we add GDP/capita to account for different levels of wealth, and you can see that the s substantially lower than in the previous two models. The table indicates that a one-unit increase in education is now associated with a 6.5 point increase in gender equality, *holding all other variables constant*. This change in coefficient illustrates the problem of omitted variable bias. Before we explicitly looked at the relationship between wealth and gender inequality, we were giving education too much credit. It seems that GDP explains some of the variation in gender equality that we had previously attributed to schooling. Indeed the s sizable and statistically significant.
 
-[\[table:largen\_results\_hl\]]{#table:largen_results_hl label="table:largen_results_hl"}
-
-  -------------------- ------------------------- ------------------------- ---------------------------
-
-
-
-
-
-                                  (1)                       (2)                        (3)
-
-  expected schooling     11.63$^{**}$ (0.62)      11.57$^{**}$ (0.62)        6.49$^{**}$ (1.02)
-  migration                                             0.27 (0.29)              $-$0.16 (0.27)
-  GDP/capita (log)                                                            15.74$^{**}$ (2.67)
-  Constant              $-$89.19$^{**}$ (8.54)   $-$88.37$^{**}$ (8.59)   $-$164.56$^{**}$ (15.02)
-
-  Observations                    134                       134                        134
-  Adjusted R$^{2}$               0.73                      0.73                       0.78
-
-  Note:                                                                 
-  -------------------- ------------------------- ------------------------- ---------------------------
+![Table: 8.2](images/largen/large-n-hl-results-table.png)
 
 The coefficient of our main variable of interest - education - changes a fair amount when we change the model. When an association remains despite us changing the models around, we say that it is **robust**. If our variable remains significant across different models, it gives us more confidence that the association is actually there. If introducing control variables means that the main interest is not significant, we would question whether our association is actually there or not. There is no hard and fast rule for judging robustness. In our case, controlling for GDP did mean that the effect size of education went down by quite a lot. This is somewhat worrying. On the other hand, education did retain a statistically significant association throughout.
 
@@ -174,11 +124,11 @@ In short, here's how to read a regression table:
 
 4.  Compare your impressions with the descriptions of the authors. Do they discuss all relevant findings, or do they leave something out?
 
-In recent years, more authors have begun to display regression results in a graphical way. Consider figure [4](#fig:dotwhisker){reference-type="ref" reference="fig:dotwhisker"} below, which displays the result of Dionne and Horowitz's 2016 article [@dionnePoliticalEffectsAgricultural2016]. Their regression estimates the probability of farmers receiving agricultural subsidies. The dots represent the coefficient estimates from their regression, and the horizontal whiskers show the 95% confidence interval. At a glance, you can see that two confidence intervals do not contain 0, meaning we are 95% sure that the real value of these coefficients is not 0 -- they are statistically significant. We also see that their value is negative, meaning that households with a female head and those that had seen death or illness were less likely to receive aid.
+In recent years, more authors have begun to display regression results in a graphical way. Consider figure 8.6 below, which displays the result of Dionne and Horowitz's 2016 article [@dionnePoliticalEffectsAgricultural2016]. Their regression estimates the probability of farmers receiving agricultural subsidies. The dots represent the coefficient estimates from their regression, and the horizontal whiskers show the 95% confidence interval. At a glance, you can see that two confidence intervals do not contain 0, meaning we are 95% sure that the real value of these coefficients is not 0 -- they are statistically significant. We also see that their value is negative, meaning that households with a female head and those that had seen death or illness were less likely to receive aid.
 
-This figure also shows an example an example of something you should know called a **dummy variable**. The term 'dummy' bears no relation to what these variables do: they only take two values (yes or no, 1 or 0) and can be used to compare groups. When we include a dummy variable in a regression, the output tells us the difference in average Y values across the two groups. In this example, females receive aid at lower rates than males (the two values of these dummy variables). If you look at the variables in figure [4](#fig:dotwhisker){reference-type="ref" reference="fig:dotwhisker"} you will see that many of them are dummies: they denote membership in ethnic groups, partisanship, and more. Rather than interpreting the coefficient as \"a one unit increase in X is associated with a $b$ increase in Y,\" we think \"being X rather than not is associated with a $b$ increase in Y.\"
+This figure also shows an example an example of something you should know called a **dummy variable**. The term 'dummy' bears no relation to what these variables do: they only take two values (yes or no, 1 or 0) and can be used to compare groups. When we include a dummy variable in a regression, the output tells us the difference in average Y values across the two groups. In this example, females receive aid at lower rates than males (the two values of these dummy variables). If you look at the variables in figure 8.6 you will see that many of them are dummies: they denote membership in ethnic groups, partisanship, and more. Rather than interpreting the coefficient as \"a one unit increase in X is associated with a $b$ increase in Y,\" we think \"being X rather than not is associated with a $b$ increase in Y.\"
 
-![Adapted from Dionne and Horowitz 2016, 220 []{label="fig:dotwhisker"}](images/largen/dotwhisker.png){#fig:dotwhisker height="3in"}
+![Figure 8.6: Adapted from Dionne and Horowitz 2016, 220](images/largen/dotwhisker.png)
 
 ## Applications
 
@@ -194,36 +144,11 @@ You will also encounter correlations in more technical sections of papers, when 
 
 We are talking about large-N data in this chapter, and regression is most useful when applied to a fairly large number of cases. Some of this research takes data from different geographical or political units to look at a phenomenon across many cases, like the example about education and gender equality earlier on in this chapter.
 
-[\[table:largen\_kuenzi\]]{#table:largen_kuenzi label="table:largen_kuenzi"}
-
-  -------------------------------- --------------------------------------------------
-  Dependent Variable:              
-  Combined polity score for 1999               *Robust Regression Result*
-
-  Constant                                               -8.80
-                                                      (2.08)\*\*\*
-  Legislative volatility                                 0.047
-                                                      (0.025)\*\*
-  Mean age of parties                                    0.0009
-                                                        (0.063)
-  Effective No. of Parties                                1.68
-                                                     (0.488)\*\*\*
-  Change in inflation                                    -0.234
-                                                     (0.043)\*\*\*
-  GDP per capita in 1999                                 0.988
-                                                         (1.32)
-  PR system dummy variable                                1.29
-                                                         (1.21)
-
-  Number of countries                                      32
-  *Note:*                           $^{*}$p$<$0.1; $^{*}$p$<$0.05; $^{*}$p$<$0.01
-  -------------------------------- --------------------------------------------------
-
-  : Adapted from Kuenzi and Lambright, 2005, 436
+![Table 8.3](images/largen/table8.3.png)
 
 Kuenzi and Lambright want to look at the relationship between party systems and the level of democracy along a number of African countries. Their outcome is a country's score on the Polity scale, and their variables of interest are legislative volatility, the effective number of parliamentary parties, and the average age of parties.[@kuenziPARTYSYSTEMSDEMOCRATIC2005]
 
-Look at Table [\[table:largen\_kuenzi\]](#table:largen_kuenzi){reference-type="ref" reference="table:largen_kuenzi"} to get a sense of the results. Let's interpret these coefficients. We can see that a one-unit increase in legislative volatility is associated with 0.047 more points on the polity index, holding all other variables constant. This is significant at the 0.05 level.
+Look at Table 8.3 to get a sense of the results. Let's interpret these coefficients. We can see that a one-unit increase in legislative volatility is associated with 0.047 more points on the polity index, holding all other variables constant. This is significant at the 0.05 level.
 
 **Check-in Question 4: Interpret the coefficient for the effective number of parties. What does the coefficient tell us?**
 
@@ -233,7 +158,7 @@ Logistic regression is a type of regression where the outcome variable, $Y$ can 
 
 This is what Garcia (2006) [@garcia-riveroRaceClassUnderlying2006] does, studying respondents' feelings about the ruling party in South Africa, the ANC. The outcome variable is whether or not voters felt close to the ANC (1) or did not feel close to it (0). He looks at several demographic indicators to see which factors are associated with support for the ANC. You will find a lot of logistic regressions of this type in the study of elections, where voting intention is often a categorical variable.
 
-Logistic regressions are slightly more tricky to interpret than regular regressions. To illustrate, let's look at the main table from Ferree (2006) [@ferreeExplainingSouthAfrica2006], who wants to understand why South Africa's election results seem to have split along racial lines. The outcome variable is whether voters intended to vote for the ANC (1) or did not plan to vote for it (0). She looks at several exploratory variables, as you can see in [\[fig:largen\_ferree\]](#fig:largen_ferree){reference-type="ref" reference="fig:largen_ferree"}
+Logistic regressions are slightly more tricky to interpret than regular regressions. To illustrate, let's look at the main table from Ferree (2006) [@ferreeExplainingSouthAfrica2006], who wants to understand why South Africa's election results seem to have split along racial lines. The outcome variable is whether voters intended to vote for the ANC (1) or did not plan to vote for it (0). She looks at several exploratory variables, as you can see in Table 8.4.
 
                                     Support for the ANC
   -------------------------------- ---------------------
@@ -258,22 +183,15 @@ Logistic regressions are slightly more tricky to interpret than regular regressi
   Pseudo R2                                 .85
   N                                         810
 
-
-  : Ferree 2006, 811
-
-[\[fig:largen\_ferree\]]{#fig:largen_ferree label="fig:largen_ferree"}
-
-In the second column of [\[fig:largen\_ferree\]](#fig:largen_ferree){reference-type="ref" reference="fig:largen_ferree"}, the coefficient for the variable 'High schooling' is -4.4. How do we interpret this? Clearly, we cannot do as we did above: we can't say that having high schooling is associated with a 4.4 unit decrease in the intention to vote for the ANC, because the only possible values are either 0 or 1.
+In the second column of Table 8.4, the coefficient for the variable 'High schooling' is -4.4. How do we interpret this? Clearly, we cannot do as we did above: we can't say that having high schooling is associated with a 4.4 unit decrease in the intention to vote for the ANC, because the only possible values are either 0 or 1.
 
 Instead we can do an anti-log on the coefficients to get odds ratios. What are odds ratios? If the odds of something happening are 50-50, the odds ratio is $\nicefrac{50}{50}=1$, if they are 80-20, the ratio is $\nicefrac{80}{20}=4$. These ratios are hard to interpret. We can convert them to probabilities, but these change depending on the value of $X$. While the interpretation is tricky, know the basic intuition: the coefficients tell us whether the variable is associated with a higher (or lower) likelihood of observing the outcome.
 
-![Adapted from Tripp and Kang 2008, 350](images/largen/trippkang.png){width="4in"}
-
-[\[fig:data\_Trippkang\]]{#fig:data_Trippkang label="fig:data_Trippkang"}
+![Figure 8.7: Adapted from Tripp and Kang 2008, 350](images/largen/trippkang.png){width="4in"}
 
 ### Experiments
 
-r3in ![image](images/largen/mengel.png){width="3in"}
+![Figure 8.8](images/largen/mengel.png){width="3in"}
 
 You will also likely encounter papers using experiments or quasi-experiments, which also use regression. As we discussed above, we can use dummy variables to compare means across groups. In experiments, this means we can use regressions to see how the treatment affected the treatment and control groups in the experiment, but also how the effects differ for different demographic groups, which we can add as control variables.
 
@@ -370,7 +288,7 @@ where $S_Y$ is the standard deviation in $Y$, $S_X$ is the standard deviation in
 $R = 0.83$\
 $S_X = 2.95$\
 $S_Y = 39.32$\
-Try plugging them into the above equation and seeing whether you get the result you see in regression table, [\[table:largen\_results\]](#table:largen_results){reference-type="ref" reference="table:largen_results"}. (Don't worry if it's not exact, there's a fair amount of rounding going on).
+Try plugging them into the above equation and seeing whether you get the result you see in regression table, Table 8.3. (Don't worry if it's not exact, there's a fair amount of rounding going on).
 
 ### Significance Tests
 
@@ -378,7 +296,7 @@ Try plugging them into the above equation and seeing whether you get the result 
 
 Note: this calculation presumes that you have understood the discussion about hypothesis testing earlier on in this book. If you are unsure, take a few minutes to refresh your memory on the contents of [ch05](./hypothesis-testing.html).
 
-Our regression result suggests that $b=11.6$. However, this is an *estimate*, and therefore there is some uncertainty around this number, which is expressed in the standard error. [\[table:largen\_results\]](#table:largen_results){reference-type="ref" reference="table:largen_results"}(and 2) tells us this error is $0.62$. Next, we need a decision rule: how unlikely do we think the p-value can be before we think this result is implausible? Let's set it as $\alpha=0.05$: if the probability of getting this particular $b$ is less than $5\%$ (assuming a world where the null hypothesis is true) we will reject the null hypothesis.
+Our regression result suggests that $b=11.6$. However, this is an *estimate*, and therefore there is some uncertainty around this number, which is expressed in the standard error. Table 8.1 (and 2) tells us this error is $0.62$. Next, we need a decision rule: how unlikely do we think the p-value can be before we think this result is implausible? Let's set it as $\alpha=0.05$: if the probability of getting this particular $b$ is less than $5\%$ (assuming a world where the null hypothesis is true) we will reject the null hypothesis.
 
 We can now calculate the Z-score, which standardizes our $b-value$ -- in other words, it tells us where it would fall on a standard normal distribution.
 

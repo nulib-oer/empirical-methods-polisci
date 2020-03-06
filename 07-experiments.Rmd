@@ -158,8 +158,8 @@ The experiment on the effects of homeopathic medicine was primarily a field stud
 
 Example responses:
 
-Survey experiment: providing some respondents with information about above average summer temperatures and below average winter temperatures and comparing their attitudes toward climate change to those who did not receive that information.
+> **Survey experiment:** providing some respondents with information about above average summer temperatures and below average winter temperatures and comparing their attitudes toward climate change to those who did not receive that information.
 
-Lab experiment: put people in a particularly warm room on a hot summer day and see if their attitudes toward climate change are different than those in a different, air-conditioned room.
+> **Lab experiment:** put people in a particularly warm room on a hot summer day and see if their attitudes toward climate change are different than those in a different, air-conditioned room.
 
-Field/natural experiment: go to areas experiencing huge shifts in average temperatures and compare people's attitudes toward climate change in these areas to those in areas whose temperatures have remained stable over time.
+> **Field/natural experiment:** go to areas experiencing huge shifts in average temperatures and compare people's attitudes toward climate change in these areas to those in areas whose temperatures have remained stable over time.

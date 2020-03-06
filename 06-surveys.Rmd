@@ -187,17 +187,17 @@ By nature, a survey is a **[large-N, observational study]{.underline}**; in-dept
 
 Then when and how will we encounter surveys in political science? Almost all subfields -- ranging from American Politics to International Relations -- in political science have adopted survey research as their empirical strategy.
 
-    1.  Use in IPE: What Determines Individual Support for Economic Openness?
+**1.  Use in IPE: What Determines Individual Support for Economic Openness?**
 
-    International political economy (IPE) theorists, for example, use surveys to show the determinants of individuals' economic policy preferences. Using cross-country surveys for Asian and European countries, Mayda et al. find that if individuals perceive risk (or instability) to increase along with trade openness, (s)he favors more restrictive policies such as tariffs or quotas. Using the same survey data, they also find that ideational factors, such as nationalism, also matter in determining individuals' trade protectionism [@mayda2007risk]. In a similar vein, also using survey data, Mutz and Kim find that in-group favoritism influences Americans' attitudes toward international trade [@mutz2017impact]. Rather than maximizing their own pocketbook gains, Americans tend to choose policies that maximize the well-being of fellow Americans. They also find that when Americans think that the trading partner country loses so that the U.S. achieves a greater relative advantage, trade policy garners greater support.
+  International political economy (IPE) theorists, for example, use surveys to show the determinants of individuals' economic policy preferences. Using cross-country surveys for Asian and European countries, Mayda et al. find that if individuals perceive risk (or instability) to increase along with trade openness, (s)he favors more restrictive policies such as tariffs or quotas. Using the same survey data, they also find that ideational factors, such as nationalism, also matter in determining individuals' trade protectionism [@mayda2007risk]. In a similar vein, also using survey data, Mutz and Kim find that in-group favoritism influences Americans' attitudes toward international trade [@mutz2017impact]. Rather than maximizing their own pocketbook gains, Americans tend to choose policies that maximize the well-being of fellow Americans. They also find that when Americans think that the trading partner country loses so that the U.S. achieves a greater relative advantage, trade policy garners greater support.
 
-    2.  Use in American Politics
+**2.  Use in American Politics**
 
-    American politics scholars also use survey to study public opinion. For example, to reveal factors driving Trump's electoral success in 2016, Ferguson et al. also use survey data (ANES); they find that (unsurprisingly) Trump's populist rhetoric resonated with Americans' economic concerns, racism and sexism. They reveal that the roots of Trump's victory in 2016 lie in Americans' economic and social concerns [@ferguson2018economic].
+  American politics scholars also use survey to study public opinion. For example, to reveal factors driving Trump's electoral success in 2016, Ferguson et al. also use survey data (ANES); they find that (unsurprisingly) Trump's populist rhetoric resonated with Americans' economic concerns, racism and sexism. They reveal that the roots of Trump's victory in 2016 lie in Americans' economic and social concerns [@ferguson2018economic].
 
-    3.  Use in Everyday Politics
+**3.  Use in Everyday Politics**
 
-    In addition to their academic uses, surveys are also used for our everyday lives. Because their professional careers depend on reading public opinion accurately, politicians refer to various polls to grasp the public's attitudes toward current policies and future policy options [@erikson2015american]. The American public is becoming more engaged in politics, leading them to increasingly follow the polls more closely.[^21] As they write, "academic polls advance our knowledge of public opinion, and commercial pollsters satisfy the public's (and private clients') curiosity regarding trends in public opinion."
+  In addition to their academic uses, surveys are also used for our everyday lives. Because their professional careers depend on reading public opinion accurately, politicians refer to various polls to grasp the public's attitudes toward current policies and future policy options [@erikson2015american]. The American public is becoming more engaged in politics, leading them to increasingly follow the polls more closely.[^21] As they write, "academic polls advance our knowledge of public opinion, and commercial pollsters satisfy the public's (and private clients') curiosity regarding trends in public opinion."
 
 ## Conclusion
 
@@ -205,64 +205,49 @@ A lot of political science theories are either explicitly or implicitly based on
 
 ## Application Questions
 
-    1.  True or false?
+**1.  True or false?**
 
-    -   Surveys offer better external validity than experiments.
+  -   Surveys offer better external validity than experiments.
+  -   Surveys offer better external validity than case studies.
+  -   Surveys are particularly good at exploring subgroup differences and historical trends because they usually have large enough sample sizes.
 
-    -   Surveys offer better external validity than case studies.
+**2.  Define and provide the an example of each of the following errors.**
 
-    -   Surveys are particularly good at exploring subgroup differences and historical trends because they usually have large enough sample sizes.
-
-    2.  Define and provide the an example of each of the following errors.
-
-    -   Sampling error
-
-    -   Non-response error
-
-    -   Measurement error
+  -   Sampling error
+  -   Non-response error
+  -   Measurement error
 
 ## Key Terms
 
-    -   conceptualization
-
-    -   convenience sample
-
-    -   coverage bias
-
-    -   double-barreled question
-
-    -   inter-coder reliability
-
-    -   margin of error
-
-    -   non-response bias
-
-    -   response rate
-
-    -   sample
-
-    -   sampling frame
-
-    -   validity
-
-    -   weighting
+  -   conceptualization
+  -   convenience sample
+  -   coverage bias
+  -   double-barreled question
+  -   inter-coder reliability
+  -   margin of error
+  -   non-response bias
+  -   response rate
+  -   sample
+  -   sampling frame
+  -   validity
+  -   weighting
 
 ## Answers to Application Questions
 
-    True or false question: True, True, False
+**True or false question:** True, True, False
 
-    [^14]: [ https://www.worldatlas.com/articles/richest-counties-in-the-united-states.html]( https://www.worldatlas.com/articles/richest-counties-in-the-united-states.html)
+[^14]: [ https://www.worldatlas.com/articles/richest-counties-in-the-united-states.html]( https://www.worldatlas.com/articles/richest-counties-in-the-united-states.html)
 
-    [^15]: For more discussion, see [@druckman2011students]
+[^15]: For more discussion, see [@druckman2011students]
 
-    [^16]: As you recall, a measurable characteristic of a *sample* is called a **statistic**. A measurable characteristic of a *population* is called a **parameter**.
+[^16]: As you recall, a measurable characteristic of a *sample* is called a **statistic**. A measurable characteristic of a *population* is called a **parameter**.
 
-    [^17]: Because the same questions are asked in different countries around the same time frame, it allows us to compare what people value and how people think in various countries. You can access to WVS here: <http://www.worldvaluessurvey.org/wvs.jsp.>
+[^17]: Because the same questions are asked in different countries around the same time frame, it allows us to compare what people value and how people think in various countries. You can access to WVS here: <http://www.worldvaluessurvey.org/wvs.jsp.>
 
-    [^18]: <http://www.presidency.ucsb.edu/data/popularity.php>
+[^18]: <http://www.presidency.ucsb.edu/data/popularity.php>
 
-    [^19]: Van der Mortel (2008) finds that social desirability-motivated responses were present in approximately 43% out of 14,275 health studies [@van2008faking].
+[^19]: Van der Mortel (2008) finds that social desirability-motivated responses were present in approximately 43% out of 14,275 health studies [@van2008faking].
 
-    [^20]: On the other hand, some studies find that social desirability bias does not significantly affect the conclusion. Heerwig and McCabe find no evidence the college-educated people's support for a black president were inflated due to social desirability bias [@heerwig2009education]
+[^20]: On the other hand, some studies find that social desirability bias does not significantly affect the conclusion. Heerwig and McCabe find no evidence the college-educated people's support for a black president were inflated due to social desirability bias [@heerwig2009education]
 
-    [^21]: In 1944, only 19 percent of Americans said they regularly or occasionally followed poll results; this figure rose to 41 percent by 1985, to 65 percent in 2001, and to 89 percent in 2008 [@erikson2015american].
+[^21]: In 1944, only 19 percent of Americans said they regularly or occasionally followed poll results; this figure rose to 41 percent by 1985, to 65 percent in 2001, and to 89 percent in 2008 [@erikson2015american].
