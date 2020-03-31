@@ -88,7 +88,7 @@ In this text, we rely on an adaptation of the scientific method. This is somethi
 
 -   **Theory**: This is the explanation or answer to the question. Typically, you will have an outcome that you wish to explain with some important factor. In the following chapter, we'll introduce theory more fully.
 
--   **Hypotheses & Implications**: while a theory is more broad and about the relationship of factors, hypotheses are often *testable implications* that stem directly from the theory. This is how
+-   **Hypotheses & Implications**: while a theory is more broad and about the relationship of factors, hypotheses are often *testable implications* that stem directly from the theory. 
 
 -   **Evidence/Test**: evidence is how the authors support their theory and conclusions. It might be longitudinal data with a regression; it might be survey data with differences of means; it might be interview data. Here, you'll explain how they are evaluating their argument.
 
