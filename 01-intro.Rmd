@@ -88,7 +88,7 @@ In this text, we rely on an adaptation of the scientific method. This is somethi
 
 -   **Theory**: This is the explanation or answer to the question. Typically, you will have an outcome that you wish to explain with some important factor. In the following chapter, we'll introduce theory more fully.
 
--   **Hypotheses & Implications**: while a theory is more broad and about the relationship of factors, hypotheses are often *testable implications* that stem directly from the theory. 
+-   **Hypotheses & Implications**: while a theory is more broad and about the relationship of factors, hypotheses are often *testable implications* that stem directly from the theory.
 
 -   **Evidence/Test**: evidence is how the authors support their theory and conclusions. It might be longitudinal data with a regression; it might be survey data with differences of means; it might be interview data. Here, you'll explain how they are evaluating their argument.
 
@@ -106,7 +106,7 @@ When reading or conducting research, there are twin goals at play: the first is 
 
 ### Support for hypotheses
 
-This first component has to do with what can be established within the framework of the question and data. For example, suppose your research question has to do with political attitudes of young Americans. To answer this, you collect data from a random sample of Americans ([ch04](./data.html), [ch05](./hypothesis.html)) your findings would pertain to your research question within your data. If had a statistically significant relationship, you would find support for your hypotheses. If you failed to have a statistically significant relationship you would not find support for your hypotheses. You would make conclusions about the individual data points within your dataset.
+This first component has to do with what can be established within the framework of the question and data. For example, suppose your research question has to do with political attitudes of young Americans. To answer this, you collect data from a random sample of Americans ([ch04](./data.html), [ch05](./hypothesis.html)) your findings would pertain to your research question within your data. If you had a statistically significant relationship, you would find support for your hypotheses. If you failed to have a statistically significant relationship, you would not find support for your hypotheses. You would make conclusions about the individual data points within your dataset.
 
 ### Generalizability
 
