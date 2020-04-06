@@ -50,7 +50,7 @@ Political scientists use a range of methods to answer their research questions, 
 
 ### Types of Methods
 
-There are many types of methods used in political science. in the realm of quantitative political science, common methods include the following approaches listed below. There is one chapter that focuses upon techniques like interviews and participant observation, but the broad focus of the book is on quantitative data. Discussion about quantitative and qualitative methods is an important distinction within the discipline.
+There are many types of methods used in political science. In the realm of quantitative political science, common methods include the following approaches listed below. There is one chapter that focuses upon techniques like interviews and participant observation, but the broad focus of the book is on quantitative data. Discussion about quantitative and qualitative methods is an important distinction within the discipline.
 
 -   Surveys: Perhaps the most accessible or well-known approach. Surveys are questions asked of respondents. We will focus on how surveys are designed and how respondents are selected.
 
