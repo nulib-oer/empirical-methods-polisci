@@ -1,6 +1,6 @@
 # Introduction
 
-## What is political science?
+## What is Political Science?
 
 This textbook focuses upon empirical methods used in political science. Before turning to the methods, it can be helpful to understand what political science is and what political science research can look like. Broadly, the discipline focuses on power and events throughout history. Some scholars focus on modern issues (e.g. Brexit) while others focus on historical ones (e.g. the New Deal in the U.S.). There are a variety of methods used and scholars are typically organized around the area/region they study.[^1]
 
@@ -100,7 +100,7 @@ In this text, we rely on an adaptation of the scientific method. This is somethi
 
 Note that the scientific method is a helpful means to organize an article (minus the last element), but it's an *even more* helpful way to organize your notes about an article. Using the scientific method can help provide a consistent, clear, organized structure that focuses on the essential elements of an article or book. In all but the last stage, you will want to be as objective as possible--laying out only the relevant elements/details. In the final portion, 'do I buy it', you will put down your critique. But to criticize something, you must first understand what is being argued.
 
-## What can Research Tell us?
+## What Can Research Tell Us?
 
 When reading or conducting research, there are twin goals at play: the first is what relationships can be established in the research project/dataset itself; the second is how the question answered by the research project can speak about a broader population than just the data in the research project.
 
@@ -112,7 +112,7 @@ This first component has to do with what can be established within the framework
 
 The second component has to do with how your research fits in to a broader picture: what can your research tell us about young Americans and how does that fit into a larger context? Supposing you conducted your sample appropriately ([ch04](./data.html)), you would be able to speak to not only the individuals in your sample, but the population they are intended to represent. This is the important component of research and why we will spend a large amount of time discussing sampling approaches and appropriate methodology. While your sample of, say, 1600 data points may be interesting, it's really only interesting in that it can tell us about the 327 million other data points we don't know anything about.
 
-## Overview of textbook
+## Overview of the Textbook
 
 The textbook proceeds with an introduction to theory and concept building, moves to an explanation of causal inference (how do we 'know' whether something is causal?), and then provides a quick introduction to data and hypothesis testing. Following that, each chapter is devoted to a particular research method used within political science: surveys, experiments, large N, small n, game theory, social network analysis, and machine learning. Each chapter follows a similar format and layout to help introduce the method, its advantages, disadvantages, and different applications.
 
