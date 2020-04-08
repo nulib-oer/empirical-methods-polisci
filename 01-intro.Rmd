@@ -110,7 +110,7 @@ This first component has to do with what can be established within the framework
 
 ### Generalizability
 
-The second component has to do with how your research fits in to a broader picture: what can your research tell us about young Americans and how does that fit into a larger context? Supposing you conducted your sample appropriately ([ch04](./data.html)), you would be able to speak to not only the individuals in your sample, but the population they are intended to represent. This is the important component of research and why we will spend a large amount of time discussing sampling approaches and appropriate methodology. While your sample of, say, 1600 data points may be interesting, it's really only interesting in that it can tell us about the 327 million other data points we don't know anything about.
+The second component has to do with how your research fits into a broader picture: what can your research tell us about young Americans and how does that fit into a larger context? Supposing you conducted your sample appropriately ([ch04](./data.html)), you would be able to speak to not only the individuals in your sample, but the population they are intended to represent. This is the important component of research and why we will spend a large amount of time discussing sampling approaches and appropriate methodology. While your sample of, say, 1600 data points may be interesting, it's really only interesting in that it can tell us about the 327 million other data points we don't know anything about.
 
 ## Overview of the Textbook
 
