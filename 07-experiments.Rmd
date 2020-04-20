@@ -97,10 +97,10 @@ Few of the activities asked of experiment participants are realistic in any sens
   |                    | Lab Experiment | Field Experiment | Survey Experiment | Natural Experiment |
   |--------------------|----------------|------------------|-------------------|--------------------|
   | Construct Validity | depends        | depends          | depends           | depends            |
-  | Internal Validity  | high           | depends          | high              | low                |
-  | External Validity  | low            | high             | high              | high               |
+  | Internal Validity  | high           | depends          | high              | low\*              |
+  | External Validity  | low            | high             | high              | high\*             |
 
-  : **Note:** \* denotes a \"maybe,\" as assessing these types of validiity for natural experiments depends on a case-by-case basis.
+> **Note:** \* denotes a \"maybe,\" as assessing these types of validiity for natural experiments depends on a case-by-case basis.
 
 **Check-in Question 4:** What is the difference between external and internal validity?
 
