@@ -94,13 +94,13 @@ Further, and most importantly, a flaw of experiments is their often weak **exter
 
 Few of the activities asked of experiment participants are realistic in any sense, but some types of experiments are inherently better suited to good external validity than others. As discussed above, field experiments and natural experiments usually have much better external validity than their counterparts because the effects being measured are on actual human behavior in real-world situations. Further, recent work finds that external validity may not be a serious concern for some survey experiment designs, as some findings from artificial settings have been found to better approximate real-world equivalents [@hainmueller_validating_2015]. In Table 1, you can compare and contrast how each major type of experiment we reviewed performs on construct validity, internal validity, and external validity; note how across all of them, construct validity varies because it is largely incumbent on the researchers to design good experiments that speak to what they are interested in studying.
 
-      Lab Experiment   Field Experiment   Survey Experiment   Natural Experiment
-  -- ---------------- ------------------ ------------------- --------------------
-         depends           depends             depends             depends
-           high            depends              high                low\*
-           low               high               high                high\*
+  |                    | Lab Experiment | Field Experiment | Survey Experiment | Natural Experiment |
+  |--------------------|----------------|------------------|-------------------|--------------------|
+  | Construct Validity | depends        | depends          | depends           | depends            |
+  | Internal Validity  | high           | depends          | high              | low                |
+  | External Validity  | low            | high             | high              | high               |
 
-  : **Note:** \* denotes a \"maybe,\" as assessing these types of valdiity for natural experiments depends on a case-by-case basis.
+  : **Note:** \* denotes a \"maybe,\" as assessing these types of validiity for natural experiments depends on a case-by-case basis.
 
 **Check-in Question 4:** What is the difference between external and internal validity?
 
