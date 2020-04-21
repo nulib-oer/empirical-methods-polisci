@@ -102,7 +102,7 @@ Column (2) shows the results of a second model where we also add the net migrati
 
 In Column (3) we add GDP/capita to account for different levels of wealth, and you can see that the s substantially lower than in the previous two models. The table indicates that a one-unit increase in education is now associated with a 6.5 point increase in gender equality, *holding all other variables constant*. This change in coefficient illustrates the problem of omitted variable bias. Before we explicitly looked at the relationship between wealth and gender inequality, we were giving education too much credit. It seems that GDP explains some of the variation in gender equality that we had previously attributed to schooling. Indeed the s sizable and statistically significant.
 
-![Table: 8.2](images/largen/large-n-hl-results-table.png)
+![Table: 8.2](images/largen/table8.2.png)
 
 The coefficient of our main variable of interest - education - changes a fair amount when we change the model. When an association remains despite us changing the models around, we say that it is **robust**. If our variable remains significant across different models, it gives us more confidence that the association is actually there. If introducing control variables means that the main interest is not significant, we would question whether our association is actually there or not. There is no hard and fast rule for judging robustness. In our case, controlling for GDP did mean that the effect size of education went down by quite a lot. This is somewhat worrying. On the other hand, education did retain a statistically significant association throughout.
 
