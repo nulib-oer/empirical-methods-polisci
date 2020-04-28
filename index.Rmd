@@ -30,3 +30,9 @@ knitr::include_graphics('images/book_cover_sm.png', dpi = NA)
 - Justin Zimmerman
 - Erin Ochoa
 - John Lee.
+
+This book is published by [Northwestern University Libraries](https://www.library.northwestern.edu/), with funding from Northwestern University's [Affordable Instructional Resources](https://air.northwestern.edu/) initiative.
+
+![Creative Commons Attribution-NonCommercial 4.0 International](https://licensebuttons.net/l/by-nc/3.0/88x31.png)
+
+Copyright 2020 Jean Clipperton. Licensed [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0).
