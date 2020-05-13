@@ -72,7 +72,7 @@ In our example, we find a beta that is not zero, $11.6$ in the bivariate regress
 
 You can see the details of this calculation in the .
 
-Another way of approaching this issue is to calculate a 95% confidence interval for the coefficient -- a range for which we have 95% certainty that the coefficient falls within its confines. In our example, the 95% confidence interval for the coefficient $b$, which captures the association between education and gender equality, is $[10.4, 12.8]$. (You can see the calculation in the ). If the entire range is positive (as it is for us) or negative, it means that we are 95% certain that the true coefficient is not zero. The null hypothesis says that there is no relationship between $X$ and $Y$. But our interval is so far away from zero that we can feel save rejecting the null hypothesis.
+Another way of approaching this issue is to calculate a 95% confidence interval for the coefficient -- a range for which we have 95% certainty that the coefficient falls within its confines. In our example, the 95% confidence interval for the coefficient $b$, which captures the association between education and gender equality, is $[10.4, 12.8]$. (You can see the calculation in the ). If the entire range is positive (as it is for us) or negative, it means that we are 95% certain that the true coefficient is not zero. The null hypothesis says that there is no relationship between $X$ and $Y$. But our interval is so far away from zero that we can feel safe rejecting the null hypothesis.
 
 ### Multivariate Regression
 
