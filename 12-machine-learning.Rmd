@@ -240,7 +240,7 @@ target function, training set, test set, expected prediction error (EPE), traini
 
 There is no single correct answer. However, for both questions, a strong answer will specify the method type (e.g., supervised, regression v. classification) and discuss issues such as the bias-variance trade-off, cross-validation, model interpretability, and prediction accuracy.
 
-## Manual bibliography - for checking
+## Bibliography
 
 Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. $"$Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.$"$ *Journal of Politics* 80(4): 1150--67.
 
