@@ -28,7 +28,9 @@ But also note the difference between the two lines in the graph above. In the bo
 
 Correlations can easily be calculated with statistical software, and the number of datasets available to researchers has exploded in recent years. This means that, now more than ever, you can conduct exploratory analyses with a large number of variables to see which ones are related to each other or the outcome you are interested in. This process, of looking at large number of variables and seeing how they relate, is sometimes called **data-mining**. Data mining can be an acceptable part of an inductive theory-building process (see [ch02](./casual-inference.html)), but it is a fraught process: when looking at a large number of variables you are bound to find some that show a relationship, and it can be tempting (even subconsciously) to write up only results that confirm our hypothesis rather than those that don't.
 
+```{block, type="question"}
 **Check-in Question 1:** What does a correlation coefficient tell us? What does it *not* tell us?
+```
 
 ### Regression
 
@@ -62,7 +64,9 @@ The line you see in figure 8.5 is the line of best fit. Still, as you can also s
 
 As you can see, we can draw an infinite number of lines through our data, but the one where the squared residuals are lowest is the line of best fit -- the line that best describes the relationship between our variables X and Y.
 
-**Check-in Question 2: Why do we want to fit a line through our scatterplot?**
+```{block, type="question"}
+**Check-in Question 2:** Why do we want to fit a line through our scatterplot?
+```
 
 ### Significance Tests
 
@@ -86,7 +90,9 @@ A multiple regression with two explanatory variables can be written as: $$Y = a 
 
 Here, $\alpha$ is the intercept (the value of gender equality we predict when both education and GDP are at $0$), $\beta_1$ tells us what change in gender inequality is associated with a 1-unit increase in education, and $\beta_2$ tells us about the association between GDP and education.
 
-**Check-in Question 3: why do we control for other variables?**
+```{block, type="question"}
+**Check-in Question 3:** why do we control for other variables?
+```
 
 ### Reading a Regression Table
 
@@ -150,7 +156,9 @@ Kuenzi and Lambright want to look at the relationship between party systems and 
 
 Look at Table 8.3 to get a sense of the results. Let's interpret these coefficients. We can see that a one-unit increase in legislative volatility is associated with 0.047 more points on the polity index, holding all other variables constant. This is significant at the 0.05 level.
 
-**Check-in Question 4: Interpret the coefficient for the effective number of parties. What does the coefficient tell us?**
+```{block, type="question"}
+**Check-in Question 4:** Interpret the coefficient for the effective number of parties. What does the coefficient tell us?
+```
 
 ### Logistic Regression
 

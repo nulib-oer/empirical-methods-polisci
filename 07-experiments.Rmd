@@ -28,7 +28,9 @@ It is important to differentiate the random assignment necessary to conduct an e
 
 A consequence of this requirement that the sample be randomly assigned to experimental groups means that how the sample was collected is less important. This, again, is a deviation from what you learned about surveys in [ch06](./surveys.html), where sampling mattered a great deal. But a good experiment can rely on what is called a **convenience sample**, or a sample that is made up of easy to reach people. For instance, for much of the 20th century, researchers often placed newspaper advertisements to construct their samples. Nowadays, however, there are entire online services built around getting researchers participants for their experiments. But these convenience samples do not undermine the legitimacy of the experiment, unless the researchers are trying to generalize to a certain population. If you had a convenience sample of your friends and family, you would be hard pressed to say that any results from an experiment on that sample could generalize to the population of a country.
 
+```{block, type="question"}
 **Check-in Question 1:** Is \"random assignment\" another way of saying \"random sampling\" and vice versa? If not, how are they distinct from one another?
+```
 
 ## Method: detail (types of experiments)
 
@@ -58,7 +60,9 @@ Again, it is worth noting that some questions are answerable in a lab setting. F
 
 Participants were brought to the lab and instructed after a brief interview to allocate \$100 between the two candidates running for President, Obama and Romney. What they did not tell the participants (aside from the money not actually being donated) was that some were randomly assigned to a cue that told them that for every \$10 they gave to the Romney campaign, the participant would receive \$1 for themselves, paid in cash. This meant that participants in this condition, if they gave all \$100 to Romney, thus undermining their likely Democratic Party loyalty, they would receive \$10. But what made this lab experiment unique was the inclusion of another treatment group, identical to the economic incentive condition, that stipulated that their donation amounts would be made public in the university's student newspaper, thus revealing their behavior to their peers; this is the type of social interaction that is often impractical to replicate in a survey setting. Ultimately, those in the control group donated an average of \$90 to Obama, while those in the economic incentive condition's average was \$68, and those with the additional stipulation had an average of \$86. In short, because of the lab setting, the researchers could leverage the presence of a Black institution in the minds of young African Americans to potentially dissuade them from giving into their economic self-interest.
 
+```{block, type="question"}
 **Check-in Question 2:** What is the primary disadvantage of conducting a lab experiment, compared to a survey experiment?
+```
 
 ## Field Experiments
 
@@ -78,7 +82,9 @@ Consider, for example, Maimonides' Rule and its effects on educational outcomes.
 
 But, let us consider the potential issues with this research design. First, we need to ask ourselves, was the assignment treatment truly random? In this case, treatment was receiving the extra teacher while only gaining a small increase in the total number of students. What would happen if certain parents were able to take advantage of Maimonides' Rule and bend the rules of their public school to get their child into these classrooms with a better student-teacher ratio? Randomization would be broken because students being assigned to the treatment group would likely be from families from better socioeconomic backgrounds (i.e., parents capable of moving their children to advantageous classes are more than likely well to do, financially). This means that the natural experiment was not really an experiment at all and that the researchers were finding a **spurious relationship**, or a relationship between treatment and outcome that was better explained by some confounding factor. Indeed, the same researchers went back to replicate their research and found that recent research that tried to replicate the original study have found artifacts of such manipulation of an otherwise clever natural experiment, leading to null effects once accounted for [@angrist_maimonides_2017].
 
+```{block, type="question"}
 **Check-in Question 3:** What steps must be taken to conduct a natural experiment?
+```
 
 ## Advantages of Method
 
@@ -102,7 +108,9 @@ Few of the activities asked of experiment participants are realistic in any sens
 
 > **Note:** \* denotes a \"maybe,\" as assessing these types of validiity for natural experiments depends on a case-by-case basis.
 
+```{block, type="question"}
 **Check-in Question 4:** What is the difference between external and internal validity?
+```
 
 ## Broader significance/use in political science
 

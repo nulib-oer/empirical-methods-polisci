@@ -40,7 +40,9 @@ If we attempt to minimize training MSE, the algorithms are more likely to estima
 
 Thus, it is a better idea to try and minimize test error. In order to generate a smaller test error, the algorithms need to estimate a model that is generalizable. That is, they need to estimate models that do a better job of capturing the true relationship between the set of predictors ($X_{1},X_{2}$) and the $Y$, while ignoring the random observed deviations from the ${f}(.)$ due to $\epsilon$ (per Equation 1). Machine learning practitioners often refer to this approach as $"$focusing on the signal and ignoring the noise.$"$
 
+```{block, type="question"}
 **Check-in Question 1:** What is overfitting and how can we reduce this problem?
+```
 
 So how do we reduce the test error? The expected difference between $\hat{f}(X_{1},X_{2})$ and $Y$ is due to two types of error (e.g., see James et al. 2013): (1) **reducible error**, (2) **irreducible error**. The first type of error is caused by a suboptimal estimate of the true function: i.e., the gap between $\hat{f}(.)$ and $f(.)$. As its name implies, the reducible error decreases as $\hat{f}(.)$ approaches $f(.)$. On the other hand, irreducible error is due to $\epsilon$, and therefore it cannot be reduced by improving the quality of $\hat{f}(.)$. For example, let us assume that $\hat{f}(.) = f(.)$, and therefore $\hat{Y} = \hat{f}( X_{1}+X_{2}) = f(X_{1}+X_{2})$. Even in this case, $\hat{Y}$ does not necessarily equal $Y$, because $Y = f(X_{1}, X_{2}) + \epsilon$. That is, even having a perfect estimate of $f(.)$ does not make the random error term go away.
 
@@ -70,7 +72,9 @@ $$EPE=E \left[  \left( Y-\hat{Y} \right) ^{2} \right] = \left[ Bias \left( \hat{
 
 The key insight is that the reducible error is itself a function of the squared bias and variance of $\hat{f}(.)$, or the estimated model. Thus, to minimize the reducible error (and hence the total EPE), we want to minimize the bias and the variance.
 
+```{block, type="question"}
 **Check-in Question 2:** What is the expected prediction error (EPE), and why does it matter?
+```
 
 ### Bias-Variance Trade-offs
 
@@ -82,7 +86,9 @@ However, it is possible for the model to be too flexible. **Variance** is a meas
 
 Figure 3 provides an illustration of this idea. The first model is not flexible enough, leading to high bias (also known as **underfitting**); on the other hand, the third model is too flexible, which leads to higher variance across slightly different training sets (**overfitting**). The second model imposes the ideal amount of flexibility, which optimizes the bias-variance trade-off and yields the smallest test MSE of the three alternatives.
 
+```{block, type="question"}
 **Check-in Question 3:** Explain why reducing bias can often entail an increase in variance.
+```
 
 ### Parametric v. Non-parametric Methods
 

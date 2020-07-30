@@ -129,3 +129,15 @@ span.search-highlight {
 .underline {
   text-decoration: underline;
 }
+
+.question {
+  border: 1px solid rgb(22, 18, 82);
+  padding: 1rem;
+  margin: 1em 0;
+  border-radius: 5px;
+  background-color: rgb(228, 224, 238);
+}
+
+.question p {
+  margin: 0 1em;
+}

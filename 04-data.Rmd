@@ -20,7 +20,9 @@ Within quantitative variables, we have important distinctions. The first way to 
 
 The second broad type of variables are numerical. These variables are operationalized as numbers and thus allow us to both establish an order and to determine the exact distance between one observation and another. Within numerical variables we find **continuous** variables, which can take on any number. This is the case of a country's GDP or a family's household income, for example. **Discrete**, or count variables, are only integer numbers. For instance, a measure of the amount of votes in the House of Representatives is a discrete variable, since there cannot be 155.3 votes.
 
-1.  **Check-in question:** How could age be operationalized (turned into) as different types of variables?*
+```{block, type="question"}
+**Check-in question:** How could age be operationalized (turned into) as different types of variables?
+```
 
 As we will discuss later, the type of descriptive analysis we can carry out varies according to the type of variable. Generally speaking, numerical data gives us more room for statistical analysis. With categorical data, the descriptive analysis is more limited. For this reason, it is advisable to collect data at the most detailed level, when possible. Say you are interested in measuring a generational effect over political participation. One way to do so would be to ask people in what age bracket they fall into (corresponding to each generation). However, if further in your research you realize there might be a more fine-grained age effect, you would need people's actual age in years. With a measure of people's age, you can both analyze the direct age effect and also group people into generations. Indicators of democracy are usually based on indices of continuous or discrete nature, and are then **aggregated** into ordinal or nominal variables for ease of description. The Economist Intelligence Unit's Index Democracy Index ranges from 0 to 10 and is then classified into: Authoritarian regime (scores under $4$), Hybrid regime ($\geq{4}<{6}$), Flawed democracy ($\geq{6} and <{8}$), and Full democracy ($8-10$). Similarly, the Polity IV score is a number from $-10$ to $10$ and this score is then categorized into Autocracy ($-10$ to $-6$), Anocracy ($-5$ to $5$), and Democracy ($6$ to $10$).
 
@@ -34,7 +36,10 @@ Another way of categorizing data is by considering units and time. **Cross-secti
 
 If the same respondents answered the poll every time the survey is conducted, it is considered a **panel data**. Panel data is distinct because it follows the exact unit over time. The British Household Panel Survey (BHPS) is an example of a panel study. In 1991, the BHPS began surveying a sample of around 5,500 households (10,000 individuals). Every year since, the BHPS returns to these households to re-survey its members. The resulting data has enormous potential for researching variation across a person's life, such as the effects of parenting on employment and gender roles or how political interest evolves as a person ages [@fraile2019; @borell-porta2018; @kuziemko2018]. A dataset with country indicators across time (such as the World Development Indicators) can also be considered panel data. In this case, the measurement of a certain indicator is being collected in several occasions, and thus we can follow the changes of that indicator across time.
 
-1.  **Check-in question:** Consider the following description of a survey carried out in Uruguay: \"Estudio Longitudinal del Bienestar en Uruguay (ELBU) is a cohort study carried out (\...) to perform multidimensional well-being assessments. The study follows a representative sample of households with children that were attending the first year of primary school at public institutions in Montevideo and urban areas in 2004 (\...) To date, four waves have been carried out in 2004, 2006, 2011/12 and 2015/16 and the fieldwork of a fifth one is being carried out.\" [^6] What type of data is this? What is the population being studied?*
+
+```{block, type="question"}
+**Check-in question:** Consider the following description of a survey carried out in Uruguay: \"Estudio Longitudinal del Bienestar en Uruguay (ELBU) is a cohort study carried out (\...) to perform multidimensional well-being assessments. The study follows a representative sample of households with children that were attending the first year of primary school at public institutions in Montevideo and urban areas in 2004 (\...) To date, four waves have been carried out in 2004, 2006, 2011/12 and 2015/16 and the fieldwork of a fifth one is being carried out.\" [^6] What type of data is this? What is the population being studied?
+```
 
 ## Samples and Sampling
 
@@ -64,7 +69,9 @@ Since we can never be $100\%$ confident that our result is exactly the same as t
 
 In sum, surveys are an essential tool in data collection, but must be designed carefully in order to avoid common pitfalls. First, be aware of problems related to sampling. When encountering surveys, always evaluate if the sample on which the study was done is representative of the population for which conclusions are being drawn. A study performed on a sample of students from your cohort will only speak to the opinions of students from your university and your cohort. Finally, yet very importantly, recall that survey estimates will always have some variation from the actual \"reality\". You must take into account this uncertainty and evaluate the results with their corresponding margin of error.
 
-1.  **Check-in question:** The headline of a news article reads: \"Candidate X will win the elections by a large margin: poll shows 52% of people support her, while Candidate Y is only backed by 43%.\" Why is this headline misleading? What key piece of information is missing to correctly interpret the difference in electoral support between the candidates?*
+```{block, type="question"}
+**Check-in question:** The headline of a news article reads: \"Candidate X will win the elections by a large margin: poll shows 52% of people support her, while Candidate Y is only backed by 43%.\" Why is this headline misleading? What key piece of information is missing to correctly interpret the difference in electoral support between the candidates?
+```
 
 ## Measurement
 
@@ -99,7 +106,9 @@ No matter how careful we are in the operationalization of our concept, there wil
 
 While systematic bias generally follows a pattern, **random measurement error** is due to chance. As opposed to systematic bias, random error does not have a distinct upward or downward bias, and thus it does not have a significant impact on our results. In other words, we might be off in our measurement, but our errors are randomly distributed throughout our data; they do not have a distinct upward of downward direction. Essentially, all or the errors should balance each other out and average out to zero. When we use Likert scales in surveys (e.g. \"In a scale of 1 to 10, where 1 is strongly disagree and 10 is strongly agree\...\"), some might respond too high and others too low, but, on average, we will capture the spirit behind it. When we have an **unreliable measurement**, however, our amount of random error has become too large. What exactly is too much error is not clear, however.
 
-1.  **Check-in question:** A researcher wants to obtain a measure of average wages in a country. To do so, she collects data from the social security agency, which centralizes information from each company's payroll. Yet, this country has a large informal economy, meaning many workers are paid \"under the table\", and thus will be left out of her measure. What type of error does this represent?*
+```{block, type="question"}
+**Check-in question:** A researcher wants to obtain a measure of average wages in a country. To do so, she collects data from the social security agency, which centralizes information from each company's payroll. Yet, this country has a large informal economy, meaning many workers are paid \"under the table\", and thus will be left out of her measure. What type of error does this represent?
+```
 
 ## Measures of Central Tendency
 

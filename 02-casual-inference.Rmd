@@ -35,7 +35,7 @@ If you have taken a science class before, you may have seen a diagram or flowcha
 
 While some articles and books do all of the things listed above, these steps do not all have to be followed in the same project for it to be scientifically sound. Science is a collaborative enterprise, and sometimes research progresses from the efforts of several scholars put together. One article could simply provide a new set of data, for example, that either challenges conventional wisdom or describes a situation for the first time. Let's say we run the exit survey after the Bolivian election, and publish an article that describes the demographic characteristics of different voters and who they voted for. Others can then start using that data in their research and test different theories against the available data. As mentioned, there are often competing arguments explaining the same observations. Some scholars argue that voters are voting based on which party they expect will deliver them more economic benefits in the future (theory 1), others that voters reward parties for how well they have treated them in the past (theory 2), and yet others claim vote choice is inherited and taught within families (theory 3). Survey questions could probe whether voters expect to gain from the new administration (theory 1), or how they have fared under different parties in the past (theory 2). In-depth interviews or ethnographic research could show that voters feel a deep connection with parties that goes back to their childhoods (theory 3).\
 
-**Exploration or Cheating?**
+### Exploration or Cheating?
 
 The process explained above is somewhat abstract, and often not followed exactly in practice. When a researcher gets new data, it is tempting to immediately have a look at it and see what connections one can find. If done right, this is **inductive research**: a deep engagement with the data leads us to new hypotheses about the world. This is often contrasted with **deductive** research, where we have theories and test them against data. (See also [ch03](./theory.html)'s discussion on theory-building versus theory testing).
 
@@ -51,7 +51,9 @@ There are a number of ways the research process can be compromised. On one end t
 
 There is a bit of a divide between qualitative/small-n and quantitative/large-n scholars on this issue. The former often caution against starting with the data, while the latter consider it essential. A qualitative scholar might argue that you cannot come up with good hypotheses without knowing a good deal about the cases you are interested in -- without looking at the data. In reality, quantitative scholars also perform exploratory analyses. There is no way to guarantee that research was done ethically and conscientiously, but the academic community is coming up with new methods, such as [pre-registration](https://cos.io/prereg/) to increase confidence in how they proceed.
 
-1.  **Check-in question:** What is the difference between inductive and deductive research?*
+```{block, type="question"}
+**Check-in question 1:** What is the difference between inductive and deductive research?
+```
 
 Along each step of the process, there are many hurdles to good research. Before we can even begin our research, be it descriptive or causal, we have to be clear about what we are actually researching. Sure, it sounds interesting to research partisanship, or polarization, or corruption, or gentrification. But what do those terms actually mean? And how exactly can you measure it? As we'll discuss in more detail in [ch04](./data.html), there is never one right way to define or measure concepts, and these differences alone can make huge differences in study outcomes.
 
@@ -67,7 +69,9 @@ I want to know if taking an aspirin will ease my headache. I can take the aspiri
 
 Since we will never have access to testing a causal claim through enacting the counterfactual, thinking about cause-effect relationships -- both coming up with theories and testing them -- is a very complex matter. There are several things we must keep in mind in the process of thinking about causality.
 
-1.  **Check-in question:** In your own words, explain the importance of \"all else equal\".*
+```{block, type="question"}
+**Check-in question 2:** In your own words, explain the importance of \"all else equal\".
+```
 
 Let's take the example of media consumption and partisanship. Say you propose the theory that watching Fox News causes viewers to vote for Republican candidates at higher rates. (For scholarship on this issue, see for example @schroederFoxNewsPolitical2015 and @hopkinsConsequencesBroaderMedia2014). Four questions can help us structure our thinking about this potential causal relationship, both in the abstract and when working with data to test its existence.
 
@@ -101,7 +105,9 @@ Let's take the example of media consumption and partisanship. Say you propose th
 
 If we address these questions, then we might have a chance at identifying a cause-effect relationship. Some methods are better than others at addressing these issues. Although later chapters will go into more detail on some of these methodologies, we will briefly introduce them here, focusing particularly on their strengths and weaknesses towards achieving causal inference. As mentioned above, causal inference is not restricted to quantitative methods. Causal relationship can also be revealed through qualitative methods, such as Process Tracing and Counterfactuals. These tools rely on in-depth analysis of particular cases by, for instance, examining historical documents and conducting interviews, and you'll learn more about them in [ch09](./small-n.html).
 
-3.  **Check-in question:** \"Development causes democracy\": explain how reverse causality could be operating here.*
+```{block, type="question"}
+**Check-in question 3:** \"Development causes democracy\": explain how reverse causality could be operating here.
+```
 
 Among quantitative methods, there are two types of methods that try to achieve causal inference: experimental studies and observational studies. Experimental studies are the most potent tool for causal inference. Why? Because of randomization. The essential characteristic that makes experiments so powerful is the fact that we can randomly assign the treatment (our independent variable) to our units. Through this seemingly simple action, we are able to overcome many of the problems mentioned above. Recall that the fundamental problem of causal inference is that we can never test the counterfactual; there is no way of holding everything equal except the manipulation of our independent variable. However, through randomization we can make - on average- all other things equal across treatment and control group. By randomly assigning the treatment to units, we can say that the only thing that differs between the treatment and the control is the presence/absence of the treatment. This means that these two groups are even similar across variables we cannot observe, and thus, we are less likely to face a confounding variable problem.
 
@@ -113,7 +119,9 @@ Historically, many scholars have made causal claims using simple regressions. Th
 
 Finally, it is worth mentioning again that causal inference is not limited to quantitative work. In [ch09](./small-n.html), you will learn about process tracing and other approaches that work better for qualitative data and situations where you have a small number of cases. Some scholars also believe in the use of both qualitative and quantitative methods within one study, complementing large-n statistical work with in-depth case work to strengthen their argument. The interplay between qualitative and quantitative work also happens at a broader level. Nothing is decided on one study alone. The most convincing findings in political science are those that have been confirmed by a variety of scholars using a range of methods.
 
-1.  **Check-in question:** Explain why correlation does not imply causation.*
+```{block, type="question"}
+**Check-in question 4:** Explain why correlation does not imply causation.
+```
 
 ## Conclusion
 

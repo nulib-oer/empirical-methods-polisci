@@ -44,7 +44,9 @@ Second, **diverse cases** highlight range of possible values. A researcher can c
 
 Lastly, **influential cases** are outliers in a sense that they are not typical and may be playing an outsize role in a researcher's results. It is unlikely that small n methods will play a significant role as influential cases rely on large n methods.
 
+```{block, type="question"}
 **Check-in Question 1:** How should a researcher go about choosing a case selection procedure?
+```
 
 ## Method: setup/overview
 
@@ -72,7 +74,9 @@ Moving on to recruitment, Robert Weiss' *Learning From Strangers* list several r
 
 Lastly, when the day to interview finally arrives a researcher should have two recorders, tissue, interview guide, consent form, and a gift card for the participant if possible. The interview should not take any longer than an hour as a sign of respect for the time of your participant. A researcher should take meticulous notes during the interview. Also, the researcher must gain the permission of the participant to conduct a follow up interview if necessary.
 
+```{block, type="question"}
 **Check-in Question 2:** What is this difference between a representative sample and a key informant?
+```
 
 ### Participant Observation
 
@@ -80,7 +84,9 @@ Lastly, when the day to interview finally arrives a researcher should have two r
 
 The key purpose of participant observations is to provide deeper insight into process and how things function. This exercise is good for 'theory building,' but it may be best to include another method, such as interviewing, to allow for the community to tell their story as well, a supplemental method Pattillo uses as well. What is most important when using participant observation (in qualitative methods in general) is to take meticulous field notes with attention to accuracy. A researcher should be cognizant of their own biases and constantly thinking through their analysis to make sure they a capturing an accurate story. In order to tell an accurate story a research should keep both mental notes and a notepad. After the end of an event it is important to write everything down while the researcher's memory is fresh.
 
+```{block, type="question"}
 **Check-in Question 3:** What are the advantages and disadvantage of covert and over participant observation?
+```
 
 ### Focus Groups
 
@@ -104,7 +110,9 @@ In his text *Wounded City: Violent Turf Wars in a Chicago Barrio*, Robert Vargas
 
 Ethnography is about relationship building and allows for latent findings that may give proper context for understanding particular groups. This is especially important for underrepresented communities, where in depth research is often lacking and responsiveness to a survey may not be likely under less personal circumstances. Ethnography allows a researcher to take a more holistic approach in understanding a community.
 
+```{block, type="question"}
 **Check-in Question 4:** What should a researcher be looking for when taking ethnographic field notes?
+```
 
 ## Applications
 

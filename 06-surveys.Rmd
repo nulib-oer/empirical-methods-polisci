@@ -181,7 +181,9 @@ By nature, a survey is a **[large-N, observational study]{.underline}**; in-dept
 
 ![Figure 6.7: Coverage Error](images/surveys/coverage_error.png)
 
+```{block, type="question"}
 **Check-in question:** what could be the solutions to social desirability bias or non-response for sensitive questions included in the survey? Be creative!
+```
 
 ## Broader significance/use in political science
 
