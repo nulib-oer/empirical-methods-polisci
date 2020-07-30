@@ -13,7 +13,7 @@
   
   
   <meta property="og:description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  
+  <meta name="github-repo" content="nulib-oer/empirical-methods-polisci" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="2 Causal Inference and the Scientific Method | Empirical Methods in Political Science: An Introduction" />
@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="This is an introductory college textbook on using empirical methods in political science research." />
   
 
-<meta name="author" content="Jean Clipperton" />
+<meta name="author" content="Jean Clipperton, et al." />
 
 
 <meta name="date" content="2020-07-30" />
@@ -70,7 +70,10 @@
 <li><a href="https://forms.gle/1FPKoqTAXwTaAE1y5" target="_blank">Report an Error</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-authors"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook-information"><i class="fa fa-check"></i>Textbook Information</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what-is-political-science"><i class="fa fa-check"></i><b>1.1</b> What is Political Science?</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="introduction.html"><a href="introduction.html#subfields-in-political-science"><i class="fa fa-check"></i><b>1.1.1</b> Subfields in Political Science</a></li>
@@ -308,7 +311,7 @@
 <li class="chapter" data-level="13" data-path="conclusions.html"><a href="conclusions.html"><i class="fa fa-check"></i><b>13</b> Conclusions</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://bookdown.org/" target="blank">Published with bookdown</a></li>
 <li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Northwestern Libraries</a></li>
 
 </ul>
@@ -354,7 +357,7 @@ If economic considerations drive the vote, we should see this in the data: poor 
 <li><p>Finally, after testing our hypotheses, we can can make conclusions about our research. If our results show that low-income citizens voted for Evo Morales at higher rates that business-owners, then this could indicate support for our hypothesis. If not, we could turn to a different theory on voting behavior and come up with observable implications and hypotheses, and then test them with the data. Note how this loops around to the beginning of the process: the evidence we have here informs further engagement with theory, and so on. As mentioned in the above steps, the implications we can derive are conditioned on the type of evidence and type of tests we can perform. Unfortunately, We cannot make causal implications when our method purely allows for descriptive statistics. In short, there needs to be an overall fit between our research question, our hypotheses, our tests and the conclusions we extract from them.</p></li>
 </ol>
 <p>While some articles and books do all of the things listed above, these steps do not all have to be followed in the same project for it to be scientifically sound. Science is a collaborative enterprise, and sometimes research progresses from the efforts of several scholars put together. One article could simply provide a new set of data, for example, that either challenges conventional wisdom or describes a situation for the first time. Let's say we run the exit survey after the Bolivian election, and publish an article that describes the demographic characteristics of different voters and who they voted for. Others can then start using that data in their research and test different theories against the available data. As mentioned, there are often competing arguments explaining the same observations. Some scholars argue that voters are voting based on which party they expect will deliver them more economic benefits in the future (theory 1), others that voters reward parties for how well they have treated them in the past (theory 2), and yet others claim vote choice is inherited and taught within families (theory 3). Survey questions could probe whether voters expect to gain from the new administration (theory 1), or how they have fared under different parties in the past (theory 2). In-depth interviews or ethnographic research could show that voters feel a deep connection with parties that goes back to their childhoods (theory 3).<br />
-<strong>Exploration or Cheating?</strong></p>
+### Exploration or Cheating?</p>
 <p>The process explained above is somewhat abstract, and often not followed exactly in practice. When a researcher gets new data, it is tempting to immediately have a look at it and see what connections one can find. If done right, this is <strong>inductive research</strong>: a deep engagement with the data leads us to new hypotheses about the world. This is often contrasted with <strong>deductive</strong> research, where we have theories and test them against data. (See also <a href="./theory.html">ch03</a>'s discussion on theory-building versus theory testing).</p>
 <p>Some people (often people working with large-n data) are strong proponents of the latter approach. They argue that you should not come up with theories after the fact to fit the patterns in your data. This is because starting with the data can lead to misconduct. A famous recent example of this happened with Cornell Professor Brian Wansink, who published dozens of headline-grabbing studies on nutrition. A closer look revealed that he used a variety of questionable research practices. See how a <em>Buzzfeed</em> investigation reports on emails from his lab:</p>
 <blockquote>
@@ -364,9 +367,11 @@ If economic considerations drive the vote, we should see this in the data: poor 
 <p>What they did is sometimes called <strong>p-hacking</strong>: manipulating the data until one gets a p-value that indicates a statistically significant result (you'll learn about p-values in chapter <a href="./hypothesis-testing.html">ch5</a>). Wansink was explicit about manipulating these values, writing to a colleague: &quot;If you can get the data, and it needs some tweeking, it would be good to get that one value below .05&quot;<span class="citation">(Lee <a href="#ref-leeSlicedDicedStory2018">2018</a>)</span>.</p>
 <p>There are a number of ways the research process can be compromised. On one end there is outright fraud, like the case of Michael LaCour, who outright fabricated data on an experiment he supposedly ran. (The authors who found it are <span class="citation">Broockman, Kalla, and Aronow (<a href="#ref-broockmanIrregularitiesLaCour20142015">2015</a>)</span>, but a more accessible summary can be found at <a href="https://fivethirtyeight.com/features/how-two-grad-students-uncovered-michael-lacour-fraud-and-a-way-to-change-opinions-on-transgender-rights/">fivethirtyeight</a> or <a href="https://www.thisamericanlife.org/extras/canvassers-study-in-episode-555-has-been-retracted">This American Life</a>). On the other hand, research may be compromised by researchers selecting the one statistical procedure that shows results among many others that do not. This can happen subconsciously as well! Research almost never involves a clear way forward, and so there will always be the temptation to look at the evidence in a different way -- until suddenly we get the results we thought we would get.</p>
 <p>There is a bit of a divide between qualitative/small-n and quantitative/large-n scholars on this issue. The former often caution against starting with the data, while the latter consider it essential. A qualitative scholar might argue that you cannot come up with good hypotheses without knowing a good deal about the cases you are interested in -- without looking at the data. In reality, quantitative scholars also perform exploratory analyses. There is no way to guarantee that research was done ethically and conscientiously, but the academic community is coming up with new methods, such as <a href="https://cos.io/prereg/">pre-registration</a> to increase confidence in how they proceed.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Check-in question:</strong> What is the difference between inductive and deductive research?*</li>
-</ol>
+<div class="question">
+<p>
+<strong>Check-in question 1:</strong> What is the difference between inductive and deductive research?
+</p>
+</div>
 <p>Along each step of the process, there are many hurdles to good research. Before we can even begin our research, be it descriptive or causal, we have to be clear about what we are actually researching. Sure, it sounds interesting to research partisanship, or polarization, or corruption, or gentrification. But what do those terms actually mean? And how exactly can you measure it? As we'll discuss in more detail in <a href="./data.html">ch04</a>, there is never one right way to define or measure concepts, and these differences alone can make huge differences in study outcomes.</p>
 <p>Say we agree on how to define gentrification, and how we want to measure it. Even with a clear measurement that is easily available, <strong>measurement errors</strong> will creep in either due to human error or randomness. When doing research with a lot of cases (large-N research) it's almost never possible to collect data on all the instances of the thing we are interested in, so we need to find a representative sample. As you will learn in Chapters <a href="./data.html">ch04</a> and <a href="./surveys.html">ch06</a>, this process results in a fair amount of uncertainty when done perfectly, and much more when done imperfectly. Similarly, researchers working with a smaller number of cases still have to restrict their choices somewhat as they are researching cases in great depth (<a href="./small-n.html">ch09</a> has more on this).</p>
 </div>
@@ -376,9 +381,11 @@ If economic considerations drive the vote, we should see this in the data: poor 
 <p>When we talk about a causal inference we are saying that X (our independent/explanatory variable) <em>causes</em> Y (our dependent/outcome variable). In other words, this means that if X does not occur, then Y does not occur. This is called the <strong>counterfactual</strong>: a scenario where everything remains exactly the same except for the presence or absence of our independent variable. Let's illustrate with a simple example:</p>
 <p>I want to know if taking an aspirin will ease my headache. I can take the aspirin (the independent variable) and then see if my headache (dependent variable) goes away. But I cannot go back in time and NOT take the aspirin to see if the headache would have disappeared anyways. I could test the counterfactual (not taking the pill) the next time I get a headache, yet I will never be able to compare these two situations because everything has changed: the amount of sleep I got, the things I ate that day, the activities I did, and a million other details that I could not have possibly controlled to reflect the exact same scenario of the day of the first headache. This also known as the dilemma of holding all else equal (&quot;ceteris paribus&quot;), and it is the fundamental problem of causal inference.</p>
 <p>Since we will never have access to testing a causal claim through enacting the counterfactual, thinking about cause-effect relationships -- both coming up with theories and testing them -- is a very complex matter. There are several things we must keep in mind in the process of thinking about causality.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Check-in question:</strong> In your own words, explain the importance of &quot;all else equal&quot;.*</li>
-</ol>
+<div class="question">
+<p>
+<strong>Check-in question 2:</strong> In your own words, explain the importance of &quot;all else equal&quot;.
+</p>
+</div>
 <p>Let's take the example of media consumption and partisanship. Say you propose the theory that watching Fox News causes viewers to vote for Republican candidates at higher rates. (For scholarship on this issue, see for example <span class="citation">Schroeder and Stone (<a href="#ref-schroederFoxNewsPolitical2015">2015</a>)</span> and <span class="citation">Hopkins and Ladd (<a href="#ref-hopkinsConsequencesBroaderMedia2014">2014</a>)</span>). Four questions can help us structure our thinking about this potential causal relationship, both in the abstract and when working with data to test its existence.</p>
 <ol style="list-style-type: decimal">
 <li><p>First, we need to determine if there is any relationship between X and Y. There are many ways of doing so, ranging from simple descriptive statistics to more complex methods such as regression. For example, you could conduct a survey that asks people about both their viewership habits and their election choices. Say you find that Fox News watchers indeed vote for Republican candidates at higher rates. Note: this specific tool (survey) will allow you to say if X and Y are <em>correlated</em>, yet this does not imply that X is the cause of Y, only that they are somehow associated. In fact, this is the case with many of the tools we commonly use.</p>
@@ -406,17 +413,21 @@ If economic considerations drive the vote, we should see this in the data: poor 
 <p>In any case, having an idea of why two variables are related makes us more confident that the causal relationship exists.</p></li>
 </ol>
 <p>If we address these questions, then we might have a chance at identifying a cause-effect relationship. Some methods are better than others at addressing these issues. Although later chapters will go into more detail on some of these methodologies, we will briefly introduce them here, focusing particularly on their strengths and weaknesses towards achieving causal inference. As mentioned above, causal inference is not restricted to quantitative methods. Causal relationship can also be revealed through qualitative methods, such as Process Tracing and Counterfactuals. These tools rely on in-depth analysis of particular cases by, for instance, examining historical documents and conducting interviews, and you'll learn more about them in <a href="./small-n.html">ch09</a>.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Check-in question:</strong> &quot;Development causes democracy&quot;: explain how reverse causality could be operating here.*</li>
-</ol>
+<div class="question">
+<p>
+<strong>Check-in question 3:</strong> &quot;Development causes democracy&quot;: explain how reverse causality could be operating here.
+</p>
+</div>
 <p>Among quantitative methods, there are two types of methods that try to achieve causal inference: experimental studies and observational studies. Experimental studies are the most potent tool for causal inference. Why? Because of randomization. The essential characteristic that makes experiments so powerful is the fact that we can randomly assign the treatment (our independent variable) to our units. Through this seemingly simple action, we are able to overcome many of the problems mentioned above. Recall that the fundamental problem of causal inference is that we can never test the counterfactual; there is no way of holding everything equal except the manipulation of our independent variable. However, through randomization we can make - on average- all other things equal across treatment and control group. By randomly assigning the treatment to units, we can say that the only thing that differs between the treatment and the control is the presence/absence of the treatment. This means that these two groups are even similar across variables we cannot observe, and thus, we are less likely to face a confounding variable problem.</p>
 <p>Although experiments are the preferred tool for causal inference, they are not always available to use, either because of lack of resources, ethical issues, or because they are unattainable given our research topic. Experiments are also most common when dealing with individuals. In cross-country comparisons, it is practically impossible to carry out experiments.</p>
 <p>Very often, we need to take data that is observational in nature and try to approximate an experiment using more or less complicated statistical procedures. The term <strong>observational</strong> comes from the fact that we are not manipulating the treatment; instead, we are simply observing the data that was collected. These methods include Difference in Difference, Regression Discontinuity, Matching, and Instrumental Variables. Explaining these is beyond the scope of this book but you can find an introduction to them in <span class="citation">(Joshua David Angrist and Pischke <a href="#ref-angristMasteringMetricsPath2015">2015</a>)</span>.</p>
 <p>Historically, many scholars have made causal claims using simple regressions. These claims should be approached with caution, as you will learn in more detail in <a href="./large-n.html">ch08</a>. The way we approximate &quot;all else equal&quot; with regressions is by controlling for possible confounding variables. We assume that, once we have controlled for these variables, all that remains is the cause-effect relationship. Yet, as mentioned earlier, it is practically impossible to control for all relevant variables. This, and other reasons, are why some scholars believe that is is impossible to make causal claims with observational data. Indeed, you should be very cautious in concluding causal relationships from your regression. Notwithstanding, they are a very useful tool to describe relevant relationships and trends in data.</p>
 <p>Finally, it is worth mentioning again that causal inference is not limited to quantitative work. In <a href="./small-n.html">ch09</a>, you will learn about process tracing and other approaches that work better for qualitative data and situations where you have a small number of cases. Some scholars also believe in the use of both qualitative and quantitative methods within one study, complementing large-n statistical work with in-depth case work to strengthen their argument. The interplay between qualitative and quantitative work also happens at a broader level. Nothing is decided on one study alone. The most convincing findings in political science are those that have been confirmed by a variety of scholars using a range of methods.</p>
-<ol style="list-style-type: decimal">
-<li><strong>Check-in question:</strong> Explain why correlation does not imply causation.*</li>
-</ol>
+<div class="question">
+<p>
+<strong>Check-in question 4:</strong> Explain why correlation does not imply causation.
+</p>
+</div>
 </div>
 <div id="conclusion" class="section level2">
 <h2><span class="header-section-number">2.4</span> Conclusion</h2>
@@ -537,7 +548,7 @@ gitbook.start({
 "sharing": {
 "github": true,
 "facebook": false,
-"twitter": true,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
