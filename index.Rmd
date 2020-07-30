@@ -1,6 +1,6 @@
 ---
 title: "Empirical Methods in Political Science: An Introduction"
-author: "Jean Clipperton"
+author: "Jean Clipperton, et al."
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -8,31 +8,39 @@ documentclass: book
 bibliography: [references.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-#github-repo: rstudio/bookdown-demo
+github-repo: nulib-oer/empirical-methods-polisci
 description: "This is an introductory college textbook on using empirical methods in political science research."
 ---
 
 # Preface {-}
 ***
 
-```{r fig.align='center', echo=FALSE, 'html'}
+```{r fig.align='center', echo=FALSE, 'bookcover'}
 knitr::include_graphics('images/book_cover_sm.png', dpi = NA)
 ```
 
-**Chapters written by:**
+## About the Authors {-}
 
-- Max Weylandt
-- Pilar Manzi
-- Salih Noor
-- Zhihang Ruan
-- Irene Kwon
-- Sam Gubitz
-- Justin Zimmerman
-- Erin Ochoa
-- John Lee.
+[Jean Clipperton](https://www.polisci.northwestern.edu/people/core-faculty/jean-clipperton.html) is an Assistant Professor of Instruction in the departments of Political Science and Sociology at Northwestern University. Jean's research focuses upon institutional design and change, the influence of institutions on behavior, and the interaction between institutions and behavior. Her recent work has focused upon how states create effective laws and the effect of legislative choices on outcomes, like constitutional longevity. Her research incorporates ideas and approaches from political science, complex systems, and social sciences more generally.
 
-This book is published by [Northwestern University Libraries](https://www.library.northwestern.edu/), with funding from Northwestern University's [Affordable Instructional Resources](https://air.northwestern.edu/) initiative.
+**Contributing Authors**
 
-![Creative Commons Attribution-NonCommercial 4.0 International](https://licensebuttons.net/l/by-nc/3.0/88x31.png)
+- [Max Weylandt](https://www.polisci.northwestern.edu/people/graduate-students/maximilian-weylandt.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Pilar Manzi](https://www.polisci.northwestern.edu/people/graduate-students/pilar-manzi.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Salih Noor](https://www.polisci.northwestern.edu/people/graduate-students/salih-noor.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Zhihang Ruan](https://www.polisci.northwestern.edu/people/graduate-students/zhihang-ruan.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Irene Kwon](https://www.polisci.northwestern.edu/people/graduate-students/irenekwon.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Sam Gubitz](https://www.polisci.northwestern.edu/people/graduate-students/samuel-gubitz.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Justin Zimmerman](https://www.polisci.northwestern.edu/people/graduate-students/justin-zimmerman.html), PhD Candidate, Department of Political Science, Northwestern University
+- [Erin Ochoa](https://www.sociology.northwestern.edu/people/graduate-students/profiles/erin-m.-ochoa.html), PhD Candidate, Department of Sociology, Northwestern University
+- [John Lee](https://www.sociology.northwestern.edu/people/graduate-students/profiles/john-lee.html), PhD Candidate, Department of Sociology, Northwestern University
 
-Copyright 2020 Jean Clipperton. Licensed [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0).
+## Textbook Information {-}
+
+This textbook is published by [Northwestern University Libraries](https://www.library.northwestern.edu/), with funding from Northwestern University's [Affordable Instructional Resources](https://air.northwestern.edu/) initiative.
+
+Copyright 2020 Jean Clipperton et al. Licensed [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0).
+
+```{r fig.align='center', echo=FALSE, 'license'}
+knitr::include_graphics('images/license.png', dpi = NA)
+```
