@@ -52,6 +52,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -92,7 +129,9 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html"><i class="fa fa-check"></i><b>2</b> Causal Inference and the Scientific Method</a><ul>
 <li class="chapter" data-level="2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#introductionbackground"><i class="fa fa-check"></i><b>2.1</b> Introduction/Background</a></li>
-<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a></li>
+<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#exploration-or-cheating"><i class="fa fa-check"></i><b>2.2.1</b> Exploration or Cheating?</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#the-fundamental-problem-of-causal-inference"><i class="fa fa-check"></i><b>2.3</b> The Fundamental Problem of Causal Inference</a></li>
 <li class="chapter" data-level="2.4" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#conclusion"><i class="fa fa-check"></i><b>2.4</b> Conclusion</a></li>
 <li class="chapter" data-level="2.5" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#application-questions"><i class="fa fa-check"></i><b>2.5</b> Application Questions</a></li>
@@ -387,9 +426,12 @@
 <div id="method-types" class="section level2">
 <h2><span class="header-section-number">9.5</span> Method: types</h2>
 <p>The typical methods used in small n research are interviews, participant observation, focus groups, process tracing, and ethnography. Each method has its advantages and disadvantages and a researcher can utilize more than one these methods depending on the aims of their research. In deciding on a small n method a researcher must consider the goals of the research, validity, and conceptual framework that will feed the researcher's broader question. The diagram below illustrates that a small n qualitative researcher should be purposeful in their research design. They must consider their overall question. Specify the goals of their research, consider the theories that are driving the conceptual framework of their research, and consider the validity (does it make sense) of their research design.</p>
-<div class="figure">
-<img src="images/questiondiagram.png" alt="Research Methods Diagram" />
-<p class="caption">Research Methods Diagram</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;images/questiondiagram.png&#39;</span>, <span class="dt">dpi =</span> <span class="ot">NA</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:questiondiagram"></span>
+<img src="images/questiondiagram.png" alt="Research Methods Diagram"  />
+<p class="caption">
+Figure 9.1: Research Methods Diagram
+</p>
 </div>
 <p>Focusing on the methods portion of the diagram, this chapter will discuss in further detail each small n qualitative method.</p>
 <div id="interviews" class="section level3">

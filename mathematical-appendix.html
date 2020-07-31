@@ -52,6 +52,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -92,7 +129,9 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html"><i class="fa fa-check"></i><b>2</b> Causal Inference and the Scientific Method</a><ul>
 <li class="chapter" data-level="2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#introductionbackground"><i class="fa fa-check"></i><b>2.1</b> Introduction/Background</a></li>
-<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a></li>
+<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#exploration-or-cheating"><i class="fa fa-check"></i><b>2.2.1</b> Exploration or Cheating?</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#the-fundamental-problem-of-causal-inference"><i class="fa fa-check"></i><b>2.3</b> The Fundamental Problem of Causal Inference</a></li>
 <li class="chapter" data-level="2.4" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#conclusion"><i class="fa fa-check"></i><b>2.4</b> Conclusion</a></li>
 <li class="chapter" data-level="2.5" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#application-questions"><i class="fa fa-check"></i><b>2.5</b> Application Questions</a></li>
@@ -401,9 +440,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 <p>Bacharach, Samuel B. 1989. “Organizational Theories: Some Criteria for Evaluation.” <em>Academy of Management Review</em> 14 (4): 496–515.</p>
 </div>
 <div>
-<p>Barakso, Maryann, Daniel M Sabet, and Brian Schaffner. 2013. <em>Understanding Political Science Research Methods: The Challenge of Inference</em>. Routledge.</p>
-</div>
-<div>
 <p>Barrat, A., M. Barthélemy, R. Pastor-Satorras, and A. Vespignani. 2004. “The Architecture of Complex Weighted Networks.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (11): 3747–52. doi:<a href="https://doi.org/10.1073/pnas.0400087101">10.1073/pnas.0400087101</a>.</p>
 </div>
 <div>
@@ -437,16 +473,10 @@ Try plugging them into the above equation and seeing whether you get the result 
 <p>Broockman, David, Joshua Kalla, and Peter Aronow. 2015. “Irregularities in LaCour (2014).”</p>
 </div>
 <div>
-<p>Bullock, John G., and Shang E. Ha. 2011. “Mediation Analysis Is Harder Than It Looks.” In <em>Cambridge Handbook of Experimental Political Science</em>, edited by James N. Druckman, Donald P. Green, James H. Kuklinski, and Arthur Lupia, 508–22. Cambridge: Cambridge University Press. doi:<a href="https://doi.org/10.1017/CBO9780511921452.035">10.1017/CBO9780511921452.035</a>.</p>
-</div>
-<div>
 <p>Cantú, Francisco, and Sebastián M. Saiegh. 2011. “Fraudulent Democracy? An Analysis of Argentina’s Infamous Decade Using Supervised Machine Learning.” <em><span style="font-style:normal;">Political Analysis</span></em> 19 (4): 409–33.</p>
 </div>
 <div>
 <p>Carroll, Robert J., and Brenton Kenkel. 2019. “Prediction.” <em>Proxies, and Power. <span style="font-style:normal;">American Journal of Political Science</span></em>.</p>
-</div>
-<div>
-<p>Cassese, Erin C, Tiffany D Barnes, and Regina P Branton. 2015. “Racializing Gender: Public Opinion at the Intersection.” <em>Politics &amp; Gender</em> 11 (1). Cambridge University Press: 1–26.</p>
 </div>
 <div>
 <p>Centers for Disease Control and Prevention. 2017. “About Adult BMI.” Web. <a href="\url{https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html}" class="uri">\url{https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html}</a>.</p>
@@ -489,9 +519,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 </div>
 <div>
 <p>Dodds, Peter Sheridan, Roby Muhamad, and Duncan J. Watts. 2003. “An Experimental Study of Search in Global Social Networks.” <em>Science</em> 301 (5634): 827–29. doi:<a href="https://doi.org/10.1126/science.1081058">10.1126/science.1081058</a>.</p>
-</div>
-<div>
-<p>Druckman, James N, and Cindy D Kam. 2011. “Students as Experimental Participants.” <em>Cambridge Handbook of Experimental Political Science</em> 1. Cambridge University Press New York: 41–57.</p>
 </div>
 <div>
 <p>Duverger, Maurice. 1954. <em>Political Parties: Their Organization and Activity in the Modern State</em>. New York, NY: Wiley.</p>
@@ -623,9 +650,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 <p>Lee, Stephanie M. 2018. “Sliced and Diced: The Inside Story of How an Ivy League Food Scientist Turned Shoddy Data into Viral Studies.” <em>BuzzFeed News</em>. https://www.buzzfeednews.com/article/stephaniemlee/brian-wansink-cornell-p-hacking.</p>
 </div>
 <div>
-<p>Leighley, Jan E, and Arnold Vedlitz. 1999. “Race, Ethnicity, and Political Participation: Competing Models and Contrasting Explanations.” <em>The Journal of Politics</em> 61 (4). University of Texas Press: 1092–1114.</p>
-</div>
-<div>
 <p>Lewis Jr, Neil A. 2019. “Studying People in Their Local Environments.” <em>APS Observer</em> 32 (3). <a href="https://www.psychologicalscience.org/observer/studying-people-in-their-local-environments" class="uri">https://www.psychologicalscience.org/observer/studying-people-in-their-local-environments</a>.</p>
 </div>
 <div>
@@ -642,9 +666,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 </div>
 <div>
 <p>Marion Suiseeya, Kimberly R., and Laura Zanotti. 2019. “Making Influence Visible: Innovating Ethnography at the Paris Climate Summit.” <em>Global Environmental Politics</em> 19 (2): 38–60. doi:<a href="https://doi.org/10.1162/glep_a_00507">10.1162/glep_a_00507</a>.</p>
-</div>
-<div>
-<p>Masuoka, Natalie, and Jane Junn. 2013. <em>The Politics of Belonging: Race, Public Opinion, and Immigration</em>. University of Chicago Press.</p>
 </div>
 <div>
 <p>Matejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” In <em>CHI 2017 Conference Proceedings:</em></p>
@@ -820,9 +841,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 </div>
 </div>
 </div>
-
-
-
 
 
 

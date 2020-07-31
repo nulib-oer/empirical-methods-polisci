@@ -52,6 +52,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -92,7 +129,9 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html"><i class="fa fa-check"></i><b>2</b> Causal Inference and the Scientific Method</a><ul>
 <li class="chapter" data-level="2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#introductionbackground"><i class="fa fa-check"></i><b>2.1</b> Introduction/Background</a></li>
-<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a></li>
+<li class="chapter" data-level="2.2" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method"><i class="fa fa-check"></i><b>2.2</b> Setup: The Scientific Method</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#exploration-or-cheating"><i class="fa fa-check"></i><b>2.2.1</b> Exploration or Cheating?</a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#the-fundamental-problem-of-causal-inference"><i class="fa fa-check"></i><b>2.3</b> The Fundamental Problem of Causal Inference</a></li>
 <li class="chapter" data-level="2.4" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#conclusion"><i class="fa fa-check"></i><b>2.4</b> Conclusion</a></li>
 <li class="chapter" data-level="2.5" data-path="causal-inference-and-the-scientific-method.html"><a href="causal-inference-and-the-scientific-method.html#application-questions"><i class="fa fa-check"></i><b>2.5</b> Application Questions</a></li>
@@ -375,9 +414,12 @@
 <p>As mentioned, there are different kinds of random samples. The first, <strong>simple random sample</strong>, refers to a basic randomization of all subjects in the population. If we were to research university professors at a certain school, a simple random sample could be constructed by obtaining a list of all the hired professors (our <strong>sampling frame</strong>), assigning a number to each individual, and then randomly selecting a certain amount of numbers, previously determined by considering the amount of resources available as well as establishing a certain minimum number of cases to reduce bias in the sample.</p>
 <p>In some cases, sample selection requires more sophisticated methods. Two additional types of random sampling are stratified random sampling and cluster random sampling. Note that these too belong to the groups of probability sampling. <strong>Stratified sampling</strong> is useful when we want to compare groups (&quot;strata&quot;) and thus we want to guarantee that our sample will have a certain amount of subjects from each group. Once the population is divided into these groups, a random sample is selected from each one. Stratified sampling is only possible if we have the necessary data to group our population according to the category of interest. For instance, if the main interest of the professor survey is to compare differences among professors of different ranking, we could conduct a stratified sample based on this information, since it is readily available. Yet, it would be harder to stratify the sample based on personal income. Recall that, to stratify sample on a given variable, the information needs to be available for the whole sampling frame.</p>
 <p><strong>Cluster sampling</strong> is sometimes confused with stratified sampling, yet they are used for different purposes and the sampling procedure is distinct. Clusters are also groups of subjects, yet they are not constructed to compare them with each other. On the contrary, clusters should ideally have heterogeneity within, yet not differ greatly from other clusters. Once subjects are grouped in clusters, clusters are selected through a simple random method; all of the individuals within the selected clusters are in the sample. Following the above example, instead of walking around all campus in search of our survey respondents, we could cluster professors by Department and survey all professors of the randomly selected clusters (Departments).</p>
-<div class="figure">
-<img src="images/data/samples.png" alt="Stratified vs. Clustered sampling" style="width:90.0%" />
-<p class="caption">Stratified vs. Clustered sampling</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;images/data/samples.png&#39;</span>, <span class="dt">dpi =</span> <span class="ot">NA</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:samples"></span>
+<img src="images/data/samples.png" alt="Stratified vs. Clustered sampling"  />
+<p class="caption">
+Figure 4.1: Stratified vs. Clustered sampling
+</p>
 </div>
 <p>Not all surveys use probabilistic sampling, and you should be very wary of these. One type of sampling method under this category is <strong>convenience sampling</strong>. As its name suggest, this method implies selecting individuals that are most accessible. Most online polls have this characteristic: the sample will be composed of people who accessed certain websites where the poll was posted and decided to take their time to answer it. A convenience sample could also consist of surveying your soccer team when your research is about soccer fans across the country. <strong>Snowball sampling</strong> is another type of nonprobability sampling. This method is usually used when studying certain vulnerable or hidden populations that are harder to reach through normal sampling methods (eg. people with AIDS). With this technique, a survey respondent will provide referrals who will be recruited to become part of the study.</p>
 <p>Nonprobability samples suffer from a major problem called <strong>sampling bias</strong>. With these techniques, the resulting sample is far from reflecting the actual population. The online poll example will be a representation only of those people who are exposed to the poll and who feel compelled to answer it, which has been shown to be nonrandom. Deciding to only survey your soccer team will yield biased results as well. You will be representing only a certain age group, from a certain neighborhood who probably share socio-economic status and educational level. The results from this poll will not provide any information on soccer fans across the country, but only of one limited, unrepresentative portion of them.</p>
@@ -395,9 +437,12 @@
 <div id="measurement" class="section level2">
 <h2><span class="header-section-number">4.5</span> Measurement</h2>
 <p>Another aspect we must take into consideration before data collection is specifically how our concept will be measured, or operationalized. Whichever our data collection process is, we must be certain that what we are measuring corresponds to the concept we wish to study. A good measurement must be reliable and valid. <strong>Reliability</strong> means that every time you measure you should obtain the same results. <strong>Validity</strong> refers to the fact that the measure actually represents the concept we are interested in. As the figure below illustrates, a measure can be reliable if all measures consistently capture the same phenomenon, yet not valid if this phenomenon is not the same as our concept. It can be neither reliable nor valid if it does not consistently measure the same thing and that thing is not our concept. A measure that is both reliable and valid will be correctly capturing our concept in every iteration.</p>
-<div class="figure">
-<img src="images/data/target.png" alt="Validity and reliability" style="width:50.0%" />
-<p class="caption">Validity and reliability</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;images/data/target.png&#39;</span>, <span class="dt">dpi =</span> <span class="ot">NA</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:target"></span>
+<img src="images/data/target.png" alt="Validity and reliability"  />
+<p class="caption">
+Figure 4.2: Validity and reliability
+</p>
 </div>
 <p>Problems of measurement are present beyond the use of surveys. Take the concept of democracy, for which we can find at least 10 different measures. The first differences among these measures is the way they are conceptualized, or defined. This step requires researchers to establish which attributes will be considered. Democracy measures usually include some combination of: political rights, political participation, freedom of speech, civil liberties, competitive elections, free and fair elections, etc. Then they vary according to which indicators they chose for each attribute. What piece of information do I consider to evaluate if a country has free elections? Will I code this as a simple dichotomous variable (free/not free)? Or will it be a numerical variable that captures the degree of freedom in elections? Lastly, since all measures of democracy are in the form of an index, there must be an aggregation rule. Are the scores of each attribute added or multiplied? Does each indicator weight the same? All of these decisions will yield different results. Table <a href="#table:%20data_democracy" reference-type="ref" reference="table: data_democracy"><span class="math display">\[table: data\_democracy\]</span></a> below, adapted from <span class="citation">(Munck <a href="#ref-munck2009">2009</a>)</span> illustrates how three different measures of democracy are constructed. Note that the table omits two further elements that distinguish the measures: the specific indicators chosen for each component and the aggregation rules.</p>
 <table>
@@ -513,9 +558,12 @@
 <p>A second measure of central tendency, the <strong>median</strong>, could be a better fit for the above example. The median is the number that marks the center of the distribution when the values are listed in numerical order. It divides the distribution in exactly half. When the number of values is even, the two numbers at the center are averaged. To calculate the median from the above example, we first order the incomes from lowest to highest: $1,000, $1,000, $1,000, $1,100, $1,200, $2,300, $2,400, $2,500, $2,500, $2,600, $60,000. Then we identify the midpoint in the distribution: $2,300. This is a far better representation of the room's average income. Thus, when a certain variable has outliers, the median is usually the preferred method to describe the center. Another advantage it has over the mean is that it can also be used to describe ordinal (but not nominal) data. However,in cases with few response categories, the median can give little information about a distribution. Two sets of numbers could have the same median yet different patterns.</p>
 <p>The last measure of central tendency is the <strong>mode</strong>. The mode is the value that is occurs most often. This measure can be used with any type of variable, yet it is especially useful for categorical data. However, if the most common value is not a significant portion of the distribution, the mode might be trivial. Note that a distribution may have more than one value with an exceptionally high occurrence. In our example, the mode was 1,000. Bi-modal distributions are such cases, where the distribution will have two peaks at distinct values. Distributions can also be multimodal, or uniform in cases where all the values have the same frequency.</p>
 <p>All three measures are complementary when describing the center of data. Furthermore, having these three measures provides a sense of how the data is shaped. If the mean, median and mode are similar, the distribution is symmetrical. When the mean is below the median and the mode, it means there are extreme values in the lower half of the distribution that are pulling the mean towards that end. This results in a <strong>negatively skewed distribution</strong>. On the contrary, high extreme values pull the mean towards the upper end, thus resulting in a <strong>positively skewed distribution</strong>. In addition, based on the number of modes, we have information on the modality of the distribution.</p>
-<div class="figure">
-<img src="images/data/plots.png" alt="Types of distributions" />
-<p class="caption">Types of distributions</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&#39;images/data/plots.png&#39;</span>)</code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:plots"></span>
+<img src="images/data/plots.png" alt="Types of distributions"  />
+<p class="caption">
+Figure 4.3: Types of distributions
+</p>
 </div>
 <p>Whereas the measures of central tendency give us insight into the center of the data and the typical values, measures of dispersion characterize how spread out the data is. One of such measures is the <strong>range</strong>. A range measures how far apart the highest and lowest value are. If votes for Party A are as low as 10% in one region and as high as 90% in another, the range is of 80%. If Party B obtains 25% in the least supportive region and 60% in the most supportive, its range is of 35%. Party B has less variability.</p>
 <p>Two other measures of dispersion widely used in statistic are the <strong>variance</strong> and the <strong>standard deviation</strong>. The standard deviation, which is a slight transformation of the variance, is more widely used because it is easier to interpret. Simply put, they measure the average distance of each observation from the mean. Larger standard deviations indicate more dispersion in the data. Note that standard deviation must always be positive: there is no such thing as a negative distance. The calculation of the variance and standard deviation is straightforward, yet requires a few steps:</p>
