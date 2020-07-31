@@ -43,12 +43,16 @@ Whether it is to explore American public opinion about same-sex marriage or to e
 2.  **Sampling**
 
     After we conceptualize and operationalize our key variables of interest, we choose whom to ask the questions. Although in some cases we do survey the whole population (e.g., the Census), it is logistically implausible to conduct the population survey every time. Instead, we rely on a **sample** to infer about the **population**.
-
-    ![Figure 6.1: Population and Sample](images/surveys/population_sample.png)
+    
+```{r population_sample, fig.align='center', fig.cap='Population and Sample'}
+knitr::include_graphics('images/surveys/population_sample.png', dpi = NA)
+```
 
     A *population* refers to our entire target group that we are trying to understand. For example, if we are trying to understand how adult Americans feel about same sex marriage, our population would be U.S. adults. On the other hand, if we are interested in American college students' opinions about same sex marriage, then our population would only include college students in the United States. In drawing the sample, then, researchers must first be clear about the population that they wish to make inferences about. In order to get at the population, we often infer from a subset of the entire population: a sample. A *sample* consists of one or more observations drawn from the population. Therefore, to draw a meaningful inference about the population, it is important to have a reliable sample representative of the population. Ideally, the sample is a miniature version of the population.
-
-    ![Figure 6.2: How Sampling Can Go Wrong](images/surveys/Virginia_sampling.png)
+    
+```{r Virginia_sampling, fig.align='center', fig.cap='How Sampling Can Go Wrong'}
+knitr::include_graphics('images/surveys/Virginia_sampling.png', dpi = NA)
+```
 
     Figure 2 presents the map of Virginia counties by median household income. The upper, darkest counties include some of the richest counties in the United States, notably Loudoun, Arlington, and Fairfax.[^14] Interested in American public opinion towards tax policies, let's say that a professor at George Mason University, located near Fairfax, obtains a convenience sample of nearby residents (n=50) to conduct a survey about income property tax. Could you say that the results from this survey reasonably represent an average American's preferences and opinions about tax policies?
 
@@ -65,8 +69,10 @@ Whether it is to explore American public opinion about same-sex marriage or to e
     -   **Stratified Sampling**
 
         Stratified sampling differs from SRS in that it first divides the entire population into smaller homogeneous sub-groups of strata. That is, each stratum is composed of similar observations -- e.g., based on income, educational level, race or gender. Then, we take the random samples from each stratum and pool them together. If we have distinct subgroups based on shared characteristics, we might use stratified sampling to highlight these inter-group differences.
-
-        ![Figure 6.3: Stratied Random Sampling. Note: The population is grouped into strata based on shared characteristics.](images/surveys/stratified-random-sampling.jpg){width="4in"}
+        
+```{r stratified-random-sampling, fig.align='center', fig.cap='Stratified Random Sampling. Note: The population is grouped into strata based on shared characteristics'}
+knitr::include_graphics('images/surveys/Virginia_sampling.png', dpi = NA)
+```
 
         Because stratification takes into characteristics of the original population, stratified sampling can better capture the key population characteristics in the sample. Through stratified sampling, researchers can ensure that certain subgroups are include in the sample. Moreover, stratification gives a smaller error in estimation and greater precision than SRS especially when the inter-group differences are large. For example, in surveying Americans' racial perceptions and policy attitudes, Masuoka and Junn used stratified sampling to recruit minority respondents [@masuoka2013politics], as SRS possibly would not have guaranteed sufficient number of Asian or Latino participants. Likewise, YouGov also uses stratified sampling to ensure that the survey sample resembles the composition of the American population; age, race, gender and education are typically used as stratification variables. Cassesse et al. used YouGov's Cooperative Congressional Election Study, which used stratified sampling of 50,000 Americans, to examine how white Americans' racial attitudes affect anti-gender discrimination policy supports [@cassese2015racializing].
 
@@ -74,7 +80,9 @@ Whether it is to explore American public opinion about same-sex marriage or to e
 
     -   **Cluster Random Sampling**
 
-        ![Figure 6.4: Cluster Sampling. Note: Here, the population is divided into several clusters; note that the entire cluster is sampled.](images/surveys/Cluster-sampling.png){width="4in"}
+```{r Cluster-sampling, fig.align='center', fig.cap='Cluster Sampling. Note: Here, the population is divided into several clusters; note that the entire cluster is sampled'}
+knitr::include_graphics('images/surveys/Cluster-sampling.png', dpi = NA)
+```
 
         As in stratified random sampling, the population is divided into sub-groups, this time called clusters. Unlike strata, however, clusters are not made up of homogeneous observations. After clustering the population into various subgroups, we now take the random sampling of the groups (i.e., clusters). In cluster sampling, each cluster is treated as the sampling unit; in other words, sampling is done on clusters. Therefore, all the observations in the cluster are selected in the sample.
 
@@ -130,12 +138,16 @@ Whether it is to explore American public opinion about same-sex marriage or to e
     **Margin of error** quantifies the random sampling error. We cannot be one hundred percent confident that our sample statistic is the exact value of the population parameter; because we are using samples, any survey or poll will differ from the true population by a certain amount. Therefore, by constructing a **confidence interval** around a point estimate (i.e., sample statistic), we are acknowledging that there is room for error for our estimates. Margin of error is the range of values below and above the sample statistic in a confidence interval.
 
     Confidence interval = sample statistic $\pm$ margin of error
-
-    ![Figure 6.5: Margin of Error and Condence Interval](images/surveys/Marginoferror.png)
+    
+```{r Marginoferror, fig.align='center', fig.cap='Margin of Error and Confidence Interval'}
+knitr::include_graphics('images/surveys/Marginoferror.png', dpi = NA)
+```
 
     As we have seen in the hypothesis testing chapter, confidence intervals mean that we are confident that the true parameter lies within that range. Conventionally, political scientists use 95 percent confidence level; this means that 95 percent of the time, the value obtained from a random sample will fall within this interval. Note from the Figure 5 that the margin of error gets smaller with a bigger sample.
-
-    ![Figure 6.6: Condence Interval in a Poll](images/surveys/Confidence_interval.png)
+    
+```{r Confidence_interval, fig.align='center', fig.cap='Confidence Interval in a Poll'}
+knitr::include_graphics('images/surveys/Confidence_interval.png', dpi = NA)
+```
 
     **Check-in question:** Can we say that the Republican candidate is leading based on the two polls presented in Figure 6? If so, why? If not, then why not?
 
@@ -179,7 +191,9 @@ By nature, a survey is a **[large-N, observational study]{.underline}**; in-dept
 
 **[Coverage error]{.underline}**: This error occurs when there is not a one-to-one correspondence between the target population and the sampling frame from which a sample is drawn. A Sampling frame is the list of all the units within a population that could be sampled. It could include not only individuals, but also households, schools, companies or other institutions depending on our research question and unit of analysis. Ideally, the sampling frame perfectly coincides with the target population; but when it does not coincide, we have coverage error.
 
-![Figure 6.7: Coverage Error](images/surveys/coverage_error.png)
+```{r coverage_error, fig.align='center', fig.cap='Coverage Error'}
+knitr::include_graphics('images/surveys/coverage_error.png', dpi = NA)
+```
 
 ```{block, type="question"}
 **Check-in question:** what could be the solutions to social desirability bias or non-response for sensitive questions included in the survey? Be creative!

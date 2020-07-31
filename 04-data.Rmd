@@ -53,7 +53,9 @@ In some cases, sample selection requires more sophisticated methods. Two additio
 
 **Cluster sampling** is sometimes confused with stratified sampling, yet they are used for different purposes and the sampling procedure is distinct. Clusters are also groups of subjects, yet they are not constructed to compare them with each other. On the contrary, clusters should ideally have heterogeneity within, yet not differ greatly from other clusters. Once subjects are grouped in clusters, clusters are selected through a simple random method; all of the individuals within the selected clusters are in the sample. Following the above example, instead of walking around all campus in search of our survey respondents, we could cluster professors by Department and survey all professors of the randomly selected clusters (Departments).
 
-![Stratified vs. Clustered sampling](./images/data/samples.png){width="90%"}
+```{r samples, fig.align='center', fig.cap='Stratified vs. Clustered sampling'}
+knitr::include_graphics('images/data/samples.png', dpi = NA)
+```
 
 Not all surveys use probabilistic sampling, and you should be very wary of these. One type of sampling method under this category is **convenience sampling**. As its name suggest, this method implies selecting individuals that are most accessible. Most online polls have this characteristic: the sample will be composed of people who accessed certain websites where the poll was posted and decided to take their time to answer it. A convenience sample could also consist of surveying your soccer team when your research is about soccer fans across the country. **Snowball sampling** is another type of nonprobability sampling. This method is usually used when studying certain vulnerable or hidden populations that are harder to reach through normal sampling methods (eg. people with AIDS). With this technique, a survey respondent will provide referrals who will be recruited to become part of the study.
 
@@ -77,7 +79,9 @@ In sum, surveys are an essential tool in data collection, but must be designed c
 
 Another aspect we must take into consideration before data collection is specifically how our concept will be measured, or operationalized. Whichever our data collection process is, we must be certain that what we are measuring corresponds to the concept we wish to study. A good measurement must be reliable and valid. **Reliability** means that every time you measure you should obtain the same results. **Validity** refers to the fact that the measure actually represents the concept we are interested in. As the figure below illustrates, a measure can be reliable if all measures consistently capture the same phenomenon, yet not valid if this phenomenon is not the same as our concept. It can be neither reliable nor valid if it does not consistently measure the same thing and that thing is not our concept. A measure that is both reliable and valid will be correctly capturing our concept in every iteration.
 
-![Validity and reliability](images/data/target.png){width="50%"}
+```{r target, fig.align='center', fig.cap='Validity and reliability'}
+knitr::include_graphics('images/data/target.png', dpi = NA)
+```
 
 Problems of measurement are present beyond the use of surveys. Take the concept of democracy, for which we can find at least 10 different measures. The first differences among these measures is the way they are conceptualized, or defined. This step requires researchers to establish which attributes will be considered. Democracy measures usually include some combination of: political rights, political participation, freedom of speech, civil liberties, competitive elections, free and fair elections, etc. Then they vary according to which indicators they chose for each attribute. What piece of information do I consider to evaluate if a country has free elections? Will I code this as a simple dichotomous variable (free/not free)? Or will it be a numerical variable that captures the degree of freedom in elections? Lastly, since all measures of democracy are in the form of an index, there must be an aggregation rule. Are the scores of each attribute added or multiplied? Does each indicator weight the same? All of these decisions will yield different results. Table [\[table: data\_democracy\]](#table: data_democracy){reference-type="ref" reference="table: data_democracy"} below, adapted from [@munck2009] illustrates how three different measures of democracy are constructed. Note that the table omits two further elements that distinguish the measures: the specific indicators chosen for each component and the aggregation rules.
 
@@ -122,7 +126,9 @@ The last measure of central tendency is the **mode**. The mode is the value that
 
 All three measures are complementary when describing the center of data. Furthermore, having these three measures provides a sense of how the data is shaped. If the mean, median and mode are similar, the distribution is symmetrical. When the mean is below the median and the mode, it means there are extreme values in the lower half of the distribution that are pulling the mean towards that end. This results in a **negatively skewed distribution**. On the contrary, high extreme values pull the mean towards the upper end, thus resulting in a **positively skewed distribution**. In addition, based on the number of modes, we have information on the modality of the distribution.
 
-![Types of distributions](images/data/plots.png)
+```{r plots, fig.align='center', fig.cap='Types of distributions'}
+knitr::include_graphics('images/data/plots.png')
+```
 
 Whereas the measures of central tendency give us insight into the center of the data and the typical values, measures of dispersion characterize how spread out the data is. One of such measures is the **range**. A range measures how far apart the highest and lowest value are. If votes for Party A are as low as 10% in one region and as high as 90% in another, the range is of 80%. If Party B obtains 25% in the least supportive region and 60% in the most supportive, its range is of 35%. Party B has less variability.
 
