@@ -4,11 +4,13 @@
 
 ## Introduction
 
-These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single "correct" definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng [@ng-a], in his highly popular Stanford course on machine learning (available through Coursera).
+These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single "correct" definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng [@ng-a], in his highly popular Stanford course on machine learning (available through [Coursera](https://www.coursera.org/learn/machine-learning)).
 
-![Figure 12.1: Traditional Programming v. Machine Learning](images/ml/jl-figure1.png)
+```{r jl-figure1, fig.align='center', echo=FALSE, fig.cap='Traditional Programming v. Machine Learning'}
+knitr::include_graphics('images/ml/jl-figure1.png', dpi = NA)
+```
 
-The first definition is by Arthur Samuel, a former researcher at IBM and early pioneer in machine learning. In his view, machine learning is a *"field of study that gives computers the ability to learn without being explicitly programmed."* This definition is useful because it alludes to a central distinction between traditional programming and machine learning: i.e., in traditional programming, a computer takes in the data and the rules and generates the output; in machine learning, a computer takes the data and the output and generates the rules that describe the relationship between the input and the output. Figure 12.1 provides an illustration of this idea.
+The first definition is by Arthur Samuel, a former researcher at IBM and early pioneer in machine learning. In his view, machine learning is a *"field of study that gives computers the ability to learn without being explicitly programmed."* This definition is useful because it alludes to a central distinction between traditional programming and machine learning: i.e., in traditional programming, a computer takes in the data and the rules and generates the output; in machine learning, a computer takes the data and the output and generates the rules that describe the relationship between the input and the output. Figure \@ref(fig:jl-figure1) provides an illustration of this idea.
 
 The second definition is more detailed and precise. According to Tom Mitchell, a computer scientist at Carnegie Mellon and the author of one of the first textbooks on machine learning: *"A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E."* [@mitchell1997a]. From the second definition, we can get a better sense of what machine learning generally entails: i.e., a computer gradually becomes better at performing a specific task ("what") through experience ("how"); moreover, the computer's performance is measured using some metric, which allows us to test whether performance has indeed improved over time. In this chapter, I will provide an overview of how machine learning methods work in practice and review some examples of how political scientists have used these methods in their research. Before proceeding, it is necessary to first explain several fundamental concepts in machine learning [for a more detailed treatment of this subject, see @hastie2017a; @james2013a]
 
@@ -34,9 +36,11 @@ Assuming we have split the original dataset into the training set and test set, 
 
 Recall that we randomly assigned the observations in the original full dataset to the training and test sets. Thus, the two datasets are comparable: i.e., the true relationship between the set of predictors ($X_{1}, X_{2}$) and $Y$ should be the same in both datasets. However, the two datasets are also not identical; these minor, non-systematic differences are due to random noise, which are represented by the $\epsilon$ in Eq. 1. Given this context, it should be clear why we want to minimize test MSE instead of training MSE.
 
-If we attempt to minimize training MSE, the algorithms are more likely to estimate highly flexible models that try to touch every data point in the feature space of the training dataset. This might initially sound nice, but it means that the model is **overfitting** to the training set: i.e., the model is attempting to capture both the real patterns due to the true ${f}(.)$, as well as the observed but spurious deviations from ${f}(.)$ that are due to the random noise ($\epsilon$). The problem here is that this kind of highly flexible model tends to generate a lower training MSE, but performs poorly on the test set---which has the same underlying patterns due to ${f}(.)$, but different observed deviations from ${f}(.)$ because of $\epsilon$. Figure 2 provides an illustration of this idea. In this example, the true relationship between $X_{1}$ and $Y$ is linear (see the graph in the middle); we know this for certain because these data were simulated.
+If we attempt to minimize training MSE, the algorithms are more likely to estimate highly flexible models that try to touch every data point in the feature space of the training dataset. This might initially sound nice, but it means that the model is **overfitting** to the training set: i.e., the model is attempting to capture both the real patterns due to the true ${f}(.)$, as well as the observed but spurious deviations from ${f}(.)$ that are due to the random noise ($\epsilon$). The problem here is that this kind of highly flexible model tends to generate a lower training MSE, but performs poorly on the test set---which has the same underlying patterns due to ${f}(.)$, but different observed deviations from ${f}(.)$ because of $\epsilon$. Figure \@ref(fig:jl-figure2) provides an illustration of this idea. In this example, the true relationship between $X_{1}$ and $Y$ is linear (see the graph in the middle); we know this for certain because these data were simulated.
 
-![Modeling True Relationship v. Overfitting[]{label="fig:jl-figure2"}](images/ml/jl-figure2.png){#fig:jl-figure2 width="5.27in" height="2.33in"}
+```{r jl-figure2, fig.align='center', echo=FALSE, fig.cap='Modeling True Relationship v. Overfitting'}
+knitr::include_graphics('images/ml/jl-figure2.png', dpi = NA)
+```
 
 Thus, it is a better idea to try and minimize test error. In order to generate a smaller test error, the algorithms need to estimate a model that is generalizable. That is, they need to estimate models that do a better job of capturing the true relationship between the set of predictors ($X_{1},X_{2}$) and the $Y$, while ignoring the random observed deviations from the ${f}(.)$ due to $\epsilon$ (per Equation 1). Machine learning practitioners often refer to this approach as $"$focusing on the signal and ignoring the noise.$"$
 
@@ -82,9 +86,11 @@ In machine learning, **bias** is a measure of the size of the gap between $\hat{
 
 However, it is possible for the model to be too flexible. **Variance** is a measure of the stability or consistency of the estimated model across training sets. If small changes to the training set (e.g., dropping a few observations) causes large changes in $\hat{f}(.)$, then the variance is high. A highly flexible model tends to reduce bias but also increase variance (hence the idea of a $"$trade-off$"$). Thus, the goal is to fit a model that is flexible enough to capture the true relationship between the set of predictors $(X_{1},X_{2},...,X_{p})$ and $Y$, but not so flexible that it is also fitting to the observed deviations from ${f}(.)$ in the training set due to $\epsilon$.
 
-![Bias-Variance Trade-offs[]{label="fig:jl-figure3"}](images/ml/jl-figure3.png){#fig:jl-figure3 width="5.19in" height="2.3in"}
+```{r jl-figure3, fig.align='center', echo=FALSE, fig.cap='Bias-Variance Trade-offs'}
+knitr::include_graphics('images/ml/jl-figure3.png', dpi = NA)
+```
 
-Figure 3 provides an illustration of this idea. The first model is not flexible enough, leading to high bias (also known as **underfitting**); on the other hand, the third model is too flexible, which leads to higher variance across slightly different training sets (**overfitting**). The second model imposes the ideal amount of flexibility, which optimizes the bias-variance trade-off and yields the smallest test MSE of the three alternatives.
+Figure \@ref(fig:jl-figure3) provides an illustration of this idea. The first model is not flexible enough, leading to high bias (also known as **underfitting**); on the other hand, the third model is too flexible, which leads to higher variance across slightly different training sets (**overfitting**). The second model imposes the ideal amount of flexibility, which optimizes the bias-variance trade-off and yields the smallest test MSE of the three alternatives.
 
 ```{block, type="question"}
 **Check-in Question 3:** Explain why reducing bias can often entail an increase in variance.
@@ -108,9 +114,11 @@ Given this discussion, which methods are preferred? It depends on the size of th
 
 We can also classify machine learning methods according to whether they predict a specific outcome. In **supervised learning**, there is a clearly defined $"$correct answer$"$ -- and the purpose of the machine learning algorithm is to correctly predict that answer. For instance, let us assume we want to predict whether a U.S. citizen will vote in the next presidential election. This is an example of a supervised learning problem; since the person either will or will not vote, there is clearly a $"$correct answer.$"$ There are two types of supervised learning, which are distinguished by the type of outcome predicted: (1) **regression**, (2) **classification**. In regression, the goal is to predict a continuous or quantitative outcome: e.g., test scores, stock prices, inflation rates, number of children, and so on.[^24] In classification, the goal is to predict a categorical or discrete outcome: e.g., religion, political party membership, vote choice, occupation, whether a person holds a four-year degree.[^25]
 
-In **unsupervised learning**, the purpose of the machine learning algorithm is to examine the underlying structure of the data and identify $"$hidden$"$ patterns. It is not attempting to correctly predict an outcome. One well-known example of an unsupervised learning method is clustering: clustering algorithms (e.g., hierarchical, k-means) identify latent groups of observations by examining the relationships among the variables associated with the observations (Bryan 2004; Wagstaff and Cardie 2000; Witten 2011). In this case, we do not know ahead of time what the $"$correct$"$ or $"$true$"$ number of clusters is. Researchers can use clustering algorithms to identify more internally homogeneous groups of subjects (e.g., with respect to demographic characteristics, attitudes, preferences, consumption patterns). Figure 4 provides an illustration of how we may organize machine learning methods by type and subtype. Please note that the list of examples is not meant to be exhaustive.
+In **unsupervised learning**, the purpose of the machine learning algorithm is to examine the underlying structure of the data and identify $"$hidden$"$ patterns. It is not attempting to correctly predict an outcome. One well-known example of an unsupervised learning method is clustering: clustering algorithms (e.g., hierarchical, k-means) identify latent groups of observations by examining the relationships among the variables associated with the observations (Bryan 2004; Wagstaff and Cardie 2000; Witten 2011). In this case, we do not know ahead of time what the $"$correct$"$ or $"$true$"$ number of clusters is. Researchers can use clustering algorithms to identify more internally homogeneous groups of subjects (e.g., with respect to demographic characteristics, attitudes, preferences, consumption patterns). Figure \@ref(fig:jl-figure4) provides an illustration of how we may organize machine learning methods by type and subtype. Please note that the list of examples is not meant to be exhaustive.
 
-![Types of Machine Learning Methods[]{label="fig:jl-figure4"}](images/ml/jl-figure4.png){#fig:jl-figure4 width="6.18in" height="4.01in"}
+```{r jl-figure4, fig.align='center', echo=FALSE, fig.cap='Types of Machine Learning Methods'}
+knitr::include_graphics('images/ml/jl-figure4.png', dpi = NA)
+```
 
 **Check-in Question 4:** What is the main difference between supervised and unsup. learning?
 
@@ -158,9 +166,11 @@ Node purity or homogeneity is often measured using the Gini index or entropy. In
 
 $$G= \sum _{k=1}^{K}p_{mk} \left( 1-p_{mk} \right)$$
 
-How does this work in practice? For example, let us assume that in the training set, being white v. not being white was the strongest individual predictor of the Trump vote (i.e., it would maximize node purity). If this were the case, then the first split would be based on race: all white respondents would be assigned to the right branch, and all non-white respondents would be assigned to the left branch (see Figure 5 below). Next, let us assume that among white respondents, being above the mean on the 1-7 point political conservatism scale is the strongest predictor of the Trump vote; if so, then the second split would be based on whether the white respondents' conservatism score is $\leq  4.3$ (left branch) or $> 4.3$ (right branch).
+How does this work in practice? For example, let us assume that in the training set, being white v. not being white was the strongest individual predictor of the Trump vote (i.e., it would maximize node purity). If this were the case, then the first split would be based on race: all white respondents would be assigned to the right branch, and all non-white respondents would be assigned to the left branch (see Figure \@ref(fig:jl-figure5) below). Next, let us assume that among white respondents, being above the mean on the 1-7 point political conservatism scale is the strongest predictor of the Trump vote; if so, then the second split would be based on whether the white respondents' conservatism score is $\leq  4.3$ (left branch) or $> 4.3$ (right branch).
 
-![Example of a Decision Tree[]{label="fig:jl-figure5"}](images/ml/jl-figure5.png){#fig:jl-figure5 width="4.73in" height="2.38in"}
+```{r jl-figure5, fig.align='center', echo=FALSE, fig.cap='Example of a Decision Tree'}
+knitr::include_graphics('images/ml/jl-figure5.png', dpi = NA)
+```
 
 In this simple example, the observations (or respondents) in the training set are assigned to one of three non-overlapping regions in the predictor space: ${R_{1}= \{Vote \vert minority}\}$, $R_{2} = \{Vote \vert white, conservatism \leq 4.3\}$, and $R_{3}= \{Vote \vert white, conservatism > 4.3 \}$. To predict the outcome class of an observation in the validation or test set, we simply look at which region the observation would be assigned to based on its predictor values (e.g., is $x_{1} = white$?), and then choose the most common class of that region. For instance, if the test observation would belong to $R_{3}$, and $70\%$ of the training observations in $R_{3}$ voted for Trump, then the predicted class of that test observation would be $Vote=1$. In general, of course, there are usually more than three regions (or terminal nodes); the splitting ends once a stopping point is reached: e.g., in order to satisfy the minimum terminal node size.
 
@@ -245,48 +255,6 @@ target function, training set, test set, expected prediction error (EPE), traini
 ## Answers to Application Questions
 
 There is no single correct answer. However, for both questions, a strong answer will specify the method type (e.g., supervised, regression v. classification) and discuss issues such as the bias-variance trade-off, cross-validation, model interpretability, and prediction accuracy.
-
-## Bibliography
-
-Blaydes, Lisa, Justin Grimmer, and Alison McQueen. 2018. $"$Mirrors for Princes and Sultans: Advice on the Art of Governance in the Medieval Christian and Islamic Worlds.$"$ *Journal of Politics* 80(4): 1150--67.
-
-Bonica, Adam. 2018. $"$Inferring Roll‐Call Scores from Campaign Contributions Using Supervised Machine Learning.$"$ *American Journal of Political Science* 62(4): 830--48.
-
-Cantú, Francisco, and Sebastián M. Saiegh. 2011. $"$Fraudulent Democracy? An Analysis of Argentina's Infamous Decade Using Supervised Machine Learning.$"$ *Political Analysis* 19(4): 409--33.
-
-Carroll, Robert J., and Brenton Kenkel. 2019. $"$Prediction, Proxies, and Power.$"$ *American Journal of Political Science*.
-
-Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2017. *The Elements of Statistical Learning: Data Mining, Inference, and Prediction*. 2nd ed. New York City: Springer.
-
-James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. *An Introduction to Statistical Learning: With Applications in R*. 7th ed. New York City: Springer.
-
-Larsen, Richard J., and Morris L. Marx. 2017. *An Introduction to Mathematical Statistics and Its Applications*. 6th ed. New York City: Pearson.
-
-Mitchell, Tom. 1997. *Machine Learning*. New York City: McGraw-Hill Education.
-
-Mueller, Hannes F., and Christopher Rauh. 2018. $"$Reading Between the Lines: Prediction of Political Violence Using Newspaper Text.$"$ *American Political Science Review* 112(2): 358--75.
-
-Ng, Andrew. *Machine Learning*. Stanford University: Coursera. https://www.coursera.org/learn/ machine-learning/.
-
-Parthasarathy, Ramya, Vijayendra Rao, and Nethra Palaniswamy. 2019. $"$Deliberative Democracy in an Unequal World: A Text-As-Data Study of South India's Village Assemblies.$"$ *American Political Science Review* 113(3): 623--40.
-
-Rice, John A. 2007. *Mathematical Statistics and Data Analysis*. 3rd ed. Belmont, CA: Brooks/Cole, Cengage Learning.
-
-Samuel, Arthur L. 1959. $"$Some Studies in Machine Learning Using the Game of Checkers.$"$ *IBM Journal of Research and Development* 3(3): 210--29.
-
-Bryan, Jenny. 2004. "Problems in Gene Clustering Based on Gene Expression Data." Special Issue on Multivariate Methods in Genomic Data Analysis 90(1): 44--66.
-
-Cutler, Adele. 2005. "Random Forests." In Encyclopedia of Statistics in Behavioral Science, American Cancer Society. https://onlinelibrary.wiley.com/doi/abs/10.1002/0470013192.bsa530.
-
-Cutler, Adele, Chris Corcoran, and Leslie Toone. 2014. "Bagging." In Wiley StatsRef: Statistics Reference Online, American Cancer Society. https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat06529.
-
-Mason, Winter, Jennifer Wortman Vaughan, and Hanna Wallach. 2014. "Computational Social Science and Social Computing." Machine Learning 95(3): 257--60.
-
-Wagstaff, Kiri, and Claire Cardie. 2000. "Clustering with Instance-Level Constraints." In Proceedings of the Seventeenth International Conference on Machine Learning, ICML '00, San Francisco, CA, USA: Morgan Kaufmann Publishers Inc., 1103--1110.
-
-Wallach, Hanna M. 2006. "Topic Modeling: Beyond Bag-of-Words." In Proceedings of the 23rd International Conference on Machine Learning, ICML '06, New York, NY, USA: Association for Computing Machinery, 977--984. https://doi.org/10.1145/1143844.1143967.
-
-Witten, Daniela M. 2011. "Classification and Clustering of Sequencing Data Using a Poisson Model." Ann. Appl. Stat. 5(4): 2493--2518.
 
 [^22]: Here is a more detailed explanation of what is meant by this sentence. The squared difference between $Y$ and $\hat{Y}$ is actually a continuous random variable. In statistical theory, a random variable is a variable whose value is the outcome of a random process. Recall that in the general case $Y = f(X) + \epsilon$, where $X$ represents a set of predictors. Since $Y$ is the function of the random error component $\epsilon$, $Y$ is by definition a random variable. Now, notice that since $(Y-\hat{Y})^{2}$ is a function of the random variable $Y$, $(Y-\hat{Y})^{2}$ must also be a random variable. In particular, $(Y-\hat{Y})^{2}$ is a continuous random variable, since it can theoretical take on an infinite number of possible (non-negative) values. We can think of the expected value of a random variable as being the weighted or "long-run" average of the random variable's possible values. To simplify the notation, let $W=(Y-\hat{Y})^{2}$. Formally, let's assume that the random variable $W$ has a probability density function $g(w)$, which determines the distribution of the probabilities associated with the possible values of $W$. The lower-case $w$ represents specific possible values of the random variable $W$. In this case, then $E(W) = \int_{-\infty}^{\infty} wg(w) dw$.
 
