@@ -11,15 +11,10 @@ If you're new to Git and R Studio, here is [nice introduction to using these too
 Wihtin R Studio, Click on `File` > `New Project` > `Version Control` > `Git`
 
 Copy and Paste this in the `Project URL` field: `https://github.com/nulib-oer/empirical-methods-polisci.git`
-```
 
 This downloads a copy of the `empirical-methods-polisci` project folder and git history to your machine. 
 
-- Install the [Bookdown](https://bookdown.org/) R package from an R Studio R console ([bookdown installation instructions](https://bookdown.org/yihui/bookdown/get-started.html)):
-
-```
-> install.packages('bookdown')
-```
+- Install the [Bookdown](https://bookdown.org/) R package from an R Studio R console ([bookdown installation instructions](https://bookdown.org/yihui/bookdown/get-started.html)): `> install.packages('bookdown')`
 
 - If you reload your R studio session or double-click the `empirical-methods-polisci.Rproj` file, the interface will change to include some Bookdown buttons, like `Build Book`.
 
