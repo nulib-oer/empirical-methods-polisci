@@ -120,7 +120,7 @@ In **unsupervised learning**, the purpose of the machine learning algorithm is t
 knitr::include_graphics('images/ml/jl-figure4.png', dpi = NA)
 ```
 
-**Check-in Question 4:** What is the main difference between supervised and unsup. learning?
+**Check-in Question 4:** What is the main difference between supervised and unsupervised learning?
 
 ## Method: setup/overview
 
@@ -220,7 +220,7 @@ In a very recent study, @parthasarathy2019a use natural language processing (NLP
 
 ### Example 5: Peace and Conflict
 
-In a fascinating paper, @mueller2018a combine a number of methods (i.e., topic models, lasso regression, linear fixed effects models) to predict political violence using newspaper text. First, they downloaded 700,000 newspaper articles about events in 185 countries from the *New York Times* (NYT), the *Washington Post* (WP), and the *Economist*. All available articles published between 1975-2015 were included in the text corpus. Topic modeling based on Dirichlet allocation (LDA) is used to reduce the high dimensionality of the text corpus (i.e., almost a million unique words, after preprocessing) to 15 topics. The relative prevalence of the topics are aggregated at the level of country-year and used as predictors in linear fixed effects models. The results show that the within-country variation over time in topic prevalence is a robust predictor of the outbreak of civil war and armed conflict: the area under the curve (AUC) indicates that about 73-82$\%$ of the outcomes can be correctly predicted using only within unit variation. The authors also use lasso regressions, an automated variable selection method, to identify the most important predictors: e.g., the prevalence of the $"$justice$"$ topic is a significant predictor of political violence across several different values of lambda, the penalty parameter. This finding is substantively important because it reinforces the idea that institutional design, the rule of law, and social stability are often tightly coupled together in reality.
+In a fascinating paper, @mueller2018a combine a number of methods (i.e., topic models, lasso regression, linear fixed effects models) to predict political violence using newspaper text. First, they downloaded 700,000 newspaper articles about events in 185 countries from the *New York Times* (NYT), the *Washington Post* (WP), and the *Economist*. All available articles published between 1975-2015 were included in the text corpus. Topic modeling based on Dirichlet allocation (LDA) is used to reduce the high dimensionality of the text corpus (i.e., almost a million unique words, after preprocessing) to 15 topics. The relative prevalence of each topic is aggregated at the level of country-year and used as predictors in linear fixed effects models. The results show that the within-country variation over time in topic prevalence is a robust predictor of the outbreak of civil war and armed conflict: the area under the curve (AUC) indicates that about 73-82$\%$ of the outcomes can be correctly predicted using only within unit variation. The authors also use lasso regressions, an automated variable selection method, to identify the most important predictors: e.g., the prevalence of the $"$justice$"$ topic is a significant predictor of political violence across several different values of lambda, the penalty parameter. This finding is substantively important because it reinforces the idea that institutional design, the rule of law, and social stability are often tightly coupled together in reality.
 
 ### Example 6: International Relations
 
@@ -250,7 +250,32 @@ The era of $"$big data$"$ has arrived. Large technology companies such as Amazon
 
 ## Key Terms
 
-target function, training set, test set, expected prediction error (EPE), training error, test error, overfitting, underfitting, reducible error, irreducible error, expected value, bias, variance, bias-variance trade-offs, parametric methods, non-parametric methods, model interpretability, model flexibility, k-fold cross-validation, prediction v. (causal) inference, supervised v. unsupervised learning, regression v. classification methods, model selection, candidate model, tuning parameters, validation set approach
+- target function
+- training set
+- test set
+- expected prediction error (EPE)
+- training error
+- test error
+- overfitting
+- underfitting
+- reducible error
+- irreducible error
+- expected value
+- bias
+- variance
+- bias-variance trade-offs
+- parametric methods
+- non-parametric methods
+- model interpretability
+- model flexibility
+- k-fold cross-validation
+- prediction v. (causal) inference
+- supervised v. unsupervised learning
+- regression v. classification methods
+- model selection
+- candidate model
+- tuning parameters
+- validation set approach
 
 ## Answers to Application Questions
 

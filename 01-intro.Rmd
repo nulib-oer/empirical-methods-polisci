@@ -10,7 +10,7 @@ There are four primary subfields in political science (although we can consider 
 
 - **Comparative politics** as a subfield focuses upon comparisons of countries or regions to one another. Typically, 'comparativists' have expertise that enables them to dig deeply into their region. However, the questions they ask are broadly relevant beyond the researcher's region of expertise.
 
-- **American politics** focuses upon\....American politics. Here, scholars' work typically focus upon behavior (e.g. voting), institutions (e.g. Congress), or are more historically focused (American Political Development, a.k.a. 'APD'). In other countries (e.g. Australia, Americanists are considered 'comparativists' \... so it's all relative). Here, scholars typically focus on one of the approaches (e.g. institutions), but increasingly more scholars focus on both behavior and institutions, for example.
+- **American politics** focuses upon\....American politics. Here, scholars typically focus on behavior (e.g. voting), institutions (e.g. Congress), or history (American Political Development, a.k.a. 'APD'). In other countries (e.g. Australia, Americanists are considered 'comparativists' \... so it's all relative). Here, scholars typically focus on one of the approaches (e.g. institutions), but increasingly more scholars focus on both behavior and institutions, for example.
 
 - **International relations**, also known as IR or world politics, focuses on large-scale global questions. Questions here are often about trade, economic development, and/or political economy. There are different branches of IR. Focusing on the quantitative side, many IR scholars work with large datasets, perhaps only slightly more so than in other fields. Qualitative work, specifically, case studies, represents approximately 45% of the field as measured by [@bennettWePreachWhat2003].
 
@@ -38,9 +38,9 @@ Questions in political science span the globe and often consider power: who has 
 
 -   Is there a 'resource curse'?
 
-These are big questions and where there has been progress made on many of them, they are often so large and broad that a different interpretation can lead to a different finding (for example, what would be a best outcome for a political institution? Stability (and thus low turnover) or a responsive government?
+These are big questions. While progress has been made toward answering many of them, they are often so large and broad that a different interpretation can lead to a different finding: for example, what would be a best outcome for a political institution, Stability (and thus low turnover) or a responsive government?
 
-As we go through the text, we'll introduce different research questions and topics that span subfields and methods to demonstrate how varied political science research is.
+As we go through the text, we'll introduce different research questions and topics that span subfields and methods to demonstrate the range of political science research.
 
 ## What are Empirical Political Science Methods?
 
