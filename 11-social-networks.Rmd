@@ -323,7 +323,7 @@ Perhaps most intuitively, nodes in social network analyses may represent individ
 
 In another class of studies, nodes represent organizations. These may be transnational human rights organizations, as in Murdie's ([@Murdie2014]) investigation, mentioned in an earlier section. Another is Fowler et al.'s ([@FowlerEtAl2007]) evaluation of job placement in a network of university political science departments across the United States.
 
-A third class of inquiry focuses on intergovernmental relations in which nodes represent nation-states. Alcañiz's ([@Alcaniz2010]) analysis of transgovernmental scientific collaboration among Latin American countries falls into this group.
+A third class of inquiry focuses on intergovernmental relations in which nodes represent nation-states. Alcañiz's ([@Alcaniz2010]) analysis of trans-governmental scientific collaboration among Latin American countries falls into this group.
 
 ## Conclusion
 
@@ -339,7 +339,7 @@ Social network analysis has the potential to refine our interpretations of socia
 
 ## Application Questions
 
-1.  Which of the networks listed in [section 11.2.1 are examples of social networks?
+1.  Which of the networks listed in [section 11.2.1] are examples of social networks?
 
 2.  Using the graph in figure \@ref(fig:fig11-15), compute the following:
 
