@@ -58,7 +58,7 @@ Small n methods are characterized by an emphasis on detail. A researcher has to 
 
 The typical methods used in small n research are interviews, participant observation, focus groups, process tracing, and ethnography. Each method has its advantages and disadvantages and a researcher can utilize more than one these methods depending on the aims of their research. In deciding on a small n method a researcher must consider the goals of the research, validity, and conceptual framework that will feed the researcher's broader question. The diagram below illustrates that a small n qualitative researcher should be purposeful in their research design. They must consider their overall question. Specify the goals of their research, consider the theories that are driving the conceptual framework of their research, and consider the validity (does it make sense) of their research design.
 
-```{r questiondiagram, fig.align='center', fig.cap='Research Methods Diagram'}
+```{r questiondiagram, fig.align='center', fig.cap='Research Methods Diagram', echo=FALSE}
 knitr::include_graphics('images/questiondiagram.png', dpi = NA)
 ```
 Focusing on the methods portion of the diagram, this chapter will discuss in further detail each small n qualitative method.
