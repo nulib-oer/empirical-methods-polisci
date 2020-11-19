@@ -120,7 +120,7 @@ In **unsupervised learning**, the purpose of the machine learning algorithm is t
 knitr::include_graphics('images/ml/jl-figure4.png', dpi = NA)
 ```
 
-**Check-in Question 4:** What is the main difference between supervised and unsup. learning?
+**Check-in Question 4:** What is the main difference between supervised and unsupervised learning?
 
 ## Method: setup/overview
 
@@ -250,7 +250,32 @@ The era of $"$big data$"$ has arrived. Large technology companies such as Amazon
 
 ## Key Terms
 
-target function, training set, test set, expected prediction error (EPE), training error, test error, overfitting, underfitting, reducible error, irreducible error, expected value, bias, variance, bias-variance trade-offs, parametric methods, non-parametric methods, model interpretability, model flexibility, k-fold cross-validation, prediction v. (causal) inference, supervised v. unsupervised learning, regression v. classification methods, model selection, candidate model, tuning parameters, validation set approach
+- target function
+- training set
+- test set
+- expected prediction error (EPE)
+- training error
+- test error
+- overfitting
+- underfitting
+- reducible error
+- irreducible error
+- expected value
+- bias
+- variance
+- bias-variance trade-offs
+- parametric methods
+- non-parametric methods
+- model interpretability
+- model flexibility
+- k-fold cross-validation
+- prediction v. (causal) inference
+- supervised v. unsupervised learning
+- regression v. classification methods
+- model selection
+- candidate model
+- tuning parameters
+- validation set approach
 
 ## Answers to Application Questions
 
