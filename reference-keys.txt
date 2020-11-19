@@ -63,6 +63,7 @@ introduction-1
 what-is-a-theory
 what-is-a-good-theory
 literature-reviews-and-theory
+theory-building-vs-theory-testing
 conclusion-1
 application-questions-1
 key-terms-1
@@ -102,6 +103,11 @@ surveys
 introduction-background
 brief-history-of-survey-research
 designing-a-survey-research
+developing-the-survey
+sampling
+simple-random-sampling-srs
+fielding-the-survey
+analyzing-the-results
 applications-1
 advantages-of-method
 disadvantages-of-method-surveys-easier-said-than-done
