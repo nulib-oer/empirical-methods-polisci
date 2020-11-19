@@ -52,7 +52,7 @@ When the nodes in a network represent people, organizations, or another type of 
 
 There are different ways to represent a network. The two most accessible methods are sociograms and adjacency matrices. The sociogram in figure \@ref(fig:fig11-1) and the adjacency matrix in Table 11.1 are representations of the same network.
 
-```{r fig11-1, fig.align='center', fig.cap='A sociogram for a network with nodes [A, B, C, D, E]. Each circle represents a node and each line represents a relationship between the two nodes it connects'}
+```{r fig11-1, fig.align='center', fig.cap='A sociogram for a network with nodes [A, B, C, D, E]. Each circle represents a node and each line represents a relationship between the two nodes it connects', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-1.png', dpi = NA)
 ```
 
@@ -76,7 +76,7 @@ To understand how an adjacency matrix works, first recall that a **matrix** is a
 
 The two most fundamental attributes of a network are whether it is *directed* and whether it is *weighted*.
 
-```{r fig11-2, fig.align='center', fig.cap='An undirected (left) and directed (right) graph of a friendship network among students. The ties in the undirected graph represent a mutual friendship between pairs of students. For example, there is a tie between Orla and Parveen, indicating that Orla is friends with Parveen and that Parveen is friends with Orla|their relationship is symmetric.'}
+```{r fig11-2, fig.align='center', fig.cap='An undirected (left) and directed (right) graph of a friendship network among students. The ties in the undirected graph represent a mutual friendship between pairs of students. For example, there is a tie between Orla and Parveen, indicating that Orla is friends with Parveen and that Parveen is friends with Orla|their relationship is symmetric.', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-2.png', dpi = NA)
 ```
 
@@ -96,7 +96,7 @@ Earlier, we described a network to model mentorship and advising between politic
 
 A second example of a directed graph is the network of students in an elementary school class based on friendship ties identified by the students themselves 11.2: if Inge identifies Jaylen as a friend, then there exists a friendship tie from Inge to Jaylen; if Jaylen identifies Inge as a friend, then there exists a friendship tie from Jaylen to Inge. Kiko identifies both Inge and Jaylen as friends, so there exist ties from Kiko to Inge and from Kiko to Jaylen. Inge identifies Kiko as a friend, but Jaylen does not; thus, there exists a tie from Inge to Kiko, but there is no tie from Jaylen to Kiko---despite the tie from Kiko to Jaylen. The ability to denote such asymmetric relationships is the key feature of directed graphs.
 
-```{r fig11-3, fig.align='center', fig.cap='A directed network of adviser--student relationships between political scientists'}
+```{r fig11-3, fig.align='center', fig.cap='A directed network of adviser--student relationships between political scientists', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-3.png', dpi = NA)
 ```
 
@@ -131,7 +131,7 @@ To visualize node attributes in a network diagram, the physical aspects of a nod
 Now that we have covered the foundations of graph elements, we can consider some concepts often implemented in the study social networks. We begin by describing key characteristics that apply to an entire graph, followed by definitions of node-specific measures. We then introduce some special types of graphs.
 
 
-```{r fig11-4, fig.align='center', fig.cap='Sociograms for undirected (left) and directed (right) graphs with highlighted geodesics between Kiko and Mega'}
+```{r fig11-4, fig.align='center', fig.cap='Sociograms for undirected (left) and directed (right) graphs with highlighted geodesics between Kiko and Mega', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-4.png', dpi = NA)
 ```
 
@@ -149,7 +149,7 @@ We can find the **mean path length**, also called the **average path length** or
 
 The **diameter** of a network is the maximum geodesic distance between any two vertices in the network [@WassermanFaust1994]. Note that the path under evaluation is *not necessarily* the *longest path* between any two vertices, but the longest of the geodesic paths in the graph.
 
-```{r fig11-5, fig.align='center', fig.cap='Sociograms for the two longest geodesics (left and center) in the directed weighted email correspondence network and one of the six longest paths (right). The path length of each of the geodesics is 6, meaning that the diameter of the graph is 6. Visiting each node only once, there are six longest paths, each of length 8. Note that because the graph is directed, the paths in each sociogram must follow the directions of the arrows'}
+```{r fig11-5, fig.align='center', fig.cap='Sociograms for the two longest geodesics (left and center) in the directed weighted email correspondence network and one of the six longest paths (right). The path length of each of the geodesics is 6, meaning that the diameter of the graph is 6. Visiting each node only once, there are six longest paths, each of length 8. Note that because the graph is directed, the paths in each sociogram must follow the directions of the arrows', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-5.png', dpi = NA)
 ```
 
@@ -167,7 +167,7 @@ If a subgraph is a connected graph---if every node is reachable from every other
 
 A **disconnected graph** is one in which at least one node is not reachable via a path from at least one other node [@WassermanFaust1994]. An equivalent definition describes a disconnected network as one in which at least one connected component is not reachable from another. This means that a disconnected graph has at least two connected components. The network shown in figure \@ref(fig:fig11-6) is a disconnected graph with three connected components.
 
-```{r fig11-6, fig.align='center', fig.cap='In the complete graph (left), each node is directly connected to all the other nodes; this graph is also a complete graph. In the connected graph in the center, each node is reachable from all other nodes in the graph. The disconnected graph (right) has three connected components; there is no way to get from some nodes to certain others'}
+```{r fig11-6, fig.align='center', fig.cap='In the complete graph (left), each node is directly connected to all the other nodes; this graph is also a complete graph. In the connected graph in the center, each node is reachable from all other nodes in the graph. The disconnected graph (right) has three connected components; there is no way to get from some nodes to certain others', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-6.png', dpi = NA)
 ```
 
@@ -181,7 +181,7 @@ Note that though these metrics can be computed for all nodes in a graph, they on
 
 **Betweenness centrality.** The **betweenness centrality** metric evaluates a given node's ability to create connections *between* other nodes. According to Freeman, who formalized the definition of the metric, betweenness is important because "a vertex falling between two others can facilitate, block, distort, or falsify communication between the two; it can more or less completely control their communication" ([@Freeman1977 p.36]). For a given target node, betweenness centrality is found by computing the sum, for all other pairs of nodes in the component, of the ratio of the number of geodesics between the pair of nodes that pass through the target node to the total number of geodesics between the pair of nodes [@Freeman1977]. More formally, we can write the definition of betweenness for a node $v$ as: $$Betweenness(v) = \sum_{i \neq j \neq v}^{n}\frac{g_{ij}(v)}{g_{ij}} \label{eq:Betweenness}$$ where $g_{ij}$ is the number of geodesics between node $i$ and node $j$, and $g_{ij}(v)$ is the number of such paths that pass through node $v$ [@Freeman1977]. The graph in figure \@ref(fig:fig11-7) displays each node's betweenness.
 
-```{r fig11-7, fig.align='center', fig.cap='Betweenness (left) and closeness (right) for the undirected friendship network. Note that Parveen has the highest value for each measure'}
+```{r fig11-7, fig.align='center', fig.cap='Betweenness (left) and closeness (right) for the undirected friendship network. Note that Parveen has the highest value for each measure', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-7.png', dpi = NA)
 ```
 
@@ -189,7 +189,7 @@ knitr::include_graphics('images/social-networks/11-7.png', dpi = NA)
 
 **Degree centrality.** A third measure of centrality is **degree centrality**, which considers important nodes to be those that have many neighbors. The **degree** of a vertex tells us its number of neighbors. To calculate the degree of a vertex in an undirected graph, we can simply count the number of edges it has [@WassermanFaust1994]. Let us return to the example of an undirected friendship network among classmates as inferred by the teacher (shown in figure \@ref(fig:fig11-8) with each node's degree labeled); in this network, if Parveen is connected to Inge, Nyasha, Orla, Quinn, and Tracy, then Parveen has a degree of $5$.
 
-```{r fig11-8, fig.align='center', fig.cap='Degree as measured in undirected (left) and directed (indegree, center; and outdegree, right) networks'}
+```{r fig11-8, fig.align='center', fig.cap='Degree as measured in undirected (left) and directed (indegree, center; and outdegree, right) networks', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-8.png', dpi = NA)
 ```
 
@@ -203,7 +203,7 @@ The **mean degree** of a graph is the mean average of the degrees for all the ve
 
 In order to evaluate clustering within a network, we must first introduce the notion of a **triple**, sometimes called a **triplet**, which is a connected component with three nodes---that is, it's a triad with at least two edges. If a triple forms a complete graph---that is, if each node is connected to both the others---then it is a **closed triple**, also known as a **triangle**; otherwise, one pair of nodes in the triple are not adjacent so it is an **open triple**. An **ordered triple** is one for which the vertex order is a characteristic of the triple; for example, if the vertices $[A, B, C]$ form a triangle, the ordered triples $ABC$, $ACB$, $BAC$, $BCA$, $CAB$, and $CBA$ are each distinct---but note that the *triangles* formed by each triple are all the same.
 
-```{r fig11-9, fig.align='center', fig.cap='A histogram of the degree distribution for the undirected friendship network shows that there are two nodes with degree $1$, four with degree $2$, and one each with degrees $3$, $4$, or $5$'}
+```{r fig11-9, fig.align='center', fig.cap='A histogram of the degree distribution for the undirected friendship network shows that there are two nodes with degree $1$, four with degree $2$, and one each with degrees $3$, $4$, or $5$', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-9.png', dpi = NA)
 ```
 
@@ -217,7 +217,7 @@ We can compute the average local clustering coefficient for a graph $g$ by takin
 
 Finally, to calculate the **global clustering coefficient**, also called the **global transitivity**, for a graph $g$, we take the ratio of thrice the number of triangles to the number of all ordered triples---both closed and open---in the graph: $$Transitivity_{global}(g) = \frac{3 \times Triangles(g)}{Triples_{ordered}(g)}$$ where $Triangles(g)$ is the total number of triangles in graph $g$ and $Triples_{ordered}(g)$ is the total number of ordered triples in $g$ [@Opsahl2013].
 
-```{r fig11-10, fig.align='center', fig.cap='Local transitivity for the undirected friendship network (with global transitivity = $0.3913$ and average local transitivity = $0.5407$)'}
+```{r fig11-10, fig.align='center', fig.cap='Local transitivity for the undirected friendship network (with global transitivity = $0.3913$ and average local transitivity = $0.5407$)', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-10.png', dpi = NA)
 ```
 
@@ -231,7 +231,7 @@ The **density** of a network is the ratio of the number of edges it contains to 
 
 A **geographic network** is one in which each node is connected to the *k* nearest nodes, with *k* ranging from $1$ to the total number of nodes in the network minus $1$. If *k* takes on the maximum value---that is, if each node is connected to all the other nodes---then the network is called a **complete graph**. figure \@ref(fig:fig11-11) shows a geographic network with $k = 4$.
 
-```{r fig11-11, fig.align='center', fig.cap='A geographic network with $k = 4$. Each node is connected to its four closest neighbors'}
+```{r fig11-11, fig.align='center', fig.cap='A geographic network with $k = 4$. Each node is connected to its four closest neighbors', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-11.png', dpi = NA)
 ```
 
@@ -247,7 +247,7 @@ These experiments show that the small-world hypothesis appears to be consistent 
 
 Small-world networks exhibit two key characteristics: (1) the mean local clustering coefficient is high---that is, on average, a node's neighbors are highly connected to each other [@WattsStrogatz1998]; and (2) the mean geodesic distance is low---that is, on average, the distance between nodes is short[@WattsStrogatz1998]. Given high average clustering, we might expect such networks to be dense, but in fact, they tend to have relatively few edges [@TakesKosters2011]. Because they have a small mean path length, the diameter---the largest geodesic distance between any two nodes---is "exponentially smaller than the size of the network" [@Kleinberg2000 p.845].
 
-```{r fig11-12, fig.align='center', fig.cap='A random network with N = 15 and p = 0:2'}
+```{r fig11-12, fig.align='center', fig.cap='A random network with N = 15 and p = 0:2', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-12.png', dpi = NA)
 ```
 
@@ -263,7 +263,7 @@ A *power-law function* is a relationship between two variables, $x$ and $y$, of 
 
 Scientific studies across a variety of disciplines have indicated that power-law networks abound; Newman, for instance, comments on the "ubiquity of power-law behaviour in the natural world" [@Newman2005]. In new research, however, Broido and Clauset challenge the general belief that power-law networks are as widespread as many have claimed, finding specifically that "social networks are at best weakly scale free, and although a power-law distribution can be a statistically plausible model for these networks, it is often not a better model than a non-scale-free distribution" ([@BroidoClauset2019]).
 
-```{r fig11-13, fig.align='center', fig.cap='Sociograms of a single small-world network with N = 17 nodes. This graph has a diameter of 4, mean degree centrality of 3:1 and a global clustering coefficient of 0:155'}
+```{r fig11-13, fig.align='center', fig.cap='Sociograms of a single small-world network with N = 17 nodes. This graph has a diameter of 4, mean degree centrality of 3:1 and a global clustering coefficient of 0:155', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-13.png', dpi = NA)
 ```
 
@@ -277,7 +277,7 @@ Here we describe in detail two studies of social networks in the domain of polit
 
 The authors implement a machine learning algorithm (see [ch12](./machine-learning.html) for an introduction to machine learning methods) to label a set of Twitter users (the *egos*) by their political leaning based on the content of their politically oriented tweets. Using the same classification method, they identify the egos' neighbors based on outgoing ties---the users whom the ego *follows* on Twitter (the *alters*)---as either Democrats or Republicans (with alters found to be non-political excluded). The result is a directed *ego network* around each ego, with alters labeled according to their own political leaning.
 
-```{r fig11-14, fig.align='center', fig.cap='A sociogram and histogram of the corresponding degree distribution for a power-law network'}
+```{r fig11-14, fig.align='center', fig.cap='A sociogram and histogram of the corresponding degree distribution for a power-law network', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-14.png', dpi = NA)
 ```
 
@@ -331,7 +331,7 @@ Social networks exist nearly everywhere that social entities exist. We can analy
 
 Technological innovations, in particular, have broadened the means by which we generate and manage social network data: in addition to traditional methods, we can now collect or access data with online surveys; from repositories containing datasets automatically produced by computational routines; as well as by combing through administrative, cultural, genealogical, historical, and other records stored in digital archives. Through these avenues, diverse datasets of increasing sizes are becoming more readily available to a larger audience of researchers. Political scientists and other scholars in the social sciences can ask an expanding range of research questions about social networks, and study these networks with an evolving body of methods.
 
-```{r fig11-15, fig.align='center', fig.cap='Sociograms for Questions 2 (left) and 3 (right)'}
+```{r fig11-15, fig.align='center', fig.cap='Sociograms for Questions 2 (left) and 3 (right)', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-15.png', dpi = NA)
 ```
 
@@ -511,6 +511,6 @@ Social network analysis has the potential to refine our interpretations of socia
 
     6.  This network is most likely to be a small-world network because it has a large proportion of nodes with average degree centrality, and smaller proportions of nodes with low or high degree centrality. Furthermore: It can't be a geographic network because degree centrality varies by node. It is not likely to be a power-law network because it has several nodes of the maximum degree (also, it's unlikely that a graph with only sixteen nodes could follow a power-law distribution). It is not likely to be a random network with $p = .7$ because that would imply that approximately $70\%$ of pairs of nodes would be connected, which would, in turn, imply an average degree centrality of $p \times N = .7 \times 16 = 10.5$; we know, however, that the mean degree is much lower than that as the maximum degree is $4$.
     
-```{r fig11-16, fig.align='center', fig.cap='Highlighted geodesic between 1 and 7'}
+```{r fig11-16, fig.align='center', fig.cap='Highlighted geodesic between 1 and 7', echo=FALSE}
 knitr::include_graphics('images/social-networks/11-16.png', dpi = NA)
 ```

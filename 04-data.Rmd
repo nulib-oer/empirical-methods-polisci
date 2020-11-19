@@ -53,7 +53,7 @@ In some cases, sample selection requires more sophisticated methods. Two additio
 
 **Cluster sampling** is sometimes confused with stratified sampling, yet they are used for different purposes and the sampling procedure is distinct. Clusters are also groups of subjects, yet they are not constructed to compare them with each other. On the contrary, clusters should ideally have heterogeneity within, yet not differ greatly from other clusters. Once subjects are grouped in clusters, clusters are selected through a simple random method; all of the individuals within the selected clusters are in the sample. Following the above example, instead of walking around all campus in search of our survey respondents, we could cluster professors by Department and survey all professors of the randomly selected clusters (Departments).
 
-```{r samples, fig.align='center', fig.cap='Stratified vs. Clustered sampling'}
+```{r samples, fig.align='center', fig.cap='Stratified vs. Clustered sampling', echo=FALSE}
 knitr::include_graphics('images/data/samples.png', dpi = NA)
 ```
 
@@ -79,7 +79,7 @@ In sum, surveys are an essential tool in data collection, but must be designed c
 
 Another aspect we must take into consideration before data collection is specifically how our concept will be measured, or operationalized. Whichever our data collection process is, we must be certain that what we are measuring corresponds to the concept we wish to study. A good measurement must be reliable and valid. **Reliability** means that every time you measure you should obtain the same results. **Validity** refers to the fact that the measure actually represents the concept we are interested in. As the figure below illustrates, a measure can be reliable if all measures consistently capture the same phenomenon, yet not valid if this phenomenon is not the same as our concept. It can be neither reliable nor valid if it does not consistently measure the same thing and that thing is not our concept. A measure that is both reliable and valid will be correctly capturing our concept in every iteration.
 
-```{r target, fig.align='center', fig.cap='Validity and reliability'}
+```{r target, fig.align='center', fig.cap='Validity and reliability', echo=FALSE}
 knitr::include_graphics('images/data/target.png', dpi = NA)
 ```
 
@@ -126,7 +126,7 @@ The last measure of central tendency is the **mode**. The mode is the value that
 
 All three measures are complementary when describing the center of data. Furthermore, having these three measures provides a sense of how the data is shaped. If the mean, median and mode are similar, the distribution is symmetrical. When the mean is below the median and the mode, it means there are extreme values in the lower half of the distribution that are pulling the mean towards that end. This results in a **negatively skewed distribution**. On the contrary, high extreme values pull the mean towards the upper end, thus resulting in a **positively skewed distribution**. In addition, based on the number of modes, we have information on the modality of the distribution.
 
-```{r plots, fig.align='center', fig.cap='Types of distributions'}
+```{r plots, fig.align='center', fig.cap='Types of distributions', echo=FALSE}
 knitr::include_graphics('images/data/plots.png')
 ```
 
