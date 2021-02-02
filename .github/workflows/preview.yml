@@ -1,32 +1,34 @@
-name: Bookdown Preview
+# This is a basic workflow to build and deploy your open textbook with Bookdown.
 
 on:
   push:
-    branches:
+    branches: 
       - main
 
+# Courtesy of _Github actions with R_, available: https://ropenscilabs.github.io/actions_sandbox/
+
+name: renderbook
+
 jobs:
-  build:
-    name: Build and Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    container:
-      image: rstudio/r-base:3.6-bionic
+  bookdown:
+    name: Render-Book
+    runs-on: macOS-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      - name: Install System Dependencies
-        run: sudo apt-get update && apt-get install -y --no-install-recommends
-      - name: Install Bookdown
-        run: |-
-          Rscript -e "install.packages('bookdown', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
-      - name: Build book
-        run: |-
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install R Markdown and Bookdown packages
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
+      - name: Install TinyTeX
+        run: Rscript -e 'tinytex::install_tinytex()'
+      - name: Build Book
+        run: |
+          set -ev
           Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-      - name: Deploy to GitHub Pages
-        uses: Cecilapp/GitHub-Pages-deploy@master
-        env:
-          EMAIL: chris-diaz@northwestern.edu # must be a verified email
-          GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
-          BUILD_DIR: _book/                     # "_site/" by default
+          Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
+          Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book
