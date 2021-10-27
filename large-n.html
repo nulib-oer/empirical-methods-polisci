@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Large N | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Large N | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="experiments.html"/>
 <link rel="next" href="small-n.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -359,7 +362,7 @@
 <div id="correlation" class="section level3">
 <h3><span class="header-section-number">8.2.1</span> Correlation</h3>
 <p>You have two variables that you think might be related in a linear fashion. Let’s say you think that a country’s level of education (measured in expected years of education) will be related to its level of gender equality (we’ll use a points system based on the UN gender inequality index) . Using software, you can quite easily calculate a linear correlation coefficient for these two variables, denoted by <span class="math inline">\(R\)</span>. For these two variables, we get the result <span class="math inline">\(R=0.83.\)</span> That number is a bit abstract but the graph below, figure <a href="large-n.html#fig:correlation">8.1</a>, visualizes what different correlations look like.</p>
-<div class="figure" style="text-align: center"><span id="fig:correlation"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:correlation"></span>
 <img src="images/largen/correlation.png" alt="Different correlations, visualized. The numbers represent correlation coefficients. Based on @boigelotdenisExampleCorrelationVarious2011, modified by Max Weylandt"  />
 <p class="caption">
 Figure 8.1: Different correlations, visualized. The numbers represent correlation coefficients. Based on <span class="citation">Boigelot (<a href="#ref-boigelotdenisExampleCorrelationVarious2011" role="doc-biblioref">2011</a>)</span>, modified by Max Weylandt
@@ -367,7 +370,7 @@ Figure 8.1: Different correlations, visualized. The numbers represent correlatio
 </div>
 <p>Correlation coefficients can range from -1 to 1. Imagine that the different graphs in figure <a href="large-n.html#fig:correlation">8.1</a> represent the different possible relationships between education (along the <span class="math inline">\(X\)</span>-axis) and gender equality (on the <span class="math inline">\(Y\)</span>-axis). As the top line of figure 8.1 shows, a correlation coefficient closer to either pole means a strong correlation while a number around 0 means a weak correlation. If <span class="math inline">\(R=-0.8\)</span>, there is a strong negative correlation (at larger values of X, Y tends to have lower values). If <span class="math inline">\(R=0.4\)</span>, there is a moderate positive correlation (at larger values of X, Y tends to have higher values). The correlation we got indicates that we have a fairly strong positive correlation. In other words, countries with higher levels of education tend to have higher gender equality overall.</p>
 <p>But also note the difference between the two lines in the graph above. In the bottom line, every image represents a perfect correlation, even though the relationships between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are clearly very different. On the first graph from the left, <span class="math inline">\(Y\)</span> increases a lot as <span class="math inline">\(X\)</span> moves from its lowest to its highest value. Two images over, <span class="math inline">\(Y\)</span> still increases as <span class="math inline">\(X\)</span> does, but much less so. They both move in the same direction perfectly (they have a correlation coefficient of <span class="math inline">\(R=1\)</span>), but the slopes are different. This has implications for our findings: is gender equality slightly higher in countries with more education, or a lot higher? Correlation cannot answer that question. Later, we’ll see how regression accounts for this difference in slopes. By the way, it is always a good idea to visualize your data. The graphs in figure <a href="large-n.html#fig:dino">8.2</a> below show three datasets that have almost identical means, medians, and correlations - yet look quite different when plotted.</p>
-<div class="figure" style="text-align: center"><span id="fig:dino"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dino"></span>
 <img src="images/largen/dino.png" alt="Based on the &quot;Datasaurus Dozen&quot; by @matejkaSameStatsDifferent2017"  />
 <p class="caption">
 Figure 8.2: Based on the “Datasaurus Dozen” by <span class="citation">Matejka and Fitzmaurice (<a href="#ref-matejkaSameStatsDifferent2017" role="doc-biblioref">2017</a>)</span>
@@ -383,7 +386,7 @@ Figure 8.2: Based on the “Datasaurus Dozen” by <span class="citation">Matejk
 <div id="regression" class="section level3">
 <h3><span class="header-section-number">8.2.2</span> Regression</h3>
 <p>Correlations are a useful first look at the relationship between two variables, but linear regression is far more powerful. The intuition behind linear regression is simple: we want to find the line that best fits all of our data points. This is because the line that fits the data best summarizes the relationship between variables, and we can use this line to learn not just the direction of an association (positive or negative) but also its strength: as <span class="math inline">\(X\)</span> changes, <em>how much</em> does <span class="math inline">\(Y\)</span> tend to change? Regression also lets us conduct significance tests to establish whether the relationship between variables actually exists or just appears to occur due to chance.</p>
-<div class="figure" style="text-align: center"><span id="fig:scatter"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatter"></span>
 <img src="images/largen/scatter.png" alt="A simple scatterplot"  />
 <p class="caption">
 Figure 8.3: A simple scatterplot
@@ -392,9 +395,9 @@ Figure 8.3: A simple scatterplot
 <p>Perhaps it’s best to start with an image. Figure <a href="large-n.html#fig:scatter">8.3</a> charts the values for 147 countries’ expected years of education against their scores on the equality index, with each country represented by a dot. Just from looking at it, you can see that countries with a high level of education tend to have higher levels of overall gender equality, even if not all countries neatly fit that description. In other words, as predicted by our correlation coefficient of 0.85, it seems that there is a relationship between education and gender equality. But how strong is this association?</p>
 <p>To answer the question, we draw the line that best fits the data points in the scatterplot. This straight line (this is <em>linear</em> regression after all) summarizes the relationship between the two variables we are interested in. Imagine we wanted to explain the relationship to someone else but couldn’t show them the individual data points. We could still show them the line and they would get a sense of how gender equality and education relate.</p>
 <p>The regression equation takes the form: <span class="math display">\[Y = a + bX\]</span></p>
-<p>Take a second to appreciate what we have done here. We’ve taken data on two variables for 147 countries, and summarized it with one line on the graph, which we can in turn express as this simple formula. The formula may look familiar to you, as it is simply the formula for a straight line. should I say linear equation? In the above equation <span class="math inline">\(a\)</span> is the intercept – the value <span class="math inline">\(Y\)</span> takes on when <span class="math inline">\(X=0\)</span>. In other words, what is the level of gender inequality that a country with 0 years of expected schooling would have? <span class="math inline">\(b\)</span> is the slope. Remember the function the slope plays in a graphs: it gives you ‘rise over run’, telling you how much the <span class="math inline">\(Y\)</span> tends changes in relation to the <span class="math inline">\(X\)</span>. This means that in a regression equation, the slope is very important, because it expresses the relationship between our variables: on average, a one-unit increase in the X variable (in our case, one year of extra expected schooling) is associated with a <span class="math inline">\(b\)</span>-sized increase or decrease in the outcome variable (points on the gender equality index). The slope <span class="math inline">\(b\)</span> is often also called the <strong>regression coefficient</strong>. In the case of our regression line, <span class="math inline">\(b=11.6\)</span>. As you will see below, we often encounter regressions with multiple variables, each of which has its own coefficient (i.e. change in the outcome variable associated with change in the independent/input variable).</p>
+<p>Take a second to appreciate what we have done here. We’ve taken data on two variables for 147 countries, and summarized it with one line on the graph, which we can in turn express as this simple formula. The formula may look familiar to you, as it is simply the formula for a straight line. In the above equation <span class="math inline">\(a\)</span> is the intercept – the value <span class="math inline">\(Y\)</span> takes on when <span class="math inline">\(X=0\)</span>. In other words, what is the level of gender inequality that a country with 0 years of expected schooling would have? <span class="math inline">\(b\)</span> is the slope. Remember the function the slope plays in a graphs: it gives you ‘rise over run’, telling you how much the <span class="math inline">\(Y\)</span> tends changes in relation to the <span class="math inline">\(X\)</span>. This means that in a regression equation, the slope is very important, because it expresses the relationship between our variables: on average, a one-unit increase in the X variable (in our case, one year of extra expected schooling) is associated with a <span class="math inline">\(b\)</span>-sized increase or decrease in the outcome variable (points on the gender equality index). The slope <span class="math inline">\(b\)</span> is often also called the <strong>regression coefficient</strong>. In the case of our regression line, <span class="math inline">\(b=11.6\)</span>. As you will see below, we often encounter regressions with multiple variables, each of which has its own coefficient (i.e. change in the outcome variable associated with change in the independent/input variable).</p>
 <p>In our example, the intercept <span class="math inline">\(a=-89.2\)</span>. This is a good time to warn you about extrapolating using data from regression. That intercept is impossible, because the way our outcome variable is set up, there are only positive scores for equality. Yet because of the best fit line, our regression predicts an impossible value for <span class="math inline">\(Y\)</span> when <span class="math inline">\(X=0\)</span>. Always remember that regression fits the line based on the data available. If you want to use it to make prediction about data points far away from the data you actually have, it is possible the prediction will be way off. (By the way, you can find the values for both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> in Table 8.1 below. We’ll discuss how to interpret the table in more detail below, but feel free to see how much you can get from it right now).</p>
-<div class="figure" style="text-align: center"><span id="fig:line"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:line"></span>
 <img src="images/largen/line.png" alt="The regression line"  />
 <p class="caption">
 Figure 8.4: The regression line
@@ -407,7 +410,7 @@ Figure 8.4: The regression line
 <div id="finding-the-line-of-best-fit" class="section level3">
 <h3><span class="header-section-number">8.3.1</span> Finding the Line of Best Fit</h3>
 <p>How do we find the line that fits the data best? Let’s restate our aim: we want a line where, given a certain <span class="math inline">\(X\)</span> value, the <span class="math inline">\(Y\)</span> value predicted by the line is really close to the actual value in the data. That seems like a reasonable definition of ‘good fit.’ Rephrased in mathematical terms, we want to be as small as possible. The thing we want to minimize is called a <strong>residual</strong>. For example, in <a href="large-n.html#fig:line">8.4</a>, Serbia has an expected years of schooling value of <span class="math inline">\(14.6\)</span> and a gender equality score of <span class="math inline">\(106\)</span>. Those are the actual values in the dataset. However, the regression line predicts that an education (i.e. <span class="math inline">\(X\)</span>) value of <span class="math inline">\(14.6\)</span> is associated with a gender inequality score of <span class="math inline">\(82.94\)</span> [<span style="color:DarkBlue"><span class="math inline">\(Y= a+ bX= -89.2 + 11.6 \cdot(14.6) = 80.16\)</span></span>]. The residual amounts to <span class="math inline">\(25.4\)</span> [<span style="color:DarkBlue"><span class="math inline">\(106 - 80.16=25.4\)</span></span>], and is highlighted with a blue line in <a href="large-n.html#fig:residuals">8.5</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:residuals"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:residuals"></span>
 <img src="images/largen/residuals.png" alt="Visualizing Residuals"  />
 <p class="caption">
 Figure 8.5: Visualizing Residuals
@@ -711,7 +714,6 @@ Figure 8.5: Visualizing Residuals
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -730,6 +732,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -743,12 +746,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }

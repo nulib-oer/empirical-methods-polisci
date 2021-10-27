@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Surveys | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Surveys | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="hypothesis-testing.html"/>
 <link rel="next" href="experiments.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -401,7 +404,7 @@
 <p>Then why do we not just always use simple random sampling Why do we have all these different ways of probability sampling? First, we often face budget constraints. Or, even though we have enough budgets, our research questions sometimes dictate that it is better to use other sampling methods than simple random sampling. For example, there are cases when if we just take the simple random sample, it is hard to ensure a large-enough observations for certain groups of people. Then researchers oversample certain subgroups to ensure sufficient observations to draw meaningful inferences. In exploring the role of race and ethnicity in political participation in the United States, Leighley and Vedlitz used oversamples of African Americans, Mexican Americans and Asian Americans in Texas <span class="citation">(Leighley and Vedlitz <a href="#ref-leighley1999race" role="doc-biblioref">1999</a>)</span>. Similarly, in examining how racial group categorizations influence individuals’ policy attitudes in the United States, Masuoka and Junn also used an oversample of Afro-Caribbeans <span class="citation">(Masuoka and Junn <a href="#ref-masuoka2013politics" role="doc-biblioref">2013</a>)</span>.</p>
 <p><strong>Stratified Sampling</strong></p>
 <p>Stratified sampling differs from SRS in that it first divides the entire population into smaller homogeneous sub-groups of strata. That is, each stratum is composed of similar observations – e.g., based on income, educational level, race or gender. Then, we take the random samples from each stratum and pool them together. If we have distinct subgroups based on shared characteristics, we might use stratified sampling to highlight these inter-group differences.</p>
-<div class="figure" style="text-align: center"><span id="fig:stratified-random-sampling"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:stratified-random-sampling"></span>
 <img src="images/surveys/Virginia_sampling.png" alt="Stratified Random Sampling. Note: The population is grouped into strata based on shared characteristics"  />
 <p class="caption">
 Figure 6.1: Stratified Random Sampling. Note: The population is grouped into strata based on shared characteristics
@@ -410,7 +413,7 @@ Figure 6.1: Stratified Random Sampling. Note: The population is grouped into str
 <p>Because stratification takes into characteristics of the original population, stratified sampling can better capture the key population characteristics in the sample. Through stratified sampling, researchers can ensure that certain subgroups are include in the sample. Moreover, stratification gives a smaller error in estimation and greater precision than SRS especially when the inter-group differences are large. For example, in surveying Americans’ racial perceptions and policy attitudes, Masuoka and Junn used stratified sampling to recruit minority respondents <span class="citation">(Masuoka and Junn <a href="#ref-masuoka2013politics" role="doc-biblioref">2013</a>)</span>, as SRS possibly would not have guaranteed sufficient number of Asian or Latino participants. Likewise, YouGov also uses stratified sampling to ensure that the survey sample resembles the composition of the American population; age, race, gender and education are typically used as stratification variables. Cassesse et al. used YouGov’s Cooperative Congressional Election Study, which used stratified sampling of 50,000 Americans, to examine how white Americans’ racial attitudes affect anti-gender discrimination policy supports <span class="citation">(Cassese, Barnes, and Branton <a href="#ref-cassese2015racializing" role="doc-biblioref">2015</a>)</span>.</p>
 <p>Despite its strengths, stratified sampling cannot be used when stratification is simply impossible – e.g., when there is very little information available about the population or when there are only few distinct characteristics (not enough features) in the population so that we could not divide it into various subgroups.</p>
 <p><strong>Cluster Random Sampling</strong></p>
-<div class="figure" style="text-align: center"><span id="fig:Cluster-sampling"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Cluster-sampling"></span>
 <img src="images/surveys/Cluster-sampling.png" alt="Cluster Sampling. Note: Here, the population is divided into several clusters; note that the entire cluster is sampled"  />
 <p class="caption">
 Figure 6.2: Cluster Sampling. Note: Here, the population is divided into several clusters; note that the entire cluster is sampled
@@ -455,7 +458,7 @@ Figure 6.2: Cluster Sampling. Note: Here, the population is divided into several
 <p>In analyzing the survey results, we must keep in mind that we are trying to estimate <strong>parameters</strong> about the population with sample <strong>statistics</strong>.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> Because of the potential errors stemming from the sampling process, we cannot be sure the sample statics are exactly identical to population parameters. Hence, it is necessary to build uncertainty in our inference about parameters.</p>
 <p><strong>Margin of error</strong> quantifies the random sampling error. We cannot be one hundred percent confident that our sample statistic is the exact value of the population parameter; because we are using samples, any survey or poll will differ from the true population by a certain amount. Therefore, by constructing a <strong>confidence interval</strong> around a point estimate (i.e., sample statistic), we are acknowledging that there is room for error for our estimates. Margin of error is the range of values below and above the sample statistic in a confidence interval.</p>
 <p>Confidence interval = sample statistic <span class="math inline">\(\pm\)</span> margin of error</p>
-<div class="figure" style="text-align: center"><span id="fig:Marginoferror"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Marginoferror"></span>
 <img src="images/surveys/Marginoferror.png" alt="Margin of Error and Confidence Interval"  />
 <p class="caption">
 Figure 6.3: Margin of Error and Confidence Interval
@@ -568,6 +571,9 @@ Figure 6.3: Margin of Error and Confidence Interval
 <div id="ref-cassese2015racializing">
 <p>Cassese, Erin C, Tiffany D Barnes, and Regina P Branton. 2015. “Racializing Gender: Public Opinion at the Intersection.” <em>Politics &amp; Gender</em> 11 (1): 1–26.</p>
 </div>
+<div id="ref-druckman2011students">
+<p>Druckman, James N, and Cindy D Kam. 2011. “Students as Experimental Participants.” <em>Cambridge Handbook of Experimental Political Science</em> 1: 41–57.</p>
+</div>
 <div id="ref-erikson2015american">
 <p>Erikson, Robert S, and Kent L Tedin. 2015. <em>American Public Opinion: Its Origins, Content and Impact</em>. Routledge.</p>
 </div>
@@ -579,6 +585,9 @@ Figure 6.3: Margin of Error and Confidence Interval
 </div>
 <div id="ref-hadaway1993polls">
 <p>Hadaway, C Kirk, Penny Long Marler, and Mark Chaves. 1993. “What the Polls Don’t Show: A Closer Look at Us Church Attendance.” <em>American Sociological Review</em>, 741–52.</p>
+</div>
+<div id="ref-heerwig2009education">
+<p>Heerwig, Jennifer A, and Brian J McCabe. 2009. “Education and Social Desirability Bias: The Case of a Black Presidential Candidate.” <em>Social Science Quarterly</em> 90 (3): 674–86.</p>
 </div>
 <div id="ref-kane2009predictors">
 <p>Kane, Emily W, and Kimberly J Whipkey. 2009. “Predictors of Public Support for Gender-Related Affirmative Action: Interests, Gender Attitudes, and Stratification Beliefs.” <em>Public Opinion Quarterly</em> 73 (2): 233–54.</p>
@@ -607,6 +616,9 @@ Figure 6.3: Margin of Error and Confidence Interval
 <div id="ref-stuart2009social">
 <p>Stuart, Gretchen S, and David A Grimes. 2009. “Social Desirability Bias in Family Planning Studies: A Neglected Problem.” <em>Contraception</em> 80 (2): 108–12.</p>
 </div>
+<div id="ref-van2008faking">
+<p>Van de Mortel, Thea F, and others. 2008. “Faking It: Social Desirability Response Bias in Self-Report Research.” <em>Australian Journal of Advanced Nursing, The</em> 25 (4): 40.</p>
+</div>
 </div>
 <div class="footnotes">
 <hr />
@@ -631,7 +643,6 @@ Figure 6.3: Margin of Error and Confidence Interval
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -650,6 +661,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -663,12 +675,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }

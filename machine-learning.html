@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Machine Learning | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Machine Learning | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="social-networks.html"/>
 <link rel="next" href="conclusions.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -350,7 +353,7 @@
 <div id="introduction-9" class="section level2">
 <h2><span class="header-section-number">12.1</span> Introduction</h2>
 <p>These days, references to machine learning are almost ubiquitous. If you follow the news, you have probably heard that machine learning is used in a wide range of contexts: e.g., to detect fraudulent transactions, predict stock prices, perform facial recognition, customize search results, and even guide self-driving cars. But what exactly is machine learning? Machine learning is often conflated with related concepts including artificial intelligence, automation, and statistical computing. Part of this confusion and ambiguity is due to the reality that even among relevant experts in statistics and computer science, there is no single “correct” definition of machine learning. However, there are two well-known formal definitions. Both definitions were cited by Andrew Ng <span class="citation">(Ng, <a href="#ref-ng-a" role="doc-biblioref">n.d.</a>)</span>, in his highly popular Stanford course on machine learning (available through <a href="https://www.coursera.org/learn/machine-learning">Coursera</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:jl-figure1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:jl-figure1"></span>
 <img src="images/ml/jl-figure1.png" alt="Traditional Programming v. Machine Learning"  />
 <p class="caption">
 Figure 12.1: Traditional Programming v. Machine Learning
@@ -375,7 +378,7 @@ Figure 12.1: Traditional Programming v. Machine Learning
 <p>Assuming we have split the original dataset into the training set and test set, we can compute two different types of MSE: <strong>training MSE</strong> and <strong>test MSE</strong>. In both cases, we first fit <span class="math inline">\(\hat{f}(.)\)</span> using the training set. The difference, which is fundamental to machine learning, is the following: the training MSE (or training error, more generally) is then computed using the data from the training set, which contains the same data used to fit <span class="math inline">\(\hat{f}(.)\)</span>. In contrast, the test MSE (or test error) is computed using the test set, which was not used to fit <span class="math inline">\(\hat{f}(.)\)</span>.</p>
 <p>Recall that we randomly assigned the observations in the original full dataset to the training and test sets. Thus, the two datasets are comparable: i.e., the true relationship between the set of predictors (<span class="math inline">\(X_{1}, X_{2}\)</span>) and <span class="math inline">\(Y\)</span> should be the same in both datasets. However, the two datasets are also not identical; these minor, non-systematic differences are due to random noise, which are represented by the <span class="math inline">\(\epsilon\)</span> in Eq. 1. Given this context, it should be clear why we want to minimize test MSE instead of training MSE.</p>
 <p>If we attempt to minimize training MSE, the algorithms are more likely to estimate highly flexible models that try to touch every data point in the feature space of the training dataset. This might initially sound nice, but it means that the model is <strong>overfitting</strong> to the training set: i.e., the model is attempting to capture both the real patterns due to the true <span class="math inline">\({f}(.)\)</span>, as well as the observed but spurious deviations from <span class="math inline">\({f}(.)\)</span> that are due to the random noise (<span class="math inline">\(\epsilon\)</span>). The problem here is that this kind of highly flexible model tends to generate a lower training MSE, but performs poorly on the test set—which has the same underlying patterns due to <span class="math inline">\({f}(.)\)</span>, but different observed deviations from <span class="math inline">\({f}(.)\)</span> because of <span class="math inline">\(\epsilon\)</span>. Figure <a href="machine-learning.html#fig:jl-figure2">12.2</a> provides an illustration of this idea. In this example, the true relationship between <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(Y\)</span> is linear (see the graph in the middle); we know this for certain because these data were simulated.</p>
-<div class="figure" style="text-align: center"><span id="fig:jl-figure2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:jl-figure2"></span>
 <img src="images/ml/jl-figure2.png" alt="Modeling True Relationship v. Overfitting"  />
 <p class="caption">
 Figure 12.2: Modeling True Relationship v. Overfitting
@@ -411,7 +414,7 @@ Figure 12.2: Modeling True Relationship v. Overfitting
 <h3><span class="header-section-number">12.2.3</span> Bias-Variance Trade-offs</h3>
 <p>In machine learning, <strong>bias</strong> is a measure of the size of the gap between <span class="math inline">\(\hat{f}(.)\)</span> and <span class="math inline">\({f}(.)\)</span>.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> The bias is smaller when the model does a better job of representing the true relationship between the set of predictors <span class="math inline">\((X_{1},X_{2},...,X_{p})\)</span> and <span class="math inline">\(Y\)</span>. For example, let’s assume that the true relationship between <span class="math inline">\(X_{2}\)</span> and <span class="math inline">\(Y\)</span> is described using an inverted U-shaped curve. If the model we select imposes a linear functional form, then the bias will be larger than if the model allowed nonlinearity. Thus, to reduce bias, we often want to use a more flexible model.</p>
 <p>However, it is possible for the model to be too flexible. <strong>Variance</strong> is a measure of the stability or consistency of the estimated model across training sets. If small changes to the training set (e.g., dropping a few observations) causes large changes in <span class="math inline">\(\hat{f}(.)\)</span>, then the variance is high. A highly flexible model tends to reduce bias but also increase variance (hence the idea of a <span class="math inline">\(&quot;\)</span>trade-off<span class="math inline">\(&quot;\)</span>). Thus, the goal is to fit a model that is flexible enough to capture the true relationship between the set of predictors <span class="math inline">\((X_{1},X_{2},...,X_{p})\)</span> and <span class="math inline">\(Y\)</span>, but not so flexible that it is also fitting to the observed deviations from <span class="math inline">\({f}(.)\)</span> in the training set due to <span class="math inline">\(\epsilon\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:jl-figure3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:jl-figure3"></span>
 <img src="images/ml/jl-figure3.png" alt="Bias-Variance Trade-offs"  />
 <p class="caption">
 Figure 12.3: Bias-Variance Trade-offs
@@ -437,7 +440,7 @@ Figure 12.3: Bias-Variance Trade-offs
 <h3><span class="header-section-number">12.2.5</span> Supervised v. Unsupervised Learning</h3>
 <p>We can also classify machine learning methods according to whether they predict a specific outcome. In <strong>supervised learning</strong>, there is a clearly defined <span class="math inline">\(&quot;\)</span>correct answer<span class="math inline">\(&quot;\)</span> – and the purpose of the machine learning algorithm is to correctly predict that answer. For instance, let us assume we want to predict whether a U.S. citizen will vote in the next presidential election. This is an example of a supervised learning problem; since the person either will or will not vote, there is clearly a <span class="math inline">\(&quot;\)</span>correct answer.<span class="math inline">\(&quot;\)</span> There are two types of supervised learning, which are distinguished by the type of outcome predicted: (1) <strong>regression</strong>, (2) <strong>classification</strong>. In regression, the goal is to predict a continuous or quantitative outcome: e.g., test scores, stock prices, inflation rates, number of children, and so on.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> In classification, the goal is to predict a categorical or discrete outcome: e.g., religion, political party membership, vote choice, occupation, whether a person holds a four-year degree.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a></p>
 <p>In <strong>unsupervised learning</strong>, the purpose of the machine learning algorithm is to examine the underlying structure of the data and identify <span class="math inline">\(&quot;\)</span>hidden<span class="math inline">\(&quot;\)</span> patterns. It is not attempting to correctly predict an outcome. One well-known example of an unsupervised learning method is clustering: clustering algorithms (e.g., hierarchical, k-means) identify latent groups of observations by examining the relationships among the variables associated with the observations (Bryan 2004; Wagstaff and Cardie 2000; Witten 2011). In this case, we do not know ahead of time what the <span class="math inline">\(&quot;\)</span>correct<span class="math inline">\(&quot;\)</span> or <span class="math inline">\(&quot;\)</span>true<span class="math inline">\(&quot;\)</span> number of clusters is. Researchers can use clustering algorithms to identify more internally homogeneous groups of subjects (e.g., with respect to demographic characteristics, attitudes, preferences, consumption patterns). Figure <a href="machine-learning.html#fig:jl-figure4">12.4</a> provides an illustration of how we may organize machine learning methods by type and subtype. Please note that the list of examples is not meant to be exhaustive.</p>
-<div class="figure" style="text-align: center"><span id="fig:jl-figure4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:jl-figure4"></span>
 <img src="images/ml/jl-figure4.png" alt="Types of Machine Learning Methods"  />
 <p class="caption">
 Figure 12.4: Types of Machine Learning Methods
@@ -479,7 +482,7 @@ Figure 12.4: Types of Machine Learning Methods
 <p>Node purity or homogeneity is often measured using the Gini index or entropy. In both cases, the measures are smaller when the nodes (or regions) are more homogeneous; thus, the objective is actually to choose splits that minimize the Gini index or entropy (which is equivalent to maximizing node purity). The Gini index is defined below <span class="citation">(James et al. <a href="#ref-james2013a" role="doc-biblioref">2013</a>, 312)</span>. Here, <span class="math inline">\(p_{mk}\)</span> represents the proportion of the training observations that are in <span class="math inline">\(m\)</span>th region (<span class="math inline">\(R_{m}\)</span>) from the <span class="math inline">\(k\)</span>th class. Recall that <span class="math inline">\(G\)</span> is small when the nodes are more homogeneous: e.g., when the proportion of training observations in <span class="math inline">\(m\)</span>th region are closely split between two classes <span class="math inline">\(45\% -55\%\)</span>, then <span class="math inline">\(G = (.45)(.55)(2) =0.495\)</span>; in contrast, when the training observations in <span class="math inline">\(R_{m}\)</span> are more dominated by a single class (and thus <span class="math inline">\(R_{m}\)</span> is more homogeneous), for instance, <span class="math inline">\(90\% -10\%\)</span> , then <span class="math inline">\(G = (.10)(.90)(2) = 0.18\)</span>.</p>
 <p><span class="math display">\[G= \sum _{k=1}^{K}p_{mk} \left( 1-p_{mk} \right)\]</span></p>
 <p>How does this work in practice? For example, let us assume that in the training set, being white v. not being white was the strongest individual predictor of the Trump vote (i.e., it would maximize node purity). If this were the case, then the first split would be based on race: all white respondents would be assigned to the right branch, and all non-white respondents would be assigned to the left branch (see Figure <a href="machine-learning.html#fig:jl-figure5">12.5</a> below). Next, let us assume that among white respondents, being above the mean on the 1-7 point political conservatism scale is the strongest predictor of the Trump vote; if so, then the second split would be based on whether the white respondents’ conservatism score is <span class="math inline">\(\leq 4.3\)</span> (left branch) or <span class="math inline">\(&gt; 4.3\)</span> (right branch).</p>
-<div class="figure" style="text-align: center"><span id="fig:jl-figure5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:jl-figure5"></span>
 <img src="images/ml/jl-figure5.png" alt="Example of a Decision Tree"  />
 <p class="caption">
 Figure 12.5: Example of a Decision Tree
@@ -644,7 +647,6 @@ Figure 12.5: Example of a Decision Tree
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -663,6 +665,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -676,12 +679,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }

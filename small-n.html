@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Small N | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Small N | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="large-n.html"/>
 <link rel="next" href="game-theory.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -397,7 +400,7 @@
 <div id="method-types" class="section level2">
 <h2><span class="header-section-number">9.5</span> Method: types</h2>
 <p>The typical methods used in small n research are interviews, participant observation, focus groups, process tracing, and ethnography. Each method has its advantages and disadvantages and a researcher can utilize more than one these methods depending on the aims of their research. In deciding on a small n method a researcher must consider the goals of the research, validity, and conceptual framework that will feed the researcher’s broader question. The diagram below illustrates that a small n qualitative researcher should be purposeful in their research design. They must consider their overall question. Specify the goals of their research, consider the theories that are driving the conceptual framework of their research, and consider the validity (does it make sense) of their research design.</p>
-<div class="figure" style="text-align: center"><span id="fig:questiondiagram"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:questiondiagram"></span>
 <img src="images/questiondiagram.png" alt="Research Methods Diagram"  />
 <p class="caption">
 Figure 9.1: Research Methods Diagram
@@ -571,7 +574,6 @@ Figure 9.1: Research Methods Diagram
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -590,6 +592,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -603,12 +606,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }

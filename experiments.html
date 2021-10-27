@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Experiments | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Experiments | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="surveys.html"/>
 <link rel="next" href="large-n.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -358,7 +361,7 @@
 <p>It took nearly 100 years for political science to attempt its first recorded experiment (although the discipline was fairly new at the time, having just split off from history and economics). Harold Gosnell conducted an experiment around the 1924 US presidential election to test the effects of mailed postcards on voter turnout <span class="citation">(Gosnell <a href="#ref-gosnell_getting_1927" role="doc-biblioref">1927</a>)</span>. Gosnell sent out postcards to certain wards, randomizing which half of the ward would get the postcards and which would not. He found modest effects, setting the stage for future work on randomized get-out-the-vote (GOTV) efforts.</p>
 <p>But Gosnell’s work was not immediately appreciated by political scientists, and it took nearly another 60 years before serious experimental work began to be taken seriously in the discipline. Shanto Iyengar, Mark Peters, and Donald Kinder invited participants to watch television news programs at the University of North Carolina, Chapel Hill <span class="citation">(Iyengar, Peters, and Kinder <a href="#ref-iyengar_experimental_1982" role="doc-biblioref">1982</a>)</span>. What the participants did not know, however, is that they were randomly assigned to watch some newscasts that had been edited to emphasize certain stories over others. These manipulations resulted in the control group assessing the president’s performance differently, based on the issues they were exposed to in the television news program.</p>
 <p>And from that point, experiments began steadily becoming a mainstay research method in political science. The figure below shows the number of experiments published every year in the <em>American Political Science Review</em>, one of the top publications in political science. As the figure shows, following Iyengar, Peters, and Kinder’s work in the 1980s, experiments started to be published in this journal at an increasing rate. However, it is important to keep in mind that experiments are not even close to being the dominant research method. If you have already read <a href="./surveys.html">ch06</a>, then you already know a good deal about the most dominant quantitative research method: surveys.</p>
-<div class="figure" style="text-align: center"><span id="fig:trend"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:trend"></span>
 <img src="images/trend.png" alt="totals are aggregated per decade"  />
 <p class="caption">
 Figure 7.1: totals are aggregated per decade
@@ -565,7 +568,6 @@ Figure 7.1: totals are aggregated per decade
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -584,6 +586,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -597,12 +600,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }

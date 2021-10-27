@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Causal Inference and the Scientific Method | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Causal Inference and the Scientific Method | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-02-22" />
+<meta name="date" content="2021-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="introduction.html"/>
 <link rel="next" href="theory.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +50,10 @@
 
 
 
-
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
 
 
 
@@ -406,7 +409,7 @@ Let’s say we are interested in understanding who supported left-wing populist 
 <ol style="list-style-type: decimal">
 <li>First, we need to determine if there is any relationship between X and Y. There are many ways of doing so, ranging from simple descriptive statistics to more complex methods such as regression. For example, you could conduct a survey that asks people about both their viewership habits and their election choices. Say you find that Fox News watchers indeed vote for Republican candidates at higher rates. Note: this specific tool (survey) will allow you to say if X and Y are <em>correlated</em>, yet this does not imply that X is the cause of Y, only that they are somehow associated. In fact, this is the case with many of the tools we commonly use.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:fig2-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2-1"></span>
 <img src="images/CI/fig2-1.png" alt="Our theory: X causes Y"  />
 <p class="caption">
 Figure 2.1: Our theory: X causes Y
@@ -415,7 +418,7 @@ Figure 2.1: Our theory: X causes Y
 <ol start="2" style="list-style-type: decimal">
 <li>Second, we need to think carefully about what is the direction of this relationship. Is X "causing" Y, or the other way around? The latter option is known as <strong>reverse causality</strong>, and needs to be considered both when you are coming up with your theory and when you are testing your data. Maybe Republicans enjoy Fox News more, because the network provides more positive coverage of their party than other networks <span class="citation">(Coe et al. <a href="#ref-coeHostileNewsPartisan2008" role="doc-biblioref">2008</a>)</span>.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:fig2-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2-2"></span>
 <img src="images/CI/fig2-2.png" alt="Reverse causality: Y causes X"  />
 <p class="caption">
 Figure 2.2: Reverse causality: Y causes X
@@ -429,7 +432,7 @@ Figure 2.2: Reverse causality: Y causes X
 <ol start="4" style="list-style-type: decimal">
 <li>Confounding variables are one possible cause of a specific error called <strong>spuriousness</strong>. A spurious relation is one where X and Y move together in the same or opposing direction, yet this movement is being driven by a third factor (the confounding variable). A researcher can misinterpret this as a causal link between X and Y.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:fig2-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2-3"></span>
 <img src="images/CI/fig2-3.png" alt="Omitted Variable: actually, age explains both X and Y!"  />
 <p class="caption">
 Figure 2.3: Omitted Variable: actually, age explains both X and Y!
@@ -564,7 +567,6 @@ Figure 2.3: Omitted Variable: actually, age explains both X and Y!
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -583,6 +585,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": false,
@@ -596,12 +599,15 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
 "info": false,
-"search": true,
 "toolbar": {
 "position": "fixed"
 }
