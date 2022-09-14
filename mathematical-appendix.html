@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>A Mathematical Appendix | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="A Mathematical Appendix | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is an introductory college textbook on using empirical methods in political science research." />
   <meta name="github-repo" content="nulib-oer/empirical-methods-polisci" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-11-19" />
+<meta name="date" content="2022-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +50,9 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -347,11 +347,11 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="mathematical-appendix" class="section level1">
-<h1><span class="header-section-number">A</span> Mathematical Appendix</h1>
+<div id="mathematical-appendix" class="section level1 hasAnchor">
+<h1><span class="header-section-number">A</span> Mathematical Appendix<a href="mathematical-appendix.html#mathematical-appendix" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>By Maximilian Weylandt</strong></p>
-<div id="calculating-the-regression-coefficient" class="section level2">
-<h2><span class="header-section-number">A.1</span> Calculating the Regression Coefficient</h2>
+<div id="calculating-the-regression-coefficient" class="section level2 hasAnchor">
+<h2><span class="header-section-number">A.1</span> Calculating the Regression Coefficient<a href="mathematical-appendix.html#calculating-the-regression-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For bivariate regressions, you can calculate the coefficient yourself. The equation is <span class="math display">\[\begin{aligned}
     b = \frac{S_Y}{S_X}R\end{aligned}\]</span></p>
 <p>where <span class="math inline">\(S_Y\)</span> is the standard deviation in <span class="math inline">\(Y\)</span>, <span class="math inline">\(S_X\)</span> is the standard deviation in <span class="math inline">\(X\)</span>, and <span class="math inline">\(R\)</span> is the correlation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. In our example on gender equality and education, the values are:<br />
@@ -360,8 +360,8 @@
 <span class="math inline">\(S_Y = 39.32\)</span><br />
 Try plugging them into the above equation and seeing whether you get the result you see in regression table, Table 8.3. (Don’t worry if it’s not exact, there’s a fair amount of rounding going on).</p>
 </div>
-<div id="significance-tests-1" class="section level2">
-<h2><span class="header-section-number">A.2</span> Significance Tests</h2>
+<div id="significance-tests-1" class="section level2 hasAnchor">
+<h2><span class="header-section-number">A.2</span> Significance Tests<a href="mathematical-appendix.html#significance-tests-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Calculating the p-value</em></p>
 <p>Note: this calculation presumes that you have understood the discussion about hypothesis testing earlier on in this book. If you are unsure, take a few minutes to refresh your memory on the contents of <a href="./hypothesis-testing.html">ch05</a>.</p>
 <p>Our regression result suggests that <span class="math inline">\(b=11.6\)</span>. However, this is an <em>estimate</em>, and therefore there is some uncertainty around this number, which is expressed in the standard error. Table 8.1 (and 2) tells us this error is <span class="math inline">\(0.62\)</span>. Next, we need a decision rule: how unlikely do we think the p-value can be before we think this result is implausible? Let’s set it as <span class="math inline">\(\alpha=0.05\)</span>: if the probability of getting this particular <span class="math inline">\(b\)</span> is less than <span class="math inline">\(5\%\)</span> (assuming a world where the null hypothesis is true) we will reject the null hypothesis.</p>
@@ -380,13 +380,13 @@ Try plugging them into the above equation and seeing whether you get the result 
 = &amp;[11.6 - 1.96 \cdot 0.62 ; 11.6 + 1.96 \cdot 0.62 ]\\
 = &amp;[10.4; 12.8]\end{aligned}\]</span></p>
 </div>
-<div id="error-terms" class="section level2">
-<h2><span class="header-section-number">A.3</span> Error Terms</h2>
+<div id="error-terms" class="section level2 hasAnchor">
+<h2><span class="header-section-number">A.3</span> Error Terms<a href="mathematical-appendix.html#error-terms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The regression equations we wrote out above are technically incomplete. In papers, you will often encounter regression equations with an <span class="math inline">\(e\)</span> at the end, like this:</p>
 <p><span class="math display">\[Y = a + b_{1}X_{1} + b_{2}X_{2} + e\]</span> The <span class="math inline">\(e\)</span> basically stands for our residuals, or the difference between what our regression predicts and what the data actually show, and is sometimes called <em>error term</em>. If you plug in any real <span class="math inline">\(X\)</span>-value from the actual data, the <span class="math inline">\(Y\)</span> you get is likely to be slightly off, because our regression line is the best fit but does not hit all points. Both sides of an equation have to be equal, and so the error term is brought in to make the right hand side equal to the actual <span class="math inline">\(Y\)</span> at that <span class="math inline">\(X\)</span>-value</p>
 </div>
-<div id="logged-variables" class="section level2">
-<h2><span class="header-section-number">A.4</span> Logged Variables</h2>
+<div id="logged-variables" class="section level2 hasAnchor">
+<h2><span class="header-section-number">A.4</span> Logged Variables<a href="mathematical-appendix.html#logged-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>While discussing our linear regression, we noted that GDP was not included directly as a control variable, but rather the log of GDP. We do this because we think that a one unit increase does not always mean the same thing across the range of possible values for our variable. Let’s say we are talking about per capita GDP, in units of 1,000 dollars. The differences between a country with a per capita GDP of 1,000 USD and 10,000 USD are massive. (In our data, countries close to those values are Niger, one of the poorest countries in the world and Indonesia, the largest economy in Southeast Asia). Meanwhile, countries with per capita GDP of 38,000 vs 47,000 are likely quite similar, like France and the Netherlands. The extra 9,000 dollars (9 units) don’t have the same effect across the range of values. Taking the log of GDP values allows us to ‘flatten’ the relationship, so that a unit change means a similar thing across <span class="math inline">\(X\)</span>-values, but it does make the coefficient a bit harder to interpret. The unit of our variable went from 1 dollar in GDP/capita to the log of 1 dollar, which is not an intuitive number to plug into "an increase of 1 unit <span class="math inline">\(X\)</span> is associated with an increase of <span class="math inline">\(b\)</span> units of <span class="math inline">\(Y\)</span>."</p>
 <p>But there is a rule of thumb. When an X-variable is logged, we can say "a 1% increase in X corresponds with a <span class="math inline">\(b/100\)</span> change in Y. In our example, that means that a 1% increase in per capita GDP is associated with a 0.159 point increase in the gender equality index.</p>
 <p>You can calculate the change in <span class="math inline">\(Y\)</span> associated with other percentage increases (<span class="math inline">\(p\)</span>) by using the formula <span class="math display">\[\Delta Y = b \cdot \frac{100+p}{100}\]</span></p>
@@ -798,9 +798,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 <p>Tsai, Lily L. 2007. “Solidary Groups, Informal Accountability, and Local Public Goods Provision in Rural China.” <em>American Political Science Review</em> 101 (2): 355–72. <a href="https://doi.org/10.1017/S0003055407070153">https://doi.org/10.1017/S0003055407070153</a>.</p>
 </div>
 <div>
-<p>Tsebelis, George. 2000. “Veto Players and Institutional Analysis.” <em>Governance</em> 13 (4): 441–74. <a href="https://doi.org/10.1111/0952-1895.00141">https://doi.org/10.1111/0952-1895.00141</a>.</p>
-</div>
-<div>
 <p>Van de Mortel, Thea F, and others. 2008. “Faking It: Social Desirability Response Bias in Self-Report Research.” <em>Australian Journal of Advanced Nursing, The</em> 25 (4): 40.</p>
 </div>
 <div>
@@ -833,8 +830,6 @@ Try plugging them into the above equation and seeing whether you get the result 
 </div>
 </div>
 </div>
-
-
 
 
 
@@ -932,7 +927,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

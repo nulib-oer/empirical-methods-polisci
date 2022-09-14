@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Causal Inference and the Scientific Method | Empirical Methods in Political Science: An Introduction</title>
   <meta name="description" content="This is an introductory college textbook on using empirical methods in political science research." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Causal Inference and the Scientific Method | Empirical Methods in Political Science: An Introduction" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is an introductory college textbook on using empirical methods in political science research." />
   <meta name="github-repo" content="nulib-oer/empirical-methods-polisci" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Jean Clipperton, et al." />
 
 
-<meta name="date" content="2021-11-19" />
+<meta name="date" content="2022-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +50,9 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -347,11 +347,11 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="causal-inference-and-the-scientific-method" class="section level1">
-<h1><span class="header-section-number">2</span> Causal Inference and the Scientific Method</h1>
+<div id="causal-inference-and-the-scientific-method" class="section level1 hasAnchor">
+<h1><span class="header-section-number">2</span> Causal Inference and the Scientific Method<a href="causal-inference-and-the-scientific-method.html#causal-inference-and-the-scientific-method" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><strong>By Pilar Manzi and Maximilian Weylandt</strong></p>
-<div id="introductionbackground" class="section level2">
-<h2><span class="header-section-number">2.1</span> Introduction/Background</h2>
+<div id="introductionbackground" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> Introduction/Background<a href="causal-inference-and-the-scientific-method.html#introductionbackground" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Social scientists, like other scientists, do a variety of work. Some are doing research that primarily aims to describe a situation. For example, Pan and Xu <span class="citation">(Pan and Xu <a href="#ref-panChinaIdeologicalSpectrum2018" role="doc-biblioref">2018</a>)</span> use a large online survey to present the first macro-overview of ideological preferences among Chinese citizens. They find that people who prefer authoritarian rule also tend to support the state intervening in the economy, while people who favor democratic reforms support market reforms at higher rates. They don’t try to explain why this is so, but just present the state of things as they have found them. Others go beyond description and try to establish cause-effect relationships. De la O <span class="citation">(De La O <a href="#ref-delao2013" role="doc-biblioref">2013</a>)</span> uses experimental data from the Mexican Conditional Cash Transfer to estimate how the transfers affect beneficiaries’ electoral participation and party choice. She finds that early enrollment in the program <em>caused</em> an increase in voter turnout and in support for the incumbent party. No matter what the research goal is, all of these different types of work follow the scientific method. Following this method is what makes us political <em>scientists</em> and not political commentators. The method guides us through our research process, offering a framework for answering questions through empirical data. It carries us from our initial research puzzle all the way to our conclusions.</p>
 <p>While all research requires careful and thoughtful work, this chapter will focus more on what’s involved in investigating causal processes. Causal claims have been a part of the field since its origins. One of the old debates in comparative politics, for example, concerns whether a country’s growing wealth results in more democracy. There have been numerous attempts at establishing a causal relationship between these two factors, yet most have been followed by valid criticisms that cast doubt on the authors’ conclusions. These debates have been centered around: how to determine if development causes democracy or if democracy causes development; what level of development is necessary for democracy; and, how to explain the presence of developed countries that are authoritarian, among others.</p>
 <p>These perennial discussions have led some authors, such as <span class="citation">(Seawright <a href="#ref-seawright2010" role="doc-biblioref">2010</a>)</span>, to argue that it is futile to attempt establishing causality among development and democracy, at least with large cross national datasets.</p>
@@ -359,8 +359,8 @@
 <p>This chapter will introduce you to terms that are crucial in thinking about causality, such as omitted and confounding variables, reverse causality, and spuriousness. It will provide you with a key set of questions that you should ask yourself when considering a potential causal relationship. Above all, we want to stress that causality cannot be shown easily. This is especially true in political science: the concepts we deal with are contested in their definitions, the way we measure concepts is prone to error, and the subjects of our research are, at the end of the day, humans. Showing causality is difficult but important work that requires careful consideration of the relationships among variables.</p>
 <p>We’ll begin by discussing the scientific method, which may already be familiar to some of you. Next, we’ll discuss some hurdles to good description, before going into more detail on establishing cause-effect relationships, or what’s called "causal inference."</p>
 </div>
-<div id="setup-the-scientific-method" class="section level2">
-<h2><span class="header-section-number">2.2</span> Setup: The Scientific Method</h2>
+<div id="setup-the-scientific-method" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.2</span> Setup: The Scientific Method<a href="causal-inference-and-the-scientific-method.html#setup-the-scientific-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you have taken a science class before, you may have seen a diagram or flowchart that describes the scientific method, or the scientific process. There is no one canonical description, but the scientific method is generally held to include a few parts.</p>
 <ol style="list-style-type: decimal">
 <li>We start with a <strong>puzzle</strong> about the real world. Our aim is often to explain something interesting- perhaps an anomalous case that is not explained by existing literature or a new phenomenon that needs explaining. But first, be aware of the type of puzzle or question you are elaborating. Normative questions, on the one hand, regard ethical or moral concerns; they are about what should and what ought be. Positive questions, on the other hand, are not about what is right or wrong, but simply about why and how things occur the way they do. This textbook focuses on how to investigate positive questions. You should try striking a good balance on the scope of your question: you want your puzzle to be specific enough to be answerable, yet not too detailed so as to only speak to a tiny part of the literature.<br />
@@ -374,8 +374,8 @@ Let’s say we are interested in understanding who supported left-wing populist 
 <li><p>Finally, after testing our hypotheses, we can make conclusions about our research. If our results show that low-income citizens voted for Evo Morales at higher rates that business-owners, then this could indicate support for our hypothesis. If not, we could turn to a different theory on voting behavior and come up with observable implications and hypotheses, and then test them with the data. Note how this loops around to the beginning of the process: the evidence we have here informs further engagement with theory, and so on. As mentioned in the above steps, the implications we can derive are conditioned on the type of evidence and type of tests we can perform. Unfortunately, we cannot make causal implications when our method purely allows for descriptive statistics. In short, there needs to be an overall fit between our research question, our hypotheses, our tests and the conclusions we extract from them.</p></li>
 </ol>
 <p>While some articles and books do all of the things listed above, these steps do not all have to be followed in the same project for it to be scientifically sound. Science is a collaborative enterprise, and sometimes research progresses from the efforts of several scholars put together. One article could simply provide a new set of data, for example, that either challenges conventional wisdom or describes a situation for the first time. Let’s say we run the exit survey after the Bolivian election, and publish an article that describes the demographic characteristics of different voters and who they voted for. Others can then start using that data in their research and test different theories against the available data. As mentioned, there are often competing arguments explaining the same observations. Some scholars argue that voters are voting based on which party they expect will deliver them more economic benefits in the future (theory 1), others that voters reward parties for how well they have treated them in the past (theory 2), and yet others claim vote choice is inherited and taught within families (theory 3). Survey questions could probe whether voters expect to gain from the new administration (theory 1), or how they have fared under different parties in the past (theory 2). In-depth interviews or ethnographic research could show that voters feel a deep connection with parties that goes back to their childhoods (theory 3).</p>
-<div id="exploration-or-cheating" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Exploration or Cheating?</h3>
+<div id="exploration-or-cheating" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.2.1</span> Exploration or Cheating?<a href="causal-inference-and-the-scientific-method.html#exploration-or-cheating" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The process explained above is somewhat abstract, and often not followed exactly in practice. When a researcher gets new data, it is tempting to immediately have a look at it and see what connections one can find. If done right, this is <strong>inductive research</strong>: a deep engagement with the data leads us to new hypotheses about the world. This is often contrasted with <strong>deductive</strong> research, where we have theories and test them against data. (See also <a href="./theory.html">ch03</a>’s discussion on theory-building versus theory testing).</p>
 <p>Some people (often people working with large-n data) are strong proponents of the latter approach. They argue that you should not come up with theories after the fact to fit the patterns in your data. This is because starting with the data can lead to misconduct. A famous recent example of this happened with Cornell Professor Brian Wansink, who published dozens of headline-grabbing studies on nutrition. A closer look revealed that he used a variety of questionable research practices. See how a <em>Buzzfeed</em> investigation reports on emails from his lab:</p>
 <blockquote>
@@ -394,8 +394,8 @@ Let’s say we are interested in understanding who supported left-wing populist 
 <p>Say we agree on how to define gentrification, and how we want to measure it. Even with a clear measurement that is easily available, <strong>measurement errors</strong> will creep in either due to human error or randomness. When doing research with a lot of cases (large-N research) it’s almost never possible to collect data on all the instances of the thing we are interested in, so we need to find a representative sample. As you will learn in Chapters <a href="./data.html">ch04</a> and <a href="./surveys.html">ch06</a>, this process results in a fair amount of uncertainty when done perfectly, and much more when done imperfectly. Similarly, researchers working with a smaller number of cases still have to restrict their choices somewhat as they are researching cases in great depth (<a href="./small-n.html">ch09</a> has more on this).</p>
 </div>
 </div>
-<div id="the-fundamental-problem-of-causal-inference" class="section level2">
-<h2><span class="header-section-number">2.3</span> The Fundamental Problem of Causal Inference</h2>
+<div id="the-fundamental-problem-of-causal-inference" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.3</span> The Fundamental Problem of Causal Inference<a href="causal-inference-and-the-scientific-method.html#the-fundamental-problem-of-causal-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Once we have found some patterns in our data, we can delve into the question of causality. Spoiler: Establishing causality is a very bold claim and can seldom be achieved in the social sciences. As you will learn throughout this book, you can do good research and make important contributions to the literature without necessarily making causal claims. Yet, the issue of causality is often present in research, even implicitly. When trying to understand how the world works, the causes of what we are seeing are never far from our minds.</p>
 <p>When we talk about a causal inference we are saying that X (our independent/explanatory variable) <em>causes</em> Y (our dependent/outcome variable). In other words, this means that if X does not occur, then Y does not occur. This is called the <strong>counterfactual</strong>: a scenario where everything remains exactly the same except for the presence or absence of our independent variable. Let’s illustrate with a simple example:</p>
 <p>I want to know if taking an aspirin will ease my headache. I can take the aspirin (the independent variable) and then see if my headache (dependent variable) goes away. But I cannot go back in time and NOT take the aspirin to see if the headache would have disappeared anyways. I could test the counterfactual (not taking the pill) the next time I get a headache, yet I will never be able to compare these two situations because everything has changed: the amount of sleep I got, the things I ate that day, the activities I did, and a million other details that I could not have possibly controlled to reflect the exact same scenario of the day of the first headache. This also known as the dilemma of holding all else equal ("ceteris paribus"), and it is the fundamental problem of causal inference.</p>
@@ -462,14 +462,14 @@ Figure 2.3: Omitted Variable: actually, age explains both X and Y!
 </p>
 </div>
 </div>
-<div id="conclusion" class="section level2">
-<h2><span class="header-section-number">2.4</span> Conclusion</h2>
+<div id="conclusion" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.4</span> Conclusion<a href="causal-inference-and-the-scientific-method.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this chapter we have discussed in broad strokes some of the concerns that matter when conducting research in political science. The first lesson is about the importance of the scientific method. Following this framework is the first thing that separates punditry from political science. Anyone can comment on politics and offer an explanation on why things are the way they are. Your job is to scrutinize and analyze facts to come up with empirically based explanations of reality. The best way to do so is by following the scientific process: posing a question, engaging with existing theory, hypothesizing explanations for your puzzle, testing your hypothesis, and interpreting the evidence.</p>
 <p>As has been mentioned throughout the chapter, research goals are varied, yet we have focused here on one of the most ambitious goals: establishing causal relationships. Determining a clean relationship between X and Y is not an easy task. Causality in the social sciences is messy and few times (if ever) is our outcome caused solely by one variable. So we must deal with the difficulties of isolating the factor we are interested in, identifying or eliminating all others that could be standing in the way.</p>
 <p>We have stressed the obstacles that stand in the way of causal inference not to discourage you from attempting it, but for you to be a conscious researcher and consumer of research. There are still several scholars in the field that irresponsibly claim to have identified causal relationships when their methods cannot support such a claim. By having a sense of the challenges behind causal inference, you can evaluate the validity of these findings. The difference between good and bad causal research is not primarily in the method used, but in how careful the researcher has thought about the relationships at hand. Hopefully this chapter has given you some tools in that regard.</p>
 </div>
-<div id="application-questions" class="section level2">
-<h2><span class="header-section-number">2.5</span> Application Questions</h2>
+<div id="application-questions" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.5</span> Application Questions<a href="causal-inference-and-the-scientific-method.html#application-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Imagine you have a research hypothesis: As people become more aware of the unequal distribution of income in our society, the more they will support a tax on the wealthy.</p>
 <ol style="list-style-type: decimal">
 <li><p>How would you test this with an experimental study? How would you test it with an observational study?</p></li>
@@ -478,8 +478,8 @@ Figure 2.3: Omitted Variable: actually, age explains both X and Y!
 <li><p>What would the counterfactual in this case look like?</p></li>
 </ol>
 </div>
-<div id="key-terms" class="section level2">
-<h2><span class="header-section-number">2.6</span> Key Terms</h2>
+<div id="key-terms" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.6</span> Key Terms<a href="causal-inference-and-the-scientific-method.html#key-terms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>bias</p></li>
 <li><p>causal inference</p></li>
@@ -504,8 +504,8 @@ Figure 2.3: Omitted Variable: actually, age explains both X and Y!
 <li><p>variable</p></li>
 </ul>
 </div>
-<div id="answers-to-check-in-questions" class="section level2">
-<h2><span class="header-section-number">2.7</span> Answers to Check-in Questions</h2>
+<div id="answers-to-check-in-questions" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.7</span> Answers to Check-in Questions<a href="causal-inference-and-the-scientific-method.html#answers-to-check-in-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Inductive research generally begins with the gathering of evidence and then generates theory after analyzing the evidence. Deductive research follows the opposite order: it begins with a theory and hypothesis, then on to collecting evidence and testing the hypothesis in light of the data collected.</p></li>
 <li><p>"All else equal" refers to the attempt of recreating the counterfactual. The counterfactual refers to that situation where everything remains exactly the same except for the presence/absence of the treatment (the explanatory variable).</p></li>
@@ -513,8 +513,8 @@ Figure 2.3: Omitted Variable: actually, age explains both X and Y!
 <li><p>When two variables are correlated it means that there is some association between them: maybe they both increase/decrease at the same time, or they move in opposite directions at the same time. But this does not mean that the movement of one variable is causing the movement of the other. For example, aspirin use is correlated with headaches (aspirin use increases when headaches appear) but this does not mean that aspirins cause headaches.</p></li>
 </ol>
 </div>
-<div id="answers-to-application-questions" class="section level2">
-<h2><span class="header-section-number">2.8</span> Answers to Application Questions</h2>
+<div id="answers-to-application-questions" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.8</span> Answers to Application Questions<a href="causal-inference-and-the-scientific-method.html#answers-to-application-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Experiment: randomly assigning people to treatment/control; treatment is a video/explanation showing how income is distributed in society; then people are asked what they think of the tax. An Observational study: A survey that asks people about how they think income is distributed and then asks them if they support a tax on the wealthy.</p></li>
 <li><p>Maybe those who know how income is distributed are the wealthiest, and they are not in favor of being taxed more heavily.</p></li>
@@ -621,7 +621,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
