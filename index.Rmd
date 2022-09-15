@@ -14,7 +14,7 @@ description: "This is an introductory college textbook on using empirical method
 
 # Preface {-}
 
-This book is a work-in-progress. Expected publication: spring 2021. Edits or suggestions can be emailed to at [digitalpublishing@northwestern.edu](mailto:digitalpublishing@northwestern.edu).
+This book is a work-in-progress. Expected publication: spring 2021. Edits or suggestions can be emailed to [digitalpublishing@northwestern.edu](mailto:digitalpublishing@northwestern.edu).
 
 ***
 
