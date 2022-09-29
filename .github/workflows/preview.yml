@@ -25,6 +25,7 @@ jobs:
         run: |
           set -ev
           Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+          Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
