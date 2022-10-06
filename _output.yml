@@ -6,7 +6,6 @@ bookdown::gitbook:
       scroll_highlight: yes
       before: |
         <li><a href="./">Empirical Methods in Political Science</a></li>
-        <li><a href="https://forms.gle/1FPKoqTAXwTaAE1y5" target="_blank">Report an Error</a></li>
       after: |
         <li><a href="https://bookdown.org/" target="blank">Published with bookdown</a></li>
         <li><a href="https://www.library.northwestern.edu/research/scholarly/index.html" target="_blank">Northwestern Libraries</a></li>
